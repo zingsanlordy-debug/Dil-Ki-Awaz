@@ -1,0 +1,259 @@
+{
+  "entities": {
+    "ShayariDoc": {
+      "title": "ShayariDoc",
+      "description": "Auto-approved global shayari document visible to all visitors in the shayaris collection",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Unique visitor userId generated on first visit and stored in localStorage"
+        },
+        "authorName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 50,
+          "description": "Display name of the shayari author (no links or phone numbers)"
+        },
+        "category": {
+          "type": "string",
+          "enum": [
+            "Love",
+            "Sad",
+            "Attitude",
+            "Alone",
+            "Motivational",
+            "Festival",
+            "Dosti"
+          ],
+          "minLength": 3,
+          "maxLength": 20,
+          "description": "Shayari category"
+        },
+        "categoryName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40,
+          "description": "Formatted category label with icon"
+        },
+        "categoryIcon": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16,
+          "description": "Category or mood icon"
+        },
+        "moodEmoji": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 16,
+          "description": "Selected mood emoji"
+        },
+        "title": {
+          "type": "string",
+          "minLength": 2,
+          "maxLength": 120,
+          "description": "Card display title (no links or phone numbers)"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 10,
+          "maxLength": 500,
+          "description": "Clean auto-approved shayari text strictly between 10 and 500 characters with no links or phone numbers"
+        },
+        "language": {
+          "type": "string",
+          "enum": ["hindi", "hinglish", "english"],
+          "minLength": 5,
+          "maxLength": 12,
+          "description": "Detected language of the shayari"
+        },
+        "status": {
+          "type": "string",
+          "enum": ["approved"],
+          "minLength": 8,
+          "maxLength": 12,
+          "description": "Moderation status (strictly approved)"
+        },
+        "reportCount": {
+          "type": "integer",
+          "description": "Community report counter (0 to 2; post is auto-deleted immediately at 3 reports or 1 admin report)"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Immutable server creation timestamp"
+        }
+      },
+      "required": [
+        "userId",
+        "authorName",
+        "category",
+        "categoryName",
+        "categoryIcon",
+        "moodEmoji",
+        "title",
+        "text",
+        "language",
+        "status",
+        "createdAt"
+      ]
+    },
+    "ZqMomentDoc": {
+      "title": "ZqMomentDoc",
+      "description": "Global real-time ZQ-MOMENTS social post with stylish caption, 1-9 photos, likes, and comment count",
+      "type": "object",
+      "properties": {
+        "userId": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Unique visitor userId generated on first visit and stored in localStorage"
+        },
+        "posterName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60,
+          "description": "Display name of the person posting to ZQ-MOMENTS"
+        },
+        "caption": {
+          "type": "string",
+          "minLength": 0,
+          "maxLength": 8000,
+          "description": "Post caption in the selected stylish font (max 500 words)"
+        },
+        "fontStyle": {
+          "type": "string",
+          "minLength": 3,
+          "maxLength": 32,
+          "enum": [
+            "normal",
+            "bold",
+            "italic",
+            "bold-italic",
+            "cursive",
+            "bold-cursive",
+            "typewriter",
+            "serif",
+            "serif-italic",
+            "serif-bold-italic",
+            "gothic",
+            "bold-gothic",
+            "bubble",
+            "dark-bubble",
+            "fancy",
+            "square",
+            "dark-square",
+            "small-caps",
+            "wide",
+            "sans-bold",
+            "sans-italic",
+            "sans-bold-italic",
+            "royal",
+            "handwritten",
+            "rozha",
+            "yatra",
+            "poetic-tiro",
+            "underline",
+            "sparkle",
+            "airy-spaced"
+          ],
+          "description": "Selected stylish font identifier saved with the post"
+        },
+        "images": {
+          "type": "array",
+          "description": "Dynamic list of 1 to 9 uploaded photo URLs or compressed image data URIs"
+        },
+        "likeCount": {
+          "type": "integer",
+          "description": "Global real-time like counter (>= 0)"
+        },
+        "commentCount": {
+          "type": "integer",
+          "description": "Global real-time comment counter (>= 0)"
+        },
+        "reportCount": {
+          "type": "integer",
+          "description": "Community report counter (0 to 2; post is auto-deleted immediately at 3 reports or 1 admin report)"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Immutable server creation timestamp used to order newest first"
+        }
+      },
+      "required": [
+        "userId",
+        "posterName",
+        "caption",
+        "fontStyle",
+        "images",
+        "likeCount",
+        "commentCount",
+        "timestamp"
+      ]
+    },
+    "ZqMomentCommentDoc": {
+      "title": "ZqMomentCommentDoc",
+      "description": "Real-time comment saved under zq_moments/{momentId}/comments/{commentId}",
+      "type": "object",
+      "properties": {
+        "momentId": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Parent ZQ-MOMENTS post document ID"
+        },
+        "userId": {
+          "type": "string",
+          "minLength": 6,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$",
+          "description": "Visitor userId of the commenter"
+        },
+        "authorName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 60,
+          "description": "Display name of the commenter"
+        },
+        "text": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 500,
+          "description": "Comment text visible to all users in real time"
+        },
+        "timestamp": {
+          "type": "string",
+          "format": "date-time",
+          "description": "Immutable server creation timestamp"
+        }
+      },
+      "required": [
+        "momentId",
+        "userId",
+        "authorName",
+        "text",
+        "timestamp"
+      ]
+    }
+  },
+  "firestore": {
+    "/shayaris/{shayariId}": {
+      "schema": { "$ref": "#/entities/ShayariDoc" },
+      "description": "Collection storing auto-approved shayaris"
+    },
+    "/zq_moments/{momentId}": {
+      "schema": { "$ref": "#/entities/ZqMomentDoc" },
+      "description": "Global real-time ZQ-MOMENTS social feed posts ordered by timestamp desc"
+    },
+    "/zq_moments/{momentId}/comments/{commentId}": {
+      "schema": { "$ref": "#/entities/ZqMomentCommentDoc" },
+      "description": "Real-time comments sub-collection for each ZQ-MOMENTS post"
+    }
+  }
+}

@@ -1,0 +1,283 @@
+@import "tailwindcss";
+
+@theme {
+  --text-xs: 0.9375rem;
+  --text-xs--line-height: 1.5;
+  --text-sm: 1.09375rem;
+  --text-sm--line-height: 1.55;
+  --text-base: 1.25rem;
+  --text-base--line-height: 1.65;
+  --text-lg: 1.40625rem;
+  --text-lg--line-height: 1.6;
+  --text-xl: 1.5625rem;
+  --text-xl--line-height: 1.5;
+  --text-2xl: 1.625rem;
+  --text-2xl--line-height: 1.35;
+  --text-3xl: 2.125rem;
+  --text-3xl--line-height: 1.3;
+  --text-4xl: 2.5rem;
+  --text-4xl--line-height: 1.25;
+  --text-5xl: 3.125rem;
+  --text-5xl--line-height: 1.2;
+}
+
+@layer base {
+  html,
+  body {
+    overflow-x: clip;
+    max-width: 100%;
+  }
+
+  body {
+    font-size: 1.125rem;
+    line-height: 1.65;
+  }
+
+  h1,
+  h2,
+  h3 {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  button {
+    font-size: 18px;
+    font-weight: 700;
+  }
+}
+
+@layer utilities {
+  .font-rozha {
+    font-family: 'Rozha One', serif;
+  }
+  .font-yatra {
+    font-family: 'Yatra One', cursive;
+  }
+  .font-kalam {
+    font-family: 'Kalam', cursive;
+  }
+  .font-tiro {
+    font-family: 'Tiro Devanagari Hindi', serif;
+  }
+  .font-caveat {
+    font-family: 'Caveat', cursive;
+  }
+  .font-cinzel {
+    font-family: 'Cinzel Decorative', serif;
+  }
+  .font-poppins {
+    font-family: 'Poppins', sans-serif;
+  }
+  .font-outfit {
+    font-family: 'Outfit', 'Poppins', sans-serif;
+  }
+  .font-noto {
+    font-family: 'Noto Serif Devanagari', serif;
+  }
+  .zq-feelings-logo {
+    font-family: 'Cinzel Decorative', Georgia, serif;
+    font-weight: 900;
+    letter-spacing: 0.06em;
+  }
+}
+
+/* Dark Red Gradient (#B91C1C -> #7F1D1D), Extra Black Bold Outfit/Poppins, Uppercase, Bigger Size + subtle shadow */
+.zq-main-title-gradient {
+  font-family: 'Outfit', 'Poppins', sans-serif;
+  font-weight: 900;
+  font-size: 30px;
+  line-height: 1.3;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  background-image: linear-gradient(135deg, #B91C1C 0%, #991B1B 50%, #7F1D1D 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  filter: drop-shadow(0 2px 3px rgba(127, 29, 29, 0.26));
+}
+
+@media (min-width: 640px) {
+  .zq-main-title-gradient {
+    font-size: 34px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .zq-main-title-gradient {
+    font-size: 38px;
+  }
+}
+
+/* 3D Pink Font Effect (#d94f70) */
+.pink-3d-text {
+  color: #d94f70;
+  text-shadow: 
+    0 1px 0 #c43a5c,
+    0 2px 0 #b32f4f,
+    0 3px 0 #9e2341,
+    0 4px 0 #891a35,
+    0 5px 2px rgba(217, 79, 112, 0.25),
+    0 6px 12px rgba(217, 79, 112, 0.2),
+    0 10px 24px rgba(217, 79, 112, 0.15);
+}
+
+.pink-sub-text {
+  color: #d94f70;
+  text-shadow: 0 1px 2px rgba(217, 79, 112, 0.2);
+}
+
+/* Glossy 3D Button Effects adapted for White/Pink Theme */
+.btn-glossy-orange {
+  background: linear-gradient(180deg, #FFB703 0%, #FB8500 45%, #E85D04 55%, #D00000 100%);
+  box-shadow: 0 10px 25px -3px rgba(251, 133, 0, 0.35),
+              0 4px 6px -2px rgba(232, 93, 4, 0.2),
+              inset 0 2px 4px rgba(255, 255, 255, 0.6),
+              inset 0 -3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.btn-glossy-orange:hover {
+  background: linear-gradient(180deg, #FFC43D 0%, #FF9E00 45%, #FF6000 55%, #E01E37 100%);
+  box-shadow: 0 14px 28px -3px rgba(251, 133, 0, 0.5),
+              0 0 25px rgba(255, 183, 3, 0.4),
+              inset 0 2px 6px rgba(255, 255, 255, 0.8),
+              inset 0 -3px 6px rgba(0, 0, 0, 0.2);
+}
+
+.btn-glossy-pink {
+  background: linear-gradient(180deg, #FF5E89 0%, #E63968 45%, #D94F70 55%, #B8254A 100%);
+  box-shadow: 0 10px 25px -3px rgba(217, 79, 112, 0.4),
+              0 4px 6px -2px rgba(184, 37, 74, 0.25),
+              inset 0 2px 4px rgba(255, 255, 255, 0.6),
+              inset 0 -3px 6px rgba(0, 0, 0, 0.25);
+}
+
+.btn-glossy-pink:hover {
+  background: linear-gradient(180deg, #FF759B 0%, #F04473 45%, #E03562 55%, #C21D47 100%);
+  box-shadow: 0 14px 28px -3px rgba(217, 79, 112, 0.55),
+              0 0 30px rgba(217, 79, 112, 0.4),
+              inset 0 2px 6px rgba(255, 255, 255, 0.8),
+              inset 0 -3px 6px rgba(0, 0, 0, 0.2);
+}
+
+/* Glass shine reflection stripe */
+.gloss-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 48%;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-radius: inherit;
+  pointer-events: none;
+}
+
+/* Floating Soft Pastel Sparkles / Hearts Keyframes */
+@keyframes floatPastel {
+  0% {
+    transform: translateY(0px) rotate(0deg) scale(0.9);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(-20px) rotate(180deg) scale(1.1);
+    opacity: 0.85;
+  }
+  100% {
+    transform: translateY(0px) rotate(360deg) scale(0.9);
+    opacity: 0.5;
+  }
+}
+
+.animate-float-pastel {
+  animation: floatPastel 6s ease-in-out infinite;
+}
+
+/* ============================================================================
+   DARK MODE THEME OVERRIDES (html.dark) — Crisp High-Contrast Reading Mode
+   ============================================================================ */
+html.dark {
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: #0b0f19;
+  color: #f1f5f9;
+}
+
+html.dark .bg-white,
+html.dark .bg-white\/95,
+html.dark .bg-white\/90 {
+  background-color: #111827 !important;
+}
+
+html.dark .bg-\[\#fff8f9\],
+html.dark .bg-\[\#fff6f8\],
+html.dark .bg-\[\#fff5f7\],
+html.dark .bg-slate-50,
+html.dark .bg-slate-50\/70 {
+  background-color: #182132 !important;
+}
+
+html.dark .bg-\[\#fff0f3\],
+html.dark .bg-rose-50,
+html.dark .bg-pink-50 {
+  background-color: #24192b !important;
+}
+
+html.dark .from-\[\#fff9fa\].to-\[\#fff0f4\] {
+  background-image: linear-gradient(to bottom, #161f30, #1f1728) !important;
+}
+
+html.dark .from-\[\#fff0f3\].via-\[\#fff5f7\].to-\[\#fff0f3\] {
+  background-image: linear-gradient(to right, #1f1728, #182132, #1f1728) !important;
+}
+
+html.dark .border-\[\#ffe4e8\],
+html.dark .border-\[\#ffd6df\],
+html.dark .border-\[\#fecdd3\],
+html.dark .border-\[\#fda4af\],
+html.dark .border-\[\#fff0f3\],
+html.dark .border-rose-200,
+html.dark .border-pink-200,
+html.dark .border-slate-100,
+html.dark .border-slate-200,
+html.dark .border-slate-200\/80,
+html.dark .border-slate-200\/90 {
+  border-color: #334155 !important;
+}
+
+html.dark .text-\[\#000000\],
+html.dark .text-slate-900,
+html.dark .text-slate-800 {
+  color: #f8fafc !important;
+}
+
+html.dark .text-slate-700,
+html.dark .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+
+html.dark .text-slate-500,
+html.dark .text-slate-400 {
+  color: #94a3b8 !important;
+}
+
+html.dark .text-\[\#991B1B\],
+html.dark .text-\[\#be123c\],
+html.dark .text-\[\#9f1239\],
+html.dark .text-\[\#881337\] {
+  color: #fb7185 !important;
+}
+
+html.dark input,
+html.dark textarea,
+html.dark select {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+
+html.dark footer {
+  background-color: #05070c !important;
+}

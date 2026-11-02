@@ -1,0 +1,5 @@
+# ZQ FEELINGS - Official Authorized Digital Sellers (IAB Tech Lab ads.txt)
+# Contact: support@zqfeelings.com
+# Domain: zqfeelings.com / zqfeelings.in
+# When Google AdSense approves your domain, replace pub-0000000000000000 below with your real Publisher ID and remove the leading '#'
+# google.com, pub-0000000000000000, DIRECT, f08c47fec0942fa0

@@ -1,0 +1,39 @@
+import { Shayari } from '../../types/shayari';
+import {
+  FAMILY_RITUALS_MASTER,
+  FAMILY_RITUALS_CATEGORIES,
+  FamilyRitualCategoryMeta
+} from '../categories/familyRitualsMeta';
+import {
+  NEWBORN_BABIES_SHAYARIS,
+  NEWBORN_BOY_SHAYARIS,
+  NEWBORN_GIRL_SHAYARIS
+} from './newborn-babies';
+import { GODH_BHARAI_SHAYARIS } from './godh-bharai';
+import {
+  NAAMKARAN_MUNDAN_SHAYARIS,
+  NAAMKARAN_SHAYARIS,
+  MUNDAN_SHAYARIS
+} from './naamkaran-mundan';
+import { GRAH_PRAVESH_SHAYARIS } from './grah-pravesh';
+
+export const FAMILY_RITUALS_SHAYARIS: Shayari[] = [
+  ...NEWBORN_BABIES_SHAYARIS,
+  ...GODH_BHARAI_SHAYARIS,
+  ...NAAMKARAN_MUNDAN_SHAYARIS,
+  ...GRAH_PRAVESH_SHAYARIS
+];
+
+export {
+  FAMILY_RITUALS_MASTER,
+  FAMILY_RITUALS_CATEGORIES,
+  NEWBORN_BABIES_SHAYARIS,
+  NEWBORN_BOY_SHAYARIS,
+  NEWBORN_GIRL_SHAYARIS,
+  GODH_BHARAI_SHAYARIS,
+  NAAMKARAN_MUNDAN_SHAYARIS,
+  NAAMKARAN_SHAYARIS,
+  MUNDAN_SHAYARIS,
+  GRAH_PRAVESH_SHAYARIS
+};
+export type { FamilyRitualCategoryMeta };

@@ -1,0 +1,15 @@
+User-agent: Googlebot
+Allow: /
+Disallow: /admin-zq
+
+User-agent: Mediapartners-Google
+Allow: /
+
+User-agent: AdsBot-Google
+Allow: /
+
+User-agent: *
+Allow: /
+Disallow: /admin-zq
+
+Sitemap: https://zqfeelings.com/sitemap.xml

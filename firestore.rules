@@ -1,0 +1,400 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+    // Pillar 0: Global Default-Deny Safety Net
+    match /{document=**} {
+      allow read, write: if false;
+    }
+
+    // Hardened Global Primitives
+    function isValidId(id) {
+      return id is string &&
+        id.size() >= 6 &&
+        id.size() <= 128 &&
+        id.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    function incoming() {
+      return request.resource.data;
+    }
+
+    function existing() {
+      return resource.data;
+    }
+
+    function isSignedIn() {
+      return request.auth != null;
+    }
+
+    function isAdmin() {
+      return isSignedIn() &&
+        request.auth.token.email_verified == true &&
+        request.auth.token.email == 'sastabazaarlootindia@gmail.com';
+    }
+
+    // Rule-Level Anti-Link Guard (blocks protocols, www, shorteners, bare domains, domain paths, and emails)
+    function hasNoLinks(val) {
+      return !val.lower().matches('(?s).*(https?://|ftp://|www\\.|(^|[^a-z])(mailto:|tel:)).*') &&
+        !val.lower().matches('(?s).*(^|[^a-z0-9])(bit\\.ly|t\\.me|wa\\.me|youtu\\.be|tinyurl\\.com|goo\\.gl|instagram\\.com|facebook\\.com|telegram\\.me|whatsapp\\.com)([^a-z0-9]|$).*') &&
+        !val.lower().matches('(?s).*[a-z0-9\\-]+\\.(com|org|net|xyz|online|site|shop|store|link|click|blogspot|wordpress|apk)([^a-z0-9]|$).*') &&
+        !val.lower().matches('(?s).*[a-z0-9\\-]+\\.(in|io|co|me|app|info|live|tv)/.*') &&
+        !val.lower().matches('(?s).*[a-z0-9._%+\\-]+@[a-z0-9.\\-]+\\.[a-z]{2,}.*');
+    }
+
+    // Rule-Level Anti-Phone Guard (blocks 10+ consecutive or formatted ASCII & Devanagari phone numbers)
+    function hasNoPhoneNumbers(val) {
+      return !val.matches('(?s).*([0-9०-९][ \\t\\r\\n\\-\\.()+]*){9}[0-9०-९].*');
+    }
+
+    function isValidUserId(uid) {
+      return uid is string &&
+        uid.size() >= 6 &&
+        uid.size() <= 128 &&
+        uid.matches('^[a-zA-Z0-9_\\-]+$');
+    }
+
+    // Blueprint Validation: ShayariDoc (strictly synced with firebase-blueprint.json)
+    function isValidShayariDoc(data) {
+      return data.keys().hasAll([
+          'userId',
+          'authorName',
+          'category',
+          'categoryName',
+          'categoryIcon',
+          'moodEmoji',
+          'title',
+          'text',
+          'language',
+          'status',
+          'createdAt'
+        ]) &&
+        data.keys().hasOnly([
+          'userId',
+          'authorName',
+          'category',
+          'categoryName',
+          'categoryIcon',
+          'moodEmoji',
+          'title',
+          'text',
+          'language',
+          'status',
+          'reportCount',
+          'createdAt'
+        ]) &&
+        isValidUserId(data.userId) &&
+        data.authorName is string &&
+        data.authorName.size() >= 1 &&
+        data.authorName.size() <= 50 &&
+        hasNoLinks(data.authorName) &&
+        hasNoPhoneNumbers(data.authorName) &&
+        data.category is string &&
+        data.category.size() >= 3 &&
+        data.category.size() <= 20 &&
+        data.category in ['Love', 'Sad', 'Attitude', 'Alone', 'Motivational', 'Festival', 'Dosti'] &&
+        data.categoryName is string &&
+        data.categoryName.size() >= 1 &&
+        data.categoryName.size() <= 40 &&
+        data.categoryIcon is string &&
+        data.categoryIcon.size() >= 1 &&
+        data.categoryIcon.size() <= 16 &&
+        data.moodEmoji is string &&
+        data.moodEmoji.size() >= 1 &&
+        data.moodEmoji.size() <= 16 &&
+        data.title is string &&
+        data.title.size() >= 2 &&
+        data.title.size() <= 120 &&
+        hasNoLinks(data.title) &&
+        hasNoPhoneNumbers(data.title) &&
+        data.text is string &&
+        data.text.size() >= 10 &&
+        data.text.size() <= 500 &&
+        hasNoLinks(data.text) &&
+        hasNoPhoneNumbers(data.text) &&
+        data.language is string &&
+        data.language.size() >= 5 &&
+        data.language.size() <= 12 &&
+        data.language in ['hindi', 'hinglish', 'english'] &&
+        data.status is string &&
+        data.status.size() >= 8 &&
+        data.status.size() <= 12 &&
+        data.status == 'approved' &&
+        (!('reportCount' in data) || (data.reportCount is int && data.reportCount >= 0 && data.reportCount <= 10)) &&
+        data.createdAt is timestamp;
+    }
+
+    function isShayariReportIncrementAction() {
+      return incoming().diff(existing()).affectedKeys().hasOnly(['reportCount']) &&
+        incoming().userId == existing().userId &&
+        incoming().createdAt == existing().createdAt &&
+        incoming().status == existing().status &&
+        incoming().reportCount is int &&
+        incoming().reportCount == (
+          ('reportCount' in existing() && existing().reportCount is int)
+            ? existing().reportCount + 1
+            : 1
+        );
+    }
+
+    // Total Array Guard for ZQ-MOMENTS Images (1 to 9 photos, O(1) prefix & size check on all 9 slots)
+    function isValidMomentImage(img) {
+      return img is string &&
+        img.size() >= 15 &&
+        img.size() <= 120000 &&
+        (img[0:8] == 'https://' || img[0:11] == 'data:image/');
+    }
+
+    function isValidMomentImages(imgs) {
+      return imgs is list &&
+        imgs.size() >= 1 &&
+        imgs.size() <= 9 &&
+        isValidMomentImage(imgs[0]) &&
+        (imgs.size() < 2 || isValidMomentImage(imgs[1])) &&
+        (imgs.size() < 3 || isValidMomentImage(imgs[2])) &&
+        (imgs.size() < 4 || isValidMomentImage(imgs[3])) &&
+        (imgs.size() < 5 || isValidMomentImage(imgs[4])) &&
+        (imgs.size() < 6 || isValidMomentImage(imgs[5])) &&
+        (imgs.size() < 7 || isValidMomentImage(imgs[6])) &&
+        (imgs.size() < 8 || isValidMomentImage(imgs[7])) &&
+        (imgs.size() < 9 || isValidMomentImage(imgs[8]));
+    }
+
+    function isValidMomentFontStyle(font) {
+      return font is string &&
+        font.size() >= 3 &&
+        font.size() <= 32 &&
+        font in [
+          'normal',
+          'bold',
+          'italic',
+          'bold-italic',
+          'cursive',
+          'bold-cursive',
+          'typewriter',
+          'serif',
+          'serif-italic',
+          'serif-bold-italic',
+          'gothic',
+          'bold-gothic',
+          'bubble',
+          'dark-bubble',
+          'fancy',
+          'square',
+          'dark-square',
+          'small-caps',
+          'wide',
+          'sans-bold',
+          'sans-italic',
+          'sans-bold-italic',
+          'royal',
+          'handwritten',
+          'rozha',
+          'yatra',
+          'poetic-tiro',
+          'underline',
+          'sparkle',
+          'airy-spaced'
+        ];
+    }
+
+    // Blueprint Validation: ZqMomentDoc (strictly synced with firebase-blueprint.json)
+    function isValidZqMomentDoc(data) {
+      return data.keys().hasAll([
+          'userId',
+          'posterName',
+          'caption',
+          'fontStyle',
+          'images',
+          'likeCount',
+          'commentCount',
+          'timestamp'
+        ]) &&
+        data.keys().hasOnly([
+          'userId',
+          'posterName',
+          'caption',
+          'fontStyle',
+          'images',
+          'likeCount',
+          'commentCount',
+          'reportCount',
+          'timestamp'
+        ]) &&
+        isValidUserId(data.userId) &&
+        data.posterName is string &&
+        data.posterName.size() >= 1 &&
+        data.posterName.size() <= 60 &&
+        hasNoLinks(data.posterName) &&
+        hasNoPhoneNumbers(data.posterName) &&
+        data.caption is string &&
+        data.caption.size() <= 8000 &&
+        hasNoLinks(data.caption) &&
+        hasNoPhoneNumbers(data.caption) &&
+        isValidMomentFontStyle(data.fontStyle) &&
+        isValidMomentImages(data.images) &&
+        data.likeCount is int &&
+        data.likeCount >= 0 &&
+        data.likeCount <= 10000000 &&
+        data.commentCount is int &&
+        data.commentCount >= 0 &&
+        data.commentCount <= 1000000 &&
+        (!('reportCount' in data) || (data.reportCount is int && data.reportCount >= 0 && data.reportCount <= 10)) &&
+        data.timestamp is timestamp;
+    }
+
+    function isMomentLikeToggleAction() {
+      return incoming().diff(existing()).affectedKeys().hasOnly(['likeCount']) &&
+        incoming().userId == existing().userId &&
+        incoming().timestamp == existing().timestamp &&
+        (incoming().likeCount == existing().likeCount + 1 ||
+          incoming().likeCount == existing().likeCount - 1);
+    }
+
+    function isMomentCommentIncrementAction() {
+      return incoming().diff(existing()).affectedKeys().hasOnly(['commentCount']) &&
+        incoming().userId == existing().userId &&
+        incoming().timestamp == existing().timestamp &&
+        incoming().commentCount == existing().commentCount + 1;
+    }
+
+    function isMomentReportIncrementAction() {
+      return incoming().diff(existing()).affectedKeys().hasOnly(['reportCount']) &&
+        incoming().userId == existing().userId &&
+        incoming().timestamp == existing().timestamp &&
+        incoming().reportCount is int &&
+        incoming().reportCount == (
+          ('reportCount' in existing() && existing().reportCount is int)
+            ? existing().reportCount + 1
+            : 1
+        );
+    }
+
+    // Blueprint Validation: ZqMomentCommentDoc (strictly synced with firebase-blueprint.json)
+    function isValidZqMomentCommentDoc(data, parentMomentId) {
+      return data.keys().hasAll([
+          'momentId',
+          'userId',
+          'authorName',
+          'text',
+          'timestamp'
+        ]) &&
+        data.keys().hasOnly([
+          'momentId',
+          'userId',
+          'authorName',
+          'text',
+          'timestamp'
+        ]) &&
+        data.momentId is string &&
+        data.momentId.size() >= 6 &&
+        data.momentId.size() <= 128 &&
+        data.momentId == parentMomentId &&
+        isValidUserId(data.userId) &&
+        data.authorName is string &&
+        data.authorName.size() >= 1 &&
+        data.authorName.size() <= 60 &&
+        hasNoLinks(data.authorName) &&
+        hasNoPhoneNumbers(data.authorName) &&
+        data.text is string &&
+        data.text.size() >= 1 &&
+        data.text.size() <= 500 &&
+        hasNoLinks(data.text) &&
+        hasNoPhoneNumbers(data.text) &&
+        data.timestamp is timestamp &&
+        data.timestamp == request.time;
+    }
+
+    // Collection 1: /shayaris/{shayariId}
+    match /shayaris/{shayariId} {
+      // Anyone can ONLY read approved shayaris
+      allow get: if isValidId(shayariId) &&
+        resource != null &&
+        existing().status == 'approved';
+
+      allow list: if existing().status == 'approved';
+
+      // Create requires valid ID, strict schema, 10-500 chars, no links, no phone numbers, status == 'approved', reportCount == 0
+      allow create: if isValidId(shayariId) &&
+        isValidShayariDoc(incoming()) &&
+        (!('reportCount' in incoming()) || incoming().reportCount == 0) &&
+        incoming().createdAt == request.time;
+
+      // Update permitted ONLY for atomic +1 reportCount increments (or verified Admin), keeping all content immutable
+      allow update: if isValidId(shayariId) &&
+        isValidShayariDoc(incoming()) &&
+        existing().status == 'approved' && (
+          isAdmin() ||
+          isShayariReportIncrementAction()
+        );
+
+      // Delete permitted only for valid shayari documents (verified Admin or valid userId-owned approved shayari, enabling 3-report auto-delete)
+      allow delete: if isValidId(shayariId) &&
+        resource != null && (
+          isAdmin() || (
+            existing().status == 'approved' &&
+            isValidUserId(existing().userId)
+          )
+        );
+    }
+
+    // Collection 2: /zq_moments/{momentId} (Global Real-Time Feed)
+    match /zq_moments/{momentId} {
+      allow get: if isValidId(momentId) &&
+        resource != null &&
+        existing().timestamp >= timestamp.value(0);
+
+      allow list: if request.query.limit <= 100 &&
+        existing().timestamp >= timestamp.value(0);
+
+      allow create: if isValidId(momentId) &&
+        isValidZqMomentDoc(incoming()) &&
+        incoming().likeCount == 0 &&
+        incoming().commentCount == 0 &&
+        (!('reportCount' in incoming()) || incoming().reportCount == 0) &&
+        incoming().timestamp == request.time;
+
+      allow update: if isValidId(momentId) &&
+        isValidZqMomentDoc(incoming()) && (
+          isAdmin() ||
+          isMomentLikeToggleAction() ||
+          isMomentCommentIncrementAction() ||
+          isMomentReportIncrementAction()
+        );
+
+      allow delete: if isValidId(momentId) &&
+        resource != null && (
+          isAdmin() ||
+          isValidUserId(existing().userId)
+        );
+
+      // Subcollection: /zq_moments/{momentId}/comments/{commentId}
+      match /comments/{commentId} {
+        allow get: if isValidId(momentId) &&
+          isValidId(commentId) &&
+          resource != null &&
+          exists(/databases/$(database)/documents/zq_moments/$(momentId));
+
+        allow list: if isValidId(momentId) &&
+          request.query.limit <= 200 &&
+          existing().timestamp >= timestamp.value(0);
+
+        allow create: if isValidId(momentId) &&
+          isValidId(commentId) &&
+          isValidZqMomentCommentDoc(incoming(), momentId) &&
+          exists(/databases/$(database)/documents/zq_moments/$(momentId)) &&
+          getAfter(/databases/$(database)/documents/zq_moments/$(momentId)).data.commentCount ==
+            get(/databases/$(database)/documents/zq_moments/$(momentId)).data.commentCount + 1;
+
+        allow update: if false;
+
+        allow delete: if isValidId(momentId) &&
+          isValidId(commentId) &&
+          resource != null && (
+            isAdmin() ||
+            isValidUserId(existing().userId)
+          );
+      }
+    }
+  }
+}
