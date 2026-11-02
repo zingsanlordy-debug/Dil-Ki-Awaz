@@ -58,7 +58,9 @@ if (configuredOrigin !== DEFAULT_PRODUCTION_ORIGIN) {
 // Pre-render the 135+ core SEO landing pages by default (<0.1s, lightweight dist upload on Vercel/Netlify).
 // Set FULL_STATIC_PRERENDER=true (or run npm run build:static) to pre-render all 4,900+ sitemap URLs.
 const isFullStaticCloudDeploy = Boolean(
-  process.env.FULL_STATIC_PRERENDER === 'true' || process.env.FULL_STATIC_PRERENDER === '1'
+  process.env.FULL_STATIC_PRERENDER === 'true' ||
+    process.env.FULL_STATIC_PRERENDER === '1' ||
+    process.env.VERCEL
 );
 
 const routesToPrerender = new Set();
