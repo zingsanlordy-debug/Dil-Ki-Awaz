@@ -12,4 +12,4 @@ User-agent: *
 Allow: /
 Disallow: /admin-zq
 
-Sitemap: https://zqfeelings.com/sitemap.xml
+Sitemap: https://dil-ki-awaaz.vercel.app/sitemap.xml

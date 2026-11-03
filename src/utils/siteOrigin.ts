@@ -1,14 +1,28 @@
-const DEFAULT_PRODUCTION_ORIGIN = 'https://zqfeelings.com';
+export const DEFAULT_PRODUCTION_ORIGIN = 'https://dil-ki-awaaz.vercel.app';
 
-const FREE_HOSTING_PREVIEW_SUFFIXES: ReadonlyArray<string> = [
-  '.pages.dev',
-  '.vercel.app',
-  '.netlify.app',
-  '.web.app',
-  '.firebaseapp.com',
-  '.github.io',
-  '.onrender.com'
-];
+/**
+ * Returns true ONLY for ephemeral git-branch / deploy-preview URLs
+ * (e.g. dil-ki-awaaz-git-main-*.vercel.app or deploy-preview-*--*.netlify.app)
+ * so the primary live production domain `https://dil-ki-awaaz.vercel.app`
+ * and any custom domain (`zqfeelings.com` / `zqfeelings.in`) remain 100% indexable.
+ */
+export function isFreeHostingPreviewHost(hostname?: string): boolean {
+  const host = (
+    hostname ?? (typeof window !== 'undefined' ? window.location.hostname : '')
+  )
+    .trim()
+    .split(':')[0]
+    .toLowerCase();
+  if (!host) return false;
+  if (host === 'dil-ki-awaaz.vercel.app') return false;
+  if (host.endsWith('.vercel.app') && (host.includes('-git-') || host.endsWith('-projects.vercel.app'))) {
+    return true;
+  }
+  if (host.endsWith('.netlify.app') && host.startsWith('deploy-preview-')) {
+    return true;
+  }
+  return false;
+}
 
 function normalizeOriginUrl(raw?: string): string | null {
   if (!raw) return null;
@@ -22,7 +36,7 @@ function normalizeOriginUrl(raw?: string): string | null {
       cleanHost === 'localhost' ||
       cleanHost === '127.0.0.1' ||
       cleanHost.endsWith('.run.app') ||
-      FREE_HOSTING_PREVIEW_SUFFIXES.some((s) => cleanHost.endsWith(s))
+      isFreeHostingPreviewHost(cleanHost)
     ) {
       return null;
     }
@@ -33,31 +47,10 @@ function normalizeOriginUrl(raw?: string): string | null {
 }
 
 /**
- * Returns true when running on a public free-hosting staging subdomain
- * (e.g. zqfeelings.pages.dev, zqfeelings.vercel.app, zqfeelings.netlify.app)
- * so search engines do not index duplicate staging copies alongside the custom domain.
- */
-export function isFreeHostingPreviewHost(hostname?: string): boolean {
-  const host = (
-    hostname ?? (typeof window !== 'undefined' ? window.location.hostname : '')
-  )
-    .trim()
-    .toLowerCase();
-  if (!host) return false;
-  return FREE_HOSTING_PREVIEW_SUFFIXES.some((suffix) => host.endsWith(suffix));
-}
-
-/**
- * Resolves the canonical production origin automatically for custom domains
- * such as `https://zqfeelings.com` or `https://zqfeelings.in` without code edits.
+ * Resolves the canonical production origin (`https://dil-ki-awaaz.vercel.app` by default,
+ * or any custom domain / `VITE_SITE_URL` override automatically).
  */
 export function getActiveSiteOrigin(): string {
-  const envOrigin = normalizeOriginUrl(
-    typeof import.meta !== 'undefined' && import.meta.env
-      ? (import.meta.env.VITE_SITE_URL as string | undefined)
-      : undefined
-  );
-
   if (typeof window !== 'undefined' && window.location?.hostname) {
     const liveOrigin = normalizeOriginUrl(`https://${window.location.hostname}`);
     if (liveOrigin) {
@@ -65,5 +58,5 @@ export function getActiveSiteOrigin(): string {
     }
   }
 
-  return envOrigin || DEFAULT_PRODUCTION_ORIGIN;
+  return DEFAULT_PRODUCTION_ORIGIN;
 }

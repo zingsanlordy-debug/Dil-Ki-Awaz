@@ -24,8 +24,7 @@ if (!fs.existsSync(indexHtmlPath)) {
 }
 
 const configuredOrigin =
-  normalizeCustomOrigin(process.env.SITE_URL) ||
-  normalizeCustomOrigin(process.env.VITE_SITE_URL) ||
+  normalizeCustomOrigin(process.env.VERCEL_PROJECT_PRODUCTION_URL) ||
   DEFAULT_PRODUCTION_ORIGIN;
 
 const baseTemplate = fs.readFileSync(indexHtmlPath, 'utf8');
@@ -105,9 +104,17 @@ const coreRoutes = [
   ...SSR_FEELINGS.map((f) => f.slug),
   ...SSR_FEELINGS.map((f) => `/${f.id}-shayari`),
   ...SSR_MAAFI_SUBS.map((m) => m.slug),
+  ...SSR_MAAFI_SUBS.map((m) => `/${m.id}-shayari`),
   ...SSR_RELIGIOUS.map((r) => r.path),
+  ...SSR_RELIGIOUS.map((r) => `/${r.id}-shayari`),
   ...SSR_RITUALS.map((r) => r.path),
-  ...SSR_MONTHS.map((m) => `/${m.id}-special-shayari`)
+  ...SSR_RITUALS.map((r) => `/${r.id}-shayari`),
+  ...SSR_MONTHS.map((m) => `/${m.id}-special-shayari`),
+  '/religious',
+  '/dharmik-shayari',
+  '/family-rituals',
+  '/sanskar-shayari',
+  '/admin-zq'
 ];
 
 for (const route of coreRoutes) {

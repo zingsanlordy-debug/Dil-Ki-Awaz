@@ -881,13 +881,14 @@ export function getSeoMetadataForState(params: {
                 `${activeFest.id} – P${activePage} | ZQ Feelings`
               )
             : clampSeoTitle(
+                activeFest.seoTitle,
                 `${activeFest.name} Shayari in Hindi | ${SITE_BRAND}`,
                 `${activeFest.name} Shayari | ${SITE_BRAND}`
               ),
         description:
           activePage >= 2
             ? `${activeFest.name} Shayari (${activeFest.hindiName}) – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd}): unique festival wishes with stylish fonts & share.`
-            : `Best ${activeFest.name} Shayari in Hindi (${activeFest.hindiName} शायरी) — 25 unique 2-4 line wishes with 20 stylish fonts, copy & WhatsApp share.`,
+            : activeFest.seoDescription,
         canonicalPath,
         h1: `${activeFest.name} Shayari in Hindi (${activeFest.hindiName} विशेस शायरी)`,
         section: `${activeFest.name} Festival Wishes Shayari`,
@@ -969,7 +970,7 @@ export function getSeoMetadataForState(params: {
                 `${activeMaafiSub.englishTitle} (${langMeta.slug}) | ZQ`
               )
             : clampSeoTitle(
-                `${activeMaafiSub.name} Shayari | ${SITE_BRAND}`,
+                activeMaafiSub.seoTitle,
                 `${activeMaafiSub.englishTitle} Shayari | ${SITE_BRAND}`
               );
 
@@ -980,7 +981,7 @@ export function getSeoMetadataForState(params: {
             : `${activeMaafiSub.name} Shayari – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd}): heartfelt apology status on ZQ Feelings.`
           : hasCustomLang
             ? `Read ${activeMaafiSub.count} heartfelt ${activeMaafiSub.englishTitle} Shayari in ${langMeta.englishName} (${langMeta.nativeLabel}) — emotional apology poetry with 20 stylish fonts & share.`
-            : `Read ${activeMaafiSub.count} heartfelt ${activeMaafiSub.name} Shayari in Hindi, Hinglish & English — emotional apology lines with 20 stylish fonts & share.`;
+            : activeMaafiSub.seoDescription;
 
       return {
         title,
@@ -1044,8 +1045,8 @@ export function getSeoMetadataForState(params: {
                   `${feelShortRoot} (${langMeta.slug}) | ZQ Feelings`
                 )
               : clampSeoTitle(
-                  `${activeFeel.name} (${activeFeel.hindiName}) | ${SITE_BRAND}`,
-                  `${activeFeel.name} in Hindi | ${SITE_BRAND}`
+                  `${feelDisplayName} (${activeFeel.hindiName}) | ${SITE_BRAND}`,
+                  `${feelDisplayName} in Hindi | ${SITE_BRAND}`
                 );
 
         const description =
@@ -1282,13 +1283,13 @@ export function getSeoMetadataForState(params: {
               `${activeRel.englishTitle} – Page ${activePage} | ZQ`
             )
           : clampSeoTitle(
-              `${activeRel.englishTitle} Shayari in Hindi | ${SITE_BRAND}`,
+              activeRel.seoTitle,
               `${activeRel.englishTitle} Shayari | ${SITE_BRAND}`
             ),
       description:
         activePage >= 2
           ? `${activeRel.name} Shayari – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd} of ${activeRel.count}): spiritual quotes & poetry in 20 stylish fonts on ZQ Feelings.`
-          : `Read ${activeRel.count} original ${activeRel.name} Shayari in Hindi, Hinglish & English — spiritual bhakti & dua poetry with 20 stylish fonts & share.`,
+          : activeRel.seoDescription,
       canonicalPath,
       h1: `${activeRel.name} Shayari`,
       section: activeRel.englishTitle,
@@ -1320,13 +1321,13 @@ export function getSeoMetadataForState(params: {
               `${activeRitual.englishTitle} – Page ${activePage} | ZQ`
             )
           : clampSeoTitle(
-              `${activeRitual.name} Shayari | ${SITE_BRAND}`,
+              activeRitual.seoTitle,
               `${activeRitual.englishTitle} Shayari | ${SITE_BRAND}`
             ),
       description:
         activePage >= 2
           ? `${activeRitual.name} Shayari – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd} of ${activeRitual.count}): auspicious family sanskar wishes with stylish fonts.`
-          : `Read ${activeRitual.count} unique ${activeRitual.name} Shayari in Hindi, Hinglish & English — heartfelt family sanskar wishes with 20 stylish fonts & share.`,
+          : activeRitual.seoDescription,
       canonicalPath,
       h1: `${activeRitual.name} Shayari`,
       section: activeRitual.englishTitle,
@@ -1359,13 +1360,13 @@ export function getSeoMetadataForState(params: {
                 `${activeMonth.nameEnglish} Shayari – Page ${activePage} | ZQ`
               )
             : clampSeoTitle(
-                `${activeMonth.nameEnglish} Special Days Shayari | ${SITE_BRAND}`,
+                activeMonth.seoTitle,
                 `${activeMonth.nameEnglish} Shayari | ${SITE_BRAND}`
               ),
         description:
           activePage >= 2
             ? `${activeMonth.nameEnglish} (${activeMonth.nameHindi}) Special Shayari – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd}): world & national days wishes on ZQ Feelings.`
-            : `Celebrate ${activeMonth.nameEnglish} (${activeMonth.nameHindi}) national & world special days with 200 unique Hindi Shayari, 35 languages & WhatsApp share.`,
+            : activeMonth.seoDescription,
         canonicalPath,
         h1: `${activeMonth.nameEnglish} Special Days Shayari in Hindi (${activeMonth.nameHindi} के खास दिन)`,
         section: '12 Months Special Days Shayari',

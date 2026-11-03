@@ -1,19 +1,22 @@
 // Zero-dependency Universal SEO Metadata & Static HTML Pre-Render Engine
-// Supports all 4,913+ routes across ZQ FEELINGS (zqfeelings.com & zqfeelings.in)
-// Works identically in Node post-build static generation and Cloudflare Edge Workers.
+// Configured for https://dil-ki-awaaz.vercel.app (and custom domains if attached later).
+// Shared by Express SSR (`server.ts`) and Static Post-Build Pre-Renderer (`scripts/postbuild-seo.mjs`).
 
 export const SITE_BRAND = 'ZQ FEELINGS';
-export const DEFAULT_PRODUCTION_ORIGIN = 'https://zqfeelings.com';
+export const DEFAULT_PRODUCTION_ORIGIN = 'https://dil-ki-awaaz.vercel.app';
 
-export const PREVIEW_HOST_SUFFIXES = [
-  '.pages.dev',
-  '.vercel.app',
-  '.netlify.app',
-  '.web.app',
-  '.firebaseapp.com',
-  '.github.io',
-  '.onrender.com'
-];
+export function isPreviewHostname(hostname) {
+  if (!hostname || typeof hostname !== 'string') return false;
+  const clean = hostname.trim().split(':')[0].toLowerCase();
+  if (!clean || clean === 'dil-ki-awaaz.vercel.app') return false;
+  if (clean.endsWith('.vercel.app') && (clean.includes('-git-') || clean.endsWith('-projects.vercel.app'))) {
+    return true;
+  }
+  if (clean.endsWith('.netlify.app') && clean.startsWith('deploy-preview-')) {
+    return true;
+  }
+  return false;
+}
 
 export function normalizeCustomOrigin(raw) {
   if (!raw || typeof raw !== 'string') return null;
@@ -27,7 +30,7 @@ export function normalizeCustomOrigin(raw) {
       cleanHost === 'localhost' ||
       cleanHost === '127.0.0.1' ||
       cleanHost.endsWith('.run.app') ||
-      PREVIEW_HOST_SUFFIXES.some((s) => cleanHost.endsWith(s))
+      isPreviewHostname(cleanHost)
     ) {
       return null;
     }
@@ -35,12 +38,6 @@ export function normalizeCustomOrigin(raw) {
   } catch {
     return null;
   }
-}
-
-export function isPreviewHostname(hostname) {
-  if (!hostname || typeof hostname !== 'string') return false;
-  const clean = hostname.trim().split(':')[0].toLowerCase();
-  return PREVIEW_HOST_SUFFIXES.some((s) => clean.endsWith(s));
 }
 
 function clampSeoTitle(primary, fallbackShort, ultraShort) {
@@ -138,33 +135,222 @@ export const SSR_VALENTINE_DAYS = [
 ];
 
 export const SSR_FESTIVALS = [
-  { id: 'diwali', name: 'Diwali', hindiName: 'दीपावली' },
-  { id: 'bhai-dooj', name: 'Bhai Dooj', hindiName: 'भाई दूज' },
-  { id: 'chhath-puja', name: 'Chhath Puja', hindiName: 'छठ पूजा' },
-  { id: 'birthday', name: 'Birthday', hindiName: 'जन्मदिन' },
-  { id: 'holi', name: 'Holi', hindiName: 'होली' },
-  { id: 'eid', name: 'Eid', hindiName: 'ईद मुबारक' },
-  { id: 'bakrid', name: 'Bakrid (Eid al-Adha)', hindiName: 'बकरीद' },
-  { id: 'new-year', name: 'New Year', hindiName: 'नया साल' },
-  { id: 'ganesh-chaturthi', name: 'Ganesh Chaturthi', hindiName: 'गणेश चतुर्थी' },
-  { id: 'gandhi-jayanti', name: 'Gandhi Jayanti', hindiName: 'गांधी जयंती' },
-  { id: 'independence-day', name: '15 August Independence Day', hindiName: 'स्वतंत्रता दिवस' },
-  { id: 'republic-day', name: '26 January Republic Day', hindiName: 'गणतंत्र दिवस' },
-  { id: 'rakshabandhan', name: 'Rakshabandhan', hindiName: 'रक्षाबंधन' },
-  { id: 'janmashtami', name: 'Janmashtami', hindiName: 'जन्माष्टमी' },
-  { id: 'navratri', name: 'Navratri / Durga Puja', hindiName: 'नवरात्रि' },
-  { id: 'dussehra', name: 'Dussehra', hindiName: 'दशहरा' },
-  { id: 'christmas', name: 'Christmas', hindiName: 'क्रिसमस' },
-  { id: 'lohri', name: 'Lohri', hindiName: 'लोहड़ी' },
-  { id: 'makar-sankranti', name: 'Makar Sankranti', hindiName: 'मकर संक्रांति' },
-  { id: 'karva-chauth', name: 'Karva Chauth', hindiName: 'करवा चौथ' },
-  { id: 'eid-milad', name: 'Eid Milad un Nabi', hindiName: 'ईद मिलाद' },
-  { id: 'mahashivratri', name: 'Mahashivratri', hindiName: 'महाशिवरात्रि' },
-  { id: 'ram-navami', name: 'Ram Navami', hindiName: 'राम नवमी' },
-  { id: 'onam', name: 'Onam', hindiName: 'ओणम' },
-  { id: 'pongal', name: 'Pongal', hindiName: 'पोंगल' },
-  { id: 'baisakhi', name: 'Baisakhi', hindiName: 'बैसाखी' },
-  { id: 'guru-nanak-jayanti', name: 'Guru Nanak Jayanti', hindiName: 'गुरु नानक जयंती' }
+  {
+    id: 'diwali',
+    name: 'Diwali',
+    hindiName: 'दीपावली',
+    seoTitle: 'Happy Diwali Shayari in Hindi (दीपावली शायरी) | ZQ Feelings',
+    seoDescription:
+      'Read 25+ Happy Diwali Shayari in Hindi (दीपावली की हार्दिक शुभकामनाएं) — Diyas, Laxmi Puja & Deepawali wishes with stylish fonts & WhatsApp share.'
+  },
+  {
+    id: 'bhai-dooj',
+    name: 'Bhai Dooj',
+    hindiName: 'भाई दूज',
+    seoTitle: 'Bhai Dooj Shayari in Hindi (भाई दूज शायरी) | ZQ Feelings',
+    seoDescription:
+      'Heartfelt Bhai Dooj Shayari in Hindi (भाई दूज शुभकामनाएं) celebrating brother-sister tilak bond with 20 stylish fonts, copy & WhatsApp share.'
+  },
+  {
+    id: 'chhath-puja',
+    name: 'Chhath Puja',
+    hindiName: 'छठ पूजा',
+    seoTitle: 'Chhath Puja Shayari in Hindi (छठ पूजा शायरी) | ZQ Feelings',
+    seoDescription:
+      'Devotional Chhath Puja Shayari in Hindi (जय छठी मैया और सूर्य अर्घ्य शायरी) — 25 auspicious Bihari & Purvanchal Chhath wishes to copy & share.'
+  },
+  {
+    id: 'birthday',
+    name: 'Birthday',
+    hindiName: 'जन्मदिन',
+    seoTitle: 'Happy Birthday Wishes Shayari in Hindi | ZQ Feelings',
+    seoDescription:
+      'Best Happy Birthday Wishes Shayari in Hindi (जन्मदिन मुबारक शायरी) for friend, brother, sister & lover with 20 stylish fonts & WhatsApp share.'
+  },
+  {
+    id: 'holi',
+    name: 'Holi',
+    hindiName: 'होली',
+    seoTitle: 'Happy Holi Shayari in Hindi (होली शायरी) | ZQ Feelings',
+    seoDescription:
+      'Colorful Happy Holi Shayari in Hindi (रंगों और गुलाल भरी होली शायरी) — festive Bura Na Mano Holi Hai wishes with stylish fonts & WhatsApp share.'
+  },
+  {
+    id: 'eid',
+    name: 'Eid',
+    hindiName: 'ईद मुबारक',
+    seoTitle: 'Eid Mubarak Shayari in Hindi (ईद मुबारक शायरी) | ZQ Feelings',
+    seoDescription:
+      'Warm Eid-ul-Fitr & Chand Raat Eid Mubarak Shayari in Hindi & Urdu (ईद मुबारक शायरी) — sweet Eidi, dua & peace wishes to copy & share.'
+  },
+  {
+    id: 'bakrid',
+    name: 'Bakrid (Eid al-Adha)',
+    hindiName: 'बकरीद',
+    seoTitle: 'Bakrid Mubarak Shayari in Hindi (बकरीद शायरी) | ZQ Feelings',
+    seoDescription:
+      'Blessed Bakrid & Eid al-Adha Mubarak Shayari in Hindi (बकरीद और कुर्बानी दुआ शायरी) — 25 heartfelt wishes with stylish fonts & WhatsApp share.'
+  },
+  {
+    id: 'new-year',
+    name: 'New Year',
+    hindiName: 'नया साल',
+    seoTitle: 'New Year Shayari 2026 in Hindi (नया साल) | ZQ Feelings',
+    seoDescription:
+      'Best New Year Shayari in Hindi (नया साल शायरी • 1 January) — 25 original wishes in 35 languages, 20 stylish fonts & share.'
+  },
+  {
+    id: 'ganesh-chaturthi',
+    name: 'Ganesh Chaturthi',
+    hindiName: 'गणेश चतुर्थी',
+    seoTitle: 'Ganesh Chaturthi Shayari in Hindi (गणपति शायरी) | ZQ Feelings',
+    seoDescription:
+      'Auspicious Ganesh Chaturthi Shayari in Hindi (गणपति बप्पा मोरया शायरी) — Vinayaka Chaturthi bhakti wishes in 20 stylish fonts & WhatsApp share.'
+  },
+  {
+    id: 'gandhi-jayanti',
+    name: 'Gandhi Jayanti',
+    hindiName: 'गांधी जयंती',
+    seoTitle: 'Gandhi Jayanti Shayari in Hindi (गांधी जयंती) | ZQ Feelings',
+    seoDescription:
+      'Inspiring 2 October Gandhi Jayanti Shayari in Hindi (महात्मा गांधी अहिंसा और सत्य शायरी) — patriotic Bapu tribute quotes to copy & share.'
+  },
+  {
+    id: 'independence-day',
+    name: '15 August Independence Day',
+    hindiName: 'स्वतंत्रता दिवस',
+    seoTitle: '15 August Independence Day Shayari in Hindi | ZQ Feelings',
+    seoDescription:
+      'Patriotic 15 August Independence Day Shayari in Hindi (स्वतंत्रता दिवस देशभक्ति और तिरंगा शायरी) — proud Jai Hind status & wishes to share.'
+  },
+  {
+    id: 'republic-day',
+    name: '26 January Republic Day',
+    hindiName: 'गणतंत्र दिवस',
+    seoTitle: '26 January Republic Day Shayari in Hindi | ZQ Feelings',
+    seoDescription:
+      'Proud 26 January Republic Day Shayari in Hindi (गणतंत्र दिवस और संविधान शायरी) — Vande Mataram & Tiranga deshbhakti wishes for WhatsApp.'
+  },
+  {
+    id: 'rakshabandhan',
+    name: 'Rakshabandhan',
+    hindiName: 'रक्षाबंधन',
+    seoTitle: 'Rakshabandhan Shayari in Hindi (रक्षाबंधन) | ZQ Feelings',
+    seoDescription:
+      'Loving Rakshabandhan & Rakhi Shayari in Hindi (रक्षाबंधन भाई-बहन के कच्चे धागों की शायरी) — 25 sweet wishes with stylish fonts & share.'
+  },
+  {
+    id: 'janmashtami',
+    name: 'Janmashtami',
+    hindiName: 'जन्माष्टमी',
+    seoTitle: 'Krishna Janmashtami Shayari in Hindi (जन्माष्टमी) | ZQ',
+    seoDescription:
+      'Devotional Shree Krishna Janmashtami Shayari in Hindi (राधा-कृष्ण और कान्हा जन्माष्टमी शायरी) — 25 divine bhakti wishes to copy & share.'
+  },
+  {
+    id: 'navratri',
+    name: 'Navratri / Durga Puja',
+    hindiName: 'नवरात्रि',
+    seoTitle: 'Happy Navratri & Durga Puja Shayari in Hindi | ZQ Feelings',
+    seoDescription:
+      'Divine Navratri & Durga Puja Shayari in Hindi (जय माता दी नवरात्रि और माँ दुर्गा भक्ति शायरी) — 25 shakti wishes with 20 stylish fonts.'
+  },
+  {
+    id: 'dussehra',
+    name: 'Dussehra',
+    hindiName: 'दशहरा',
+    seoTitle: 'Happy Dussehra Shayari in Hindi (दशहरा शायरी) | ZQ Feelings',
+    seoDescription:
+      'Victorious Happy Dussehra & Vijayadashami Shayari in Hindi (बुराई पर अच्छाई की जीत दशहरा शायरी) — Shri Ram wishes with stylish fonts & share.'
+  },
+  {
+    id: 'christmas',
+    name: 'Christmas',
+    hindiName: 'क्रिसमस',
+    seoTitle: 'Christmas Day Shayari in Hindi (क्रिसमस) | ZQ Feelings',
+    seoDescription:
+      'Best Christmas Day Shayari in Hindi (क्रिसमस डे शायरी • 25 December) — 25 original wishes in 35 languages, 20 stylish fonts & share.'
+  },
+  {
+    id: 'lohri',
+    name: 'Lohri',
+    hindiName: 'लोहड़ी',
+    seoTitle: 'Happy Lohri Shayari in Hindi (लोहड़ी शायरी) | ZQ Feelings',
+    seoDescription:
+      'Warm Happy Lohri Shayari in Hindi (लोहड़ी की लख-लख बधाइयाँ, रेवड़ी और मूंगफली शायरी) — festive winter bonfire wishes to copy & share.'
+  },
+  {
+    id: 'makar-sankranti',
+    name: 'Makar Sankranti',
+    hindiName: 'मकर संक्रांति',
+    seoTitle: 'Makar Sankranti Shayari in Hindi (मकर संक्रांति) | ZQ',
+    seoDescription:
+      'Sweet Til-Gud Makar Sankranti & Uttarayan Shayari in Hindi (तिल-गुड़ और पतंग मकर संक्रांति शायरी) — 25 harvest wishes for WhatsApp share.'
+  },
+  {
+    id: 'karva-chauth',
+    name: 'Karva Chauth',
+    hindiName: 'करवा चौथ',
+    seoTitle: 'Karva Chauth Shayari in Hindi (करवा चौथ शायरी) | ZQ Feelings',
+    seoDescription:
+      'Romantic Karva Chauth Shayari in Hindi (करवा चौथ चाँद और अखंड सुहाग शायरी) for husband & wife with 20 stylish fonts & WhatsApp share.'
+  },
+  {
+    id: 'eid-milad',
+    name: 'Eid Milad un Nabi',
+    hindiName: 'ईद मिलाद',
+    seoTitle: 'Eid Milad un Nabi Shayari in Hindi (ईद मिलाद) | ZQ Feelings',
+    seoDescription:
+      'Peaceful Eid Milad-un-Nabi Mubarak Shayari in Hindi & Urdu (जश्न-ए-ईद मिलाद-उन-नबी दुआ और नूर शायरी) — 25 spiritual wishes to copy & share.'
+  },
+  {
+    id: 'mahashivratri',
+    name: 'Mahashivratri',
+    hindiName: 'महाशिवरात्रि',
+    seoTitle: 'Mahashivratri Shayari in Hindi (महाशिवरात्रि) | ZQ Feelings',
+    seoDescription:
+      'Divine Har Har Mahadev & Mahashivratri Shayari in Hindi (भोलेनाथ और महादेव शिवरात्रि भक्ति शायरी) — 25 Bholenath status lines to share.'
+  },
+  {
+    id: 'ram-navami',
+    name: 'Ram Navami',
+    hindiName: 'राम नवमी',
+    seoTitle: 'Ram Navami Shayari in Hindi (राम नवमी शायरी) | ZQ Feelings',
+    seoDescription:
+      'Sacred Jai Shri Ram & Ram Navami Shayari in Hindi (मर्यादा पुरुषोत्तम श्री राम नवमी भक्ति शायरी) — 25 auspicious wishes in stylish fonts.'
+  },
+  {
+    id: 'onam',
+    name: 'Onam',
+    hindiName: 'ओणम',
+    seoTitle: 'Happy Onam Wishes Shayari in Hindi (ओणम शायरी) | ZQ Feelings',
+    seoDescription:
+      'Joyful Happy Onam Shayari in Hindi (ओणम पर्व, पूक्कलम और खुशहाली की शुभकामनाएं) — 25 Kerala harvest festival wishes to copy & share.'
+  },
+  {
+    id: 'pongal',
+    name: 'Pongal',
+    hindiName: 'पोंगल',
+    seoTitle: 'Happy Pongal Shayari in Hindi (पोंगल शायरी) | ZQ Feelings',
+    seoDescription:
+      'Auspicious Happy Pongal Shayari in Hindi (पोंगल पर्व, सूर्य वंदना और समृद्धि की शायरी) — 25 harvest celebration wishes for WhatsApp share.'
+  },
+  {
+    id: 'baisakhi',
+    name: 'Baisakhi',
+    hindiName: 'बैसाखी',
+    seoTitle: 'Happy Baisakhi Shayari in Hindi (बैसाखी शायरी) | ZQ Feelings',
+    seoDescription:
+      'Vibrant Happy Baisakhi Shayari in Hindi (बैसाखी की लख-लख बधाइयाँ, भंगड़ा और नई फसल शायरी) — 25 festive wishes with 20 stylish fonts.'
+  },
+  {
+    id: 'guru-nanak-jayanti',
+    name: 'Guru Nanak Jayanti',
+    hindiName: 'गुरु नानक जयंती',
+    seoTitle: 'Guru Nanak Jayanti Gurpurab Shayari in Hindi | ZQ Feelings',
+    seoDescription:
+      'Sacred Guru Nanak Jayanti & Gurpurab Shayari in Hindi (धन गुरु नानक देव जी प्रकाश पर्व और गुरबाणी शायरी) — 25 peaceful wishes to share.'
+  }
 ];
 
 export const SSR_FEELINGS = [
@@ -248,39 +434,231 @@ const SSR_FEELINGS_MERGE_MAP = {
 };
 
 export const SSR_MAAFI_SUBS = [
-  { id: 'maa-se-maafi', name: 'Maa Se Maafi (माँ से माफ़ी)', englishTitle: 'Maa Se Maafi', count: 25, slug: '/feelings/maa-se-maafi-shayari' },
-  { id: 'papa-se-maafi', name: 'Papa Se Maafi (पापा से माफ़ी)', englishTitle: 'Papa Se Maafi', count: 25, slug: '/feelings/papa-se-maafi-shayari' },
-  { id: 'biwi-se-maafi', name: 'Biwi Se Maafi (बीवी से माफ़ी)', englishTitle: 'Biwi Se Maafi', count: 25, slug: '/feelings/biwi-se-maafi-shayari' },
-  { id: 'husband-se-maafi', name: 'Husband Se Maafi (पति से माफ़ी)', englishTitle: 'Husband Se Maafi', count: 25, slug: '/feelings/husband-se-maafi-shayari' }
+  {
+    id: 'maa-se-maafi',
+    name: 'Maa Se Maafi (माँ से माफ़ी)',
+    englishTitle: 'Maa Se Maafi',
+    count: 25,
+    slug: '/feelings/maa-se-maafi-shayari',
+    seoTitle: 'Maa Se Maafi (माँ से माफ़ी) Shayari | ZQ FEELINGS',
+    seoDescription:
+      'Emotional Maa Se Maafi Shayari in Hindi (नाराज़ माँ को मनाने की भावुक माफ़ी शायरी) — 25 heartfelt apology poems in 35 languages & stylish fonts.'
+  },
+  {
+    id: 'papa-se-maafi',
+    name: 'Papa Se Maafi (पापा से माफ़ी)',
+    englishTitle: 'Papa Se Maafi',
+    count: 25,
+    slug: '/feelings/papa-se-maafi-shayari',
+    seoTitle: 'Papa Se Maafi (पापा से माफ़ी) Shayari | ZQ FEELINGS',
+    seoDescription:
+      'Respectful Papa Se Maafi Shayari in Hindi (पापा से हुई गलती पर क्षमा माँगने की शायरी) — 25 sincere apology lines in 35 languages & stylish fonts.'
+  },
+  {
+    id: 'biwi-se-maafi',
+    name: 'Biwi Se Maafi (बीवी से माफ़ी)',
+    englishTitle: 'Biwi Se Maafi',
+    count: 25,
+    slug: '/feelings/biwi-se-maafi-shayari',
+    seoTitle: 'Biwi Se Maafi (बीवी से माफ़ी) Shayari | ZQ FEELINGS',
+    seoDescription:
+      'Romantic Biwi Se Maafi Shayari in Hindi (रूठी पत्नी का गुस्सा पिघलाने वाली सॉरी शायरी) — 25 sweet wife apology wishes in 35 languages.'
+  },
+  {
+    id: 'husband-se-maafi',
+    name: 'Husband Se Maafi (पति से माफ़ी)',
+    englishTitle: 'Husband Se Maafi',
+    count: 25,
+    slug: '/feelings/husband-se-maafi-shayari',
+    seoTitle: 'Husband Se Maafi (पति से माफ़ी) Shayari | ZQ FEELINGS',
+    seoDescription:
+      'Sweet Husband Se Maafi Shayari in Hindi (नाराज़ पति को प्यार से मनाने वाली सॉरी शायरी) — 25 loving apology status lines in 35 languages.'
+  }
 ];
 
 export const SSR_RELIGIOUS = [
-  { id: 'sanatan-hindu', name: 'Sanatan Hindu (सनातन हिंदू)', englishTitle: 'Sanatan Hindu', count: 100, path: '/religious/sanatan-hindu' },
-  { id: 'islamic-allah', name: 'Islamic Allah (इस्लामिक अल्लाह)', englishTitle: 'Islamic Allah', count: 100, path: '/religious/islamic-allah' },
-  { id: 'christian-faith', name: 'Masih Faith (मसीह विश्वास)', englishTitle: 'Masih Faith', count: 60, path: '/religious/christian-faith' },
-  { id: 'sikh-dharm', name: 'Sikh Dharm (सिख धर्म)', englishTitle: 'Sikh Dharm', count: 50, path: '/religious/sikh-dharm' }
+  {
+    id: 'sanatan-hindu',
+    name: 'Sanatan Hindu (सनातन हिंदू)',
+    englishTitle: 'Sanatan Hindu',
+    count: 100,
+    path: '/religious/sanatan-hindu',
+    seoTitle: 'Sanatan Hindu Dharmik Shayari in Hindi | ZQ FEELINGS',
+    seoDescription:
+      '100+ Sanatan Hindu Dharmik Shayari in Hindi (सनातन धर्म, गीता, वेद, महादेव व श्री राम भक्ति शायरी) with 20 stylish fonts & WhatsApp share.'
+  },
+  {
+    id: 'islamic-allah',
+    name: 'Islamic Allah (इस्लामिक अल्लाह)',
+    englishTitle: 'Islamic Allah',
+    count: 100,
+    path: '/religious/islamic-allah',
+    seoTitle: 'Islamic Allah & Dua Shayari in Hindi & Urdu | ZQ FEELINGS',
+    seoDescription:
+      '100+ Islamic Allah & Dua Shayari in Hindi & Urdu (अल्लाह, नमाज़, क़ुरआन, सब्र, जुम्मा मुबारक और ईमान शायरी) with 20 stylish fonts & share.'
+  },
+  {
+    id: 'christian-faith',
+    name: 'Masih Faith (मसीह विश्वास)',
+    englishTitle: 'Masih Faith',
+    count: 60,
+    path: '/religious/christian-faith',
+    seoTitle: 'Masih Faith & Prabhu Yeshu Shayari in Hindi | ZQ FEELINGS',
+    seoDescription:
+      '60+ Masih Faith & Prabhu Yeshu Shayari in Hindi (प्रभु यीशु मसीह, बाइबल वचन, प्रार्थना और अनुग्रह शायरी) with 20 stylish fonts & share.'
+  },
+  {
+    id: 'sikh-dharm',
+    name: 'Sikh Dharm (सिख धर्म)',
+    englishTitle: 'Sikh Dharm',
+    count: 50,
+    path: '/religious/sikh-dharm',
+    seoTitle: 'Sikh Dharm & Waheguru Gurbani Shayari in Hindi | ZQ',
+    seoDescription:
+      '50+ Sikh Dharm & Waheguru Gurbani Shayari in Hindi (वाहेगुरु, गुरु ग्रंथ साहिब, खालसा, सेवा और सिमरन शायरी) with 20 stylish fonts & share.'
+  }
 ];
 
 export const SSR_RITUALS = [
-  { id: 'newborn-babies', name: 'Newborn Baby (नन्ही खुशी)', englishTitle: 'Newborn Baby', count: 100, path: '/newborn-babies-shayari/' },
-  { id: 'godh-bharai', name: 'Godh Bharai (गोद भराई)', englishTitle: 'Godh Bharai', count: 50, path: '/godh-bharai-shayari/' },
-  { id: 'naamkaran-mundan', name: 'Naamkaran & Mundan', englishTitle: 'Naamkaran & Mundan', count: 50, path: '/naamkaran-mundan-shayari/' },
-  { id: 'grah-pravesh', name: 'Grah Pravesh (गृह प्रवेश)', englishTitle: 'Grah Pravesh', count: 50, path: '/grah-pravesh-shayari/' }
+  {
+    id: 'newborn-babies',
+    name: 'Newborn Baby (नन्ही खुशी)',
+    englishTitle: 'Newborn Baby',
+    count: 100,
+    path: '/newborn-babies-shayari/',
+    seoTitle: 'Newborn Baby Boy & Girl Wishes Shayari | ZQ FEELINGS',
+    seoDescription:
+      '100+ Newborn Baby Boy & Baby Girl Wishes Shayari in Hindi (नन्हे राजकुमार और लक्ष्मी परी के जन्म की बधाई शायरी) with 20 stylish fonts.'
+  },
+  {
+    id: 'godh-bharai',
+    name: 'Godh Bharai (गोद भराई)',
+    englishTitle: 'Godh Bharai',
+    count: 50,
+    path: '/godh-bharai-shayari/',
+    seoTitle: 'Godh Bharai & Baby Shower Shayari in Hindi | ZQ FEELINGS',
+    seoDescription:
+      '50+ Godh Bharai & Baby Shower Shayari in Hindi (गोद भराई रस्म और माँ बनने की पावन बधाई शायरी) with 20 stylish fonts & WhatsApp share.'
+  },
+  {
+    id: 'naamkaran-mundan',
+    name: 'Naamkaran & Mundan',
+    englishTitle: 'Naamkaran & Mundan',
+    count: 50,
+    path: '/naamkaran-mundan-shayari/',
+    seoTitle: 'Naamkaran & Mundan Sanskar Shayari in Hindi | ZQ FEELINGS',
+    seoDescription:
+      '50+ Naamkaran & Mundan Sanskar Shayari in Hindi (शिशु नामकरण और मुंडन संस्कार की मंगल आशीर्वाद शायरी) with 20 stylish fonts & share.'
+  },
+  {
+    id: 'grah-pravesh',
+    name: 'Grah Pravesh (गृह प्रवेश)',
+    englishTitle: 'Grah Pravesh',
+    count: 50,
+    path: '/grah-pravesh-shayari/',
+    seoTitle: 'Grah Pravesh & New Home Shayari in Hindi | ZQ FEELINGS',
+    seoDescription:
+      '50+ Grah Pravesh & New Home Wishes Shayari in Hindi (नए घर के गृह प्रवेश और कलश पूजन की शुभकामना शायरी) with 20 stylish fonts & share.'
+  }
 ];
 
 export const SSR_MONTHS = [
-  { id: 'january', nameEnglish: 'January', nameHindi: 'जनवरी' },
-  { id: 'february', nameEnglish: 'February', nameHindi: 'फरवरी' },
-  { id: 'march', nameEnglish: 'March', nameHindi: 'मार्च' },
-  { id: 'april', nameEnglish: 'April', nameHindi: 'अप्रैल' },
-  { id: 'may', nameEnglish: 'May', nameHindi: 'मई' },
-  { id: 'june', nameEnglish: 'June', nameHindi: 'जून' },
-  { id: 'july', nameEnglish: 'July', nameHindi: 'जुलाई' },
-  { id: 'august', nameEnglish: 'August', nameHindi: 'अगस्त' },
-  { id: 'september', nameEnglish: 'September', nameHindi: 'सितंबर' },
-  { id: 'october', nameEnglish: 'October', nameHindi: 'अक्टूबर' },
-  { id: 'november', nameEnglish: 'November', nameHindi: 'नवंबर' },
-  { id: 'december', nameEnglish: 'December', nameHindi: 'दिसंबर' }
+  {
+    id: 'january',
+    nameEnglish: 'January',
+    nameHindi: 'जनवरी',
+    seoTitle: 'January Special Days Shayari (जनवरी शायरी) | ZQ FEELINGS',
+    seoDescription:
+      'January Special Days Shayari in Hindi (जनवरी शायरी) — 200 wishes for New Year, Lohri, Youth Day, Army Day & Republic Day on ZQ Feelings.'
+  },
+  {
+    id: 'february',
+    nameEnglish: 'February',
+    nameHindi: 'फरवरी',
+    seoTitle: 'February Special Days Shayari (फरवरी शायरी) | ZQ FEELINGS',
+    seoDescription:
+      'February Special Days Shayari in Hindi (फरवरी शायरी) — 200 wishes for Basant Panchami, Rose Day, Valentine Week & Science Day on ZQ Feelings.'
+  },
+  {
+    id: 'march',
+    nameEnglish: 'March',
+    nameHindi: 'मार्च',
+    seoTitle: 'March Special Days Shayari (मार्च शायरी) | ZQ FEELINGS',
+    seoDescription:
+      "March Special Days Shayari in Hindi (मार्च शायरी) — 200 wishes for Women's Day, Holi, Shaheed Diwas & World Poetry Day on ZQ Feelings."
+  },
+  {
+    id: 'april',
+    nameEnglish: 'April',
+    nameHindi: 'अप्रैल',
+    seoTitle: 'April Special Days Shayari (अप्रैल शायरी) | ZQ FEELINGS',
+    seoDescription:
+      'April Special Days Shayari in Hindi (अप्रैल शायरी) — 200 wishes for Ram Navami, Hanuman Jayanti, Ambedkar Jayanti & Earth Day on ZQ Feelings.'
+  },
+  {
+    id: 'may',
+    nameEnglish: 'May',
+    nameHindi: 'मई',
+    seoTitle: 'May Special Days Shayari (मई शायरी) | ZQ FEELINGS',
+    seoDescription:
+      "May Special Days Shayari in Hindi (मई शायरी) — 200 wishes for Mother's Day, Labour Day, Buddha Purnima & Family Day on ZQ Feelings."
+  },
+  {
+    id: 'june',
+    nameEnglish: 'June',
+    nameHindi: 'जून',
+    seoTitle: 'June Special Days Shayari (जून शायरी) | ZQ FEELINGS',
+    seoDescription:
+      "June Special Days Shayari in Hindi (जून शायरी) — 200 wishes for Father's Day, Environment Day, International Yoga Day & Music Day."
+  },
+  {
+    id: 'july',
+    nameEnglish: 'July',
+    nameHindi: 'जुलाई',
+    seoTitle: 'July Special Days Shayari (जुलाई शायरी) | ZQ FEELINGS',
+    seoDescription:
+      "July Special Days Shayari in Hindi (जुलाई शायरी) — 200 wishes for Doctor's Day, Guru Purnima, Sawan Somwar & Kargil Vijay Diwas."
+  },
+  {
+    id: 'august',
+    nameEnglish: 'August',
+    nameHindi: 'अगस्त',
+    seoTitle: 'August Special Days Shayari (अगस्त शायरी) | ZQ FEELINGS',
+    seoDescription:
+      'August Special Days Shayari in Hindi (अगस्त शायरी) — 200 wishes for Friendship Day, Rakshabandhan, 15 August & Krishna Janmashtami.'
+  },
+  {
+    id: 'september',
+    nameEnglish: 'September',
+    nameHindi: 'सितंबर',
+    seoTitle: 'September Special Days Shayari (सितंबर शायरी) | ZQ',
+    seoDescription:
+      "September Special Days Shayari in Hindi (सितंबर शायरी) — 200 wishes for Teacher's Day, Hindi Diwas, Engineer's Day & Ganeshotsav."
+  },
+  {
+    id: 'october',
+    nameEnglish: 'October',
+    nameHindi: 'अक्टूबर',
+    seoTitle: 'October Special Days Shayari (अक्टूबर शायरी) | ZQ',
+    seoDescription:
+      'October Special Days Shayari in Hindi (अक्टूबर शायरी) — 200 wishes for Gandhi Jayanti, Navratri, Dussehra, Karva Chauth & Ekta Diwas.'
+  },
+  {
+    id: 'november',
+    nameEnglish: 'November',
+    nameHindi: 'नवंबर',
+    seoTitle: 'November Special Days Shayari (नवंबर शायरी) | ZQ FEELINGS',
+    seoDescription:
+      "November Special Days Shayari in Hindi (नवंबर शायरी) — 200 wishes for Diwali, Bhai Dooj, Chhath Puja, Children's Day & Gurpurab."
+  },
+  {
+    id: 'december',
+    nameEnglish: 'December',
+    nameHindi: 'दिसंबर',
+    seoTitle: 'December Special Days Shayari (दिसंबर शायरी) | ZQ FEELINGS',
+    seoDescription:
+      'December Special Days Shayari in Hindi (दिसंबर शायरी) — 200 wishes for Navy Day, Geeta Jayanti, Kisan Diwas, Christmas & Year-End.'
+  }
 ];
 
 const SSR_HINDI_ROUTE_ALIASES = {
@@ -459,7 +837,7 @@ export function resolveServerSeoMeta(rawPathname) {
     return {
       title: `ZQ-MOMENTS 💗 – Shayari Photo Status | ${SITE_BRAND}`,
       description:
-        'Explore ZQ-MOMENTS 💗 — live photo status feed with 1–9 photos, 30 stylish fonts, copyable Hindi Shayari captions, likes & comments.',
+        'Share 100% original Shayari Photo Status on ZQ-MOMENTS 💗 — Auto-Filter protected, 30 stylish fonts, likes, comments & 3-report safety.',
       canonicalPath: '/zq-moments',
       langCode: 'hi',
       robots: 'index, follow',
@@ -491,7 +869,7 @@ export function resolveServerSeoMeta(rawPathname) {
     return {
       title: `Apni Shayari Likhe (अपनी शायरी लिखें) | ${SITE_BRAND}`,
       description:
-        'Write your own Hindi Shayari across Love, Sad, Attitude, Festival & Dosti categories, save cards, and share on WhatsApp — ZQ Feelings.',
+        'Write & publish 100% original Love & Sad Shayari on ZQ Feelings — Auto-Filter verified, instant LIVE feed, 20 stylish fonts & WhatsApp share.',
       canonicalPath: '/apni-shayari-likhe',
       langCode: 'hi',
       robots: 'index, follow',
@@ -774,7 +1152,7 @@ export function resolveServerSeoMeta(rawPathname) {
                 `${m.englishTitle} (${langMeta.slug}) | ZQ`
               )
             : clampSeoTitle(
-                `${m.name} Shayari | ${SITE_BRAND}`,
+                m.seoTitle,
                 `${m.englishTitle} Shayari | ${SITE_BRAND}`
               ),
       description:
@@ -784,7 +1162,7 @@ export function resolveServerSeoMeta(rawPathname) {
             : `${m.name} Shayari – Page ${pg} (Shayari ${rStart}–${rEnd}): heartfelt apology status on ZQ Feelings.`
           : hasCustomLang
             ? `Read ${m.count} heartfelt ${m.englishTitle} Shayari in ${langMeta.englishName} (${langMeta.nativeLabel}) — emotional apology poetry with 20 stylish fonts & share.`
-            : `Read ${m.count} heartfelt ${m.name} Shayari in Hindi, Hinglish & English — emotional apology lines with 20 stylish fonts & share.`,
+            : m.seoDescription,
       canonicalPath,
       valentineBasePath: hindiBase,
       valentinePageSuffix: pageSuffix,
@@ -831,8 +1209,8 @@ export function resolveServerSeoMeta(rawPathname) {
                 `${feelShortRoot} (${langMeta.slug}) | ZQ Feelings`
               )
             : clampSeoTitle(
-                `${f.name} (${f.hindiName}) | ${SITE_BRAND}`,
-                `${f.name} in Hindi | ${SITE_BRAND}`
+                `${feelDisplayName} (${f.hindiName}) | ${SITE_BRAND}`,
+                `${feelDisplayName} in Hindi | ${SITE_BRAND}`
               ),
       description:
         pg >= 2
@@ -1049,13 +1427,13 @@ export function resolveServerSeoMeta(rawPathname) {
                 `${month.nameEnglish} Shayari – Page ${activePage} | ZQ`
               )
             : clampSeoTitle(
-                `${month.nameEnglish} Special Days Shayari | ${SITE_BRAND}`,
+                month.seoTitle,
                 `${month.nameEnglish} Shayari | ${SITE_BRAND}`
               ),
         description:
           activePage >= 2
             ? `${month.nameEnglish} (${month.nameHindi}) Special Shayari – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd}): world & national days wishes on ZQ Feelings.`
-            : `Celebrate ${month.nameEnglish} (${month.nameHindi}) national & world special days with 200 unique Hindi Shayari, 35 languages & WhatsApp share.`,
+            : month.seoDescription,
         canonicalPath,
         langCode: 'hi',
         robots: 'index, follow',
@@ -1063,14 +1441,10 @@ export function resolveServerSeoMeta(rawPathname) {
           { name: 'Home', path: '/' },
           { name: '12 Months Special', path: '/12-months-special-days-shayari' },
           { name: `${month.nameEnglish} Shayari`, path: basePath },
-          ...(activePage >= 2 ? [{ name: `Page ${pgLabel(activePage)}`, path: canonicalPath }] : [])
+          ...(activePage >= 2 ? [{ name: `Page ${activePage}`, path: canonicalPath }] : [])
         ]
       };
     }
-  }
-
-  function pgLabel(n) {
-    return String(n);
   }
 
   const buildReligiousMeta = (rel) => {
@@ -1083,13 +1457,13 @@ export function resolveServerSeoMeta(rawPathname) {
               `${rel.englishTitle} – Page ${activePage} | ZQ`
             )
           : clampSeoTitle(
-              `${rel.englishTitle} Shayari in Hindi | ${SITE_BRAND}`,
+              rel.seoTitle,
               `${rel.englishTitle} Shayari | ${SITE_BRAND}`
             ),
       description:
         activePage >= 2
           ? `${rel.name} Shayari – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd} of ${rel.count}): spiritual quotes & poetry in 20 stylish fonts on ZQ Feelings.`
-          : `Read ${rel.count} original ${rel.name} Shayari in Hindi, Hinglish & English — spiritual bhakti & dua poetry with 20 stylish fonts & share.`,
+          : rel.seoDescription,
       canonicalPath,
       langCode: 'hi',
       robots: 'index, follow',
@@ -1125,13 +1499,13 @@ export function resolveServerSeoMeta(rawPathname) {
               `${rit.englishTitle} – Page ${activePage} | ZQ`
             )
           : clampSeoTitle(
-              `${rit.name} Shayari | ${SITE_BRAND}`,
+              rit.seoTitle,
               `${rit.englishTitle} Shayari | ${SITE_BRAND}`
             ),
       description:
         activePage >= 2
           ? `${rit.name} Shayari – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd} of ${rit.count}): auspicious family sanskar wishes with stylish fonts.`
-          : `Read ${rit.count} unique ${rit.name} Shayari in Hindi, Hinglish & English — heartfelt family sanskar wishes with 20 stylish fonts & share.`,
+          : rit.seoDescription,
       canonicalPath,
       langCode: 'hi',
       robots: 'index, follow',
@@ -1214,13 +1588,14 @@ export function resolveServerSeoMeta(rawPathname) {
                 `${fest.id} – P${activePage} | ZQ Feelings`
               )
             : clampSeoTitle(
+                fest.seoTitle,
                 `${fest.name} Shayari in Hindi | ${SITE_BRAND}`,
                 `${fest.name} Shayari | ${SITE_BRAND}`
               ),
         description:
           activePage >= 2
             ? `${fest.name} Shayari (${fest.hindiName}) – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd}): unique festival wishes with stylish fonts & share.`
-            : `Best ${fest.name} Shayari in Hindi (${fest.hindiName} शायरी) — 25 unique 2-4 line wishes with 20 stylish fonts, copy & WhatsApp share.`,
+            : fest.seoDescription,
         canonicalPath,
         langCode: 'hi',
         robots: 'index, follow',

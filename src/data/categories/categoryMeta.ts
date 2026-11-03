@@ -11,6 +11,8 @@ export const MAAFI_SUBCATEGORIES_META: ReadonlyArray<{
   count: number;
   slug: string;
   subtitle: string;
+  seoTitle: string;
+  seoDescription: string;
 }> = [
   {
     id: 'maa-se-maafi',
@@ -20,7 +22,10 @@ export const MAAFI_SUBCATEGORIES_META: ReadonlyArray<{
     icon: '🤱',
     count: 25,
     slug: '/feelings/maa-se-maafi-shayari',
-    subtitle: 'नाराज़ माँ को मनाने और ममता के चरणों में क्षमा माँगने की भावुक शायरी'
+    subtitle: 'नाराज़ माँ को मनाने और ममता के चरणों में क्षमा माँगने की भावुक शायरी',
+    seoTitle: 'Maa Se Maafi (माँ से माफ़ी) Shayari | ZQ FEELINGS',
+    seoDescription:
+      'Emotional Maa Se Maafi Shayari in Hindi (नाराज़ माँ को मनाने की भावुक माफ़ी शायरी) — 25 heartfelt apology poems in 35 languages & stylish fonts.'
   },
   {
     id: 'papa-se-maafi',
@@ -30,7 +35,10 @@ export const MAAFI_SUBCATEGORIES_META: ReadonlyArray<{
     icon: '👨‍👦',
     count: 25,
     slug: '/feelings/papa-se-maafi-shayari',
-    subtitle: 'पापा से हुई गलती पर सम्मान और पश्चाताप से भरी दिल छू लेने वाली माफ़ी शायरी'
+    subtitle: 'पापा से हुई गलती पर सम्मान और पश्चाताप से भरी दिल छू लेने वाली माफ़ी शायरी',
+    seoTitle: 'Papa Se Maafi (पापा से माफ़ी) Shayari | ZQ FEELINGS',
+    seoDescription:
+      'Respectful Papa Se Maafi Shayari in Hindi (पापा से हुई गलती पर क्षमा माँगने की शायरी) — 25 sincere apology lines in 35 languages & stylish fonts.'
   },
   {
     id: 'biwi-se-maafi',
@@ -40,7 +48,10 @@ export const MAAFI_SUBCATEGORIES_META: ReadonlyArray<{
     icon: '🌹',
     count: 25,
     slug: '/feelings/biwi-se-maafi-shayari',
-    subtitle: 'रूठी बीवी का गुस्सा पिघलाने और प्यार से मनाने वाली रोमांटिक सॉरी शायरी'
+    subtitle: 'रूठी बीवी का गुस्सा पिघलाने और प्यार से मनाने वाली रोमांटिक सॉरी शायरी',
+    seoTitle: 'Biwi Se Maafi (बीवी से माफ़ी) Shayari | ZQ FEELINGS',
+    seoDescription:
+      'Romantic Biwi Se Maafi Shayari in Hindi (रूठी पत्नी का गुस्सा पिघलाने वाली सॉरी शायरी) — 25 sweet wife apology wishes in 35 languages.'
   },
   {
     id: 'husband-se-maafi',
@@ -50,38 +61,257 @@ export const MAAFI_SUBCATEGORIES_META: ReadonlyArray<{
     icon: '💞',
     count: 25,
     slug: '/feelings/husband-se-maafi-shayari',
-    subtitle: 'नाराज़ पतिदेव को प्यार से मनाने और मुस्कान लौटाने वाली मीठी सॉरी शायरी'
+    subtitle: 'नाराज़ पतिदेव को प्यार से मनाने और मुस्कान लौटाने वाली मीठी सॉरी शायरी',
+    seoTitle: 'Husband Se Maafi (पति से माफ़ी) Shayari | ZQ FEELINGS',
+    seoDescription:
+      'Sweet Husband Se Maafi Shayari in Hindi (नाराज़ पति को प्यार से मनाने वाली सॉरी शायरी) — 25 loving apology status lines in 35 languages.'
   }
 ];
 
 export const FESTIVAL_CATEGORIES = [
-  { id: 'diwali', name: 'Diwali', hindiName: 'दीपावली', icon: '🪔' },
-  { id: 'bhai-dooj', name: 'Bhai Dooj', hindiName: 'भाई दूज', icon: '🌺' },
-  { id: 'chhath-puja', name: 'Chhath Puja', hindiName: 'छठ पूजा', icon: '🌅' },
-  { id: 'birthday', name: 'Birthday', hindiName: 'जन्मदिन', icon: '🎂' },
-  { id: 'holi', name: 'Holi', hindiName: 'होली', icon: '🎨' },
-  { id: 'eid', name: 'Eid', hindiName: 'ईद मुबारक', icon: '🌙' },
-  { id: 'bakrid', name: 'Bakrid (Eid al-Adha)', hindiName: 'बकरीद', icon: '🕌' },
-  { id: 'new-year', name: 'New Year', hindiName: 'नया साल', icon: '🎉' },
-  { id: 'ganesh-chaturthi', name: 'Ganesh Chaturthi', hindiName: 'गणेश चतुर्थी', icon: '🐘' },
-  { id: 'gandhi-jayanti', name: 'Gandhi Jayanti', hindiName: 'गांधी जयंती', icon: '🕊️' },
-  { id: 'independence-day', name: '15 August Independence Day', hindiName: 'स्वतंत्रता दिवस', icon: '🇮🇳' },
-  { id: 'republic-day', name: '26 January Republic Day', hindiName: 'गणतंत्र दिवस', icon: '🎖️' },
-  { id: 'rakshabandhan', name: 'Rakshabandhan', hindiName: 'रक्षाबंधन', icon: '🧵' },
-  { id: 'janmashtami', name: 'Janmashtami', hindiName: 'जन्माष्टमी', icon: '🦚' },
-  { id: 'navratri', name: 'Navratri / Durga Puja', hindiName: 'नवरात्रि', icon: '🔱' },
-  { id: 'dussehra', name: 'Dussehra', hindiName: 'दशहरा', icon: '🏹' },
-  { id: 'christmas', name: 'Christmas', hindiName: 'क्रिसमस', icon: '🎄' },
-  { id: 'lohri', name: 'Lohri', hindiName: 'लोहड़ी', icon: '🔥' },
-  { id: 'makar-sankranti', name: 'Makar Sankranti', hindiName: 'मकर संक्रांति', icon: '🪁' },
-  { id: 'karva-chauth', name: 'Karva Chauth', hindiName: 'करवा चौथ', icon: '🌕' },
-  { id: 'eid-milad', name: 'Eid Milad un Nabi', hindiName: 'ईद मिलाद', icon: '✨' },
-  { id: 'mahashivratri', name: 'Mahashivratri', hindiName: 'महाशिवरात्रि', icon: '🕉️' },
-  { id: 'ram-navami', name: 'Ram Navami', hindiName: 'राम नवमी', icon: '🚩' },
-  { id: 'onam', name: 'Onam', hindiName: 'ओणम', icon: '🛶' },
-  { id: 'pongal', name: 'Pongal', hindiName: 'पोंगल', icon: '🌾' },
-  { id: 'baisakhi', name: 'Baisakhi', hindiName: 'बैसाखी', icon: '🥁' },
-  { id: 'guru-nanak-jayanti', name: 'Guru Nanak Jayanti', hindiName: 'गुरु नानक जयंती', icon: 'ੴ' }
+  {
+    id: 'diwali',
+    name: 'Diwali',
+    hindiName: 'दीपावली',
+    icon: '🪔',
+    seoTitle: 'Happy Diwali Shayari in Hindi (दीपावली शायरी) | ZQ Feelings',
+    seoDescription:
+      'Read 25+ Happy Diwali Shayari in Hindi (दीपावली की हार्दिक शुभकामनाएं) — Diyas, Laxmi Puja & Deepawali wishes with stylish fonts & WhatsApp share.'
+  },
+  {
+    id: 'bhai-dooj',
+    name: 'Bhai Dooj',
+    hindiName: 'भाई दूज',
+    icon: '🌺',
+    seoTitle: 'Bhai Dooj Shayari in Hindi (भाई दूज शायरी) | ZQ Feelings',
+    seoDescription:
+      'Heartfelt Bhai Dooj Shayari in Hindi (भाई दूज शुभकामनाएं) celebrating brother-sister tilak bond with 20 stylish fonts, copy & WhatsApp share.'
+  },
+  {
+    id: 'chhath-puja',
+    name: 'Chhath Puja',
+    hindiName: 'छठ पूजा',
+    icon: '🌅',
+    seoTitle: 'Chhath Puja Shayari in Hindi (छठ पूजा शायरी) | ZQ Feelings',
+    seoDescription:
+      'Devotional Chhath Puja Shayari in Hindi (जय छठी मैया और सूर्य अर्घ्य शायरी) — 25 auspicious Bihari & Purvanchal Chhath wishes to copy & share.'
+  },
+  {
+    id: 'birthday',
+    name: 'Birthday',
+    hindiName: 'जन्मदिन',
+    icon: '🎂',
+    seoTitle: 'Happy Birthday Wishes Shayari in Hindi | ZQ Feelings',
+    seoDescription:
+      'Best Happy Birthday Wishes Shayari in Hindi (जन्मदिन मुबारक शायरी) for friend, brother, sister & lover with 20 stylish fonts & WhatsApp share.'
+  },
+  {
+    id: 'holi',
+    name: 'Holi',
+    hindiName: 'होली',
+    icon: '🎨',
+    seoTitle: 'Happy Holi Shayari in Hindi (होली शायरी) | ZQ Feelings',
+    seoDescription:
+      'Colorful Happy Holi Shayari in Hindi (रंगों और गुलाल भरी होली शायरी) — festive Bura Na Mano Holi Hai wishes with stylish fonts & WhatsApp share.'
+  },
+  {
+    id: 'eid',
+    name: 'Eid',
+    hindiName: 'ईद मुबारक',
+    icon: '🌙',
+    seoTitle: 'Eid Mubarak Shayari in Hindi (ईद मुबारक शायरी) | ZQ Feelings',
+    seoDescription:
+      'Warm Eid-ul-Fitr & Chand Raat Eid Mubarak Shayari in Hindi & Urdu (ईद मुबारक शायरी) — sweet Eidi, dua & peace wishes to copy & share.'
+  },
+  {
+    id: 'bakrid',
+    name: 'Bakrid (Eid al-Adha)',
+    hindiName: 'बकरीद',
+    icon: '🕌',
+    seoTitle: 'Bakrid Mubarak Shayari in Hindi (बकरीद शायरी) | ZQ Feelings',
+    seoDescription:
+      'Blessed Bakrid & Eid al-Adha Mubarak Shayari in Hindi (बकरीद और कुर्बानी दुआ शायरी) — 25 heartfelt wishes with stylish fonts & WhatsApp share.'
+  },
+  {
+    id: 'new-year',
+    name: 'New Year',
+    hindiName: 'नया साल',
+    icon: '🎉',
+    seoTitle: 'New Year Shayari 2026 in Hindi (नया साल) | ZQ Feelings',
+    seoDescription:
+      'Best New Year Shayari in Hindi (नया साल शायरी • 1 January) — 25 original wishes in 35 languages, 20 stylish fonts & share.'
+  },
+  {
+    id: 'ganesh-chaturthi',
+    name: 'Ganesh Chaturthi',
+    hindiName: 'गणेश चतुर्थी',
+    icon: '🐘',
+    seoTitle: 'Ganesh Chaturthi Shayari in Hindi (गणपति शायरी) | ZQ Feelings',
+    seoDescription:
+      'Auspicious Ganesh Chaturthi Shayari in Hindi (गणपति बप्पा मोरया शायरी) — Vinayaka Chaturthi bhakti wishes in 20 stylish fonts & WhatsApp share.'
+  },
+  {
+    id: 'gandhi-jayanti',
+    name: 'Gandhi Jayanti',
+    hindiName: 'गांधी जयंती',
+    icon: '🕊️',
+    seoTitle: 'Gandhi Jayanti Shayari in Hindi (गांधी जयंती) | ZQ Feelings',
+    seoDescription:
+      'Inspiring 2 October Gandhi Jayanti Shayari in Hindi (महात्मा गांधी अहिंसा और सत्य शायरी) — patriotic Bapu tribute quotes to copy & share.'
+  },
+  {
+    id: 'independence-day',
+    name: '15 August Independence Day',
+    hindiName: 'स्वतंत्रता दिवस',
+    icon: '🇮🇳',
+    seoTitle: '15 August Independence Day Shayari in Hindi | ZQ Feelings',
+    seoDescription:
+      'Patriotic 15 August Independence Day Shayari in Hindi (स्वतंत्रता दिवस देशभक्ति और तिरंगा शायरी) — proud Jai Hind status & wishes to share.'
+  },
+  {
+    id: 'republic-day',
+    name: '26 January Republic Day',
+    hindiName: 'गणतंत्र दिवस',
+    icon: '🎖️',
+    seoTitle: '26 January Republic Day Shayari in Hindi | ZQ Feelings',
+    seoDescription:
+      'Proud 26 January Republic Day Shayari in Hindi (गणतंत्र दिवस और संविधान शायरी) — Vande Mataram & Tiranga deshbhakti wishes for WhatsApp.'
+  },
+  {
+    id: 'rakshabandhan',
+    name: 'Rakshabandhan',
+    hindiName: 'रक्षाबंधन',
+    icon: '🧵',
+    seoTitle: 'Rakshabandhan Shayari in Hindi (रक्षाबंधन) | ZQ Feelings',
+    seoDescription:
+      'Loving Rakshabandhan & Rakhi Shayari in Hindi (रक्षाबंधन भाई-बहन के कच्चे धागों की शायरी) — 25 sweet wishes with stylish fonts & share.'
+  },
+  {
+    id: 'janmashtami',
+    name: 'Janmashtami',
+    hindiName: 'जन्माष्टमी',
+    icon: '🦚',
+    seoTitle: 'Krishna Janmashtami Shayari in Hindi (जन्माष्टमी) | ZQ',
+    seoDescription:
+      'Devotional Shree Krishna Janmashtami Shayari in Hindi (राधा-कृष्ण और कान्हा जन्माष्टमी शायरी) — 25 divine bhakti wishes to copy & share.'
+  },
+  {
+    id: 'navratri',
+    name: 'Navratri / Durga Puja',
+    hindiName: 'नवरात्रि',
+    icon: '🔱',
+    seoTitle: 'Happy Navratri & Durga Puja Shayari in Hindi | ZQ Feelings',
+    seoDescription:
+      'Divine Navratri & Durga Puja Shayari in Hindi (जय माता दी नवरात्रि और माँ दुर्गा भक्ति शायरी) — 25 shakti wishes with 20 stylish fonts.'
+  },
+  {
+    id: 'dussehra',
+    name: 'Dussehra',
+    hindiName: 'दशहरा',
+    icon: '🏹',
+    seoTitle: 'Happy Dussehra Shayari in Hindi (दशहरा शायरी) | ZQ Feelings',
+    seoDescription:
+      'Victorious Happy Dussehra & Vijayadashami Shayari in Hindi (बुराई पर अच्छाई की जीत दशहरा शायरी) — Shri Ram wishes with stylish fonts & share.'
+  },
+  {
+    id: 'christmas',
+    name: 'Christmas',
+    hindiName: 'क्रिसमस',
+    icon: '🎄',
+    seoTitle: 'Christmas Day Shayari in Hindi (क्रिसमस) | ZQ Feelings',
+    seoDescription:
+      'Best Christmas Day Shayari in Hindi (क्रिसमस डे शायरी • 25 December) — 25 original wishes in 35 languages, 20 stylish fonts & share.'
+  },
+  {
+    id: 'lohri',
+    name: 'Lohri',
+    hindiName: 'लोहड़ी',
+    icon: '🔥',
+    seoTitle: 'Happy Lohri Shayari in Hindi (लोहड़ी शायरी) | ZQ Feelings',
+    seoDescription:
+      'Warm Happy Lohri Shayari in Hindi (लोहड़ी की लख-लख बधाइयाँ, रेवड़ी और मूंगफली शायरी) — festive winter bonfire wishes to copy & share.'
+  },
+  {
+    id: 'makar-sankranti',
+    name: 'Makar Sankranti',
+    hindiName: 'मकर संक्रांति',
+    icon: '🪁',
+    seoTitle: 'Makar Sankranti Shayari in Hindi (मकर संक्रांति) | ZQ',
+    seoDescription:
+      'Sweet Til-Gud Makar Sankranti & Uttarayan Shayari in Hindi (तिल-गुड़ और पतंग मकर संक्रांति शायरी) — 25 harvest wishes for WhatsApp share.'
+  },
+  {
+    id: 'karva-chauth',
+    name: 'Karva Chauth',
+    hindiName: 'करवा चौथ',
+    icon: '🌕',
+    seoTitle: 'Karva Chauth Shayari in Hindi (करवा चौथ शायरी) | ZQ Feelings',
+    seoDescription:
+      'Romantic Karva Chauth Shayari in Hindi (करवा चौथ चाँद और अखंड सुहाग शायरी) for husband & wife with 20 stylish fonts & WhatsApp share.'
+  },
+  {
+    id: 'eid-milad',
+    name: 'Eid Milad un Nabi',
+    hindiName: 'ईद मिलाद',
+    icon: '✨',
+    seoTitle: 'Eid Milad un Nabi Shayari in Hindi (ईद मिलाद) | ZQ Feelings',
+    seoDescription:
+      'Peaceful Eid Milad-un-Nabi Mubarak Shayari in Hindi & Urdu (जश्न-ए-ईद मिलाद-उन-नबी दुआ और नूर शायरी) — 25 spiritual wishes to copy & share.'
+  },
+  {
+    id: 'mahashivratri',
+    name: 'Mahashivratri',
+    hindiName: 'महाशिवरात्रि',
+    icon: '🕉️',
+    seoTitle: 'Mahashivratri Shayari in Hindi (महाशिवरात्रि) | ZQ Feelings',
+    seoDescription:
+      'Divine Har Har Mahadev & Mahashivratri Shayari in Hindi (भोलेनाथ और महादेव शिवरात्रि भक्ति शायरी) — 25 Bholenath status lines to share.'
+  },
+  {
+    id: 'ram-navami',
+    name: 'Ram Navami',
+    hindiName: 'राम नवमी',
+    icon: '🚩',
+    seoTitle: 'Ram Navami Shayari in Hindi (राम नवमी शायरी) | ZQ Feelings',
+    seoDescription:
+      'Sacred Jai Shri Ram & Ram Navami Shayari in Hindi (मर्यादा पुरुषोत्तम श्री राम नवमी भक्ति शायरी) — 25 auspicious wishes in stylish fonts.'
+  },
+  {
+    id: 'onam',
+    name: 'Onam',
+    hindiName: 'ओणम',
+    icon: '🛶',
+    seoTitle: 'Happy Onam Wishes Shayari in Hindi (ओणम शायरी) | ZQ Feelings',
+    seoDescription:
+      'Joyful Happy Onam Shayari in Hindi (ओणम पर्व, पूक्कलम और खुशहाली की शुभकामनाएं) — 25 Kerala harvest festival wishes to copy & share.'
+  },
+  {
+    id: 'pongal',
+    name: 'Pongal',
+    hindiName: 'पोंगल',
+    icon: '🌾',
+    seoTitle: 'Happy Pongal Shayari in Hindi (पोंगल शायरी) | ZQ Feelings',
+    seoDescription:
+      'Auspicious Happy Pongal Shayari in Hindi (पोंगल पर्व, सूर्य वंदना और समृद्धि की शायरी) — 25 harvest celebration wishes for WhatsApp share.'
+  },
+  {
+    id: 'baisakhi',
+    name: 'Baisakhi',
+    hindiName: 'बैसाखी',
+    icon: '🥁',
+    seoTitle: 'Happy Baisakhi Shayari in Hindi (बैसाखी शायरी) | ZQ Feelings',
+    seoDescription:
+      'Vibrant Happy Baisakhi Shayari in Hindi (बैसाखी की लख-लख बधाइयाँ, भंगड़ा और नई फसल शायरी) — 25 festive wishes with 20 stylish fonts.'
+  },
+  {
+    id: 'guru-nanak-jayanti',
+    name: 'Guru Nanak Jayanti',
+    hindiName: 'गुरु नानक जयंती',
+    icon: 'ੴ',
+    seoTitle: 'Guru Nanak Jayanti Gurpurab Shayari in Hindi | ZQ Feelings',
+    seoDescription:
+      'Sacred Guru Nanak Jayanti & Gurpurab Shayari in Hindi (धन गुरु नानक देव जी प्रकाश पर्व और गुरबाणी शायरी) — 25 peaceful wishes to share.'
+  }
 ] as const;
 
 export interface FeelingsCategoryMeta {

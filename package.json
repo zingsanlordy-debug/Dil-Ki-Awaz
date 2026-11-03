@@ -8,8 +8,9 @@
   },
   "scripts": {
     "dev": "tsx server.ts",
-    "build": "NODE_OPTIONS=--max-old-space-size=4096 vite build && node scripts/postbuild-seo.mjs",
-    "build:static": "FULL_STATIC_PRERENDER=true NODE_OPTIONS=--max-old-space-size=4096 vite build && FULL_STATIC_PRERENDER=true node scripts/postbuild-seo.mjs",
+    "sitemap": "tsx scripts/generate-sitemap.ts",
+    "build": "tsx scripts/generate-sitemap.ts && NODE_OPTIONS=--max-old-space-size=4096 vite build && node scripts/postbuild-seo.mjs",
+    "build:static": "tsx scripts/generate-sitemap.ts && FULL_STATIC_PRERENDER=true NODE_OPTIONS=--max-old-space-size=4096 vite build && FULL_STATIC_PRERENDER=true node scripts/postbuild-seo.mjs",
     "start": "node server.ts",
     "preview": "vite preview --host=0.0.0.0",
     "clean": "rm -rf dist server.js",
