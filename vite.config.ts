@@ -1,14 +1,43 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
+import fs from 'fs';
 import path from 'path';
 import { fileURLToPath } from 'url';
-import { defineConfig } from 'vite';
+import { defineConfig, type Plugin } from 'vite';
 
 const __dirname = fileURLToPath(new URL('.', import.meta.url));
 
+function fastStaticPackPlugin(): Plugin {
+  const packFileRegex =
+    /(?:static35(?:Dialect|Indic1|Indic2|Global1|Global2|Global3)|valentineWeek(?:Indic1|Indic2|Global1|Global2|Global3))\.ts$/;
+
+  return {
+    name: 'fast-static-pack-json',
+    enforce: 'pre',
+    load(id) {
+      const cleanId = id.split('?')[0].replace(/\\/g, '/');
+      if (!packFileRegex.test(cleanId)) {
+        return null;
+      }
+      const src = fs.readFileSync(cleanId, 'utf8');
+      const match = src.match(/export\s+const\s+([A-Z0-9_]+)\s*:/);
+      const start = src.indexOf('{');
+      const end = src.lastIndexOf('}');
+      if (!match || start === -1 || end === -1 || end <= start) {
+        return null;
+      }
+      const compactJson = JSON.stringify(JSON.parse(src.slice(start, end + 1)));
+      return {
+        code: `export const ${match[1]} = JSON.parse(${JSON.stringify(compactJson)});\n`,
+        map: null,
+      };
+    },
+  };
+}
+
 export default defineConfig(() => {
   return {
-    plugins: [react(), tailwindcss()],
+    plugins: [fastStaticPackPlugin(), react(), tailwindcss()],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
@@ -23,6 +52,7 @@ export default defineConfig(() => {
         'react-dom/client',
         'react/jsx-runtime',
         'react/jsx-dev-runtime',
+        '@vercel/analytics/react',
         'lucide-react',
         'firebase/app',
         'firebase/auth',
@@ -32,6 +62,8 @@ export default defineConfig(() => {
       ],
     },
     build: {
+      sourcemap: false,
+      reportCompressedSize: false,
       chunkSizeWarningLimit: 2500,
       rollupOptions: {
         input: {

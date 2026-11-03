@@ -58,8 +58,7 @@ if (configuredOrigin !== DEFAULT_PRODUCTION_ORIGIN) {
 // Set FULL_STATIC_PRERENDER=true (or run npm run build:static) to pre-render all 4,900+ sitemap URLs.
 const isFullStaticCloudDeploy = Boolean(
   process.env.FULL_STATIC_PRERENDER === 'true' ||
-    process.env.FULL_STATIC_PRERENDER === '1' ||
-    process.env.VERCEL
+    process.env.FULL_STATIC_PRERENDER === '1'
 );
 
 const routesToPrerender = new Set();

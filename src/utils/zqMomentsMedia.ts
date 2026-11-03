@@ -1,5 +1,5 @@
 import { FirebaseStorage, ref, uploadBytes, getDownloadURL } from 'firebase/storage';
-import type { NSFWJS, PredictionType } from 'nsfwjs/core';
+import type { NSFWJS, PredictionType } from 'nsfwjs';
 
 export const ZQ_NSFW_PHOTO_BLOCK_MESSAGE =
   'NSFW / Ashleel photo allowed nahi hai ❌ Auto-Rejected!';
@@ -141,21 +141,14 @@ async function getNsfwModel(): Promise<NSFWJS> {
         await tf.ready();
       }
 
-      const [{ load }, { MobileNetV2Model }] = await Promise.all([
-        import('nsfwjs/core'),
-        import('nsfwjs/models/mobilenet_v2')
-      ]);
+      const { load } = await import('nsfwjs');
 
       try {
-        return await load('MobileNetV2', {
-          modelDefinitions: [MobileNetV2Model]
-        });
+        return await load('MobileNetV2');
       } catch {
         await tf.setBackend('cpu');
         await tf.ready();
-        return await load('MobileNetV2', {
-          modelDefinitions: [MobileNetV2Model]
-        });
+        return await load('MobileNetV2');
       }
     })().catch((err) => {
       nsfwModelPromise = null;
