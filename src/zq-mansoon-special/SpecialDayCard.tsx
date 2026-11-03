@@ -20,6 +20,7 @@ import {
   useTranslatedText
 } from '../context/GlobalLanguageContext';
 import { FlatSpecialShayari } from './data';
+import { formatShayariCopyText } from '../utils/copyShayariFormat';
 
 interface SpecialDayCardProps {
   item: FlatSpecialShayari;
@@ -106,9 +107,14 @@ export const SpecialDayCard: React.FC<SpecialDayCardProps> = ({
   )}`;
 
   const handleCopy = () => {
-    const textToCopy = `🌸 ${translatedDayName} (${item.dateLabel}) 🌸\n\n${displayLines.join(
-      '\n'
-    )}\n\n💗 ZQ FEELINGS - Dil Ki Awaaz 💗`;
+    const cleanDayHashtag = item.dayNameEnglish.replace(/[^a-zA-Z0-9]/g, '');
+    const monthHashtag = `${item.monthNameEnglish.replace(/[^a-zA-Z0-9]/g, '')}Shayari`;
+    const textToCopy = formatShayariCopyText({
+      title: `${translatedDayName} (${item.dateLabel})`,
+      lines: displayLines,
+      category: item.monthId,
+      tags: [cleanDayHashtag, monthHashtag, ...shayari.tags]
+    });
     navigator.clipboard.writeText(textToCopy);
     setCopied(true);
     setTimeout(() => setCopied(false), 2200);

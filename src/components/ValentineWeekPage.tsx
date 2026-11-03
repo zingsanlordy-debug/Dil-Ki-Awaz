@@ -34,6 +34,7 @@ import {
   isValentineLanguageReady
 } from '../data/valentineWeekLoader';
 import { FONT_OPTIONS, transformShayariLine } from '../data/fonts';
+import { formatShayariCopyText } from '../utils/copyShayariFormat';
 import { FontStyleId, Shayari } from '../types/shayari';
 import { useFontSize } from '../context/FontSizeContext';
 
@@ -86,12 +87,14 @@ const ValentineShayariCardItem: React.FC<ValentineShayariCardItemProps> = ({
       ? `${window.location.origin}${dedicatedCategoryPath}`
       : `https://zqfeelings.com${dedicatedCategoryPath}`;
 
-  const formattedSharePayload = `${category.icon} ${category.shortName} Shayari (${category.dateLabel})\n\n${displayLines.join(
-    '\n'
-  )}\n\n❤️ ZQ Feelings - Valentine Week Special\n${sharePageUrl}`;
+  const copyTextPayload = formatShayariCopyText({
+    title: cardTitle || `${category.shortName} Shayari`,
+    lines: displayLines,
+    category: category.id
+  });
 
   const handleCopy = () => {
-    navigator.clipboard.writeText(formattedSharePayload).catch(() => {
+    navigator.clipboard.writeText(copyTextPayload).catch(() => {
       // ignore clipboard permission error
     });
     setCopied(true);
@@ -111,7 +114,7 @@ const ValentineShayariCardItem: React.FC<ValentineShayariCardItemProps> = ({
         // User cancelled or share unavailable — fallback to copy
       }
     }
-    navigator.clipboard.writeText(formattedSharePayload).catch(() => {
+    navigator.clipboard.writeText(copyTextPayload).catch(() => {
       // ignore
     });
     setSharedFeedback(true);

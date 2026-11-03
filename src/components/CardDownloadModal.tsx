@@ -3,6 +3,7 @@ import { X, Copy, Check, Share2, Sparkles } from 'lucide-react';
 import { Shayari, FontStyleId } from '../types/shayari';
 import { FONT_OPTIONS } from '../data/fonts';
 import { getCategoryGradientTheme } from '../utils/categoryTheme';
+import { formatShayariCopyText } from '../utils/copyShayariFormat';
 
 interface CardDownloadModalProps {
   shayari: Shayari | null;
@@ -24,7 +25,12 @@ export const CardDownloadModal: React.FC<CardDownloadModalProps> = ({
   const categoryTheme = getCategoryGradientTheme(shayari.category, shayari.categoryType);
 
   const handleCopyText = () => {
-    const textToCopy = `🌸 ${shayari.title} 🌸\n\n${shayari.lines.join('\n')}\n\n💗 ZQ FEELINGS - Dil Ki Awaaz 💗\n${shayari.tags.map((t) => `#${t}`).join(' ')}`;
+    const textToCopy = formatShayariCopyText({
+      title: shayari.title,
+      lines: shayari.lines,
+      category: String(shayari.category || ''),
+      tags: shayari.tags
+    });
     navigator.clipboard.writeText(textToCopy);
     setCopied(true);
     setTimeout(() => setCopied(false), 2000);

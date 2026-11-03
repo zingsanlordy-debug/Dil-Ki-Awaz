@@ -32,6 +32,7 @@ import {
   getStatic35ShayariTitle
 } from '../data/static35/static35Loader';
 import { PostReportTriggerAndDrawer, UgcSeoSafeFooter } from './PostReportAndFooter';
+import { formatShayariCopyText } from '../utils/copyShayariFormat';
 
 export interface ShayariCardProps {
   shayari: Shayari;
@@ -110,7 +111,12 @@ const ShayariCardView: React.FC<ResolvedCardViewProps> = ({
   );
 
   const handleCopy = () => {
-    const textToCopy = `🌸 ${resolvedTitle} 🌸\n\n${displayLines.join('\n')}\n\n💗 ZQ FEELINGS - Dil Ki Awaaz 💗\n${shayari.tags.map((t) => `#${t}`).join(' ')}`;
+    const textToCopy = formatShayariCopyText({
+      title: resolvedTitle,
+      lines: displayLines,
+      category: String(shayari.category || ''),
+      tags: shayari.tags
+    });
     navigator.clipboard.writeText(textToCopy);
     setCopied(true);
     setTimeout(() => setCopied(false), 2200);

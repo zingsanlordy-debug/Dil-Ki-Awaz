@@ -4,6 +4,7 @@
  */
 
 import React, { useState, useEffect, useMemo, useRef, useDeferredValue, Suspense, lazy } from 'react';
+import { Analytics } from '@vercel/analytics/react';
 import { ConfettiSparkles } from './components/ConfettiSparkles';
 import { Header, AppRoute } from './components/Header';
 import { HomePage } from './components/HomePage';
@@ -1352,6 +1353,8 @@ export default function App() {
           />
         )}
       </Suspense>
+
+      <Analytics />
     </div>
   );
 }
