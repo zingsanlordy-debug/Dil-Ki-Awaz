@@ -328,6 +328,14 @@ async function startServer(): Promise<void> {
       );
   });
 
+  app.get('/googlec97049106a7959f6.html', (_req: Request, res: Response) => {
+    res
+      .status(200)
+      .type('text/html')
+      .setHeader('Cache-Control', 'public, max-age=3600')
+      .send('google-site-verification: googlec97049106a7959f6.html');
+  });
+
   if (isProduction) {
     const distPath = path.resolve(__dirname, 'dist');
     const assetsPath = path.join(distPath, 'assets');
