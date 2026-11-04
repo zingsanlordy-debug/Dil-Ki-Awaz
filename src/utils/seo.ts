@@ -70,12 +70,31 @@ export interface PageSeoMeta {
 
 import { getActiveSiteOrigin, isFreeHostingPreviewHost } from './siteOrigin';
 
-const SITE_BRAND = 'ZQ FEELINGS';
+export const SITE_NAME_FULL = 'ZQ Feelings - Dil Ki Awaaz';
+export const HOME_SEO_TITLE = 'Best New Shayari 2026 | ZQ Feelings - Dil Ki Awaaz';
+export const HOME_SEO_DESCRIPTION =
+  'Read Best New Shayari 2026 in Hindi, English and more. Latest Love, Sad, Attitude, Miss You Shayari only on ZQ Feelings - Dil Ki Awaaz.';
 
-function clampSeoTitle(primary: string, fallbackShort: string, ultraShort?: string): string {
-  if (primary.length <= 60) return primary;
-  if (fallbackShort.length <= 60) return fallbackShort;
-  return (ultraShort || fallbackShort).slice(0, 60);
+export function formatTopicSeoTitle(topic: string): string {
+  const cleanTopic = topic.trim();
+  if (!cleanTopic) return HOME_SEO_TITLE;
+  return `${cleanTopic} Best New Shayari 2026 | ${SITE_NAME_FULL}`;
+}
+
+export function formatTopicSeoDescription(topic?: string): string {
+  if (!topic || !topic.trim()) {
+    return HOME_SEO_DESCRIPTION;
+  }
+  const cleanTopic = topic.trim();
+  const fullCandidate = `Read ${cleanTopic} - Best New Shayari 2026 in Hindi, English and more. Latest Love, Sad, Attitude, Miss You Shayari only on ZQ Feelings - Dil Ki Awaaz.`;
+  if (fullCandidate.length <= 160) {
+    return fullCandidate;
+  }
+  const mediumCandidate = `Read ${cleanTopic} - Best New Shayari 2026 in Hindi, English and more. Latest Love, Sad, Attitude Shayari only on ZQ Feelings - Dil Ki Awaaz.`;
+  if (mediumCandidate.length <= 160) {
+    return mediumCandidate;
+  }
+  return `Read ${cleanTopic} - Best New Shayari 2026 in Hindi, English and more only on ZQ Feelings - Dil Ki Awaaz.`;
 }
 
 /**
@@ -695,18 +714,16 @@ export function getSeoMetadataForState(params: {
   } = params;
 
   const activePage = params.page && params.page >= 2 ? Math.floor(params.page) : 1;
-  const rangeStart = (activePage - 1) * 20 + 1;
-  const rangeEnd = activePage * 20;
-
   if (searchQuery && searchQuery.trim()) {
     const q = searchQuery.trim().slice(0, 22);
+    const searchTopic = `${q} Shayari`;
     return {
-      title: clampSeoTitle(`${q} Shayari in Hindi | ${SITE_BRAND}`, `${q} Shayari | ZQ Feelings`),
-      description: `Read the best "${q}" Hindi Shayari, 2-line status & 4-line poetry on ZQ FEELINGS. Copy 20 stylish fonts or share on WhatsApp.`,
+      title: formatTopicSeoTitle(searchTopic),
+      description: formatTopicSeoDescription(searchTopic),
       canonicalPath: '/',
       h1: `${q} Hindi Shayari Search Results`,
       section: 'Hindi Shayari Search',
-      keywords: [q, 'Hindi Shayari', 'Shayari Search', 'ZQ FEELINGS', 'Dil Ki Awaaz'],
+      keywords: [q, 'Best New Shayari 2026', 'Shayari Search', 'ZQ Feelings', 'Dil Ki Awaaz'],
       breadcrumbs: [{ name: 'Home', path: '/' }]
     };
   }
@@ -714,13 +731,12 @@ export function getSeoMetadataForState(params: {
   // Legal & Info Routes
   if (route === 'about') {
     return {
-      title: `About Us – Dil Ki Awaaz | ${SITE_BRAND}`,
-      description:
-        'About ZQ FEELINGS - Dil Ki Awaaz: 100% original Hindi, Hinglish, Urdu & 35-language Shayari for Feelings, Festivals, Valentine & Sanskar.',
+      title: formatTopicSeoTitle('About Us'),
+      description: formatTopicSeoDescription('About Us'),
       canonicalPath: '/about-us',
       h1: 'About Us — ZQ FEELINGS (दिल की आवाज़)',
       section: 'About ZQ FEELINGS',
-      keywords: ['About ZQ FEELINGS', 'Dil Ki Awaaz', 'Original Hindi Shayari'],
+      keywords: ['About ZQ Feelings', 'Dil Ki Awaaz', 'Best New Shayari 2026'],
       breadcrumbs: [
         { name: 'Home', path: '/' },
         { name: 'About Us', path: '/about-us' }
@@ -730,13 +746,12 @@ export function getSeoMetadataForState(params: {
 
   if (route === 'privacy') {
     return {
-      title: `Privacy Policy (गोपनीयता नीति) | ${SITE_BRAND}`,
-      description:
-        'Read the Privacy Policy of ZQ FEELINGS - Dil Ki Awaaz. Browse, copy, translate in 35 languages & save favorite Shayari with full privacy.',
+      title: formatTopicSeoTitle('Privacy Policy'),
+      description: formatTopicSeoDescription('Privacy Policy'),
       canonicalPath: '/privacy-policy',
       h1: 'Privacy Policy (गोपनीयता नीति)',
       section: 'Privacy Policy',
-      keywords: ['Privacy Policy', 'ZQ FEELINGS Privacy', 'Dil Ki Awaaz'],
+      keywords: ['Privacy Policy', 'ZQ Feelings Privacy', 'Dil Ki Awaaz'],
       breadcrumbs: [
         { name: 'Home', path: '/' },
         { name: 'Privacy Policy', path: '/privacy-policy' }
@@ -746,13 +761,12 @@ export function getSeoMetadataForState(params: {
 
   if (route === 'terms') {
     return {
-      title: `Terms & Conditions (नियम व शर्तें) | ${SITE_BRAND}`,
-      description:
-        'Terms & Conditions for reading, personal WhatsApp/Facebook sharing, and posting user poetry on ZQ FEELINGS - Dil Ki Awaaz.',
+      title: formatTopicSeoTitle('Terms & Conditions'),
+      description: formatTopicSeoDescription('Terms & Conditions'),
       canonicalPath: '/terms-and-conditions',
       h1: 'Terms & Conditions (नियम व शर्तें)',
       section: 'Terms & Conditions',
-      keywords: ['Terms and Conditions', 'ZQ FEELINGS Terms', 'Dil Ki Awaaz'],
+      keywords: ['Terms and Conditions', 'ZQ Feelings Terms', 'Dil Ki Awaaz'],
       breadcrumbs: [
         { name: 'Home', path: '/' },
         { name: 'Terms & Conditions', path: '/terms-and-conditions' }
@@ -762,13 +776,12 @@ export function getSeoMetadataForState(params: {
 
   if (route === 'disclaimer') {
     return {
-      title: `Disclaimer & Copyright Policy | ${SITE_BRAND}`,
-      description:
-        '100% Original Content & Copyright Disclaimer of ZQ FEELINGS - Dil Ki Awaaz. Respectful poetry across faiths, festivals & traditions.',
+      title: formatTopicSeoTitle('Disclaimer'),
+      description: formatTopicSeoDescription('Disclaimer'),
       canonicalPath: '/disclaimer',
       h1: 'Disclaimer & Copyright Policy (अस्वीकरण)',
       section: 'Disclaimer',
-      keywords: ['Disclaimer', 'Copyright Policy', 'ZQ FEELINGS'],
+      keywords: ['Disclaimer', 'Copyright Policy', 'ZQ Feelings'],
       breadcrumbs: [
         { name: 'Home', path: '/' },
         { name: 'Disclaimer', path: '/disclaimer' }
@@ -778,13 +791,12 @@ export function getSeoMetadataForState(params: {
 
   if (route === 'contact') {
     return {
-      title: `Contact Us (संपर्क करें) | ${SITE_BRAND}`,
-      description:
-        'Contact ZQ FEELINGS - Dil Ki Awaaz support team for feedback, suggestions, collaborations, or poetry inquiries.',
+      title: formatTopicSeoTitle('Contact Us'),
+      description: formatTopicSeoDescription('Contact Us'),
       canonicalPath: '/contact-us',
       h1: 'Contact Us (संपर्क करें)',
       section: 'Contact Us',
-      keywords: ['Contact ZQ FEELINGS', 'Dil Ki Awaaz Support'],
+      keywords: ['Contact ZQ Feelings', 'Dil Ki Awaaz Support'],
       breadcrumbs: [
         { name: 'Home', path: '/' },
         { name: 'Contact Us', path: '/contact-us' }
@@ -804,34 +816,12 @@ export function getSeoMetadataForState(params: {
       const langBasePath = buildHoliday35CleanPath(festivalCat, langMeta.code, 1);
       const pageSuffix = activePage >= 2 ? `/page/${activePage}` : undefined;
 
-      const title =
-        activePage >= 2
-          ? clampSeoTitle(
-              `${holMeta.shortName} Shayari (${langMeta.englishName}) – Page ${activePage} | ZQ`,
-              `${holMeta.shortName} (${langMeta.englishName}) P${activePage} | ZQ`
-            )
-          : hasCustomLang
-            ? festivalCat === 'new-year'
-              ? clampSeoTitle(
-                  `New Year Shayari in ${langMeta.englishName} (1 Jan) | ZQ Feelings`,
-                  `New Year Shayari in ${langMeta.englishName} | ZQ Feelings`,
-                  `New Year Shayari (${langMeta.englishName}) | ZQ`
-                )
-              : clampSeoTitle(
-                  `Christmas Shayari in ${langMeta.englishName} (25 Dec) | ZQ`,
-                  `Christmas Day Shayari (${langMeta.englishName}) | ZQ`,
-                  `Christmas (${langMeta.englishName}) | ZQ`
-                )
-            : festivalCat === 'new-year'
-              ? 'New Year Shayari 2026 in Hindi (नया साल) | ZQ Feelings'
-              : 'Christmas Day Shayari in Hindi (क्रिसमस) | ZQ Feelings';
-
-      const description =
-        activePage >= 2
-          ? `${holMeta.name} Shayari in ${langMeta.englishName} – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd}): ${holMeta.dateLabel} wishes with 20 stylish fonts & share.`
-          : hasCustomLang
-            ? `Best ${holMeta.name} Shayari in ${langMeta.englishName} (${langMeta.nativeLabel} • ${holMeta.dateLabel}) — 25 original wishes with 20 stylish fonts & WhatsApp share.`
-            : `Best ${holMeta.name} Shayari in Hindi (${holMeta.hindiName} शायरी • ${holMeta.dateLabel}) — 25 original wishes in 35 languages, 20 stylish fonts & share.`;
+      const holBaseTopic = hasCustomLang
+        ? `${holMeta.name} Shayari in ${langMeta.englishName}`
+        : `${holMeta.name} Shayari`;
+      const holTopic = activePage >= 2 ? `${holBaseTopic} - Page ${activePage}` : holBaseTopic;
+      const title = formatTopicSeoTitle(holTopic);
+      const description = formatTopicSeoDescription(holTopic);
 
       return {
         title,
@@ -846,8 +836,8 @@ export function getSeoMetadataForState(params: {
           `${holMeta.name} Shayari`,
           `${holMeta.name} Shayari in ${langMeta.englishName}`,
           `${holMeta.hindiName} शायरी`,
-          `${holMeta.dateLabel} Wishes`,
-          'ZQ FEELINGS'
+          'Best New Shayari 2026',
+          'ZQ Feelings'
         ],
         breadcrumbs: [
           { name: 'Home', path: '/' },
@@ -872,32 +862,22 @@ export function getSeoMetadataForState(params: {
     if (activeFest) {
       const basePath = `/${activeFest.id}-shayari`;
       const canonicalPath = buildPaginatedCleanPath(basePath, activePage);
+      const festTopic =
+        activePage >= 2
+          ? `${activeFest.name} Shayari - Page ${activePage}`
+          : `${activeFest.name} Shayari`;
       return {
-        title:
-          activePage >= 2
-            ? clampSeoTitle(
-                `${activeFest.name} Festival Shayari – Page ${activePage} | ZQ`,
-                `${activeFest.name} – Page ${activePage} | ZQ Feelings`,
-                `${activeFest.id} – P${activePage} | ZQ Feelings`
-              )
-            : clampSeoTitle(
-                activeFest.seoTitle,
-                `${activeFest.name} Shayari in Hindi | ${SITE_BRAND}`,
-                `${activeFest.name} Shayari | ${SITE_BRAND}`
-              ),
-        description:
-          activePage >= 2
-            ? `${activeFest.name} Shayari (${activeFest.hindiName}) – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd}): unique festival wishes with stylish fonts & share.`
-            : activeFest.seoDescription,
+        title: formatTopicSeoTitle(festTopic),
+        description: formatTopicSeoDescription(festTopic),
         canonicalPath,
         h1: `${activeFest.name} Shayari in Hindi (${activeFest.hindiName} विशेस शायरी)`,
         section: `${activeFest.name} Festival Wishes Shayari`,
         keywords: [
           `${activeFest.name} Shayari`,
           `${activeFest.hindiName} शायरी`,
-          'Festival Wishes in Hindi',
-          'Hindi Shayari',
-          'ZQ FEELINGS'
+          'Best New Shayari 2026',
+          'ZQ Feelings',
+          'Dil Ki Awaaz'
         ],
         breadcrumbs: [
           { name: 'Home', path: '/' },
@@ -910,22 +890,15 @@ export function getSeoMetadataForState(params: {
 
     const baseHubPath = '/festival-shayari';
     const canonicalHubPath = buildPaginatedCleanPath(baseHubPath, activePage);
+    const festHubTopic =
+      activePage >= 2 ? `Festival Shayari - Page ${activePage}` : 'Festival Shayari';
     return {
-      title:
-        activePage >= 2
-          ? clampSeoTitle(
-              `Festival Shayari in Hindi – Page ${activePage} | ZQ Feelings`,
-              `Festival Shayari – Page ${activePage} | ZQ Feelings`
-            )
-          : `Festival Shayari in Hindi – Diwali, Holi | ${SITE_BRAND}`,
-      description:
-        activePage >= 2
-          ? `Festival Shayari in Hindi – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd}): Diwali, Holi, Eid & Navratri wishes on ZQ Feelings.`
-          : 'Explore 27 Indian Festival Shayari in Hindi — Diwali, Holi, Eid, Rakshabandhan, Navratri & Chhath Puja 2-4 line wishes to copy & share.',
+      title: formatTopicSeoTitle(festHubTopic),
+      description: formatTopicSeoDescription(festHubTopic),
       canonicalPath: canonicalHubPath,
       h1: 'Festival Shayari - Diwali, Holi, Eid Wishes',
       section: 'Festival Wishes Shayari',
-      keywords: ['Festival Shayari', 'त्यौहार शायरी', 'Diwali Shayari', 'Holi Shayari', 'ZQ FEELINGS'],
+      keywords: ['Festival Shayari', 'त्यौहार शायरी', 'Diwali Shayari', 'Holi Shayari', 'ZQ Feelings'],
       breadcrumbs: [
         { name: 'Home', path: '/' },
         { name: 'Festival Shayari', path: baseHubPath },
@@ -951,37 +924,13 @@ export function getSeoMetadataForState(params: {
         false
       );
 
-      const title =
-        activePage >= 2
-          ? hasCustomLang
-            ? clampSeoTitle(
-                `${activeMaafiSub.englishTitle} Shayari (${langMeta.englishName}) – Page ${activePage} | ZQ`,
-                `${activeMaafiSub.englishTitle} (${langMeta.englishName}) – Page ${activePage} | ZQ`,
-                `${activeMaafiSub.englishTitle} (${langMeta.slug}) P${activePage} | ZQ`
-              )
-            : clampSeoTitle(
-                `${activeMaafiSub.englishTitle} Shayari – Page ${activePage} | ZQ Feelings`,
-                `${activeMaafiSub.englishTitle} – Page ${activePage} | ZQ`
-              )
-          : hasCustomLang
-            ? clampSeoTitle(
-                `${activeMaafiSub.englishTitle} Shayari in ${langMeta.englishName} | ZQ Feelings`,
-                `${activeMaafiSub.englishTitle} Shayari (${langMeta.englishName}) | ZQ`,
-                `${activeMaafiSub.englishTitle} (${langMeta.slug}) | ZQ`
-              )
-            : clampSeoTitle(
-                activeMaafiSub.seoTitle,
-                `${activeMaafiSub.englishTitle} Shayari | ${SITE_BRAND}`
-              );
-
-      const description =
-        activePage >= 2
-          ? hasCustomLang
-            ? `${activeMaafiSub.englishTitle} Shayari in ${langMeta.englishName} – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd}): heartfelt apology status on ZQ Feelings.`
-            : `${activeMaafiSub.name} Shayari – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd}): heartfelt apology status on ZQ Feelings.`
-          : hasCustomLang
-            ? `Read ${activeMaafiSub.count} heartfelt ${activeMaafiSub.englishTitle} Shayari in ${langMeta.englishName} (${langMeta.nativeLabel}) — emotional apology poetry with 20 stylish fonts & share.`
-            : activeMaafiSub.seoDescription;
+      const maafiBaseTopic = hasCustomLang
+        ? `${activeMaafiSub.englishTitle} Shayari in ${langMeta.englishName}`
+        : `${activeMaafiSub.englishTitle} Shayari`;
+      const maafiTopic =
+        activePage >= 2 ? `${maafiBaseTopic} - Page ${activePage}` : maafiBaseTopic;
+      const title = formatTopicSeoTitle(maafiTopic);
+      const description = formatTopicSeoDescription(maafiTopic);
 
       return {
         title,
@@ -997,8 +946,8 @@ export function getSeoMetadataForState(params: {
           `${activeMaafiSub.englishTitle} Shayari in ${langMeta.englishName}`,
           activeMaafiSub.hindiTitle,
           'Sorry Shayari',
-          'Maafi Shayari',
-          'ZQ FEELINGS'
+          'Best New Shayari 2026',
+          'ZQ Feelings'
         ],
         breadcrumbs: [
           { name: 'Home', path: '/' },
@@ -1024,39 +973,13 @@ export function getSeoMetadataForState(params: {
         );
         const feelDisplayName =
           activeFeel.id === 'birthday-feelings' ? 'Birthday Feelings Shayari' : activeFeel.name;
-        const feelShortRoot = feelDisplayName.replace(/\s+Shayari$/i, '');
-
-        const title =
-          activePage >= 2
-            ? hasCustomLang
-              ? clampSeoTitle(
-                  `${feelDisplayName} in ${langMeta.englishName} – Page ${activePage} | ZQ`,
-                  `${feelShortRoot} Shayari (${langMeta.englishName}) P${activePage} | ZQ`,
-                  `${feelShortRoot} (${langMeta.slug}) P${activePage} | ZQ`
-                )
-              : clampSeoTitle(
-                  `${feelDisplayName} – Page ${activePage} | ZQ Feelings`,
-                  `${feelDisplayName} P${activePage} | ZQ Feelings`
-                )
-            : hasCustomLang
-              ? clampSeoTitle(
-                  `${feelDisplayName} in ${langMeta.englishName} | ZQ Feelings`,
-                  `${feelDisplayName} (${langMeta.englishName}) | ZQ`,
-                  `${feelShortRoot} (${langMeta.slug}) | ZQ Feelings`
-                )
-              : clampSeoTitle(
-                  `${feelDisplayName} (${activeFeel.hindiName}) | ${SITE_BRAND}`,
-                  `${feelDisplayName} in Hindi | ${SITE_BRAND}`
-                );
-
-        const description =
-          activePage >= 2
-            ? hasCustomLang
-              ? `${feelDisplayName} in ${langMeta.englishName} – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd}): pre-translated status with 20 stylish fonts & share.`
-              : `${activeFeel.name} (${activeFeel.hindiName}) – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd}): Hindi, Hinglish & English status with 20 stylish fonts.`
-            : hasCustomLang
-              ? `Read Best ${feelDisplayName} in ${langMeta.englishName} (${langMeta.nativeLabel}) — original emotional poetry with 20 stylish fonts & WhatsApp share.`
-              : activeFeel.seoDescription;
+        const feelBaseTopic = hasCustomLang
+          ? `${feelDisplayName} in ${langMeta.englishName}`
+          : feelDisplayName;
+        const feelTopic =
+          activePage >= 2 ? `${feelBaseTopic} - Page ${activePage}` : feelBaseTopic;
+        const title = formatTopicSeoTitle(feelTopic);
+        const description = formatTopicSeoDescription(feelTopic);
 
         return {
           title,
@@ -1071,8 +994,8 @@ export function getSeoMetadataForState(params: {
             activeFeel.name,
             `${feelDisplayName} in ${langMeta.englishName}`,
             activeFeel.hindiName,
-            'Feelings Shayari',
-            'ZQ FEELINGS'
+            'Best New Shayari 2026',
+            'ZQ Feelings'
           ],
           breadcrumbs: [
             { name: 'Home', path: '/' },
@@ -1094,33 +1017,14 @@ export function getSeoMetadataForState(params: {
     const baseHubPath = '/feelings-shayari';
     const langHubBasePath = buildFeelingsCleanPath('all', langMeta.code, 1, false);
     const canonicalHubPath = buildFeelingsCleanPath('all', langMeta.code, activePage, false);
+    const feelHubBaseTopic = hasCustomLang
+      ? `Feelings Shayari in ${langMeta.englishName}`
+      : 'Feelings Shayari';
+    const feelHubTopic =
+      activePage >= 2 ? `${feelHubBaseTopic} - Page ${activePage}` : feelHubBaseTopic;
     return {
-      title:
-        activePage >= 2
-          ? hasCustomLang
-            ? clampSeoTitle(
-                `Feelings Shayari in ${langMeta.englishName} – Page ${activePage} | ZQ`,
-                `Feelings Shayari (${langMeta.englishName}) P${activePage} | ZQ`
-              )
-            : clampSeoTitle(
-                `Feelings Shayari – Page ${activePage} (Love & Sad) | ZQ Feelings`,
-                `Feelings Shayari – Page ${activePage} | ZQ Feelings`
-              )
-          : hasCustomLang
-            ? clampSeoTitle(
-                `Feelings Shayari in ${langMeta.englishName} – Love & Sad | ZQ`,
-                `Feelings Shayari in ${langMeta.englishName} | ZQ Feelings`,
-                `Feelings Shayari (${langMeta.englishName}) | ZQ`
-              )
-            : `Feelings Shayari in Hindi – Love & Sad | ${SITE_BRAND}`,
-      description:
-        activePage >= 2
-          ? hasCustomLang
-            ? `Feelings Shayari in ${langMeta.englishName} – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd}): Love, Sad, Attitude & Dosti poetry on ZQ Feelings.`
-            : `Feelings Shayari in Hindi – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd}): Love, Sad, Yaad, Attitude, Dosti & Emotional status on ZQ Feelings.`
-          : hasCustomLang
-            ? `Read 1,631+ Feelings Shayari in ${langMeta.englishName} (${langMeta.nativeLabel}) — Love, Sad, Yaad, Attitude, Dosti & Sorry poetry on ZQ Feelings.`
-            : 'Read 1,631+ unique Feelings Shayari in Hindi & 35 languages — Love, Sad, Yaad, Alone, Motivational, Sorry, Attitude, Dosti & Funny Shayari.',
+      title: formatTopicSeoTitle(feelHubTopic),
+      description: formatTopicSeoDescription(feelHubTopic),
       canonicalPath: canonicalHubPath,
       valentineBasePath: baseHubPath,
       valentinePageSuffix: pageSuffix,
@@ -1132,8 +1036,8 @@ export function getSeoMetadataForState(params: {
         `Feelings Shayari in ${langMeta.englishName}`,
         'Love Shayari',
         'Sad Shayari',
-        'Dosti Shayari',
-        'ZQ FEELINGS'
+        'Best New Shayari 2026',
+        'ZQ Feelings'
       ],
       breadcrumbs: [
         { name: 'Home', path: '/' },
@@ -1157,37 +1061,13 @@ export function getSeoMetadataForState(params: {
       const canonicalPath = buildPaginatedCleanPath(langBasePath, activePage);
       const valentinePageSuffix = activePage >= 2 ? `/page/${activePage}` : undefined;
 
-      const titleText =
-        activePage >= 2
-          ? hasCustomLang
-            ? clampSeoTitle(
-                `${activeValCat.shortName} Shayari in ${langMeta!.englishName} – Page ${activePage} | ZQ`,
-                `${activeValCat.shortName} (${langMeta!.englishName}) – Page ${activePage} | ZQ`,
-                `${activeValCat.shortName} (${langMeta!.slug}) – Page ${activePage} | ZQ`
-              )
-            : clampSeoTitle(
-                `${activeValCat.shortName} Shayari 2026 – Page ${activePage} | ZQ Feelings`,
-                `${activeValCat.shortName} Shayari – Page ${activePage} | ZQ Feelings`
-              )
-          : hasCustomLang
-            ? clampSeoTitle(
-                `${activeValCat.shortName} Shayari in ${langMeta!.englishName} | ZQ Feelings`,
-                `${activeValCat.shortName} Shayari (${langMeta!.englishName}) | ZQ`,
-                `${activeValCat.shortName} (${langMeta!.slug}) | ZQ Feelings`
-              )
-            : clampSeoTitle(
-                `40+ Best ${activeValCat.shortName} Shayari 2026 | ZQ Feelings`,
-                `${activeValCat.shortName} Shayari 2026 | ZQ Feelings`
-              );
-
-      const descriptionText =
-        activePage >= 2
-          ? hasCustomLang
-            ? `${activeValCat.shortName} Shayari in ${langMeta!.englishName} (${langMeta!.nativeLabel}) – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd}): ${activeValCat.dateLabel} wishes on ZQ Feelings.`
-            : `${activeValCat.shortName} Shayari 2026 (${activeValCat.dateLabel}) – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd}): ${activeValCat.hindiName} with 20 stylish fonts & share.`
-          : hasCustomLang
-            ? `Read 40+ Best ${activeValCat.shortName} Shayari 2026 (${activeValCat.dateLabel}) in ${langMeta!.englishName} (${langMeta!.nativeLabel}) with 20 stylish fonts & WhatsApp share.`
-            : `Read 40+ Best ${activeValCat.shortName} Shayari 2026 (${activeValCat.dateLabel} • ${activeValCat.hindiName}) in Hindi with 20 stylish fonts, copy & WhatsApp share.`;
+      const valDayBaseTopic = hasCustomLang
+        ? `${activeValCat.shortName} Shayari in ${langMeta!.englishName}`
+        : `${activeValCat.shortName} Shayari`;
+      const valDayTopic =
+        activePage >= 2 ? `${valDayBaseTopic} - Page ${activePage}` : valDayBaseTopic;
+      const titleText = formatTopicSeoTitle(valDayTopic);
+      const descriptionText = formatTopicSeoDescription(valDayTopic);
 
       return {
         title: titleText,
@@ -1216,7 +1096,7 @@ export function getSeoMetadataForState(params: {
         faqs: [
           {
             question: `${activeValCat.shortName} कब मनाया जाता है?`,
-            answer: `${activeValCat.shortName} हर साल ${activeValCat.dateLabel} को मनाया जाता है। ZQ Feelings पर आपको ${activeValCat.shortName} की 40 मौलिक शायरियाँ 35 भाषाओं और 20 स्टाइलिश फ़ॉन्ट्स में मिलती हैं।`
+            answer: `${activeValCat.shortName} हर साल ${activeValCat.dateLabel} को मनाया जाता है। ZQ Feelings पर आपको ${activeValCat.shortName} की 40 मौलिक शायरियाँ 35 भाषाओं और 20 स्टाइलिश फ़ॉन्ट्स मिलती हैं।`
           },
           {
             question: `क्या मैं ${activeValCat.shortName} Shayari को 35 भाषाओं में पढ़ और शेयर कर सकता हूँ?`,
@@ -1228,17 +1108,12 @@ export function getSeoMetadataForState(params: {
 
     const baseHubPath = '/valentine-week';
     const canonicalHubPath = hasCustomLang ? `${baseHubPath}/${langMeta!.slug}` : baseHubPath;
+    const valHubTopic = hasCustomLang
+      ? `Valentine Week Shayari in ${langMeta!.englishName}`
+      : 'Valentine Week Shayari';
     return {
-      title: hasCustomLang
-        ? clampSeoTitle(
-            `Valentine Week Shayari in ${langMeta!.englishName} | ZQ Feelings`,
-            `Valentine Shayari (${langMeta!.englishName}) | ZQ`,
-            `Valentine (${langMeta!.slug}) | ZQ Feelings`
-          )
-        : 'Valentine Week Shayari (7–21 Feb) – 600+ | ZQ Feelings',
-      description: hasCustomLang
-        ? `Valentine Week Shayari in ${langMeta!.englishName} (${langMeta!.nativeLabel}) — 600 unique poems across 15 days (7–21 Feb) with 20 stylish fonts.`
-        : 'Valentine Week Special (7–21 Feb) — Read 600 original Shayari across all 15 days from Rose Day to Breakup Day in Hindi & 35 languages on ZQ Feelings.',
+      title: formatTopicSeoTitle(valHubTopic),
+      description: formatTopicSeoDescription(valHubTopic),
       canonicalPath: canonicalHubPath,
       valentineBasePath: baseHubPath,
       langCode: langMeta?.hreflang || 'hi',
@@ -1248,7 +1123,7 @@ export function getSeoMetadataForState(params: {
         'Valentine Week Special',
         'Rose Day Shayari',
         'Propose Day Shayari',
-        'Valentine Day Shayari',
+        'Best New Shayari 2026',
         'ZQ Feelings'
       ],
       breadcrumbs: [
@@ -1275,21 +1150,13 @@ export function getSeoMetadataForState(params: {
     const activeRel =
       RELIGIOUS_CATEGORIES.find((r) => r.id === params.religiousCat) || RELIGIOUS_CATEGORIES[0];
     const canonicalPath = buildPaginatedCleanPath(activeRel.path, activePage);
+    const relTopic =
+      activePage >= 2
+        ? `${activeRel.englishTitle} Shayari - Page ${activePage}`
+        : `${activeRel.englishTitle} Shayari`;
     return {
-      title:
-        activePage >= 2
-          ? clampSeoTitle(
-              `${activeRel.englishTitle} Shayari – Page ${activePage} | ZQ Feelings`,
-              `${activeRel.englishTitle} – Page ${activePage} | ZQ`
-            )
-          : clampSeoTitle(
-              activeRel.seoTitle,
-              `${activeRel.englishTitle} Shayari | ${SITE_BRAND}`
-            ),
-      description:
-        activePage >= 2
-          ? `${activeRel.name} Shayari – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd} of ${activeRel.count}): spiritual quotes & poetry in 20 stylish fonts on ZQ Feelings.`
-          : activeRel.seoDescription,
+      title: formatTopicSeoTitle(relTopic),
+      description: formatTopicSeoDescription(relTopic),
       canonicalPath,
       h1: `${activeRel.name} Shayari`,
       section: activeRel.englishTitle,
@@ -1297,8 +1164,8 @@ export function getSeoMetadataForState(params: {
         `${activeRel.englishTitle} Shayari`,
         activeRel.hindiTitle,
         'Dharmik Shayari',
-        'Spiritual Shayari',
-        'ZQ FEELINGS'
+        'Best New Shayari 2026',
+        'ZQ Feelings'
       ],
       breadcrumbs: [
         { name: 'Home', path: '/' },
@@ -1313,21 +1180,13 @@ export function getSeoMetadataForState(params: {
       FAMILY_RITUALS_CATEGORIES.find((r) => r.id === params.familyRitualCat) ||
       FAMILY_RITUALS_CATEGORIES[0];
     const canonicalPath = buildPaginatedCleanPath(activeRitual.path, activePage);
+    const ritualTopic =
+      activePage >= 2
+        ? `${activeRitual.englishTitle} Shayari - Page ${activePage}`
+        : `${activeRitual.englishTitle} Shayari`;
     return {
-      title:
-        activePage >= 2
-          ? clampSeoTitle(
-              `${activeRitual.englishTitle} Shayari – Page ${activePage} | ZQ Feelings`,
-              `${activeRitual.englishTitle} – Page ${activePage} | ZQ`
-            )
-          : clampSeoTitle(
-              activeRitual.seoTitle,
-              `${activeRitual.englishTitle} Shayari | ${SITE_BRAND}`
-            ),
-      description:
-        activePage >= 2
-          ? `${activeRitual.name} Shayari – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd} of ${activeRitual.count}): auspicious family sanskar wishes with stylish fonts.`
-          : activeRitual.seoDescription,
+      title: formatTopicSeoTitle(ritualTopic),
+      description: formatTopicSeoDescription(ritualTopic),
       canonicalPath,
       h1: `${activeRitual.name} Shayari`,
       section: activeRitual.englishTitle,
@@ -1335,8 +1194,8 @@ export function getSeoMetadataForState(params: {
         `${activeRitual.englishTitle} Shayari`,
         activeRitual.hindiTitle,
         'Sanskar Shayari',
-        'Family Rituals Wishes',
-        'ZQ FEELINGS'
+        'Best New Shayari 2026',
+        'ZQ Feelings'
       ],
       breadcrumbs: [
         { name: 'Home', path: '/' },
@@ -1352,21 +1211,13 @@ export function getSeoMetadataForState(params: {
     if (activeMonth) {
       const basePath = `/${activeMonth.id}-special-shayari`;
       const canonicalPath = buildPaginatedCleanPath(basePath, activePage);
+      const monthTopic =
+        activePage >= 2
+          ? `${activeMonth.nameEnglish} Special Days Shayari - Page ${activePage}`
+          : `${activeMonth.nameEnglish} Special Days Shayari`;
       return {
-        title:
-          activePage >= 2
-            ? clampSeoTitle(
-                `${activeMonth.nameEnglish} Special Shayari – Page ${activePage} | ZQ Feelings`,
-                `${activeMonth.nameEnglish} Shayari – Page ${activePage} | ZQ`
-              )
-            : clampSeoTitle(
-                activeMonth.seoTitle,
-                `${activeMonth.nameEnglish} Shayari | ${SITE_BRAND}`
-              ),
-        description:
-          activePage >= 2
-            ? `${activeMonth.nameEnglish} (${activeMonth.nameHindi}) Special Shayari – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd}): world & national days wishes on ZQ Feelings.`
-            : activeMonth.seoDescription,
+        title: formatTopicSeoTitle(monthTopic),
+        description: formatTopicSeoDescription(monthTopic),
         canonicalPath,
         h1: `${activeMonth.nameEnglish} Special Days Shayari in Hindi (${activeMonth.nameHindi} के खास दिन)`,
         section: '12 Months Special Days Shayari',
@@ -1374,8 +1225,8 @@ export function getSeoMetadataForState(params: {
           `${activeMonth.nameEnglish} Shayari`,
           `${activeMonth.nameHindi} शायरी`,
           'Special Days Shayari',
-          'Hindi Wishes',
-          'ZQ FEELINGS'
+          'Best New Shayari 2026',
+          'ZQ Feelings'
         ],
         breadcrumbs: [
           { name: 'Home', path: '/' },
@@ -1388,22 +1239,17 @@ export function getSeoMetadataForState(params: {
 
     const baseHubPath = '/12-months-special-days-shayari';
     const canonicalHubPath = buildPaginatedCleanPath(baseHubPath, activePage);
+    const monthsHubTopic =
+      activePage >= 2
+        ? `12 Months Special Days Shayari - Page ${activePage}`
+        : '12 Months Special Days Shayari';
     return {
-      title:
-        activePage >= 2
-          ? clampSeoTitle(
-              `12 Months Special Shayari – Page ${activePage} | ZQ Feelings`,
-              `Special Days – Page ${activePage} | ZQ Feelings`
-            )
-          : `12 Months Special Days Shayari in Hindi | ${SITE_BRAND}`,
-      description:
-        activePage >= 2
-          ? `12 Months Special Days Shayari – Page ${activePage} (Shayari ${rangeStart}–${rangeEnd}): Jan–Dec wishes in Hindi on ZQ Feelings.`
-          : 'Complete Jan–Dec 12 Months Special Days Shayari in Hindi with 20 stylish fonts, 35 languages, one-click copy & WhatsApp share.',
+      title: formatTopicSeoTitle(monthsHubTopic),
+      description: formatTopicSeoDescription(monthsHubTopic),
       canonicalPath: canonicalHubPath,
       h1: '12 Months Special Days - Pure Saal Ke Special Din',
       section: '12 Months Special Days Shayari',
-      keywords: ['Special Days Shayari', '12 Months Shayari', 'Hindi Wishes', 'World Days Shayari', 'ZQ FEELINGS'],
+      keywords: ['Special Days Shayari', '12 Months Shayari', 'Best New Shayari 2026', 'ZQ Feelings'],
       breadcrumbs: [
         { name: 'Home', path: '/' },
         { name: '12 Months Special Days', path: baseHubPath },
@@ -1413,14 +1259,14 @@ export function getSeoMetadataForState(params: {
   }
 
   if (route === 'zq-moments') {
+    const momentsTopic = 'ZQ Moments Shayari Photo Status';
     return {
-      title: `ZQ-MOMENTS 💗 – Shayari Photo Status | ${SITE_BRAND}`,
-      description:
-        'Share 100% original Shayari Photo Status on ZQ-MOMENTS 💗 — Auto-Filter protected, 30 stylish fonts, likes, comments & 3-report safety.',
+      title: formatTopicSeoTitle(momentsTopic),
+      description: formatTopicSeoDescription(momentsTopic),
       canonicalPath: '/zq-moments',
       h1: 'ZQ Moments - Shayari Photo Status',
       section: 'ZQ-MOMENTS Social Feed',
-      keywords: ['ZQ-MOMENTS', 'Shayari Photo Status', 'Stylish Fonts', 'ZQ FEELINGS', 'Dil Ki Awaaz'],
+      keywords: ['ZQ Moments', 'Shayari Photo Status', 'Best New Shayari 2026', 'ZQ Feelings', 'Dil Ki Awaaz'],
       breadcrumbs: [
         { name: 'Home', path: '/' },
         { name: 'ZQ Moments', path: '/zq-moments' }
@@ -1441,14 +1287,14 @@ export function getSeoMetadataForState(params: {
   }
 
   if (route === 'public-wall') {
+    const writeTopic = 'Apni Shayari Likhe';
     return {
-      title: `Apni Shayari Likhe (अपनी शायरी लिखें) | ${SITE_BRAND}`,
-      description:
-        'Write & publish 100% original Love & Sad Shayari on ZQ Feelings — Auto-Filter verified, instant LIVE feed, 20 stylish fonts & WhatsApp share.',
+      title: formatTopicSeoTitle(writeTopic),
+      description: formatTopicSeoDescription(writeTopic),
       canonicalPath: '/apni-shayari-likhe',
       h1: 'Apni Shayari Likhe - Apne Dil Ki Baat Likhe',
       section: 'User Hindi Poetry',
-      keywords: ['Apni Shayari Likhe', 'Write Hindi Shayari', 'अपनी शायरी लिखें', 'ZQ FEELINGS'],
+      keywords: ['Apni Shayari Likhe', 'Write Hindi Shayari', 'Best New Shayari 2026', 'ZQ Feelings'],
       breadcrumbs: [
         { name: 'Home', path: '/' },
         { name: 'Apni Shayari Likhe', path: '/apni-shayari-likhe' }
@@ -1469,14 +1315,14 @@ export function getSeoMetadataForState(params: {
   }
 
   if (route === 'favorites') {
+    const favTopic = 'Pasandida Saved Shayari';
     return {
-      title: `Pasandida Shayari – Saved Hindi Shayari | ${SITE_BRAND}`,
-      description:
-        'View, copy, and share your saved favorite (Pasandida) Hindi Shayari, Festival Wishes & custom poetry anytime on ZQ FEELINGS.',
+      title: formatTopicSeoTitle(favTopic),
+      description: formatTopicSeoDescription(favTopic),
       canonicalPath: '/pasandida-shayari',
       h1: 'आपकी पसंदीदा शायरियाँ (Pasandida Hindi Shayari)',
       section: 'Saved Hindi Poetry',
-      keywords: ['Pasandida Shayari', 'Saved Hindi Shayari', 'Favorite Shayari', 'ZQ FEELINGS'],
+      keywords: ['Pasandida Shayari', 'Saved Shayari', 'Best New Shayari 2026', 'ZQ Feelings'],
       breadcrumbs: [
         { name: 'Home', path: '/' },
         { name: 'Pasandida Shayari', path: '/pasandida-shayari' }
@@ -1485,14 +1331,14 @@ export function getSeoMetadataForState(params: {
   }
 
   if (route === 'zq-official') {
+    const officialTopic = 'ZQ Official Shayari';
     return {
-      title: `ZQ Official Verified Hindi Shayari | ${SITE_BRAND}`,
-      description:
-        'Read verified official Hindi, Hinglish & English Shayari curated by ZQ FEELINGS - Dil Ki Awaaz across Love, Sad, Attitude & Festivals.',
+      title: formatTopicSeoTitle(officialTopic),
+      description: formatTopicSeoDescription(officialTopic),
       canonicalPath: '/zq-feelings-shayari',
       h1: 'ZQ FEELINGS 👑 Official Verified Hindi Shayari',
       section: 'Official Verified Hindi Shayari',
-      keywords: ['ZQ FEELINGS Official', 'Verified Hindi Shayari', 'Dil Ki Awaaz', 'Hindi Status'],
+      keywords: ['ZQ Feelings Official', 'Best New Shayari 2026', 'Dil Ki Awaaz', 'Hindi Status'],
       breadcrumbs: [
         { name: 'Home', path: '/' },
         { name: 'ZQ Official Shayari', path: '/zq-feelings-shayari' }
@@ -1501,13 +1347,14 @@ export function getSeoMetadataForState(params: {
   }
 
   if (route === 'admin-zq') {
+    const adminTopic = 'ZQ Admin Moderation';
     return {
-      title: `ZQ Admin Moderation | ${SITE_BRAND}`,
-      description: 'Admin moderation console for Global Auto-Approved Shayaris on ZQ FEELINGS - Dil Ki Awaaz.',
+      title: formatTopicSeoTitle(adminTopic),
+      description: formatTopicSeoDescription(adminTopic),
       canonicalPath: '/admin-zq',
       h1: 'ZQ Admin Panel (/admin-zq)',
       section: 'Admin Moderation',
-      keywords: ['ZQ FEELINGS Admin'],
+      keywords: ['ZQ Feelings Admin'],
       breadcrumbs: [
         { name: 'Home', path: '/' },
         { name: 'Admin', path: '/admin-zq' }
@@ -1515,32 +1362,25 @@ export function getSeoMetadataForState(params: {
     };
   }
 
-  // Default: Home ('/' and '/page/N') — Exact Top-1 SEO Title (<=60 chars) & Description (<=155 chars)
+  // Default: Home ('/' and '/page/N')
   const homeCanonical = buildPaginatedCleanPath('/', activePage);
+  const homePageTopic = activePage >= 2 ? `Page ${activePage}` : '';
   return {
-    title:
-      activePage >= 2
-        ? clampSeoTitle(
-            `Best Shayari - Page ${activePage} (Love, Sad, Diwali) | ZQ Feelings`,
-            `Best Shayari - Page ${activePage} | ZQ Feelings`
-          )
-        : 'Best Shayari - Love, Sad, Diwali, Valentine | ZQ Feelings',
+    title: activePage >= 2 ? formatTopicSeoTitle(homePageTopic) : HOME_SEO_TITLE,
     description:
-      activePage >= 2
-        ? `Best Shayari Page ${activePage} (Shayari ${rangeStart}–${rangeEnd}) — Read trending Love, Sad, Diwali & Valentine Shayari in Hindi, English & Urdu on ZQ Feelings.`
-        : 'Best Love, Sad, Diwali, Valentine and more festival & celebration Shayari in Hindi, English & Urdu for Boy & Girl - ZQ Feelings.',
+      activePage >= 2 ? formatTopicSeoDescription(homePageTopic) : HOME_SEO_DESCRIPTION,
     canonicalPath: homeCanonical,
     h1: 'All in One Shayari Collection - Love, Sad, Festival, Diwali, Holi, Sanatan Hindu, Islamic Muslim & Hindi Urdu English Special Shayari | ZQ-FEELINGS - Dil Ki Awaaz',
     section: 'Hindi Shayari & Poetry',
     keywords: [
-      'Best Shayari',
+      'Best New Shayari 2026',
       'Love Shayari',
       'Sad Shayari',
+      'Attitude Shayari',
+      'Miss You Shayari',
       'Diwali Shayari',
       'Valentine Shayari',
-      'Festival Shayari',
       'Hindi Shayari',
-      'Urdu Shayari',
       'English Shayari',
       'ZQ Feelings',
       'Dil Ki Awaaz'
@@ -1551,9 +1391,9 @@ export function getSeoMetadataForState(params: {
     ],
     faqs: [
       {
-        question: 'ZQ FEELINGS - Dil Ki Awaaz पर कुल कितनी शायरियाँ और श्रेणियाँ उपलब्ध हैं?',
+        question: 'ZQ Feelings - Dil Ki Awaaz पर कुल कितनी शायरियाँ और श्रेणियाँ उपलब्ध हैं?',
         answer:
-          'ZQ FEELINGS पर 5,870+ सौ-प्रतिशत मौलिक शायरियाँ हैं, जिनमें 32 Feelings श्रेणियाँ, 27 भारतीय त्यौहार, 15 दिनों का Valentine Week Special (35 भाषाओं में), 4 धार्मिक श्रेणियाँ, 4 संस्कार रस्में और 12 महीनों के खास दिन शामिल हैं।'
+          'ZQ Feelings - Dil Ki Awaaz पर 5,870+ सौ-प्रतिशत मौलिक शायरियाँ हैं, जिनमें 32 Feelings श्रेणियाँ, 27 भारतीय त्यौहार, 15 दिनों का Valentine Week Special (35 भाषाओं में), 4 धार्मिक श्रेणियाँ, 4 संस्कार रस्में और 12 महीनों के खास दिन शामिल हैं।'
       },
       {
         question: 'क्या यहाँ से शायरी 20 स्टाइलिश फ़ॉन्ट्स और फोटो कार्ड के रूप में शेयर कर सकते हैं?',
@@ -1615,10 +1455,12 @@ export function syncDocumentSeo(meta: PageSeoMeta, samplePoems: Shayari[]) {
   const siteOrigin = getActiveSiteOrigin();
   const defaultOgImage = `${siteOrigin}/og-image.jpg`;
   const canonicalUrl = `${siteOrigin}${meta.canonicalPath}`;
-  const ogImageAlt = `${meta.title} • ZQ FEELINGS - Dil Ki Awaaz`;
+  const ogImageAlt = meta.title;
 
   document.title = meta.title;
 
+  upsertMetaTag('name', 'application-name', SITE_NAME_FULL);
+  upsertMetaTag('name', 'apple-mobile-web-app-title', SITE_NAME_FULL);
   upsertMetaTag('name', 'description', meta.description);
   upsertMetaTag('name', 'keywords', meta.keywords.join(', '));
   upsertMetaTag('name', 'language', activeDocLang);
@@ -1635,7 +1477,7 @@ export function syncDocumentSeo(meta: PageSeoMeta, samplePoems: Shayari[]) {
   upsertMetaTag('property', 'og:title', meta.title);
   upsertMetaTag('property', 'og:description', meta.description);
   upsertMetaTag('property', 'og:url', canonicalUrl);
-  upsertMetaTag('property', 'og:site_name', 'ZQ FEELINGS - Dil Ki Awaaz');
+  upsertMetaTag('property', 'og:site_name', SITE_NAME_FULL);
   upsertMetaTag('property', 'og:image', defaultOgImage);
   upsertMetaTag('property', 'og:image:width', '1200');
   upsertMetaTag('property', 'og:image:height', '630');
@@ -1682,7 +1524,27 @@ export function syncDocumentSeo(meta: PageSeoMeta, samplePoems: Shayari[]) {
     upsertAlternateLangLink('x-default', canonicalUrl, false);
   }
 
-  // Build Schema.org WebSite + BreadcrumbList + CollectionPage + Article + Poem + FAQPage structured data
+  // Ensure standalone WebSite JSON-LD schema has exact site name "ZQ Feelings - Dil Ki Awaaz"
+  let websiteScriptEl = document.getElementById(
+    'website-schema-jsonld'
+  ) as HTMLScriptElement | null;
+  if (!websiteScriptEl) {
+    websiteScriptEl = document.createElement('script');
+    websiteScriptEl.id = 'website-schema-jsonld';
+    websiteScriptEl.type = 'application/ld+json';
+    document.head.appendChild(websiteScriptEl);
+  }
+  websiteScriptEl.textContent = JSON.stringify({
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    '@id': `${siteOrigin}/#website`,
+    name: SITE_NAME_FULL,
+    alternateName: ['ZQ Feelings', 'Dil Ki Awaaz'],
+    url: `${siteOrigin}/`,
+    inLanguage: 'hi'
+  });
+
+  // Build Schema.org BreadcrumbList + CollectionPage + Article + Poem + FAQPage structured data
   const poetryEntities = samplePoems.slice(0, 8).map((poem, index) => ({
     '@type': 'Poem',
     additionalType: 'https://schema.org/Poem',
@@ -1694,7 +1556,7 @@ export function syncDocumentSeo(meta: PageSeoMeta, samplePoems: Shayari[]) {
     text: (poem.lines || poem.linesHindi).join('\n'),
     author: {
       '@type': 'Person',
-      name: poem.author || 'ZQ FEELINGS - Dil Ki Awaaz'
+      name: poem.author || SITE_NAME_FULL
     },
     keywords: poem.tags?.join(', ') || meta.keywords.join(', ')
   }));
@@ -1711,14 +1573,6 @@ export function syncDocumentSeo(meta: PageSeoMeta, samplePoems: Shayari[]) {
   };
 
   const graphNodes: Record<string, unknown>[] = [
-    {
-      '@type': 'WebSite',
-      '@id': `${siteOrigin}/#website`,
-      name: 'ZQ FEELINGS - Dil Ki Awaaz: All in One Shayari Collection',
-      alternateName: 'ZQ FEELINGS - Dil Ki Awaaz',
-      url: `${siteOrigin}/`,
-      inLanguage: 'hi'
-    },
     breadcrumbSchema,
     {
       '@type': 'CollectionPage',
@@ -1747,12 +1601,12 @@ export function syncDocumentSeo(meta: PageSeoMeta, samplePoems: Shayari[]) {
       keywords: meta.keywords.join(', '),
       author: {
         '@type': 'Organization',
-        name: 'ZQ FEELINGS - Dil Ki Awaaz',
+        name: SITE_NAME_FULL,
         url: `${siteOrigin}/`
       },
       publisher: {
         '@type': 'Organization',
-        name: 'ZQ FEELINGS - Dil Ki Awaaz'
+        name: SITE_NAME_FULL
       },
       ...(poetryEntities.length > 0 ? { hasPart: poetryEntities } : {})
     }

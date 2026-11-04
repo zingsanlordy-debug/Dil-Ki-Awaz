@@ -277,9 +277,14 @@ for (const entry of entries) {
       `Description SSR/Client mismatch on ${entry.path}:\n  SSR:    ${serverMeta.description}\n  Client: ${clientMeta.description}`
     );
   }
-  if (serverMeta.title.length > 60) {
+  if (!serverMeta.title.endsWith('Best New Shayari 2026 | ZQ Feelings - Dil Ki Awaaz')) {
     auditErrors.push(
-      `Title exceeds 60 chars (${serverMeta.title.length}) on ${entry.path}: "${serverMeta.title}"`
+      `Title missing required brand suffix on ${entry.path}: "${serverMeta.title}"`
+    );
+  }
+  if (/vercel/i.test(serverMeta.title) || /vercel/i.test(serverMeta.description)) {
+    auditErrors.push(
+      `Forbidden word "Vercel" found in title/description on ${entry.path}`
     );
   }
   if (serverMeta.description.length > 160) {
@@ -344,5 +349,5 @@ xmlLines.push('');
 fs.writeFileSync(publicSitemapPath, xmlLines.join('\n'), 'utf8');
 
 console.log(
-  `[generate-sitemap] Generated ${entries.length} verified canonical URLs in public/sitemap.xml for ${SITE_ORIGIN} (100% unique Titles <=60 chars & Descriptions <=160 chars).`
+  `[generate-sitemap] Generated ${entries.length} verified canonical URLs in public/sitemap.xml for ${SITE_ORIGIN} (100% unique Titles & Descriptions <=160 chars).`
 );

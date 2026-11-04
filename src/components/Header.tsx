@@ -116,14 +116,19 @@ export const Header: React.FC<HeaderProps> = ({
             <a
               href="/"
               onClick={(e) => handleLinkClick(e, 'home')}
-              aria-label="ZQ FEELINGS Home"
-              className="inline-flex items-center gap-2 select-none cursor-pointer group"
+              aria-label="ZQ FEELINGS - Dil Ki Awaaz | Best New Shayari 2026"
+              className="inline-flex items-center gap-2.5 select-none cursor-pointer group"
             >
               <span className="w-9 h-9 rounded-full btn-glossy-pink border border-[#ffe4e8] flex items-center justify-center text-white shadow-2xs shrink-0 group-hover:scale-105 transition-transform">
                 <Heart className="w-4 h-4 fill-white text-white" />
               </span>
-              <span className="zq-feelings-logo text-[16px] sm:text-[18px] text-[#d94f70] leading-none">
-                ZQ FEELINGS
+              <span className="flex flex-col">
+                <span className="zq-feelings-logo text-[20px] sm:text-[24px] font-black text-[#d94f70] leading-tight">
+                  ZQ FEELINGS
+                </span>
+                <span className="text-[11px] sm:text-[12px] font-bold text-[#d94f70] leading-tight">
+                  Dil Ki Awaaz | Best New Shayari 2026
+                </span>
               </span>
             </a>
           </div>

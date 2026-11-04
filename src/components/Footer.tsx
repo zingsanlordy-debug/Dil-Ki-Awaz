@@ -98,6 +98,9 @@ export const Footer: React.FC<FooterProps> = ({
                 <span className="zq-feelings-logo text-[#f472b6]">ZQ FEELINGS</span>{' '}
                 <span>- Dil Ki Awaaz</span>
               </a>
+              <p className="text-[15px] sm:text-[16px] font-semibold text-[#f472b6]">
+                Best New Shayari 2026 / 2027 - Dil Ki Awaaz
+              </p>
               <h2 className="text-[26px] font-bold text-white leading-snug">
                 About
               </h2>
@@ -322,9 +325,14 @@ export const Footer: React.FC<FooterProps> = ({
         {/* Bottom Copyright Bar */}
         <div className="border-t border-slate-800/90 bg-slate-950/80">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-6 flex flex-col sm:flex-row items-center justify-between gap-4 text-[16px] text-slate-400">
-            <p className="text-center sm:text-left">
-              © 2026 <span className="zq-feelings-logo text-slate-200">ZQ FEELINGS</span> - Dil Ki Awaaz. All Rights Reserved.
-            </p>
+            <div className="text-center sm:text-left space-y-1">
+              <p>
+                © 2026 <span className="zq-feelings-logo text-slate-200">ZQ FEELINGS</span> - Dil Ki Awaaz. All Rights Reserved.
+              </p>
+              <p className="text-[14px] text-slate-400 font-medium">
+                Best New Shayari 2026 / 2027 - Dil Ki Awaaz
+              </p>
+            </div>
 
             <div className="flex flex-wrap items-center justify-center gap-4">
               <a
