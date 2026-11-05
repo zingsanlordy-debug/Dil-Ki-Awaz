@@ -1534,10 +1534,13 @@ export function renderSsrMetaHtml(
   const hreflangTags = meta.hreflangPrefixSlug
     ? [
         ...SSR_VALENTINE_LANGS.map((lang) => {
-          const hrefUrl = `${siteOrigin}/${lang.isoPrefix}/${meta.hreflangPrefixSlug}${pageSuffix}`;
+          const isDiwaliHindi = meta.hreflangPrefixSlug === 'diwali-shayari' && lang.code === 'hi';
+          const hrefUrl = isDiwaliHindi
+            ? `${siteOrigin}/diwali-shayari${pageSuffix}`
+            : `${siteOrigin}/${lang.isoPrefix}/${meta.hreflangPrefixSlug}${pageSuffix}`;
           return `    <link rel="alternate" hreflang="${lang.hreflang}" href="${hrefUrl}" />`;
         }),
-        `    <link rel="alternate" hreflang="x-default" href="${siteOrigin}/hi/${meta.hreflangPrefixSlug}${pageSuffix}" />`
+        `    <link rel="alternate" hreflang="x-default" href="${siteOrigin}${meta.hreflangPrefixSlug === 'diwali-shayari' ? '' : '/hi'}/${meta.hreflangPrefixSlug}${pageSuffix}" />`
       ].join('\n')
     : meta.valentineBasePath
       ? (() => {

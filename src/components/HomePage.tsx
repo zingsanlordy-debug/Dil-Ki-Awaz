@@ -21,13 +21,13 @@ import {
   useTranslatedText,
   TranslatedText
 } from '../context/GlobalLanguageContext';
-import { VALENTINE_CATEGORIES, ValentineCategoryId } from '../data/valentineWeekMeta';
+import { VALENTINE_CATEGORIES, ValentineCategoryId, ValentineLangCode } from '../data/valentineWeekMeta';
 import { ShayariCard } from './ShayariCard';
 import { ShayariPagination } from './ShayariPagination';
 import { getPaginatedSlice } from '../utils/pagination';
 
 interface HomePageProps {
-  onOpenFestival: (category?: string) => void;
+  onOpenFestival: (category?: string, lang?: ValentineLangCode, page?: number) => void;
   onOpenFeelings: (category?: string) => void;
   onOpenValentineWeek: (category?: ValentineCategoryId) => void;
   onOpenReligious: (category: ReligiousCategory) => void;
@@ -603,6 +603,135 @@ export const HomePage: React.FC<HomePageProps> = ({
                 <ArrowRight className="w-4 h-4" />
               </a>
             )}
+          </div>
+
+          {/* 4 Naye Pages Links (100 Nayi Shayari x 35 Languages) */}
+          <div className="p-4 sm:p-6 rounded-2xl bg-white border border-[#ffd6df] shadow-2xs space-y-3.5">
+            <div className="flex flex-wrap items-center justify-between gap-2 border-b border-[#ffe4e8] pb-3">
+              <div className="flex items-center gap-2">
+                <Sparkles className="w-5 h-5 text-[#d94f70]" />
+                <h3 className="font-rozha text-[18px] sm:text-[20px] font-bold text-slate-900">
+                  100 Nayi Diwali Shayari (4 Naye Pages • 35 Languages Translated)
+                </h3>
+              </div>
+              <span className="text-[12px] font-black uppercase tracking-wider px-3 py-1 rounded-full bg-[#fff0f3] text-[#d94f70] border border-[#ffd6df]">
+                100% Original
+              </span>
+            </div>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
+              <a
+                href="/diwali-shayari/page/2"
+                onClick={(e) => {
+                  e.preventDefault();
+                  onOpenFestival('diwali', 'hi', 2);
+                }}
+                className="group p-4 rounded-xl bg-[#fff8f9] hover:bg-[#fff0f3] border border-[#ffe4e8] hover:border-[#d94f70] transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <span className="text-2xl select-none">🪔</span>
+                    <span className="px-2 py-0.5 rounded-md bg-white text-[#d94f70] border border-[#ffd6df] text-[12px] font-extrabold">
+                      Page 2 • 26-50
+                    </span>
+                  </div>
+                  <h4 className="font-bold text-[16px] text-slate-900 group-hover:text-[#d94f70] transition-colors leading-snug">
+                    Dhanteras &amp; Choti Diwali
+                  </h4>
+                  <p className="text-[13px] text-slate-600 mt-1">
+                    25 Nayi Wishes • 35 Languages
+                  </p>
+                </div>
+                <div className="mt-3 pt-2 border-t border-[#ffd6df]/60 flex items-center justify-between text-[13px] font-bold text-[#d94f70]">
+                  <span>Page 2 Dekhein</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </a>
+
+              <a
+                href="/diwali-shayari/page/3"
+                onClick={(e) => {
+                  e.preventDefault();
+                  onOpenFestival('diwali', 'hi', 3);
+                }}
+                className="group p-4 rounded-xl bg-[#fff8f9] hover:bg-[#fff0f3] border border-[#ffe4e8] hover:border-[#d94f70] transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <span className="text-2xl select-none">🌸</span>
+                    <span className="px-2 py-0.5 rounded-md bg-white text-[#d94f70] border border-[#ffd6df] text-[12px] font-extrabold">
+                      Page 3 • 51-75
+                    </span>
+                  </div>
+                  <h4 className="font-bold text-[16px] text-slate-900 group-hover:text-[#d94f70] transition-colors leading-snug">
+                    Govardhan Puja &amp; Bhai Dooj
+                  </h4>
+                  <p className="text-[13px] text-slate-600 mt-1">
+                    25 Nayi Wishes • 35 Languages
+                  </p>
+                </div>
+                <div className="mt-3 pt-2 border-t border-[#ffd6df]/60 flex items-center justify-between text-[13px] font-bold text-[#d94f70]">
+                  <span>Page 3 Dekhein</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </a>
+
+              <a
+                href="/diwali-shayari/page/4"
+                onClick={(e) => {
+                  e.preventDefault();
+                  onOpenFestival('diwali', 'hi', 4);
+                }}
+                className="group p-4 rounded-xl bg-[#fff8f9] hover:bg-[#fff0f3] border border-[#ffe4e8] hover:border-[#d94f70] transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <span className="text-2xl select-none">✨</span>
+                    <span className="px-2 py-0.5 rounded-md bg-white text-[#d94f70] border border-[#ffd6df] text-[12px] font-extrabold">
+                      Page 4 • 76-100
+                    </span>
+                  </div>
+                  <h4 className="font-bold text-[16px] text-slate-900 group-hover:text-[#d94f70] transition-colors leading-snug">
+                    Maha Lakshmi Puja &amp; Parivaar
+                  </h4>
+                  <p className="text-[13px] text-slate-600 mt-1">
+                    25 Nayi Wishes • 35 Languages
+                  </p>
+                </div>
+                <div className="mt-3 pt-2 border-t border-[#ffd6df]/60 flex items-center justify-between text-[13px] font-bold text-[#d94f70]">
+                  <span>Page 4 Dekhein</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </a>
+
+              <a
+                href="/diwali-shayari/page/5"
+                onClick={(e) => {
+                  e.preventDefault();
+                  onOpenFestival('diwali', 'hi', 5);
+                }}
+                className="group p-4 rounded-xl bg-[#fff8f9] hover:bg-[#fff0f3] border border-[#ffe4e8] hover:border-[#d94f70] transition-all flex flex-col justify-between"
+              >
+                <div>
+                  <div className="flex items-center justify-between gap-2 mb-2">
+                    <span className="text-2xl select-none">🎁</span>
+                    <span className="px-2 py-0.5 rounded-md bg-white text-[#d94f70] border border-[#ffd6df] text-[12px] font-extrabold">
+                      Page 5 • 101-125
+                    </span>
+                  </div>
+                  <h4 className="font-bold text-[16px] text-slate-900 group-hover:text-[#d94f70] transition-colors leading-snug">
+                    Family, Friends, Office &amp; Rishtedar
+                  </h4>
+                  <p className="text-[13px] text-slate-600 mt-1">
+                    25 Nayi Wishes • 35 Languages
+                  </p>
+                </div>
+                <div className="mt-3 pt-2 border-t border-[#ffd6df]/60 flex items-center justify-between text-[13px] font-bold text-[#d94f70]">
+                  <span>Page 5 Dekhein</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </a>
+            </div>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">

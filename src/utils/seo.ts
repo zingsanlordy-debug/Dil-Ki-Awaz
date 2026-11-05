@@ -1553,15 +1553,18 @@ export function syncDocumentSeo(meta: PageSeoMeta, samplePoems: Shayari[]) {
   const pageSuffix = meta.valentinePageSuffix || '';
   if (meta.hreflangPrefixSlug) {
     for (const lang of VALENTINE_LANGUAGES) {
+      const isDiwaliHindi = meta.hreflangPrefixSlug === 'diwali-shayari' && lang.code === 'hi';
       const iso = STATIC35_ISO_PREFIX_BY_CODE[lang.code] || 'hi';
-      const cleanAltUrl = `${siteOrigin}/${iso}/${meta.hreflangPrefixSlug}${pageSuffix}`;
+      const cleanAltUrl = isDiwaliHindi
+        ? `${siteOrigin}/diwali-shayari${pageSuffix}`
+        : `${siteOrigin}/${iso}/${meta.hreflangPrefixSlug}${pageSuffix}`;
       upsertAlternateLangLink(lang.hreflang, cleanAltUrl, lang.hreflang !== 'hi');
     }
-    upsertAlternateLangLink(
-      'x-default',
-      `${siteOrigin}/hi/${meta.hreflangPrefixSlug}${pageSuffix}`,
-      false
-    );
+    const xDefaultUrl =
+      meta.hreflangPrefixSlug === 'diwali-shayari'
+        ? `${siteOrigin}/diwali-shayari${pageSuffix}`
+        : `${siteOrigin}/hi/${meta.hreflangPrefixSlug}${pageSuffix}`;
+    upsertAlternateLangLink('x-default', xDefaultUrl, false);
   } else if (meta.valentineBasePath) {
     const trimmedBase = meta.valentineBasePath.replace(/\/+$/, '');
     const hindiAltUrl = pageSuffix

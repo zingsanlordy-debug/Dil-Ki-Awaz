@@ -566,9 +566,14 @@ export default function App() {
     }
   };
 
-  const navigateTo = (route: AppRoute, category?: string) => {
+  const navigateTo = (
+    route: AppRoute,
+    category?: string,
+    page: number = 1,
+    staticLang?: ValentineLangCode
+  ) => {
     setCurrentRoute(route);
-    setCurrentPage(1);
+    setCurrentPage(page);
     setSearchQuery('');
     window.scrollTo({ top: 0, behavior: 'smooth' });
 
@@ -577,16 +582,18 @@ export default function App() {
       const nextCat = category || 'all';
       setSelectedFestivalCat(nextCat);
       if (isHoliday35Category(nextCat)) {
-        setSelectedStaticLang('hi');
-        newUrl = buildHoliday35CleanPath(nextCat, 'hi', 1);
+        const langCode = staticLang || 'hi';
+        setSelectedStaticLang(langCode);
+        newUrl = buildHoliday35CleanPath(nextCat, langCode, page);
       } else {
-        newUrl = category ? buildCleanSeoUrl('festival', nextCat) : '/festival-shayari';
+        newUrl = category ? buildCleanSeoUrl('festival', nextCat, undefined, page) : '/festival-shayari';
       }
     } else if (route === 'feelings') {
       const nextCat = category || 'all';
       setSelectedFeelingsCat(nextCat);
-      setSelectedStaticLang('hi');
-      newUrl = category ? buildCleanSeoUrl('feelings', nextCat, 'hi') : '/feelings-shayari';
+      const langCode = staticLang || 'hi';
+      setSelectedStaticLang(langCode);
+      newUrl = category ? buildCleanSeoUrl('feelings', nextCat, langCode, page) : '/feelings-shayari';
     } else if (route === 'religious') {
       const nextRelCat = (category || 'sanatan-hindu') as ReligiousCategory;
       setSelectedReligiousCat(nextRelCat);
@@ -607,7 +614,7 @@ export default function App() {
       setSelectedValentineLang(undefined);
       newUrl = buildCleanSeoUrl('valentine-week', nextValCat);
     } else {
-      newUrl = buildCleanSeoUrl(route);
+      newUrl = buildCleanSeoUrl(route, undefined, undefined, page);
     }
 
     pushCleanUrl(newUrl, route);
@@ -1026,7 +1033,7 @@ export default function App() {
             {/* ROUTE: HOME PAGE */}
             {currentRoute === 'home' && (
               <HomePage
-                onOpenFestival={(cat) => navigateTo('festival', cat)}
+                onOpenFestival={(cat, lang, page) => navigateTo('festival', cat, page || 1, lang)}
                 onOpenFeelings={(cat) => navigateTo('feelings', cat)}
                 onOpenValentineWeek={(cat) => navigateTo('valentine-week', cat)}
                 onOpenReligious={(cat) => navigateTo('religious', cat)}
