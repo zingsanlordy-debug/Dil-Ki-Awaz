@@ -26,6 +26,7 @@ import {
   getStatic35CategoryHeading,
   isStatic35LanguageReady
 } from '../data/static35/static35Loader';
+import { DIWALI_35_FAQS, DIWALI_35_SEO } from '../data/static35/diwali35Data';
 
 interface FestivalPageProps {
   initialCategory?: string;
@@ -186,13 +187,15 @@ export const FestivalPage: React.FC<FestivalPageProps> = ({
             )}
             <h1 className="font-rozha text-[24px] sm:text-[30px] font-bold text-[#d94f70] leading-snug">
               {activeFestObj ? `${activeFestObj.icon} ` : '🎉 '}
-              {isStatic35Holiday
-                ? staticHolidayHeading
-                : globalLanguage === 'default'
-                  ? activeFestObj
-                    ? `${activeFestObj.name} Shayari (${activeFestObj.hindiName} शायरी)`
-                    : 'Festival Shayari (त्यौहार शायरी)'
-                  : translatedActiveHeading}
+              {activeCategory === 'diwali'
+                ? (DIWALI_35_SEO[activeLang]?.h1 || '100 Happy Diwali Wishes, Shayari aur Messages in Hindi')
+                : isStatic35Holiday
+                  ? staticHolidayHeading
+                  : globalLanguage === 'default'
+                    ? activeFestObj
+                      ? `${activeFestObj.name} Shayari (${activeFestObj.hindiName} शायरी)`
+                      : 'Festival Shayari (त्यौहार शायरी)'
+                    : translatedActiveHeading}
             </h1>
           </div>
           <span className="px-3.5 py-1 rounded-full bg-[#fff0f3] text-[#d94f70] font-extrabold text-[14px] sm:text-[15px] border border-[#ffe4e8] tabular-nums">
@@ -201,6 +204,14 @@ export const FestivalPage: React.FC<FestivalPageProps> = ({
               : `${categoryShayaris.length} Shayari`}
           </span>
         </div>
+
+        {activeCategory === 'diwali' && (
+          <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#fff0f3] to-[#fff8f9] border-2 border-[#ffd6df] text-slate-800 shadow-2xs">
+            <p className="text-[15px] sm:text-[17px] font-bold text-[#d94f70] leading-relaxed">
+              🪔 {DIWALI_35_SEO[activeLang]?.introText || 'Diwali Week 6 Nov se 11 Nov 2026 tak hai. Dhanteras, Choti Diwali, Diwali, Govardhan Puja aur Bhai Dooj - sabki wishes yahin se copy karo. 100 Wishes x 35 Languages = 3500 Wishes.'}
+            </p>
+          </div>
+        )}
 
         {isStatic35Holiday && (
           <Static35TopLanguageSelector
@@ -237,6 +248,42 @@ export const FestivalPage: React.FC<FestivalPageProps> = ({
             ))}
           </div>
 
+          {/* Festive Diwali Gift Offer Box */}
+          {activeCategory === 'diwali' && (
+            <div className="my-8 p-6 sm:p-7 rounded-3xl bg-gradient-to-r from-amber-500 via-rose-500 to-[#d94f70] text-white shadow-md text-center relative overflow-hidden">
+              <div className="relative z-10 space-y-3">
+                <span className="inline-block px-3.5 py-1 rounded-full bg-white/20 backdrop-blur-xs text-[12px] font-black uppercase tracking-wider">
+                  Diwali Special Deals 2026
+                </span>
+                <h3 className="font-rozha text-[24px] sm:text-[28px] font-bold tracking-tight">
+                  🪔 {DIWALI_35_SEO[activeLang]?.offerTitle || 'Diwali Gift Offer Dekho'} 🎁
+                </h3>
+                <p className="text-[14px] sm:text-[15px] text-white/95 max-w-lg mx-auto font-medium">
+                  {DIWALI_35_SEO[activeLang]?.offerSubtitle || 'Dhanteras, Diwali aur Bhai Dooj ke liye best gift offers & festive deals'}
+                </p>
+                <div className="pt-2">
+                  <a
+                    href="#"
+                    className="inline-flex items-center justify-center min-h-[48px] px-8 py-3 rounded-2xl bg-white text-[#d94f70] hover:bg-amber-100 font-extrabold text-[16px] shadow-sm hover:shadow-lg transition-all cursor-pointer transform hover:scale-105 active:scale-95"
+                  >
+                    {DIWALI_35_SEO[activeLang]?.offerBtn || 'Offer Dekho'} &rarr;
+                  </a>
+                </div>
+              </div>
+            </div>
+          )}
+
+          {/* Adsterra Advertisement Space */}
+          {activeCategory === 'diwali' && (
+            <div
+              id="adsterra-slot-diwali"
+              className="w-full my-6 flex items-center justify-center min-h-[90px] border border-dashed border-pink-200/80 rounded-2xl bg-pink-50/20 text-slate-400 text-xs font-semibold"
+              aria-label="Advertisement Space"
+            >
+              {/* Adsterra Advertisement Slot (Paste your ad script here) */}
+            </div>
+          )}
+
           <ShayariPagination
             currentPage={pagination.currentPage}
             totalPages={pagination.totalPages}
@@ -246,6 +293,29 @@ export const FestivalPage: React.FC<FestivalPageProps> = ({
             onPageChange={handlePageSelect}
             getPageHref={getPageHref}
           />
+
+          {/* 6 FAQs in 35 Languages */}
+          {activeCategory === 'diwali' && (
+            <section className="my-10 pt-6 border-t-2 border-[#ffe4e8] space-y-4">
+              <h2 className="font-rozha text-[22px] sm:text-[26px] font-bold text-[#d94f70] flex items-center gap-2">
+                <span>❓</span>
+                <span>Diwali 2026 FAQ - Questions &amp; Answers</span>
+              </h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                {(DIWALI_35_FAQS[activeLang] || DIWALI_35_FAQS['hi']).map((faq, i) => (
+                  <div key={i} className="p-4 sm:p-5 rounded-2xl bg-[#fff8f9] border border-[#ffd6df] space-y-2">
+                    <h3 className="font-bold text-[16px] text-[#d94f70] flex items-start gap-2">
+                      <span className="shrink-0 text-amber-600 font-black">Q{i + 1}.</span>
+                      <span>{faq.question}</span>
+                    </h3>
+                    <p className="text-[14px] text-slate-700 leading-relaxed font-normal pl-6">
+                      {faq.answer}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
 
           {isStatic35Holiday && holidayMeta && (
             <Static35BottomLanguageBar

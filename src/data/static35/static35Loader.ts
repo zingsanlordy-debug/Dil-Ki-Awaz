@@ -4,6 +4,7 @@ import {
   STATIC35_CATEGORY_HEADINGS,
   STATIC35_INLINE_TITLES
 } from './static35TitlesBase';
+import { DIWALI_35_PACKS } from './diwali35Data';
 
 export type Static35EntryTuple = readonly [string, ...string[]];
 export type Static35LangMap = Record<string, Static35EntryTuple>;
@@ -104,6 +105,13 @@ export function getStatic35ShayariLines(
   shayari: Shayari,
   lang: ValentineLangCode
 ): readonly string[] {
+  if (shayari.id.startsWith('diwali-')) {
+    const dTuple = DIWALI_35_PACKS[lang]?.[shayari.id];
+    if (dTuple && dTuple.length > 1) {
+      return dTuple.slice(1);
+    }
+  }
+
   const hiLines =
     shayari.linesHindi && shayari.linesHindi.length > 0 ? shayari.linesHindi : shayari.lines;
   const enLines =
@@ -137,6 +145,13 @@ export function getStatic35ShayariTitle(
   shayari: Shayari,
   lang: ValentineLangCode
 ): string {
+  if (shayari.id.startsWith('diwali-')) {
+    const dTuple = DIWALI_35_PACKS[lang]?.[shayari.id];
+    if (dTuple && dTuple[0]) {
+      return dTuple[0];
+    }
+  }
+
   if (lang === 'hi') {
     return shayari.title;
   }

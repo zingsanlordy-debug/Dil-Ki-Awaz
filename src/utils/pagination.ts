@@ -9,22 +9,23 @@ export interface PageRange {
  * - <= 25 shayari: 1 page only
  * - > 25 shayari (including 36-50 & 50+): strict 20+20 per page (e.g. 40 -> 20+20, 50 -> 20+20+10, 60 -> 20+20+20)
  */
-export function computeShayariPageRanges(total: number): PageRange[] {
+export function computeShayariPageRanges(total: number, customPageSize?: number): PageRange[] {
   if (total <= 0) {
     return [{ page: 1, start: 0, end: 0 }];
   }
 
-  // 25 or fewer -> 1 page only
-  if (total <= 25) {
+  // 100 items (e.g. Diwali) -> strict 4 pages of 25 each: 1-25, 26-50, 51-75, 76-100
+  const pageSize = customPageSize || (total === 100 ? 25 : total <= 25 ? total : 20);
+
+  if (total <= pageSize) {
     return [{ page: 1, start: 0, end: total }];
   }
 
-  // Strict 20+20 per page for all multi-page categories (36-50, 50+, etc.)
   const ranges: PageRange[] = [];
   let cursor = 0;
   let pageNum = 1;
   while (cursor < total) {
-    const nextEnd = Math.min(cursor + 20, total);
+    const nextEnd = Math.min(cursor + pageSize, total);
     ranges.push({
       page: pageNum,
       start: cursor,
@@ -39,7 +40,8 @@ export function computeShayariPageRanges(total: number): PageRange[] {
 
 export function getPaginatedSlice<T>(
   items: readonly T[],
-  currentPage: number
+  currentPage: number,
+  customPageSize?: number
 ): {
   pageItems: T[];
   currentPage: number;
@@ -49,7 +51,7 @@ export function getPaginatedSlice<T>(
   totalItems: number;
   ranges: PageRange[];
 } {
-  const ranges = computeShayariPageRanges(items.length);
+  const ranges = computeShayariPageRanges(items.length, customPageSize);
   const totalPages = ranges.length;
   const safePage = Math.min(Math.max(1, currentPage), totalPages);
   const activeRange = ranges[safePage - 1] || { page: 1, start: 0, end: items.length };

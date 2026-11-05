@@ -29,6 +29,7 @@ import {
   isHoliday35Category,
   parseStatic35LangToken
 } from '../data/static35/static35Meta';
+import { DIWALI_35_FAQS, DIWALI_35_SEO } from '../data/static35/diwali35Data';
 
 export interface ParsedSeoRoute {
   route: AppRoute;
@@ -491,6 +492,13 @@ export function parseLocationToRoute(pathname: string, hash = ''): ParsedSeoRout
             staticLang: maybePrefixLang
           });
         }
+        if (s1 === 'diwali-shayari' || s1 === 'diwali') {
+          return withPage({
+            route: 'festival',
+            festivalCat: 'diwali',
+            staticLang: maybePrefixLang
+          });
+        }
         if (s1 === 'feelings-shayari' || s1 === 'feelings') {
           return withPage({
             route: 'feelings',
@@ -533,6 +541,13 @@ export function parseLocationToRoute(pathname: string, hash = ''): ParsedSeoRout
           return withPage({
             route: 'festival',
             festivalCat: 'christmas',
+            staticLang: maybeSuffixLang
+          });
+        }
+        if (pathSegs[0] === 'diwali-shayari' || pathSegs[0] === 'diwali') {
+          return withPage({
+            route: 'festival',
+            festivalCat: 'diwali',
             staticLang: maybeSuffixLang
           });
         }
@@ -815,6 +830,50 @@ export function getSeoMetadataForState(params: {
       const hindiBasePath = buildHoliday35CleanPath(festivalCat, 'hi', 1);
       const langBasePath = buildHoliday35CleanPath(festivalCat, langMeta.code, 1);
       const pageSuffix = activePage >= 2 ? `/page/${activePage}` : undefined;
+
+      if (festivalCat === 'diwali') {
+        const dSeo = DIWALI_35_SEO[langMeta.code] || DIWALI_35_SEO['hi'];
+        const title =
+          activePage >= 2
+            ? `${dSeo.title.replace(/\s*\|\s*ZQ Feelings.*$/, '')} - Page ${activePage} | ZQ Feelings`
+            : dSeo.title;
+        const description =
+          activePage >= 2 ? `${dSeo.description} (Page ${activePage})` : dSeo.description;
+        const h1 = activePage >= 2 ? `${dSeo.h1} - Page ${activePage}` : dSeo.h1;
+        const faqs = (DIWALI_35_FAQS[langMeta.code] || DIWALI_35_FAQS['hi']).map((f) => ({
+          question: f.question,
+          answer: f.answer
+        }));
+
+        return {
+          title,
+          description,
+          canonicalPath,
+          hreflangPrefixSlug: 'diwali-shayari',
+          valentinePageSuffix: pageSuffix,
+          langCode: langMeta.hreflang,
+          h1,
+          section: '100 Diwali Week Wishes, Shayari & Messages',
+          keywords: [
+            '100 Best Diwali Wishes 2026',
+            'Happy Diwali in Hindi',
+            'Dhanteras Wishes',
+            'Choti Diwali',
+            'Lakshmi Puja Shayari',
+            'Govardhan Puja',
+            'Bhai Dooj Wishes',
+            'ZQ Feelings'
+          ],
+          breadcrumbs: [
+            { name: 'Home', path: '/' },
+            { name: 'Festival Shayari', path: '/festival-shayari' },
+            { name: 'Diwali Wishes 2026', path: hindiBasePath },
+            ...(hasCustomLang ? [{ name: langMeta.englishName, path: langBasePath }] : []),
+            ...(activePage >= 2 ? [{ name: `Page ${activePage}`, path: canonicalPath }] : [])
+          ],
+          faqs
+        };
+      }
 
       const holBaseTopic = hasCustomLang
         ? `${holMeta.name} Shayari in ${langMeta.englishName}`

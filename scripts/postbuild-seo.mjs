@@ -10,6 +10,7 @@ import {
   SSR_RELIGIOUS,
   SSR_RITUALS,
   SSR_VALENTINE_DAYS,
+  SSR_VALENTINE_LANGS,
   normalizeCustomOrigin,
   renderSsrMetaHtml
 } from './seo-prerender-engine.mjs';
@@ -118,6 +119,16 @@ const coreRoutes = [
 
 for (const route of coreRoutes) {
   routesToPrerender.add(route);
+}
+
+// Guarantee all 35 languages x 4 pages of Diwali are pre-rendered into static HTML
+for (const lang of SSR_VALENTINE_LANGS) {
+  for (let pg = 1; pg <= 4; pg++) {
+    const isHindi = lang.code === 'hi';
+    const basePath = isHindi ? '/diwali-shayari' : `/${lang.isoPrefix}/diwali-shayari`;
+    const fullPath = pg === 1 ? basePath : `${basePath}/page/${pg}`;
+    routesToPrerender.add(fullPath);
+  }
 }
 
 let generatedCount = 0;

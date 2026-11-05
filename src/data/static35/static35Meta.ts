@@ -13,7 +13,7 @@ import {
 } from '../valentineWeekMeta';
 import type { GlobalLanguageId } from '../../utils/globalTranslations';
 
-export type Holiday35Id = 'new-year' | 'christmas';
+export type Holiday35Id = 'new-year' | 'christmas' | 'diwali';
 
 export const HOLIDAY_35_META: Record<
   Holiday35Id,
@@ -44,11 +44,20 @@ export const HOLIDAY_35_META: Record<
     dateLabel: '25 December',
     icon: '🎄',
     count: 25
+  },
+  diwali: {
+    id: 'diwali',
+    name: 'Diwali',
+    shortName: 'Diwali',
+    hindiName: 'दीपावली',
+    dateLabel: '8 November',
+    icon: '🪔',
+    count: 100
   }
 };
 
 export function isHoliday35Category(catId?: string | null): catId is Holiday35Id {
-  return catId === 'new-year' || catId === 'christmas';
+  return catId === 'new-year' || catId === 'christmas' || catId === 'diwali';
 }
 
 /**
@@ -202,8 +211,9 @@ export function buildHoliday35CleanPath(
   langCode: ValentineLangCode = 'hi',
   page?: number
 ): string {
+  const isHindi = langCode === 'hi';
   const iso = getStatic35IsoPrefix(langCode);
-  const base = `/${iso}/${holidayId}-shayari`;
+  const base = holidayId === 'diwali' && isHindi ? '/diwali-shayari' : `/${iso}/${holidayId}-shayari`;
   if (page && page >= 2) {
     return `${base}/page/${page}`;
   }

@@ -133,8 +133,35 @@ SSR_VALENTINE_LANG_ALIASES['in'] = 'id';
 
 const SSR_HOLIDAY_35 = {
   'new-year': { id: 'new-year', name: 'New Year', shortName: 'New Year', hindiName: 'नया साल', dateLabel: '1 January' },
-  christmas: { id: 'christmas', name: 'Christmas Day', shortName: 'Christmas', hindiName: 'क्रिसमस डे', dateLabel: '25 December' }
+  christmas: { id: 'christmas', name: 'Christmas Day', shortName: 'Christmas', hindiName: 'क्रिसमस डे', dateLabel: '25 December' },
+  diwali: { id: 'diwali', name: 'Diwali', shortName: 'Diwali', hindiName: 'दीपावली', dateLabel: '8 November', count: 100 }
 };
+
+function getSsrDiwali35Seo(code) {
+  if (code === 'hi') {
+    return {
+      title: "100 Best Diwali Wishes in Hindi 2026 - Happy Diwali, Dhanteras, Bhai Dooj Shayari | ZQ Feelings",
+      description: "100+ Best Happy Diwali Wishes in Hindi, Dhanteras Wishes, Lakshmi Puja, Govardhan, Bhai Dooj Shayari, Messages for Family, Friends. Copy karke WhatsApp par bhejo. Diwali 8 Nov 2026."
+    };
+  }
+  if (code === 'en-US') {
+    return {
+      title: "100 Best Diwali Wishes in English 2026 - Deepawali Quotes, Dhanteras & Bhai Dooj | ZQ Feelings",
+      description: "100+ Best Happy Diwali Wishes 2026 in English, Dhanteras, Lakshmi Puja, Bhai Dooj quotes & greetings for family & friends. Copy & share on WhatsApp. Diwali 8 Nov 2026."
+    };
+  }
+  if (code === 'hi-Latn') {
+    return {
+      title: "100 Best Diwali Wishes in Hinglish 2026 - Happy Diwali, Dhanteras, Bhai Dooj | ZQ Feelings",
+      description: "100+ Best Happy Diwali Wishes 2026 in Hinglish for WhatsApp & Instagram. Dhanteras, Lakshmi Puja & Bhai Dooj status for family & friends."
+    };
+  }
+  const langObj = SSR_VALENTINE_LANGS.find((l) => l.code === code) || SSR_VALENTINE_LANGS[0];
+  return {
+    title: `100 Best Diwali Wishes in ${langObj.englishName} 2026 | ZQ Feelings`,
+    description: `Read 100+ Happy Diwali Wishes, Dhanteras, Lakshmi Puja and Bhai Dooj greetings in ${langObj.englishName}. Copy and share on WhatsApp. Diwali 8 Nov 2026.`
+  };
+}
 
 export const SSR_VALENTINE_DAYS = [
   { id: 'rose-day', shortName: 'Rose Day', hindiName: 'रोज़ डे शायरी', dateLabel: '7 Feb' },
@@ -1124,6 +1151,39 @@ export function resolveServerSeoMeta(rawPathname) {
   const buildHoliday35Meta = (holidayId, langMeta = SSR_VALENTINE_LANGS[0], pg = activePage) => {
     const holMeta = SSR_HOLIDAY_35[holidayId];
     const hasCustomLang = langMeta.code !== 'hi';
+
+    if (holidayId === 'diwali') {
+      const isHindi = langMeta.code === 'hi';
+      const hindiBasePath = '/diwali-shayari';
+      const langBasePath = isHindi ? '/diwali-shayari' : `/${langMeta.isoPrefix}/diwali-shayari`;
+      const canonicalPath = pg >= 2 ? `${langBasePath}/page/${pg}` : langBasePath;
+      const pageSuffix = pg >= 2 ? `/page/${pg}` : undefined;
+
+      const dSeo = getSsrDiwali35Seo(langMeta.code);
+      const title =
+        pg >= 2
+          ? `${dSeo.title.replace(/\s*\|\s*ZQ Feelings.*$/, '')} - Page ${pg} | ZQ Feelings`
+          : dSeo.title;
+      const description = pg >= 2 ? `${dSeo.description} (Page ${pg})` : dSeo.description;
+
+      return {
+        title,
+        description,
+        canonicalPath,
+        hreflangPrefixSlug: 'diwali-shayari',
+        valentinePageSuffix: pageSuffix,
+        langCode: langMeta.hreflang,
+        robots: 'index, follow',
+        breadcrumbs: [
+          { name: 'Home', path: '/' },
+          { name: 'Festival Shayari', path: '/festival-shayari' },
+          { name: 'Diwali Wishes 2026', path: hindiBasePath },
+          ...(hasCustomLang ? [{ name: langMeta.englishName, path: langBasePath }] : []),
+          ...(pg >= 2 ? [{ name: `Page ${pg}`, path: canonicalPath }] : [])
+        ]
+      };
+    }
+
     const hindiBasePath = `/hi/${holidayId}-shayari`;
     const langBasePath = `/${langMeta.isoPrefix}/${holidayId}-shayari`;
     const canonicalPath = pg >= 2 ? `${langBasePath}/page/${pg}` : langBasePath;
@@ -1212,6 +1272,9 @@ export function resolveServerSeoMeta(rawPathname) {
         if (s1 === 'christmas-shayari' || s1 === 'christmas' || s1 === 'christmas-day-shayari') {
           return buildHoliday35Meta('christmas', maybePrefixLang, activePage);
         }
+        if (s1 === 'diwali-shayari' || s1 === 'diwali') {
+          return buildHoliday35Meta('diwali', maybePrefixLang, activePage);
+        }
         if (s1 === 'feelings-shayari' || s1 === 'feelings') {
           return buildFeelingsHubMeta(maybePrefixLang, activePage);
         }
@@ -1239,6 +1302,9 @@ export function resolveServerSeoMeta(rawPathname) {
         }
         if (pathSegs[0] === 'christmas-shayari' || pathSegs[0] === 'christmas') {
           return buildHoliday35Meta('christmas', maybeSuffixLang, activePage);
+        }
+        if (pathSegs[0] === 'diwali-shayari' || pathSegs[0] === 'diwali') {
+          return buildHoliday35Meta('diwali', maybeSuffixLang, activePage);
         }
       }
     }
@@ -1404,7 +1470,7 @@ export function resolveServerSeoMeta(rawPathname) {
 
   for (const fest of SSR_FESTIVALS) {
     if (cleanSlug === `${fest.id}-shayari` || cleanSlug === fest.id) {
-      if (fest.id === 'new-year' || fest.id === 'christmas') {
+      if (fest.id === 'new-year' || fest.id === 'christmas' || fest.id === 'diwali') {
         return buildHoliday35Meta(fest.id, SSR_VALENTINE_LANGS[0], activePage);
       }
       const basePath = `/${fest.id}-shayari`;

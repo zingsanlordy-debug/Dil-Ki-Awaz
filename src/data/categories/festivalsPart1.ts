@@ -1,4 +1,5 @@
 import { Shayari } from "../../types/shayari";
+import { DIWALI_EXPANDED } from "./diwaliExpanded";
 
 export const FESTIVALS_PART_1: Shayari[] = [
   {
@@ -1171,6 +1172,7 @@ export const FESTIVALS_PART_1: Shayari[] = [
       }
     ]
   },
+  ...DIWALI_EXPANDED,
   {
     "id": "bhai-dooj-1",
     "category": "bhai-dooj",

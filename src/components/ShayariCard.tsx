@@ -222,6 +222,11 @@ const ShayariCardView: React.FC<ResolvedCardViewProps> = ({
           <div className="min-w-0">
             <div className="flex flex-wrap items-center gap-x-2 gap-y-1 text-[15px] font-bold">
               <span className="tracking-wide text-[#d94f70]">{resolvedCategoryName}</span>
+              {shayari.subCategory && (
+                <span className="px-2 py-0.5 rounded-lg bg-[#fff0f3] text-[#d94f70] border border-[#ffd6df] text-[13px] font-extrabold shadow-2xs">
+                  [{shayari.subCategory}]
+                </span>
+              )}
               <span aria-hidden="true" className="text-slate-300">
                 ·
               </span>
