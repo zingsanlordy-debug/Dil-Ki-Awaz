@@ -27,6 +27,8 @@ import {
   isStatic35LanguageReady
 } from '../data/static35/static35Loader';
 import { DIWALI_35_FAQS, DIWALI_35_SEO } from '../data/static35/diwali35Data';
+import { DiwaliOfferBox } from './DiwaliOfferBox';
+import { DiwaliTopBanner320x50, DiwaliMiddleNativeBanner } from './DiwaliAds';
 
 interface FestivalPageProps {
   initialCategory?: string;
@@ -188,7 +190,7 @@ export const FestivalPage: React.FC<FestivalPageProps> = ({
             <h1 className="font-rozha text-[24px] sm:text-[30px] font-bold text-[#d94f70] leading-snug">
               {activeFestObj ? `${activeFestObj.icon} ` : '🎉 '}
               {activeCategory === 'diwali'
-                ? (DIWALI_35_SEO[activeLang]?.h1 || '100 Happy Diwali Wishes, Shayari aur Messages in Hindi')
+                ? (DIWALI_35_SEO[activeLang]?.h1 || '125 Happy Diwali Wishes, Shayari aur Messages in Hindi')
                 : isStatic35Holiday
                   ? staticHolidayHeading
                   : globalLanguage === 'default'
@@ -208,7 +210,7 @@ export const FestivalPage: React.FC<FestivalPageProps> = ({
         {activeCategory === 'diwali' && (
           <div className="p-4 sm:p-5 rounded-2xl bg-gradient-to-r from-[#fff0f3] to-[#fff8f9] border-2 border-[#ffd6df] text-slate-800 shadow-2xs">
             <p className="text-[15px] sm:text-[17px] font-bold text-[#d94f70] leading-relaxed">
-              🪔 {DIWALI_35_SEO[activeLang]?.introText || 'Diwali Week 6 Nov se 11 Nov 2026 tak hai. Dhanteras, Choti Diwali, Diwali, Govardhan Puja aur Bhai Dooj - sabki wishes yahin se copy karo. 100 Wishes x 35 Languages = 3500 Wishes.'}
+              🪔 {DIWALI_35_SEO[activeLang]?.introText || 'Diwali Week 6 Nov se 11 Nov 2026 tak hai. Dhanteras, Choti Diwali, Diwali, Govardhan Puja aur Bhai Dooj - sabki wishes yahin se copy karo. 125 Wishes x 35 Languages = 4375 Wishes.'}
             </p>
           </div>
         )}
@@ -223,66 +225,57 @@ export const FestivalPage: React.FC<FestivalPageProps> = ({
         )}
       </div>
 
+      {/* Top Diwali 320x50 Ad Banner (only on Diwali section) */}
+      {activeCategory === 'diwali' && <DiwaliTopBanner320x50 />}
+
+      {/* Diwali H2 Section Title above shayari cards */}
+      {activeCategory === 'diwali' && (
+        <h2 className="text-[22px] sm:text-[26px] font-bold text-slate-800 font-rozha text-center sm:text-left pt-2 pb-1">
+          Happy Diwali Shayari in Hindi - Dil Ki Awaz
+        </h2>
+      )}
+
       {/* DIRECT SHAYARI CARDS ONLY */}
       {pagination.pageItems.length > 0 ? (
         <div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8">
-            {pagination.pageItems.map((shayari) => (
-              <ShayariCard
-                key={isStatic35Holiday ? `${shayari.id}-${activeLang}` : shayari.id}
-                shayari={shayari}
-                isFavorite={isFavorite(shayari.id)}
-                onToggleFavorite={onToggleFavorite}
-                currentLanguage={
-                  isStatic35Holiday
-                    ? activeLang.startsWith('en')
-                      ? 'english'
-                      : 'hindi'
-                    : cardLanguage
-                }
-                staticLangCode={isStatic35Holiday ? activeLang : undefined}
-                shareCanonicalPath={holidaySharePath}
-                onOpenCardModal={onOpenCardModal}
-                onOpenComments={onOpenComments}
-              />
-            ))}
+            {pagination.pageItems.map((shayari, index) => {
+              const cardElement = (
+                <ShayariCard
+                  key={isStatic35Holiday ? `${shayari.id}-${activeLang}` : shayari.id}
+                  shayari={shayari}
+                  isFavorite={isFavorite(shayari.id)}
+                  onToggleFavorite={onToggleFavorite}
+                  currentLanguage={
+                    isStatic35Holiday
+                      ? activeLang.startsWith('en')
+                        ? 'english'
+                        : 'hindi'
+                      : cardLanguage
+                  }
+                  staticLangCode={isStatic35Holiday ? activeLang : undefined}
+                  shareCanonicalPath={holidaySharePath}
+                  onOpenCardModal={onOpenCardModal}
+                  onOpenComments={onOpenComments}
+                />
+              );
+
+              // In the middle of Diwali Shayari (at card 12), render Native Banner Ad
+              if (activeCategory === 'diwali' && index === 12) {
+                return (
+                  <React.Fragment key={`diwali-card-and-middle-ad-${shayari.id}`}>
+                    <DiwaliMiddleNativeBanner />
+                    {cardElement}
+                  </React.Fragment>
+                );
+              }
+
+              return cardElement;
+            })}
           </div>
 
-          {/* Festive Diwali Gift Offer Box */}
-          {activeCategory === 'diwali' && (
-            <div className="my-8 p-6 sm:p-7 rounded-3xl bg-gradient-to-r from-amber-500 via-rose-500 to-[#d94f70] text-white shadow-md text-center relative overflow-hidden">
-              <div className="relative z-10 space-y-3">
-                <span className="inline-block px-3.5 py-1 rounded-full bg-white/20 backdrop-blur-xs text-[12px] font-black uppercase tracking-wider">
-                  Diwali Special Deals 2026
-                </span>
-                <h3 className="font-rozha text-[24px] sm:text-[28px] font-bold tracking-tight">
-                  🪔 {DIWALI_35_SEO[activeLang]?.offerTitle || 'Diwali Gift Offer Dekho'} 🎁
-                </h3>
-                <p className="text-[14px] sm:text-[15px] text-white/95 max-w-lg mx-auto font-medium">
-                  {DIWALI_35_SEO[activeLang]?.offerSubtitle || 'Dhanteras, Diwali aur Bhai Dooj ke liye best gift offers & festive deals'}
-                </p>
-                <div className="pt-2">
-                  <a
-                    href="#"
-                    className="inline-flex items-center justify-center min-h-[48px] px-8 py-3 rounded-2xl bg-white text-[#d94f70] hover:bg-amber-100 font-extrabold text-[16px] shadow-sm hover:shadow-lg transition-all cursor-pointer transform hover:scale-105 active:scale-95"
-                  >
-                    {DIWALI_35_SEO[activeLang]?.offerBtn || 'Offer Dekho'} &rarr;
-                  </a>
-                </div>
-              </div>
-            </div>
-          )}
-
-          {/* Adsterra Advertisement Space */}
-          {activeCategory === 'diwali' && (
-            <div
-              id="adsterra-slot-diwali"
-              className="w-full my-6 flex items-center justify-center min-h-[90px] border border-dashed border-pink-200/80 rounded-2xl bg-pink-50/20 text-slate-400 text-xs font-semibold"
-              aria-label="Advertisement Space"
-            >
-              {/* Adsterra Advertisement Slot (Paste your ad script here) */}
-            </div>
-          )}
+          {/* Festive Diwali Gift Offer Box (Auto-Link System + 6 Cards) */}
+          {activeCategory === 'diwali' && <DiwaliOfferBox />}
 
           <ShayariPagination
             currentPage={pagination.currentPage}

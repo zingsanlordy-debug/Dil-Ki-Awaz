@@ -408,19 +408,19 @@ for (const lang of VALENTINE_LANGUAGES) {
 // 35 Language SEO Meta & Intro Text
 const SEO_35 = {
   hi: {
-    title: "100 Best Diwali Wishes in Hindi 2026 - Happy Diwali, Dhanteras, Bhai Dooj Shayari | ZQ Feelings",
-    h1: "100 Happy Diwali Wishes, Shayari aur Messages in Hindi",
-    description: "100+ Best Happy Diwali Wishes in Hindi, Dhanteras Wishes, Lakshmi Puja, Govardhan, Bhai Dooj Shayari, Messages for Family, Friends. Copy karke WhatsApp par bhejo. Diwali 8 Nov 2026.",
-    introText: "Diwali Week 6 Nov se 11 Nov 2026 tak hai. Dhanteras, Choti Diwali, Diwali, Govardhan Puja aur Bhai Dooj - sabki wishes yahin se copy karo. 100 Wishes x 35 Languages = 3500 Wishes.",
+    title: "125 Best Diwali Wishes in Hindi 2026 - Happy Diwali, Dhanteras, Bhai Dooj Shayari | ZQ Feelings",
+    h1: "125 Happy Diwali Wishes, Shayari aur Messages in Hindi",
+    description: "Best Happy Diwali Shayari, Diwali Wishes, Deepavali Shayari in Hindi - Dil Ki Awaz",
+    introText: "Diwali Week 6 Nov se 11 Nov 2026 tak hai. Dhanteras, Choti Diwali, Diwali, Govardhan Puja aur Bhai Dooj - sabki wishes yahin se copy karo. 125 Wishes x 35 Languages = 4375 Wishes.",
     offerTitle: "Diwali Gift Offer Dekho",
     offerBtn: "Offer Dekho",
     offerSubtitle: "Dhanteras, Diwali aur Bhai Dooj ke liye best gift offers & festive deals"
   },
   'en-US': {
-    title: "100 Best Diwali Wishes in English 2026 - Deepawali Quotes, Dhanteras & Bhai Dooj | ZQ Feelings",
-    h1: "100 Happy Diwali Wishes, Quotes and Messages in English",
+    title: "125 Best Diwali Wishes in English 2026 - Deepawali Quotes, Dhanteras & Bhai Dooj | ZQ Feelings",
+    h1: "125 Happy Diwali Wishes, Quotes and Messages in English",
     description: "100+ Best Happy Diwali Wishes 2026 in English, Dhanteras, Lakshmi Puja, Bhai Dooj quotes & greetings for family & friends. Copy & share on WhatsApp. Diwali 8 Nov 2026.",
-    introText: "Diwali Week runs from 6 Nov to 11 Nov 2026. Copy Dhanteras, Choti Diwali, Lakshmi Puja, Govardhan, and Bhai Dooj wishes in 35 pre-translated languages.",
+    introText: "Diwali Week runs from 6 Nov to 11 Nov 2026. Copy Dhanteras, Choti Diwali, Lakshmi Puja, Govardhan, and Bhai Dooj wishes in 35 pre-translated languages (125 Wishes x 35 Languages = 4375 Wishes).",
     offerTitle: "View Diwali Gift Offers",
     offerBtn: "View Offers",
     offerSubtitle: "Best festive deals, gift hampers & sweets for Diwali, Dhanteras & Bhai Dooj"
@@ -432,20 +432,20 @@ for (const lang of VALENTINE_LANGUAGES) {
   if (!SEO_35[code]) {
     if (code === 'hi-Latn') {
       SEO_35[code] = {
-        title: "100 Best Diwali Wishes in Hinglish 2026 - Happy Diwali, Dhanteras, Bhai Dooj | ZQ Feelings",
-        h1: "100 Happy Diwali Wishes, Status aur Messages in Hinglish",
+        title: "125 Best Diwali Wishes in Hinglish 2026 - Happy Diwali, Dhanteras, Bhai Dooj | ZQ Feelings",
+        h1: "125 Happy Diwali Wishes, Status aur Messages in Hinglish",
         description: "100+ Best Happy Diwali Wishes 2026 in Hinglish for WhatsApp & Instagram. Dhanteras, Lakshmi Puja & Bhai Dooj status for family & friends.",
-        introText: "Diwali Week 6 Nov se 11 Nov 2026 tak hai. Dhanteras, Choti Diwali, Diwali, Govardhan Puja aur Bhai Dooj ki wishes yahin se copy karo.",
+        introText: "Diwali Week 6 Nov se 11 Nov 2026 tak hai. Dhanteras, Choti Diwali, Diwali, Govardhan Puja aur Bhai Dooj - sabki wishes yahin se copy karo. 125 Wishes x 35 Languages = 4375 Wishes.",
         offerTitle: "Diwali Gift Offer Dekho",
         offerBtn: "Offer Dekho",
         offerSubtitle: "Diwali, Dhanteras aur Bhai Dooj ke special gift deals & festive offers"
       };
     } else {
       SEO_35[code] = {
-        title: `100 Best Diwali Wishes in ${lang.englishName} 2026 | ZQ Feelings`,
-        h1: `100 Happy Diwali Wishes and Messages in ${lang.englishName}`,
+        title: `125 Best Diwali Wishes in ${lang.englishName} 2026 | ZQ Feelings`,
+        h1: `125 Happy Diwali Wishes and Messages in ${lang.englishName}`,
         description: `Read 100+ Happy Diwali Wishes, Dhanteras, Lakshmi Puja and Bhai Dooj greetings in ${lang.englishName}. Copy and share on WhatsApp. Diwali 8 Nov 2026.`,
-        introText: `Diwali Week 6 Nov to 11 Nov 2026. Explore 100 original Diwali wishes pre-translated in ${lang.englishName} with easy copy & share.`,
+        introText: `Diwali Week 6 Nov to 11 Nov 2026. Explore 125 original Diwali wishes pre-translated in ${lang.englishName} with easy copy & share (125 Wishes x 35 Languages = 4375 Wishes).`,
         offerTitle: `Diwali Gift Offers in ${lang.englishName}`,
         offerBtn: "Explore Offers",
         offerSubtitle: `Exclusive festive offers and Diwali gifts for ${lang.englishName} readers`
@@ -455,7 +455,7 @@ for (const lang of VALENTINE_LANGUAGES) {
 }
 
 const outputFile = 'src/data/static35/diwali35Data.ts';
-const content = `// Pre-translated 100 Diwali Shayaris x 35 Languages + 6 Translated FAQs + SEO Metadata
+const content = `// Pre-translated 125 Diwali Shayaris x 35 Languages + 6 Translated FAQs + SEO Metadata
 import { ValentineLangCode } from '../valentineWeekMeta';
 
 export interface DiwaliFaqItem {

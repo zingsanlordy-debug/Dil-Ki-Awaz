@@ -134,31 +134,31 @@ SSR_VALENTINE_LANG_ALIASES['in'] = 'id';
 const SSR_HOLIDAY_35 = {
   'new-year': { id: 'new-year', name: 'New Year', shortName: 'New Year', hindiName: 'नया साल', dateLabel: '1 January' },
   christmas: { id: 'christmas', name: 'Christmas Day', shortName: 'Christmas', hindiName: 'क्रिसमस डे', dateLabel: '25 December' },
-  diwali: { id: 'diwali', name: 'Diwali', shortName: 'Diwali', hindiName: 'दीपावली', dateLabel: '8 November', count: 100 }
+  diwali: { id: 'diwali', name: 'Diwali', shortName: 'Diwali', hindiName: 'दीपावली', dateLabel: '8 November', count: 125 }
 };
 
 function getSsrDiwali35Seo(code) {
   if (code === 'hi') {
     return {
-      title: "100 Best Diwali Wishes in Hindi 2026 - Happy Diwali, Dhanteras, Bhai Dooj Shayari | ZQ Feelings",
-      description: "100+ Best Happy Diwali Wishes in Hindi, Dhanteras Wishes, Lakshmi Puja, Govardhan, Bhai Dooj Shayari, Messages for Family, Friends. Copy karke WhatsApp par bhejo. Diwali 8 Nov 2026."
+      title: "125 Best Diwali Wishes in Hindi 2026 - Happy Diwali, Dhanteras, Bhai Dooj Shayari | ZQ Feelings",
+      description: "Best Happy Diwali Shayari, Diwali Wishes, Deepavali Shayari in Hindi - Dil Ki Awaz"
     };
   }
   if (code === 'en-US') {
     return {
-      title: "100 Best Diwali Wishes in English 2026 - Deepawali Quotes, Dhanteras & Bhai Dooj | ZQ Feelings",
+      title: "125 Best Diwali Wishes in English 2026 - Deepawali Quotes, Dhanteras & Bhai Dooj | ZQ Feelings",
       description: "100+ Best Happy Diwali Wishes 2026 in English, Dhanteras, Lakshmi Puja, Bhai Dooj quotes & greetings for family & friends. Copy & share on WhatsApp. Diwali 8 Nov 2026."
     };
   }
   if (code === 'hi-Latn') {
     return {
-      title: "100 Best Diwali Wishes in Hinglish 2026 - Happy Diwali, Dhanteras, Bhai Dooj | ZQ Feelings",
+      title: "125 Best Diwali Wishes in Hinglish 2026 - Happy Diwali, Dhanteras, Bhai Dooj | ZQ Feelings",
       description: "100+ Best Happy Diwali Wishes 2026 in Hinglish for WhatsApp & Instagram. Dhanteras, Lakshmi Puja & Bhai Dooj status for family & friends."
     };
   }
   const langObj = SSR_VALENTINE_LANGS.find((l) => l.code === code) || SSR_VALENTINE_LANGS[0];
   return {
-    title: `100 Best Diwali Wishes in ${langObj.englishName} 2026 | ZQ Feelings`,
+    title: `125 Best Diwali Wishes in ${langObj.englishName} 2026 | ZQ Feelings`,
     description: `Read 100+ Happy Diwali Wishes, Dhanteras, Lakshmi Puja and Bhai Dooj greetings in ${langObj.englishName}. Copy and share on WhatsApp. Diwali 8 Nov 2026.`
   };
 }

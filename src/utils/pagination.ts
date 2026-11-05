@@ -14,8 +14,8 @@ export function computeShayariPageRanges(total: number, customPageSize?: number)
     return [{ page: 1, start: 0, end: 0 }];
   }
 
-  // 100 items (e.g. Diwali) -> strict 4 pages of 25 each: 1-25, 26-50, 51-75, 76-100
-  const pageSize = customPageSize || (total === 100 ? 25 : total <= 25 ? total : 20);
+  // 100 or 125 items (e.g. Diwali) -> strict pages of 25 each: 1-25, 26-50, 51-75, 76-100, 101-125
+  const pageSize = customPageSize || (total === 100 || total === 125 ? 25 : total <= 25 ? total : 20);
 
   if (total <= pageSize) {
     return [{ page: 1, start: 0, end: total }];

@@ -52,7 +52,7 @@ export const HOLIDAY_35_META: Record<
     hindiName: 'दीपावली',
     dateLabel: '8 November',
     icon: '🪔',
-    count: 100
+    count: 125
   }
 };
 

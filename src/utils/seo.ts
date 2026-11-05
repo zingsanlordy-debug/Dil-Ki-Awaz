@@ -853,9 +853,9 @@ export function getSeoMetadataForState(params: {
           valentinePageSuffix: pageSuffix,
           langCode: langMeta.hreflang,
           h1,
-          section: '100 Diwali Week Wishes, Shayari & Messages',
+          section: '125 Diwali Week Wishes, Shayari & Messages',
           keywords: [
-            '100 Best Diwali Wishes 2026',
+            '125 Best Diwali Wishes 2026',
             'Happy Diwali in Hindi',
             'Dhanteras Wishes',
             'Choti Diwali',
