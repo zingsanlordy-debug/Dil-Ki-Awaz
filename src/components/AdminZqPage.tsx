@@ -487,6 +487,7 @@ export const AdminZqPage: React.FC<AdminZqPageProps> = ({
                           src={src}
                           alt={`${post.posterName} moment ${idx + 1}`}
                           referrerPolicy="no-referrer"
+                          loading="lazy"
                           className="w-full h-24 object-cover rounded-xl border border-[#ffe4e8]"
                         />
                       ))}

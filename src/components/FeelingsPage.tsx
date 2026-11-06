@@ -31,6 +31,7 @@ import {
   getStatic35CategoryHeading,
   isStatic35LanguageReady
 } from '../data/static35/static35Loader';
+import { getCategorySeoDetail } from '../data/categories/categorySeoContent';
 
 function extractMaafiSubFromCategory(rawCat?: string): MaafiSubCategory | 'general' {
   if (!rawCat) return 'general';
@@ -197,6 +198,27 @@ export const FeelingsPage: React.FC<FeelingsPageProps> = ({
 
   const canonicalSharePath = buildFeelingsCleanPath(currentCatKey, activeLang, pagination.currentPage);
 
+  const catSeoDetail = useMemo(
+    () => getCategorySeoDetail(activeCategory !== 'all' ? activeCategory : undefined),
+    [activeCategory]
+  );
+
+  const [visibleCardCount, setVisibleCardCount] = useState<number>(10);
+  useEffect(() => {
+    setVisibleCardCount(10);
+  }, [activeCategory, maafiSubCategory, activeLang, currentPage]);
+
+  useEffect(() => {
+    if (visibleCardCount >= pagination.pageItems.length) return;
+    const handleScroll = () => {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 900) {
+        setVisibleCardCount((prev) => Math.min(prev + 10, pagination.pageItems.length));
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [visibleCardCount, pagination.pageItems.length]);
+
   return (
     <div
       dir={langMeta.rtl ? 'rtl' : 'ltr'}
@@ -239,13 +261,22 @@ export const FeelingsPage: React.FC<FeelingsPageProps> = ({
           buildHref={(lang) => buildFeelingsCleanPath(currentCatKey, lang, 1)}
           onSelectLanguage={handleLanguageSelect}
         />
+
+        {/* 2-3 Line SEO Friendly Category Intro (Google Top 1 Ranking) */}
+        {catSeoDetail?.introText && activeLang === 'hi' && (
+          <div className="mt-3 bg-[#fff8f9] border border-[#ffe4e8] rounded-2xl p-4 sm:p-5 shadow-2xs">
+            <p className="text-[14px] sm:text-[15px] font-semibold text-slate-700 leading-relaxed">
+              {catSeoDetail.introText}
+            </p>
+          </div>
+        )}
       </div>
 
-      {/* DIRECT SHAYARI CARDS (100% Pre-Translated 35 Languages Static SEO) */}
+      {/* DIRECT SHAYARI CARDS (Lazy loaded first 10, then on scroll for maximum speed) */}
       {pagination.pageItems.length > 0 ? (
         <div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8">
-            {pagination.pageItems.map((shayari) => (
+            {pagination.pageItems.slice(0, visibleCardCount).map((shayari) => (
               <ShayariCard
                 key={`${shayari.id}-${activeLang}`}
                 shayari={shayari}
@@ -259,6 +290,20 @@ export const FeelingsPage: React.FC<FeelingsPageProps> = ({
               />
             ))}
           </div>
+
+          {visibleCardCount < pagination.pageItems.length && (
+            <div className="mt-6 text-center">
+              <button
+                type="button"
+                onClick={() =>
+                  setVisibleCardCount((prev) => Math.min(prev + 10, pagination.pageItems.length))
+                }
+                className="px-6 py-2.5 rounded-2xl bg-[#fff0f3] hover:bg-[#d94f70] text-[#d94f70] hover:text-white border border-[#ffd6df] font-bold text-[14px] transition-all cursor-pointer shadow-2xs"
+              >
+                और शायरी लोड करें ({pagination.pageItems.length - visibleCardCount} बाकी) ↓
+              </button>
+            </div>
+          )}
 
           <ShayariPagination
             currentPage={pagination.currentPage}
@@ -280,6 +325,65 @@ export const FeelingsPage: React.FC<FeelingsPageProps> = ({
             buildHref={(lang) => buildFeelingsCleanPath(currentCatKey, lang, 1)}
             onSelectLanguage={handleLanguageSelect}
           />
+
+          {/* Related Categories Cross-Linking Section */}
+          {catSeoDetail?.relatedCategoryIds && catSeoDetail.relatedCategoryIds.length > 0 && (
+            <section className="mt-8 pt-6 border-t-2 border-[#ffe4e8] space-y-3">
+              <h3 className="font-rozha text-[18px] sm:text-[20px] font-bold text-[#d94f70]">
+                🔗 आपको यह शायरी भी पसंद आएगी (Related Categories):
+              </h3>
+              <div className="flex flex-wrap gap-2.5">
+                {catSeoDetail.relatedCategoryIds.map((relId) => {
+                  const relDetail = getCategorySeoDetail(relId);
+                  if (!relDetail) return null;
+                  return (
+                    <a
+                      key={relId}
+                      href={buildFeelingsCleanPath(relId, activeLang, 1)}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        setActiveCategory(relId);
+                        setMaafiSubCategory('general');
+                        setCurrentPage(1);
+                        onSelectCategory?.(relId, activeLang);
+                        window.scrollTo({ top: 0, behavior: 'smooth' });
+                      }}
+                      className="px-3.5 py-2 rounded-xl bg-[#fff8f9] hover:bg-[#fff0f3] border border-[#ffd6df] hover:border-[#d94f70] text-[13px] sm:text-[14px] font-bold text-slate-800 hover:text-[#d94f70] transition-all shadow-2xs"
+                    >
+                      {relDetail.categoryName} ({relDetail.hindiName}) →
+                    </a>
+                  );
+                })}
+              </div>
+            </section>
+          )}
+
+          {/* People Also Ask FAQ Section (Schema FAQ Rich Snippet Support) */}
+          {catSeoDetail?.faqs && catSeoDetail.faqs.length > 0 && (
+            <section className="mt-8 pt-6 border-t-2 border-[#ffe4e8] space-y-4">
+              <div className="flex items-center gap-2">
+                <span className="text-2xl select-none">💡</span>
+                <h2 className="font-rozha text-[22px] sm:text-[24px] font-bold text-[#d94f70]">
+                  {catSeoDetail.categoryName} - अक्सर पूछे जाने वाले सवाल (FAQ)
+                </h2>
+              </div>
+              <div className="space-y-3">
+                {catSeoDetail.faqs.map((faq, idx) => (
+                  <div
+                    key={idx}
+                    className="bg-[#fff8f9] border border-[#ffe4e8] rounded-2xl p-4 sm:p-5 shadow-2xs"
+                  >
+                    <h3 className="font-bold text-[16px] sm:text-[17px] text-slate-900 mb-2">
+                      {faq.question}
+                    </h3>
+                    <p className="text-[14px] sm:text-[15px] text-slate-700 leading-relaxed font-medium">
+                      {faq.answer}
+                    </p>
+                  </div>
+                ))}
+              </div>
+            </section>
+          )}
         </div>
       ) : (
         <div className="text-center py-16 px-6 bg-[#fff8f9] rounded-3xl border-2 border-dashed border-[#ffe4e8]">

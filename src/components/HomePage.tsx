@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import { ArrowRight, Flame, Heart, HeartHandshake, Pencil, Sparkles } from 'lucide-react';
 import {
   Shayari,
@@ -167,6 +167,22 @@ export const HomePage: React.FC<HomePageProps> = ({
     () => getPaginatedSlice(trendingShayaris, currentPage),
     [trendingShayaris, currentPage]
   );
+
+  const [visibleTrendingCount, setVisibleTrendingCount] = useState<number>(10);
+  useEffect(() => {
+    setVisibleTrendingCount(10);
+  }, [currentPage]);
+
+  useEffect(() => {
+    if (visibleTrendingCount >= trendingPagination.pageItems.length) return;
+    const handleScroll = () => {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 900) {
+        setVisibleTrendingCount((prev) => Math.min(prev + 10, trendingPagination.pageItems.length));
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [visibleTrendingCount, trendingPagination.pageItems.length]);
 
   const orderedFeelingChips = useMemo<FeelingChipItem[]>(() => {
     const map = new Map<string, FeelingChipItem>();
@@ -735,7 +751,7 @@ export const HomePage: React.FC<HomePageProps> = ({
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {trendingPagination.pageItems.map((shayari) => (
+            {trendingPagination.pageItems.slice(0, visibleTrendingCount).map((shayari) => (
               <ShayariCard
                 key={shayari.id}
                 shayari={shayari}
@@ -747,6 +763,22 @@ export const HomePage: React.FC<HomePageProps> = ({
               />
             ))}
           </div>
+
+          {visibleTrendingCount < trendingPagination.pageItems.length && (
+            <div className="mt-6 text-center">
+              <button
+                type="button"
+                onClick={() =>
+                  setVisibleTrendingCount((prev) =>
+                    Math.min(prev + 10, trendingPagination.pageItems.length)
+                  )
+                }
+                className="px-6 py-2.5 rounded-2xl bg-[#fff0f3] hover:bg-[#d94f70] text-[#d94f70] hover:text-white border border-[#ffd6df] font-bold text-[14px] transition-all cursor-pointer shadow-2xs"
+              >
+                और शायरी देखें ({trendingPagination.pageItems.length - visibleTrendingCount} बाकी) ↓
+              </button>
+            </div>
+          )}
 
           <ShayariPagination
             currentPage={trendingPagination.currentPage}

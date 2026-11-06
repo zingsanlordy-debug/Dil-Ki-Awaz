@@ -6,6 +6,44 @@
     <meta name="theme-color" content="#d94f70" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <title>Best New Shayari 2026 | ZQ Feelings - Dil Ki Awaaz</title>
+    <!-- Permanent Title Lock: Strictly prevents 3rd-party ad / notification scripts from blinking '(1) New Message' or alternating document.title -->
+    <script>
+      (function() {
+        var _lockedTitle = document.title;
+        var _docDesc = Object.getOwnPropertyDescriptor(Document.prototype, 'title') ||
+                       Object.getOwnPropertyDescriptor(HTMLDocument.prototype, 'title');
+
+        function isTamperedTitle(val) {
+          if (!val || typeof val !== 'string') return true;
+          return /New\s*Message|\(1\)|\(2\)|🔔|Notification|Incoming/i.test(val);
+        }
+
+        try {
+          Object.defineProperty(document, 'title', {
+            get: function() {
+              return _lockedTitle;
+            },
+            set: function(val) {
+              if (isTamperedTitle(val)) {
+                return; // Strictly reject any blinking spam title
+              }
+              _lockedTitle = val;
+              if (_docDesc && _docDesc.set) {
+                try { _docDesc.set.call(document, val); } catch (e) {}
+              }
+            },
+            configurable: true,
+            enumerable: true
+          });
+        } catch (e) {}
+
+        window.addEventListener('visibilitychange', function() {
+          if (_docDesc && _docDesc.set && _lockedTitle) {
+            try { _docDesc.set.call(document, _lockedTitle); } catch (err) {}
+          }
+        }, true);
+      })();
+    </script>
     <meta name="application-name" content="ZQ Feelings - Dil Ki Awaaz" />
     <meta name="apple-mobile-web-app-title" content="ZQ Feelings - Dil Ki Awaaz" />
     <meta name="description" content="Read Best New Shayari 2026 in Hindi, English and more. Latest Love, Sad, Attitude, Miss You Shayari only on ZQ Feelings - Dil Ki Awaaz." />
@@ -48,10 +86,12 @@
     <!-- Social Bar -->
     <script data-cfasync="false" src="https://bicea.org/14/460e7a6918c574841836284f0da73bf2"></script>
 
-    <!-- Google Fonts for stylish Hindi & English typography -->
+    <!-- Google Fonts for stylish Hindi & English typography (Non-blocking async load for 90+ PageSpeed) -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Kalam:wght@400;700&family=Outfit:wght@600;700;800;900&family=Poppins:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&family=Yatra+One&family=Caveat:wght@600;700&family=Noto+Serif+Devanagari:wght@600;800&display=swap" rel="stylesheet" />
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Kalam:wght@400;700&family=Outfit:wght@600;700;800;900&family=Poppins:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&family=Yatra+One&family=Caveat:wght@600;700&family=Noto+Serif+Devanagari:wght@600;800&display=swap" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Kalam:wght@400;700&family=Outfit:wght@600;700;800;900&family=Poppins:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&family=Yatra+One&family=Caveat:wght@600;700&family=Noto+Serif+Devanagari:wght@600;800&display=swap" media="print" onload="this.media='all'" />
+    <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700;900&family=Kalam:wght@400;700&family=Outfit:wght@600;700;800;900&family=Poppins:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400&family=Rozha+One&family=Tiro+Devanagari+Hindi:ital@0;1&family=Yatra+One&family=Caveat:wght@600;700&family=Noto+Serif+Devanagari:wght@600;800&display=swap" /></noscript>
 
     <!-- Schema.org BreadcrumbList, WebApplication, Article & Poetry Structured Data -->
     <script id="dynamic-seo-jsonld" type="application/ld+json">

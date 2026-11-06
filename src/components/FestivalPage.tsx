@@ -165,6 +165,22 @@ export const FestivalPage: React.FC<FestivalPageProps> = ({
     ? buildHoliday35CleanPath(activeCategory, activeLang, pagination.currentPage)
     : undefined;
 
+  const [visibleFestCount, setVisibleFestCount] = useState<number>(10);
+  useEffect(() => {
+    setVisibleFestCount(10);
+  }, [activeCategory, activeLang, currentPage]);
+
+  useEffect(() => {
+    if (visibleFestCount >= pagination.pageItems.length) return;
+    const handleScroll = () => {
+      if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 900) {
+        setVisibleFestCount((prev) => Math.min(prev + 10, pagination.pageItems.length));
+      }
+    };
+    window.addEventListener('scroll', handleScroll, { passive: true });
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, [visibleFestCount, pagination.pageItems.length]);
+
   return (
     <div
       dir={effectiveDir}
@@ -239,7 +255,7 @@ export const FestivalPage: React.FC<FestivalPageProps> = ({
       {pagination.pageItems.length > 0 ? (
         <div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8">
-            {pagination.pageItems.map((shayari, index) => {
+            {pagination.pageItems.slice(0, visibleFestCount).map((shayari, index) => {
               const cardElement = (
                 <ShayariCard
                   key={isStatic35Holiday ? `${shayari.id}-${activeLang}` : shayari.id}
@@ -273,6 +289,22 @@ export const FestivalPage: React.FC<FestivalPageProps> = ({
               return cardElement;
             })}
           </div>
+
+          {visibleFestCount < pagination.pageItems.length && (
+            <div className="mt-6 text-center">
+              <button
+                type="button"
+                onClick={() =>
+                  setVisibleFestCount((prev) =>
+                    Math.min(prev + 10, pagination.pageItems.length)
+                  )
+                }
+                className="px-6 py-2.5 rounded-2xl bg-[#fff0f3] hover:bg-[#d94f70] text-[#d94f70] hover:text-white border border-[#ffd6df] font-bold text-[14px] transition-all cursor-pointer shadow-2xs"
+              >
+                और शायरी लोड करें ({pagination.pageItems.length - visibleFestCount} बाकी) ↓
+              </button>
+            </div>
+          )}
 
           {/* Festive Diwali Gift Offer Box (Auto-Link System + 6 Cards) */}
           {activeCategory === 'diwali' && <DiwaliOfferBox />}

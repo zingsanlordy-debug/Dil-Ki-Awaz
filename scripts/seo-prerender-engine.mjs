@@ -431,6 +431,125 @@ export const SSR_FEELINGS = [
   { id: 'sharabi', name: 'Sharabi Shayari', hindiName: 'शराबी शायरी', slug: '/feelings/sharabi-shayari/', seoDescription: 'Soulful Sharabi, Maikhana, Jaam & Mehfil Shayari in Hindi (शराबी और मयख़ाना शायरी) with 20 stylish fonts, copy & WhatsApp share.' }
 ];
 
+export const SSR_CATEGORY_SEO_MAP = {
+  emotional: {
+    seoTitle: 'Best Emotional Shayari in Hindi 2026 - Dil Ki Awaz | ZQ Feelings',
+    metaDescription: 'Read Best Emotional Shayari in Hindi (इमोशनल शायरी) 2026. Heart touching jazbaati shayari in 35 languages, 20 stylish fonts on ZQ Feelings - Dil Ki Awaaz.',
+    h1: 'Best Emotional Shayari in Hindi 2026 - दिल को छू लेने वाली इमोशनल शायरी',
+    faqs: [
+      { question: 'Emotional Shayari kya hai?', answer: 'Emotional Shayari दिल की गहरी भावनाओं, जज़्बातों और दर्द को खूबसूरत अल्फाज़ों में बयां करने वाली शायरी होती है।' },
+      { question: 'Best Emotional Shayari in Hindi kaun si hai?', answer: 'ZQ Feelings पर उपलब्ध Emotional Shayari collection में दिल के जज़्बात बयां करने वाली टॉप रेटेड ओरिजिनल शायरियाँ सबसे लोकप्रिय हैं।' }
+    ]
+  },
+  sad: {
+    seoTitle: 'Best Sad Shayari in Hindi 2026 - Dard Bhari Shayari | ZQ Feelings',
+    metaDescription: 'Read Best Sad Shayari in Hindi (दर्द भरी सैड शायरी) 2026. Heartbreak, aansoo & gham shayari in 35 languages, 20 stylish fonts on ZQ Feelings - Dil Ki Awaaz.',
+    h1: 'Best Sad Shayari in Hindi 2026 - दर्द भरी सैड शायरी कलेक्शन',
+    faqs: [
+      { question: 'Sad Shayari kiske liye hoti hai?', answer: 'Sad Shayari उन लोगों के लिए होती है जो दिल टूटने, जुदाई, अकेलेपन या अपनों की बेरुखी का दर्द महसूस कर रहे होते हैं।' }
+    ]
+  },
+  love: {
+    seoTitle: 'Best Love Shayari in Hindi 2026 - Romantic Mohabbat Shayari | ZQ Feelings',
+    metaDescription: 'Read Best Love Shayari in Hindi (प्यार और मोहब्बत शायरी) 2026. True romantic love shayari for girlfriend & boyfriend in 35 languages on ZQ Feelings - Dil Ki Awaaz.',
+    h1: 'Best Love Shayari in Hindi 2026 - सच्चे प्यार और मोहब्बत की शायरी',
+    faqs: [
+      { question: 'Love Shayari se mohabbat ka izhaar kaise karein?', answer: 'Love Shayari की 2-4 मीठी पंक्तियाँ आपके दिल की बात आपके पार्टनर तक बिना झिझक पहुँचा देती हैं।' }
+    ]
+  },
+  attitude: {
+    seoTitle: 'Best Attitude Shayari in Hindi 2026 - Royal Tevar Status | ZQ Feelings',
+    metaDescription: 'Read Best Attitude Shayari in Hindi (एटीट्यूड और तेवर शायरी) 2026. Royal style akad shayari for boys & girls in 35 languages on ZQ Feelings - Dil Ki Awaaz.',
+    h1: 'Best Attitude Shayari in Hindi 2026 - रॉयल तेवर और अकड़ शायरी',
+    faqs: [
+      { question: 'Attitude Shayari WhatsApp status par kaise lagayein?', answer: 'यहाँ दिए गए Copy बटन पर टैप करें और सीधे अपने व्हाट्सएप या इंस्टाग्राम बायो/स्टेटस में पेस्ट करें।' }
+    ]
+  },
+  'miss-you': {
+    seoTitle: 'Best Miss You Shayari in Hindi 2026 - Teri Yaad Shayari | ZQ Feelings',
+    metaDescription: 'Read Best Miss You Shayari in Hindi (मिस यू और तेरी कमी शायरी) 2026. Heart touching intezaar poetry in 35 languages on ZQ Feelings - Dil Ki Awaaz.',
+    h1: 'Best Miss You Shayari in Hindi 2026 - मिस यू और तेरी याद शायरी',
+    faqs: [
+      { question: 'Miss You Shayari kiske liye bheji ja sakti hai?', answer: 'Miss You Shayari आप अपने लवर, दोस्त, माता-पिता या किसी भी अज़ीज़ को भेज सकते हैं जिनकी कमी आपको खल रही हो।' }
+    ]
+  },
+  alone: {
+    seoTitle: 'Best Alone Shayari in Hindi 2026 - Tanhai & Judai Shayari | ZQ Feelings',
+    metaDescription: 'Read Best Alone Shayari in Hindi (तन्हाई और अकेलापन शायरी) 2026. Deep quiet night poetry in 35 languages, 20 stylish fonts on ZQ Feelings - Dil Ki Awaaz.',
+    h1: 'Best Alone Shayari in Hindi 2026 - तन्हाई और अकेलेपन की शायरी'
+  },
+  motivational: {
+    seoTitle: 'Best Motivational Shayari in Hindi 2026 - Hausla Success Shayari | ZQ Feelings',
+    metaDescription: 'Read Best Motivational Shayari in Hindi (हौसला और सफलता शायरी) 2026. Inspiring hard work status in 35 languages on ZQ Feelings - Dil Ki Awaaz.',
+    h1: 'Best Motivational Shayari in Hindi 2026 - हौसला और सफलता की शायरी'
+  },
+  dosti: {
+    seoTitle: 'Best Dosti Shayari in Hindi 2026 - Friendship Yaari Shayari | ZQ Feelings',
+    metaDescription: 'Read Best Dosti Shayari in Hindi (सच्ची दोस्ती और यारी शायरी) 2026. Heartwarming friend status in 35 languages on ZQ Feelings - Dil Ki Awaaz.',
+    h1: 'Best Dosti Shayari in Hindi 2026 - सच्ची दोस्ती और यारी की शायरी'
+  },
+  'good-morning': {
+    seoTitle: 'Best Good Morning Shayari in Hindi 2026 - Suprabhat Wishes | ZQ Feelings',
+    metaDescription: 'Read Best Good Morning Shayari in Hindi (सुप्रभात शायरी) 2026. Fresh morning positive wishes in 35 languages on ZQ Feelings - Dil Ki Awaaz.',
+    h1: 'Best Good Morning Shayari in Hindi 2026 - सुप्रभात और नई सुबह की शायरी'
+  },
+  'good-night': {
+    seoTitle: 'Best Good Night Shayari in Hindi 2026 - Shubh Ratri Shayari | ZQ Feelings',
+    metaDescription: 'Read Best Good Night Shayari in Hindi (शुभ रात्रि शायरी) 2026. Sweet dream night wishes in 35 languages on ZQ Feelings - Dil Ki Awaaz.',
+    h1: 'Best Good Night Shayari in Hindi 2026 - शुभ रात्रि और मीठे सपनों की शायरी'
+  },
+  'heart-touching': {
+    seoTitle: 'Best Heart Touching Shayari in Hindi 2026 - Dil Chhoo Lene Wali | ZQ Feelings',
+    metaDescription: 'Read Best Heart Touching Shayari in Hindi (दिल छू लेने वाली शायरी) 2026. Soulful poetry in 35 languages on ZQ Feelings - Dil Ki Awaaz.',
+    h1: 'Best Heart Touching Shayari in Hindi 2026 - दिल छू लेने वाली शायरी'
+  },
+  '2-line': {
+    seoTitle: 'Best 2 Line Shayari in Hindi 2026 - Short Deep Status | ZQ Feelings',
+    metaDescription: 'Read Best 2 Line Shayari in Hindi (दो लाइन की बेहतरीन शायरी) 2026. Short, punchy & deep status in 35 languages on ZQ Feelings - Dil Ki Awaaz.',
+    h1: 'Best 2 Line Shayari in Hindi 2026 - दो लाइन की गहरी शायरी'
+  },
+  yaad: {
+    seoTitle: 'Best Yaad Shayari in Hindi 2026 - Yaadein & Intezaar | ZQ Feelings',
+    metaDescription: 'Read Best Yaad Shayari in Hindi (याद और इंतज़ार शायरी) 2026. Touching memories poetry in 35 languages on ZQ Feelings - Dil Ki Awaaz.',
+    h1: 'Best Yaad Shayari in Hindi 2026 - याद और इंतज़ार की शायरी'
+  },
+  kismat: {
+    seoTitle: 'Best Kismat Shayari in Hindi 2026 - Naseeb & Taqdeer | ZQ Feelings',
+    metaDescription: 'Read Best Kismat Shayari in Hindi (किस्मत और नसीब शायरी) 2026. Destiny & fate poetry in 35 languages on ZQ Feelings - Dil Ki Awaaz.',
+    h1: 'Best Kismat Shayari in Hindi 2026 - किस्मत और नसीब की शायरी'
+  },
+  khushi: {
+    seoTitle: 'Best Khushi Shayari in Hindi 2026 - Smile & Muskaan Wishes | ZQ Feelings',
+    metaDescription: 'Read Best Khushi Shayari in Hindi (खुशी और मुस्कान शायरी) 2026. Joyful happiness poetry in 35 languages on ZQ Feelings - Dil Ki Awaaz.',
+    h1: 'Best Khushi Shayari in Hindi 2026 - खुशी और मुस्कान की शायरी'
+  },
+  sorry: {
+    seoTitle: 'Best Sorry Shayari in Hindi 2026 - Maafi & Roothna Manana | ZQ Feelings',
+    metaDescription: 'Read Best Sorry Shayari in Hindi (माफी और सॉरी शायरी) 2026. Heartfelt apology poetry for loved ones in 35 languages on ZQ Feelings - Dil Ki Awaaz.',
+    h1: 'Best Sorry Shayari in Hindi 2026 - दिल से माफी और रूठना-मनाना शायरी'
+  },
+  bewafa: {
+    seoTitle: 'Best Bewafa Shayari in Hindi 2026 - Dhokha & Broken Trust | ZQ Feelings',
+    metaDescription: 'Read Best Bewafa Shayari in Hindi (बेवफ़ा और धोखा शायरी) 2026. Painful betrayal poetry in 35 languages on ZQ Feelings - Dil Ki Awaaz.',
+    h1: 'Best Bewafa Shayari in Hindi 2026 - बेवफ़ाई और टूटे भरोसे की शायरी'
+  },
+  breakup: {
+    seoTitle: 'Best Breakup Shayari in Hindi 2026 - Heartbreak Judai Status | ZQ Feelings',
+    metaDescription: 'Read Best Breakup Shayari in Hindi (ब्रेकअप शायरी) 2026. Heartbreak & separation poetry in 35 languages on ZQ Feelings - Dil Ki Awaaz.',
+    h1: 'Best Breakup Shayari in Hindi 2026 - ब्रेकअप और जुदाई की शायरी'
+  },
+  family: {
+    seoTitle: 'Best Family Shayari in Hindi 2026 - Parivar & Ghar Status | ZQ Feelings',
+    metaDescription: 'Read Best Family Shayari in Hindi (परिवार और माँ-पापा शायरी) 2026. Warm home poetry in 35 languages on ZQ Feelings - Dil Ki Awaaz.',
+    h1: 'Best Family Shayari in Hindi 2026 - परिवार और माँ-बाप के प्यार की शायरी'
+  },
+  funny: {
+    seoTitle: 'Best Funny Shayari in Hindi 2026 - Jokes & Comedy Shayari | ZQ Feelings',
+    metaDescription: 'Read Best Funny Shayari in Hindi (मज़ेदार फनी शायरी) 2026. Hilarious jokes and laughter poetry in 35 languages on ZQ Feelings - Dil Ki Awaaz.',
+    h1: 'Best Funny Shayari in Hindi 2026 - मज़ेदार फनी और चुटकुले शायरी'
+  }
+};
+
 const SSR_FEELINGS_MERGE_MAP = {
   love: 'love',
   'romantic-love': 'love',
@@ -1125,19 +1244,40 @@ export function resolveServerSeoMeta(rawPathname) {
     const canonicalPath = buildSsrFeelingsPath(hindiBase, langMeta, pg);
     const pageSuffix = pg >= 2 ? `/page/${pg}` : undefined;
     const feelDisplayName = f.id === 'birthday-feelings' ? 'Birthday Feelings Shayari' : f.name;
-    const feelBaseTopic = hasCustomLang
-      ? `${feelDisplayName} in ${langMeta.englishName}`
-      : feelDisplayName;
-    const feelTopic = pg >= 2 ? `${feelBaseTopic} - Page ${pg}` : feelBaseTopic;
+
+    const catSeo = SSR_CATEGORY_SEO_MAP[f.id];
+    let title = '';
+    let description = '';
+    let h1 = '';
+    let faqs = catSeo?.faqs;
+
+    if (hasCustomLang) {
+      const feelBaseTopic = `${feelDisplayName} in ${langMeta.englishName}`;
+      const feelTopic = pg >= 2 ? `${feelBaseTopic} - Page ${pg}` : feelBaseTopic;
+      title = formatTopicSeoTitle(feelTopic);
+      description = formatTopicSeoDescription(feelTopic);
+      h1 = `${feelDisplayName} in ${langMeta.englishName}`;
+    } else if (catSeo) {
+      title = pg >= 2 ? `${catSeo.seoTitle.replace(/\s*\|\s*ZQ Feelings.*$/, '')} - Page ${pg} | ZQ Feelings` : catSeo.seoTitle;
+      description = pg >= 2 ? `${catSeo.metaDescription} (Page ${pg})` : catSeo.metaDescription;
+      h1 = pg >= 2 ? `${catSeo.h1} - Page ${pg}` : catSeo.h1;
+    } else {
+      const feelTopic = pg >= 2 ? `${feelDisplayName} - Page ${pg}` : feelDisplayName;
+      title = formatTopicSeoTitle(feelTopic);
+      description = formatTopicSeoDescription(feelTopic);
+      h1 = `${f.name} (${f.hindiName})`;
+    }
 
     return {
-      title: formatTopicSeoTitle(feelTopic),
-      description: formatTopicSeoDescription(feelTopic),
+      title,
+      description,
+      h1,
       canonicalPath,
       valentineBasePath: hindiBase,
       valentinePageSuffix: pageSuffix,
       langCode: langMeta.hreflang,
       robots: 'index, follow',
+      faqs,
       breadcrumbs: [
         { name: 'Home', path: '/' },
         { name: 'Feelings Shayari', path: '/feelings-shayari' },
@@ -1574,48 +1714,66 @@ export function renderSsrMetaHtml(
     inLanguage: 'hi'
   });
 
+  const graphNodes = [
+    {
+      '@type': 'BreadcrumbList',
+      '@id': `${canonicalUrl}#breadcrumb`,
+      itemListElement: (meta.breadcrumbs || []).map((crumb, idx) => ({
+        '@type': 'ListItem',
+        position: idx + 1,
+        name: crumb.name,
+        item: `${siteOrigin}${crumb.path}`
+      }))
+    },
+    {
+      '@type': 'CollectionPage',
+      '@id': `${canonicalUrl}#collection`,
+      url: canonicalUrl,
+      name: meta.title,
+      description: meta.description,
+      inLanguage: meta.langCode,
+      isPartOf: { '@id': `${siteOrigin}/#website` },
+      breadcrumb: { '@id': `${canonicalUrl}#breadcrumb` }
+    },
+    {
+      '@type': 'Article',
+      '@id': `${canonicalUrl}#article`,
+      mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
+      headline: meta.h1 || meta.title,
+      name: meta.title,
+      description: meta.description,
+      image: ogImageUrl,
+      inLanguage: meta.langCode,
+      author: {
+        '@type': 'Organization',
+        name: SITE_NAME_FULL,
+        url: `${siteOrigin}/`
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: SITE_NAME_FULL
+      }
+    }
+  ];
+
+  if (meta.faqs && meta.faqs.length > 0) {
+    graphNodes.push({
+      '@type': 'FAQPage',
+      '@id': `${canonicalUrl}#faq`,
+      mainEntity: meta.faqs.map((faq) => ({
+        '@type': 'Question',
+        name: faq.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: faq.answer
+        }
+      }))
+    });
+  }
+
   const ssrJsonLd = JSON.stringify({
     '@context': 'https://schema.org',
-    '@graph': [
-      {
-        '@type': 'BreadcrumbList',
-        '@id': `${canonicalUrl}#breadcrumb`,
-        itemListElement: meta.breadcrumbs.map((crumb, idx) => ({
-          '@type': 'ListItem',
-          position: idx + 1,
-          name: crumb.name,
-          item: `${siteOrigin}${crumb.path}`
-        }))
-      },
-      {
-        '@type': 'CollectionPage',
-        '@id': `${canonicalUrl}#collection`,
-        url: canonicalUrl,
-        name: meta.title,
-        description: meta.description,
-        inLanguage: meta.langCode,
-        isPartOf: { '@id': `${siteOrigin}/#website` },
-        breadcrumb: { '@id': `${canonicalUrl}#breadcrumb` }
-      },
-      {
-        '@type': 'Article',
-        '@id': `${canonicalUrl}#article`,
-        mainEntityOfPage: { '@type': 'WebPage', '@id': canonicalUrl },
-        headline: meta.title,
-        description: meta.description,
-        image: ogImageUrl,
-        inLanguage: meta.langCode,
-        author: {
-          '@type': 'Organization',
-          name: SITE_NAME_FULL,
-          url: `${siteOrigin}/`
-        },
-        publisher: {
-          '@type': 'Organization',
-          name: SITE_NAME_FULL
-        }
-      }
-    ]
+    '@graph': graphNodes
   });
 
   return baseHtml

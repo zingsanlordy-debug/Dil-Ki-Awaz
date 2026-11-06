@@ -1456,6 +1456,7 @@ export const ZqMomentsPage: React.FC<ZqMomentsPageProps> = () => {
               src={lightboxState.photos[lightboxState.index]}
               alt={`${lightboxState.posterName} - Hindi Shayari Photo Status ${lightboxState.index + 1} on ZQ Moments`}
               referrerPolicy="no-referrer"
+              loading="lazy"
               className="max-h-[78vh] max-w-full object-contain rounded-2xl select-none"
             />
 

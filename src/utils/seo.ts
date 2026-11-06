@@ -30,6 +30,7 @@ import {
   parseStatic35LangToken
 } from '../data/static35/static35Meta';
 import { DIWALI_35_FAQS, DIWALI_35_SEO } from '../data/static35/diwali35Data';
+import { getCategorySeoDetail } from '../data/categories/categorySeoContent';
 
 export interface ParsedSeoRoute {
   route: AppRoute;
@@ -1030,15 +1031,40 @@ export function getSeoMetadataForState(params: {
           activePage,
           false
         );
+        const catDetail = getCategorySeoDetail(activeFeel.id);
         const feelDisplayName =
           activeFeel.id === 'birthday-feelings' ? 'Birthday Feelings Shayari' : activeFeel.name;
-        const feelBaseTopic = hasCustomLang
-          ? `${feelDisplayName} in ${langMeta.englishName}`
-          : feelDisplayName;
-        const feelTopic =
-          activePage >= 2 ? `${feelBaseTopic} - Page ${activePage}` : feelBaseTopic;
-        const title = formatTopicSeoTitle(feelTopic);
-        const description = formatTopicSeoDescription(feelTopic);
+
+        let title = '';
+        let description = '';
+        let h1 = '';
+        let faqs = catDetail?.faqs;
+
+        if (hasCustomLang) {
+          const feelBaseTopic = `${feelDisplayName} in ${langMeta.englishName}`;
+          const feelTopic = activePage >= 2 ? `${feelBaseTopic} - Page ${activePage}` : feelBaseTopic;
+          title = formatTopicSeoTitle(feelTopic);
+          description = formatTopicSeoDescription(feelTopic);
+          h1 = `${feelDisplayName} in ${langMeta.englishName}`;
+        } else if (catDetail) {
+          title = activePage >= 2 ? `${catDetail.seoTitle.replace(/\s*\|\s*ZQ Feelings.*$/, '')} - Page ${activePage} | ZQ Feelings` : catDetail.seoTitle;
+          description = activePage >= 2 ? `${catDetail.metaDescription} (Page ${activePage})` : catDetail.metaDescription;
+          h1 = activePage >= 2 ? `${catDetail.h1} - Page ${activePage}` : catDetail.h1;
+        } else {
+          const feelTopic = activePage >= 2 ? `${feelDisplayName} - Page ${activePage}` : feelDisplayName;
+          title = formatTopicSeoTitle(feelTopic);
+          description = formatTopicSeoDescription(feelTopic);
+          h1 = `${activeFeel.name} (${activeFeel.hindiName})`;
+        }
+
+        if (!faqs || faqs.length === 0) {
+          faqs = [
+            {
+              question: `क्या ${activeFeel.name} (${activeFeel.hindiName}) सभी 35 भाषाओं में उपलब्ध है?`,
+              answer: `जी हाँ, ZQ Feelings पर ${activeFeel.name} की सभी मौलिक शायरियाँ 15 भारतीय और 20 वैश्विक भाषाओं (कुल 35 प्री-ट्रांसलेटेड भाषाओं) में क्लीन URL, 20 स्टाइलिश फ़ॉन्ट्स और WhatsApp शेयर के साथ उपलब्ध हैं।`
+            }
+          ];
+        }
 
         return {
           title,
@@ -1047,14 +1073,16 @@ export function getSeoMetadataForState(params: {
           valentineBasePath: hindiBase,
           valentinePageSuffix: pageSuffix,
           langCode: langMeta.hreflang,
-          h1: `${activeFeel.name} (${activeFeel.hindiName})`,
+          h1,
           section: activeFeel.name,
           keywords: [
             activeFeel.name,
-            `${feelDisplayName} in ${langMeta.englishName}`,
+            `Best ${activeFeel.name} in Hindi`,
+            `${activeFeel.name} 2026`,
             activeFeel.hindiName,
             'Best New Shayari 2026',
-            'ZQ Feelings'
+            'ZQ Feelings',
+            'Dil Ki Awaaz'
           ],
           breadcrumbs: [
             { name: 'Home', path: '/' },
@@ -1063,12 +1091,7 @@ export function getSeoMetadataForState(params: {
             ...(hasCustomLang ? [{ name: langMeta.englishName, path: langBasePath }] : []),
             ...(activePage >= 2 ? [{ name: `Page ${activePage}`, path: canonicalPath }] : [])
           ],
-          faqs: [
-            {
-              question: `क्या ${activeFeel.name} (${activeFeel.hindiName}) सभी 35 भाषाओं में उपलब्ध है?`,
-              answer: `जी हाँ, ZQ Feelings पर ${activeFeel.name} की सभी मौलिक शायरियाँ 15 भारतीय और 20 वैश्विक भाषाओं (कुल 35 प्री-ट्रांसलेटेड भाषाओं) में क्लीन URL, 20 स्टाइलिश फ़ॉन्ट्स और WhatsApp शेयर के साथ उपलब्ध हैं।`
-            }
-          ]
+          faqs
         };
       }
     }
