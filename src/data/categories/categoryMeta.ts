@@ -74,7 +74,7 @@ export const FESTIVAL_CATEGORIES = [
     name: 'Diwali',
     hindiName: 'दीपावली',
     icon: '🪔',
-    seoTitle: 'Happy Diwali Shayari in Hindi (दीपावली शायरी) | ZQ Feelings',
+    seoTitle: '125+ Best Diwali Shayari 2026 in Hindi - Happy Diwali Shayari | ZQ Feelings',
     seoDescription:
       'Read 25+ Happy Diwali Shayari in Hindi (दीपावली की हार्दिक शुभकामनाएं) — Diyas, Laxmi Puja & Deepawali wishes with stylish fonts & WhatsApp share.'
   },

@@ -408,7 +408,7 @@ for (const lang of VALENTINE_LANGUAGES) {
 // 35 Language SEO Meta & Intro Text
 const SEO_35 = {
   hi: {
-    title: "125 Best Diwali Wishes in Hindi 2026 - Happy Diwali, Dhanteras, Bhai Dooj Shayari | ZQ Feelings",
+    title: "125+ Best Diwali Shayari 2026 in Hindi - Happy Diwali Shayari | ZQ Feelings",
     h1: "125 Happy Diwali Wishes, Shayari aur Messages in Hindi",
     description: "Best Happy Diwali Shayari, Diwali Wishes, Deepavali Shayari in Hindi - Dil Ki Awaz",
     introText: "Diwali Week 6 Nov se 11 Nov 2026 tak hai. Dhanteras, Choti Diwali, Diwali, Govardhan Puja aur Bhai Dooj - sabki wishes yahin se copy karo. 125 Wishes x 35 Languages = 4375 Wishes.",

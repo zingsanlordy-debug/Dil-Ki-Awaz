@@ -140,7 +140,7 @@ const SSR_HOLIDAY_35 = {
 function getSsrDiwali35Seo(code) {
   if (code === 'hi') {
     return {
-      title: "125 Best Diwali Wishes in Hindi 2026 - Happy Diwali, Dhanteras, Bhai Dooj Shayari | ZQ Feelings",
+      title: "125+ Best Diwali Shayari 2026 in Hindi - Happy Diwali Shayari | ZQ Feelings",
       description: "Best Happy Diwali Shayari, Diwali Wishes, Deepavali Shayari in Hindi - Dil Ki Awaz"
     };
   }
