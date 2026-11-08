@@ -9,10 +9,6 @@ import {
 } from '../data/shayariData';
 import { ShayariCard } from './ShayariCard';
 import { ShayariPagination } from './ShayariPagination';
-import {
-  Static35BottomLanguageBar,
-  Static35TopLanguageSelector
-} from './Static35LanguageBar';
 import { getPaginatedSlice } from '../utils/pagination';
 import { Shayari, FontStyleId, MaafiSubCategory } from '../types/shayari';
 import { useGlobalLanguage } from '../context/GlobalLanguageContext';
@@ -89,7 +85,7 @@ export const FeelingsPage: React.FC<FeelingsPageProps> = ({
   const [currentPage, setCurrentPage] = useState<number>(
     initialPage && initialPage >= 1 ? initialPage : 1
   );
-  const { ui } = useGlobalLanguage();
+  const { globalLanguage, ui } = useGlobalLanguage();
 
   useEffect(() => {
     if (initialCategory) {
@@ -109,8 +105,16 @@ export const FeelingsPage: React.FC<FeelingsPageProps> = ({
   }, [initialCategory, initialPage]);
 
   useEffect(() => {
-    setActiveLang(initialLang || 'hi');
-  }, [initialLang]);
+    if (globalLanguage === 'english') {
+      setActiveLang('en-US');
+    } else if (globalLanguage === 'urdu') {
+      setActiveLang('ur');
+    } else if (initialLang) {
+      setActiveLang(initialLang);
+    } else {
+      setActiveLang('hi');
+    }
+  }, [initialLang, globalLanguage]);
 
   const triggerLoadLang = useCallback(async (lang: ValentineLangCode) => {
     if (isStatic35LanguageReady(lang)) return;
@@ -255,13 +259,6 @@ export const FeelingsPage: React.FC<FeelingsPageProps> = ({
           </span>
         </div>
 
-        <Static35TopLanguageSelector
-          activeLang={activeLang}
-          isLoadingLang={isLoadingLang}
-          buildHref={(lang) => buildFeelingsCleanPath(currentCatKey, lang, 1)}
-          onSelectLanguage={handleLanguageSelect}
-        />
-
         {/* 2-3 Line SEO Friendly Category Intro (Google Top 1 Ranking) */}
         {catSeoDetail?.introText && activeLang === 'hi' && (
           <div className="mt-3 bg-[#fff8f9] border border-[#ffe4e8] rounded-2xl p-4 sm:p-5 shadow-2xs">
@@ -282,7 +279,13 @@ export const FeelingsPage: React.FC<FeelingsPageProps> = ({
                 shayari={shayari}
                 isFavorite={isFavorite(shayari.id)}
                 onToggleFavorite={onToggleFavorite}
-                currentLanguage={activeLang.startsWith('en') ? 'english' : 'hindi'}
+                currentLanguage={
+                  activeLang.startsWith('en')
+                    ? 'english'
+                    : activeLang === 'ur'
+                      ? 'urdu'
+                      : 'hindi'
+                }
                 staticLangCode={activeLang}
                 shareCanonicalPath={canonicalSharePath}
                 onOpenCardModal={onOpenCardModal}
@@ -316,14 +319,6 @@ export const FeelingsPage: React.FC<FeelingsPageProps> = ({
               getPageHref ||
               ((pg) => buildFeelingsCleanPath(currentCatKey, activeLang, pg))
             }
-          />
-
-          <Static35BottomLanguageBar
-            sectionLabel={sectionShortLabel}
-            activeLang={activeLang}
-            isLoadingLang={isLoadingLang}
-            buildHref={(lang) => buildFeelingsCleanPath(currentCatKey, lang, 1)}
-            onSelectLanguage={handleLanguageSelect}
           />
 
           {/* Related Categories Cross-Linking Section */}

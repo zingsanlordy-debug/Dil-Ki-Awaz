@@ -85,7 +85,7 @@ export const ReligiousPage: React.FC<ReligiousPageProps> = ({
   const cardLanguage =
     globalLanguage === 'english'
       ? 'english'
-      : globalLanguage === 'urdu' && activeCategory === 'islamic-allah'
+      : globalLanguage === 'urdu'
         ? 'urdu'
         : 'hindi';
 

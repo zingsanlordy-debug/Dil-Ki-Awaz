@@ -28,7 +28,7 @@ import {
 } from '../data/static35/static35Loader';
 import { DIWALI_35_FAQS, DIWALI_35_SEO } from '../data/static35/diwali35Data';
 import { DiwaliOfferBox } from './DiwaliOfferBox';
-import { DiwaliTopBanner320x50, DiwaliMiddleNativeBanner } from './DiwaliAds';
+import { DiwaliTopBanner320x50 } from './DiwaliAds';
 
 interface FestivalPageProps {
   initialCategory?: string;
@@ -275,17 +275,6 @@ export const FestivalPage: React.FC<FestivalPageProps> = ({
                   onOpenComments={onOpenComments}
                 />
               );
-
-              // In the middle of Diwali Shayari (at card 12), render Native Banner Ad
-              if (activeCategory === 'diwali' && index === 12) {
-                return (
-                  <React.Fragment key={`diwali-card-and-middle-ad-${shayari.id}`}>
-                    <DiwaliMiddleNativeBanner />
-                    {cardElement}
-                  </React.Fragment>
-                );
-              }
-
               return cardElement;
             })}
           </div>

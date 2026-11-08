@@ -37,6 +37,7 @@ import { FONT_OPTIONS, transformShayariLine } from '../data/fonts';
 import { formatShayariCopyText } from '../utils/copyShayariFormat';
 import { FontStyleId, Shayari } from '../types/shayari';
 import { useFontSize } from '../context/FontSizeContext';
+import { useGlobalLanguage } from '../context/GlobalLanguageContext';
 
 interface ValentineShayariCardItemProps {
   item: ValentineBaseShayari;
@@ -751,12 +752,23 @@ export const ValentineWeekPage: React.FC<ValentineWeekPageProps> = ({
     }
   }, []);
 
+  const { globalLanguage } = useGlobalLanguage();
+
   useEffect(() => {
-    if (initialLang) {
+    if (globalLanguage === 'english') {
+      setDefaultLang('en-US');
+      setCategoryLangOverrides({});
+    } else if (globalLanguage === 'urdu') {
+      setDefaultLang('ur');
+      setCategoryLangOverrides({});
+    } else if (initialLang) {
       setDefaultLang(initialLang);
       setCategoryLangOverrides({});
+    } else {
+      setDefaultLang('hi');
+      setCategoryLangOverrides({});
     }
-  }, [initialLang]);
+  }, [initialLang, globalLanguage]);
 
   useEffect(() => {
     if (activeCategory) {
@@ -884,34 +896,6 @@ export const ValentineWeekPage: React.FC<ValentineWeekPageProps> = ({
             <p className="text-[16px] sm:text-[18px] text-pink-50 font-medium leading-relaxed max-w-3xl mx-auto">
               {activeCatMeta.hindiName} ({activeCatMeta.dateLabel}) — {activeCatMeta.subtitle}
             </p>
-
-            {/* Top 35-Language Selector Button */}
-            <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
-              <button
-                type="button"
-                onClick={() => setTopLangDrawerOpen((prev) => !prev)}
-                className="min-h-[46px] px-5 py-2.5 rounded-2xl bg-white text-[#991B1B] hover:bg-pink-50 font-extrabold text-[15px] inline-flex items-center gap-2 shadow-xs cursor-pointer transition-colors"
-              >
-                <Globe className="w-4 h-4 text-[#e11d48]" />
-                <span>35 Languages: {pageLangMeta.nativeLabel}</span>
-                {topLangDrawerOpen ? (
-                  <ChevronUp className="w-4 h-4" />
-                ) : (
-                  <ChevronDown className="w-4 h-4" />
-                )}
-              </button>
-            </div>
-
-            {topLangDrawerOpen && (
-              <TopLanguageDrawer
-                activeLang={pageLang}
-                categoryId={activeCatMeta.id}
-                onSelectLanguage={(lang) => {
-                  handleCategoryLanguageSelect(activeCatMeta.id, lang);
-                  setTopLangDrawerOpen(false);
-                }}
-              />
-            )}
           </div>
         </section>
 
@@ -1035,14 +1019,6 @@ export const ValentineWeekPage: React.FC<ValentineWeekPageProps> = ({
                   )}
                 </div>
               </div>
-
-              {/* Bottom 35-Language Selector */}
-              <CategoryLanguageBar
-                category={activeCatMeta}
-                activeLang={pageLang}
-                isLoadingLang={!!loadingLangs[pageLang]}
-                onSelectLanguage={(lang) => handleCategoryLanguageSelect(activeCatMeta.id, lang)}
-              />
             </section>
           );
         })()}
@@ -1167,22 +1143,7 @@ export const ValentineWeekPage: React.FC<ValentineWeekPageProps> = ({
             Rose Day की पहली सुर्ख पंखुड़ी से लेकर Valentine Day के सच्चे हमसफ़र और 21 Feb के आत्मसम्मान तक — दिल से लिखी 600 अनमोल शायरियाँ, 35 भाषाएँ, 20 स्टाइलिश फ़ॉन्ट्स, एक क्लिक कॉपी और शेयर के साथ।
           </p>
 
-          {/* Top Auto-Detected Page Language Bar */}
           <div className="pt-2 flex flex-wrap items-center justify-center gap-3">
-            <button
-              type="button"
-              onClick={() => setTopLangDrawerOpen((prev) => !prev)}
-              className="min-h-[46px] px-5 py-2.5 rounded-2xl bg-white text-[#991B1B] hover:bg-pink-50 font-extrabold text-[15px] inline-flex items-center gap-2 shadow-xs cursor-pointer transition-colors"
-            >
-              <Globe className="w-4 h-4 text-[#e11d48]" />
-              <span>Language: {activeDefaultLangMeta.nativeLabel}</span>
-              {topLangDrawerOpen ? (
-                <ChevronUp className="w-4 h-4" />
-              ) : (
-                <ChevronDown className="w-4 h-4" />
-              )}
-            </button>
-
             <button
               type="button"
               onClick={handleToggleExpandAll}
@@ -1191,13 +1152,6 @@ export const ValentineWeekPage: React.FC<ValentineWeekPageProps> = ({
               <span>{areAllExpanded ? 'Collapse All 15 Days' : 'Expand All 15 Days'}</span>
             </button>
           </div>
-
-          {topLangDrawerOpen && (
-            <TopLanguageDrawer
-              activeLang={defaultLang}
-              onSelectLanguage={handleGlobalLanguageSelect}
-            />
-          )}
         </div>
       </section>
 
@@ -1451,13 +1405,6 @@ export const ValentineWeekPage: React.FC<ValentineWeekPageProps> = ({
                       />
                     ))}
                   </div>
-
-                  <CategoryLanguageBar
-                    category={cat}
-                    activeLang={activeLang}
-                    isLoadingLang={!!loadingLangs[activeLang]}
-                    onSelectLanguage={(lang) => handleCategoryLanguageSelect(cat.id, lang)}
-                  />
                 </div>
               )}
             </section>

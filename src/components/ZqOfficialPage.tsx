@@ -3,8 +3,8 @@ import { ALL_CATEGORIES_FOR_POSTING } from '../data/shayariData';
 import { ShayariCard } from './ShayariCard';
 import { Shayari, FontStyleId, LanguageType, CommentItem } from '../types/shayari';
 import { getCategoryGradientTheme } from '../utils/categoryTheme';
-import { Crown, Languages, Filter, ArrowLeft } from 'lucide-react';
-import { TranslatedText } from '../context/GlobalLanguageContext';
+import { Crown, Filter, ArrowLeft } from 'lucide-react';
+import { TranslatedText, useGlobalLanguage } from '../context/GlobalLanguageContext';
 
 interface ZqOfficialPageProps {
   officialShayaris: Shayari[];
@@ -25,8 +25,14 @@ export const ZqOfficialPage: React.FC<ZqOfficialPageProps> = ({
   onOpenCardModal,
   onOpenComments
 }) => {
+  const { globalLanguage } = useGlobalLanguage();
   const [selectedCategory, setSelectedCategory] = useState<string>('love');
-  const [currentLanguage, setCurrentLanguage] = useState<LanguageType>('hindi');
+  const effectiveLanguage: LanguageType =
+    globalLanguage === 'english'
+      ? 'english'
+      : globalLanguage === 'urdu'
+        ? 'urdu'
+        : 'hindi';
   const heroTheme = getCategoryGradientTheme(selectedCategory, 'feelings');
 
   const filteredList =
@@ -133,52 +139,6 @@ export const ZqOfficialPage: React.FC<ZqOfficialPageProps> = ({
         </div>
       </div>
 
-      {/* 3 LANGUAGE SWITCH BUTTONS (18px bold) */}
-      <div className="bg-white border-2 border-[#ffe4e8] rounded-3xl p-6 sm:p-8 shadow-xs flex flex-col sm:flex-row items-center justify-between gap-4">
-        <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-2xl bg-[#fff0f3] border border-[#ffe4e8] flex items-center justify-center text-[#d94f70]">
-            <Languages className="w-7 h-7" />
-          </div>
-          <div>
-            <h3 className="text-[26px] font-bold text-[#d94f70]">भाषा का चयन (Choose Language)</h3>
-            <p className="text-[16px] font-semibold text-slate-600">सभी आधिकारिक शायरियाँ 3 भाषाओं में उपलब्ध हैं</p>
-          </div>
-        </div>
-
-        <div className="flex flex-wrap items-center gap-2.5 bg-[#fff8f9] p-2.5 rounded-2xl border border-[#ffe4e8]">
-          <button
-            onClick={() => setCurrentLanguage('hindi')}
-            className={`min-h-[52px] px-5 py-3 rounded-xl text-[18px] font-bold transition-all cursor-pointer ${
-              currentLanguage === 'hindi'
-                ? 'bg-[#d94f70] text-white shadow-sm'
-                : 'text-slate-800 hover:text-[#d94f70] hover:bg-white'
-            }`}
-          >
-            🇮🇳 हिन्दी (Hindi)
-          </button>
-          <button
-            onClick={() => setCurrentLanguage('hinglish')}
-            className={`min-h-[52px] px-5 py-3 rounded-xl text-[18px] font-bold transition-all cursor-pointer ${
-              currentLanguage === 'hinglish'
-                ? 'bg-[#d94f70] text-white shadow-sm'
-                : 'text-slate-800 hover:text-[#d94f70] hover:bg-white'
-            }`}
-          >
-            💬 Hinglish (हिंग्लिश)
-          </button>
-          <button
-            onClick={() => setCurrentLanguage('english')}
-            className={`min-h-[52px] px-5 py-3 rounded-xl text-[18px] font-bold transition-all cursor-pointer ${
-              currentLanguage === 'english'
-                ? 'bg-[#d94f70] text-white shadow-sm'
-                : 'text-slate-800 hover:text-[#d94f70] hover:bg-white'
-            }`}
-          >
-            🇬🇧 English (अंग्रेजी)
-          </button>
-        </div>
-      </div>
-
       {/* SHAYARI LIST WITH GOLDEN OFFICIAL BADGE */}
       {filteredList.length > 0 ? (
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 sm:gap-8">
@@ -197,7 +157,7 @@ export const ZqOfficialPage: React.FC<ZqOfficialPageProps> = ({
                 shayari={shayari}
                 isFavorite={isFavorite(shayari.id)}
                 onToggleFavorite={onToggleFavorite}
-                currentLanguage={currentLanguage}
+                currentLanguage={effectiveLanguage}
                 onOpenCardModal={onOpenCardModal}
                 onOpenComments={(s) =>
                   onOpenComments(s.id, s.title, s.comments || [])

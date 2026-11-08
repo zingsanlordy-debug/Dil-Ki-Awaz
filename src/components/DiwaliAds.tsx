@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React from 'react';
 
 /**
  * Top Adsterra Banner 320x50 for Diwali Section
@@ -25,37 +25,3 @@ export const DiwaliTopBanner320x50: React.FC = () => {
   );
 };
 
-/**
- * Middle Adsterra Native Banner for Diwali Section
- * Placed in the middle of Diwali Shayari cards
- */
-export const DiwaliMiddleNativeBanner: React.FC = () => {
-  const isLoaded = useRef(false);
-
-  useEffect(() => {
-    if (isLoaded.current) return;
-    isLoaded.current = true;
-
-    const scriptId = 'adsterra-native-7044c10fe6ce8253d1af096d8d9ef180';
-    if (!document.getElementById(scriptId)) {
-      const script = document.createElement('script');
-      script.id = scriptId;
-      script.async = true;
-      script.setAttribute('data-cfasync', 'false');
-      script.src = 'https://bicea.org/21/7044c10fe6ce8253d1af096d8d9ef180';
-      document.body.appendChild(script);
-    }
-  }, []);
-
-  return (
-    <div className="col-span-full w-full my-6 flex flex-col items-center justify-center p-4 rounded-3xl bg-gradient-to-r from-[#fff8f9] via-white to-[#fff8f9] border border-[#ffd6df] shadow-2xs">
-      <span className="text-[11px] font-bold text-slate-400 uppercase tracking-widest mb-2 select-none">
-        Advertisement
-      </span>
-      <div
-        id="container-7044c10fe6ce8253d1af096d8d9ef180"
-        className="w-full flex justify-center items-center min-h-[90px]"
-      />
-    </div>
-  );
-};

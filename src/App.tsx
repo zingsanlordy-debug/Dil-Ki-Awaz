@@ -689,18 +689,12 @@ export default function App() {
     if (currentRoute === 'feelings') {
       setSelectedStaticLang(mappedCode);
       setCurrentPage(1);
-      pushCleanUrl(buildFeelingsCleanPath(selectedFeelingsCat, mappedCode, 1, false), 'feelings');
     } else if (currentRoute === 'festival' && isHoliday35Category(selectedFestivalCat)) {
       setSelectedStaticLang(mappedCode);
       setCurrentPage(1);
-      pushCleanUrl(buildHoliday35CleanPath(selectedFestivalCat, mappedCode, 1), 'festival');
     } else if (currentRoute === 'valentine-week') {
       setSelectedValentineLang(mappedCode);
       setCurrentPage(1);
-      pushCleanUrl(
-        buildValentineCleanPath(selectedValentineCat, mappedCode, false),
-        'valentine-week'
-      );
     }
   }, [
     globalLanguage,
@@ -880,6 +874,27 @@ export default function App() {
     currentRoute === 'disclaimer' ||
     currentRoute === 'contact';
 
+  const activeCategoryForHeader = useMemo(() => {
+    if (currentRoute === 'festival') return selectedFestivalCat;
+    if (currentRoute === 'feelings') return selectedFeelingsCat;
+    if (currentRoute === 'religious') return selectedReligiousCat;
+    if (currentRoute === 'family-rituals') return selectedFamilyRitualCat;
+    return undefined;
+  }, [
+    currentRoute,
+    selectedFestivalCat,
+    selectedFeelingsCat,
+    selectedReligiousCat,
+    selectedFamilyRitualCat
+  ]);
+
+  const effectiveCardLanguage: LanguageType =
+    globalLanguage === 'english'
+      ? 'english'
+      : globalLanguage === 'urdu'
+        ? 'urdu'
+        : 'hindi';
+
   return (
     <div className="relative min-h-screen bg-white text-slate-800 flex flex-col font-poppins selection:bg-[#d94f70] selection:text-white">
       {/* 2. THEME: WHITE BACKGROUND WITH LIGHT PINK AMBIENCE & PASTEL FLOATING HEARTS */}
@@ -892,6 +907,7 @@ export default function App() {
         searchQuery={searchQuery}
         onSearchChange={setSearchQuery}
         favoritesCount={favoriteIds.length}
+        activeCategory={activeCategoryForHeader}
       />
 
       {/* Main Content Area */}
@@ -919,60 +935,13 @@ export default function App() {
                 </span>
               </div>
 
-              <div className="flex flex-wrap items-center gap-3">
-                <div className="flex items-center gap-1.5 bg-[#fff8f9] p-1.5 rounded-2xl border border-[#ffe4e8]">
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setCurrentLanguage('hindi');
-                      if (globalLanguage !== 'default') setGlobalLanguage('hindi');
-                    }}
-                    className={`min-h-[46px] px-4 py-2 rounded-xl text-[18px] font-bold transition-all cursor-pointer ${
-                      (globalLanguage === 'default' && currentLanguage === 'hindi') ||
-                      globalLanguage === 'hindi'
-                        ? 'bg-[#d94f70] text-white'
-                        : 'text-slate-700'
-                    }`}
-                  >
-                    हिन्दी
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setGlobalLanguage('default');
-                      setCurrentLanguage('hinglish');
-                    }}
-                    className={`min-h-[46px] px-4 py-2 rounded-xl text-[18px] font-bold transition-all cursor-pointer ${
-                      globalLanguage === 'default' && currentLanguage === 'hinglish'
-                        ? 'bg-[#d94f70] text-white'
-                        : 'text-slate-700'
-                    }`}
-                  >
-                    Hinglish
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => {
-                      setCurrentLanguage('english');
-                      if (globalLanguage !== 'default') setGlobalLanguage('english');
-                    }}
-                    className={`min-h-[46px] px-4 py-2 rounded-xl text-[18px] font-bold transition-all cursor-pointer ${
-                      (globalLanguage === 'default' && currentLanguage === 'english') ||
-                      globalLanguage === 'english'
-                        ? 'bg-[#d94f70] text-white'
-                        : 'text-slate-700'
-                    }`}
-                  >
-                    English
-                  </button>
-                </div>
-
+              <div className="flex items-center gap-3">
                 <button
                   type="button"
                   onClick={() => setSearchQuery('')}
-                  className="min-h-[46px] px-4 py-2 rounded-xl bg-[#fff0f3] border border-[#ffe4e8] text-[18px] text-[#d94f70] hover:text-[#b32f4f] flex items-center gap-1.5 cursor-pointer font-bold"
+                  className="min-h-[42px] px-4 py-2 rounded-xl bg-[#fff0f3] hover:bg-[#d94f70] text-[#d94f70] hover:text-white border border-[#ffe4e8] text-[15px] flex items-center gap-1.5 cursor-pointer font-bold transition-colors"
                 >
-                  <ArrowLeft className="w-5 h-5" />
+                  <ArrowLeft className="w-4 h-4" />
                   <span>{ui.closeSearchBtn}</span>
                 </button>
               </div>
@@ -987,7 +956,7 @@ export default function App() {
                       shayari={shayari}
                       isFavorite={isFavorite(shayari.id)}
                       onToggleFavorite={toggleFavorite}
-                      currentLanguage={currentLanguage}
+                      currentLanguage={effectiveCardLanguage}
                       onOpenCardModal={handleOpenCardModal}
                       onOpenComments={(s) =>
                         handleOpenComments(s.id, s.title, s.comments || [])
@@ -1049,7 +1018,7 @@ export default function App() {
                 }}
                 isFavorite={isFavorite}
                 onToggleFavorite={toggleFavorite}
-                currentLanguage={currentLanguage}
+                currentLanguage={effectiveCardLanguage}
                 onOpenCardModal={handleOpenCardModal}
                 onOpenComments={(s) =>
                   handleOpenComments(s.id, s.title, s.comments || [])
@@ -1285,7 +1254,7 @@ export default function App() {
                 onNavigateHome={() => navigateTo('home')}
                 onOpenWriteShayari={() => navigateTo('public-wall')}
                 onToggleFavorite={toggleFavorite}
-                currentLanguage={currentLanguage}
+                currentLanguage={effectiveCardLanguage}
                 onOpenCardModal={handleOpenCardModal}
               />
             )}
