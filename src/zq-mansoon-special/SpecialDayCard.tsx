@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useMemo } from 'react';
 import {
   Copy,
   Check,
@@ -12,7 +12,13 @@ import {
   Plus
 } from 'lucide-react';
 import { Shayari, FontStyleId, LanguageType } from '../types/shayari';
-import { FONT_OPTIONS, transformShayariLine } from '../data/fonts';
+import {
+  FONT_OPTIONS,
+  getFontsForLanguage,
+  transformShayariLine,
+  HINDI_FONTS_30
+} from '../data/fonts';
+import { loadGoogleFontAsync } from '../utils/fontLoader';
 import { useFontSize } from '../context/FontSizeContext';
 import {
   useGlobalLanguage,
@@ -46,7 +52,6 @@ export const SpecialDayCard: React.FC<SpecialDayCardProps> = ({
   onOpenComments
 }) => {
   const { shayari } = item;
-  const [selectedFont, setSelectedFont] = useState<FontStyleId>('classic-serif');
   const [cardLanguage, setCardLanguage] = useState<'hindi' | 'hinglish' | 'english'>(
     pageLanguage === 'hinglish' || pageLanguage === 'english' ? pageLanguage : 'hindi'
   );
@@ -72,8 +77,31 @@ export const SpecialDayCard: React.FC<SpecialDayCardProps> = ({
     );
   }, [pageLanguage]);
 
-  const currentFontOption =
-    FONT_OPTIONS.find((f) => f.id === selectedFont) || FONT_OPTIONS[0];
+  const activeLangForFont = (
+    globalLanguage && globalLanguage !== 'default'
+      ? globalLanguage
+      : cardLanguage || 'hinglish'
+  ).toLowerCase();
+  const availableFonts = useMemo(() => getFontsForLanguage(activeLangForFont), [activeLangForFont]);
+
+  const [selectedFont, setSelectedFont] = useState<FontStyleId>(() => availableFonts[0]?.id || 'en-normal');
+
+  useEffect(() => {
+    if (!availableFonts.some((f) => f.id === selectedFont)) {
+      setSelectedFont(availableFonts[0]?.id || 'en-normal');
+    }
+  }, [availableFonts]);
+
+  const currentFontOption = useMemo(
+    () => availableFonts.find((f) => f.id === selectedFont) || availableFonts[0] || HINDI_FONTS_30[0],
+    [availableFonts, selectedFont]
+  );
+
+  useEffect(() => {
+    if (currentFontOption?.googleFontFamily) {
+      loadGoogleFontAsync(currentFontOption.googleFontFamily);
+    }
+  }, [currentFontOption]);
 
   const baseHindiLines =
     shayari.linesHindi && shayari.linesHindi.length > 0 ? shayari.linesHindi : shayari.lines;
@@ -118,13 +146,6 @@ export const SpecialDayCard: React.FC<SpecialDayCardProps> = ({
     navigator.clipboard.writeText(textToCopy);
     setCopied(true);
     setTimeout(() => setCopied(false), 2200);
-  };
-
-  const handleSelectCardLanguage = (lang: 'hindi' | 'hinglish' | 'english') => {
-    if (globalLanguage !== 'default') {
-      setGlobalLanguage('default');
-    }
-    setCardLanguage(lang);
   };
 
   const handleLike = () => {
@@ -235,29 +256,8 @@ export const SpecialDayCard: React.FC<SpecialDayCardProps> = ({
         </div>
       </div>
 
-      {/* Inline Language Switcher (Hindi / Hinglish / English) + Font Size (- / +) */}
-      <div className="px-4 sm:px-5 py-2.5 bg-[#fff0f3]/65 border-b border-[#ffe4e8] flex flex-wrap items-center justify-between gap-2">
-        <div className="flex items-center gap-1.5 flex-wrap">
-          {(['hindi', 'hinglish', 'english'] as const).map((lang) => {
-            const active = globalLanguage === 'default' && cardLanguage === lang;
-            return (
-              <button
-                key={lang}
-                type="button"
-                onClick={() => handleSelectCardLanguage(lang)}
-                className={`min-h-[38px] px-3 py-1.5 rounded-xl text-[14px] font-bold cursor-pointer transition-all border ${
-                  active
-                    ? 'bg-[#d94f70] text-white border-[#d94f70] shadow-2xs'
-                    : 'bg-white text-slate-800 border-[#ffe4e8] hover:border-[#d94f70] hover:text-[#d94f70]'
-                }`}
-              >
-                {LANGUAGE_LABELS[lang]}
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Font Size - / + Controls */}
+      {/* Font Size (- / +) Controls */}
+      <div className="px-4 sm:px-5 py-2 bg-[#fff0f3]/65 border-b border-[#ffe4e8] flex items-center justify-end">
         <div
           className="inline-flex items-center gap-1 bg-white px-2 py-1 rounded-xl border border-[#ffe4e8]"
           title="फ़ॉन्ट साइज़ घटाएं या बढ़ाएं (Font Size - / +)"
@@ -300,6 +300,7 @@ export const SpecialDayCard: React.FC<SpecialDayCardProps> = ({
 
           <div
             dir={isRtl ? 'rtl' : 'ltr'}
+            style={currentFontOption?.fontFamily ? { fontFamily: currentFontOption.fontFamily } : undefined}
             className={`space-y-3.5 text-center tracking-wide transition-all duration-200 ${shayariTextClass} ${
               currentFontOption.fontClass || ''
             } ${
@@ -315,6 +316,7 @@ export const SpecialDayCard: React.FC<SpecialDayCardProps> = ({
             {displayLines.map((line, idx) => (
               <p
                 key={idx}
+                style={currentFontOption?.fontFamily ? { fontFamily: currentFontOption.fontFamily } : undefined}
                 className={`select-text leading-[1.8] hover:text-[#d94f70] transition-colors ${
                   selectedFont === 'neon' ? 'text-[#d94f70]' : 'text-[#000000]'
                 }`}
@@ -336,11 +338,11 @@ export const SpecialDayCard: React.FC<SpecialDayCardProps> = ({
         </div>
       </div>
 
-      {/* 20 Stylish Fonts Switcher */}
+      {/* LANGUAGE-SPECIFIC DYNAMIC FONTS SWITCHER */}
       <div className="px-5 sm:px-6 py-4 bg-white border-t border-b border-[#ffe4e8]">
         <div className="flex items-center justify-between mb-2.5">
-          <span className="text-[15px] font-bold text-slate-800 flex items-center gap-1.5">
-            <span>20 स्टाइलिश फ़ॉन्ट्स:</span>
+          <span className="text-[15px] font-bold text-slate-800 flex items-center gap-2">
+            <span>{availableFonts.length} स्टाइलिश फ़ॉन्ट्स:</span>
             <span className="text-[#d94f70] font-extrabold">{currentFontOption.name}</span>
           </span>
           <span className="text-[13px] text-slate-500 font-semibold">
@@ -349,14 +351,18 @@ export const SpecialDayCard: React.FC<SpecialDayCardProps> = ({
         </div>
 
         <div className="flex gap-2 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-pink-200">
-          {FONT_OPTIONS.map((font) => {
+          {availableFonts.map((font) => {
             const isActive = selectedFont === font.id;
             return (
               <button
                 key={font.id}
                 type="button"
-                onClick={() => setSelectedFont(font.id)}
+                onClick={() => {
+                  setSelectedFont(font.id);
+                  if (font.googleFontFamily) loadGoogleFontAsync(font.googleFontFamily);
+                }}
                 title={font.description}
+                style={font.fontFamily ? { fontFamily: font.fontFamily } : undefined}
                 className={`min-h-[44px] flex-shrink-0 px-3.5 py-2 rounded-xl text-[16px] font-bold transition-all cursor-pointer border whitespace-nowrap ${
                   font.fontClass || ''
                 } ${

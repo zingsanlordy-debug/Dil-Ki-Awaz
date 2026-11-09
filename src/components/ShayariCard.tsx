@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import {
   Copy,
   Check,
@@ -13,7 +13,14 @@ import {
   User
 } from 'lucide-react';
 import { Shayari, FontStyleId, LanguageType } from '../types/shayari';
-import { FONT_OPTIONS, transformShayariLine } from '../data/fonts';
+import {
+  FONT_OPTIONS,
+  getFontsForLanguage,
+  getFontOptionById,
+  transformShayariLine,
+  HINDI_FONTS_30
+} from '../data/fonts';
+import { loadGoogleFontAsync } from '../utils/fontLoader';
 import { useFontSize } from '../context/FontSizeContext';
 import { LANGUAGE_TAG_LABELS, resolveShayariLanguage } from '../utils/languageDetect';
 import {
@@ -94,17 +101,40 @@ const ShayariCardView: React.FC<ResolvedCardViewProps> = ({
   targetSpeechLang,
   isRtl
 }) => {
-  const [selectedFont, setSelectedFont] = useState<FontStyleId>('normal');
   const [copied, setCopied] = useState(false);
   const [likes, setLikes] = useState(shayari.initialLikes);
   const [hasLiked, setHasLiked] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const { fontSizeMode } = useFontSize();
-  const { ui } = useGlobalLanguage();
+  const { globalLanguage, ui } = useGlobalLanguage();
 
-  const currentFontOption = FONT_OPTIONS.find((f) => f.id === selectedFont) || FONT_OPTIONS[0];
+  const activeLangForFont = (
+    globalLanguage && globalLanguage !== 'default'
+      ? globalLanguage
+      : 'hinglish'
+  ).toLowerCase();
+  const availableFonts = useMemo(() => getFontsForLanguage(activeLangForFont), [activeLangForFont]);
 
-  // Transform lines with active font (20 fonts supported)
+  const [selectedFont, setSelectedFont] = useState<FontStyleId>(() => availableFonts[0]?.id || 'en-normal');
+
+  useEffect(() => {
+    if (!availableFonts.some((f) => f.id === selectedFont)) {
+      setSelectedFont(availableFonts[0]?.id || 'en-normal');
+    }
+  }, [availableFonts]);
+
+  const currentFontOption = useMemo(
+    () => availableFonts.find((f) => f.id === selectedFont) || availableFonts[0],
+    [availableFonts, selectedFont]
+  );
+
+  useEffect(() => {
+    if (currentFontOption?.googleFontFamily) {
+      loadGoogleFontAsync(currentFontOption.googleFontFamily);
+    }
+  }, [currentFontOption]);
+
+  // Transform lines with active font
   const displayLines = useMemo(
     () => rawLines.map((line) => transformShayariLine(line, selectedFont)),
     [rawLines, selectedFont]
@@ -322,11 +352,13 @@ const ShayariCardView: React.FC<ResolvedCardViewProps> = ({
           <div
             itemProp="text"
             dir={isRtl ? 'rtl' : 'ltr'}
+            style={currentFontOption?.fontFamily ? { fontFamily: currentFontOption.fontFamily } : undefined}
             className={`space-y-3.5 text-center tracking-wide transition-all duration-200 ${shayariTypographyClass} ${currentFontOption.fontClass || ''} ${selectedFont === 'sparkle' ? 'bg-[#fff0f3] p-5 rounded-2xl border border-[#ffe4e8]' : ''} ${selectedFont === 'neon' ? 'drop-shadow-[0_2px_10px_rgba(255,100,50,0.4)] text-[#d94f70]' : ''}`}
           >
             {displayLines.map((line, idx) => (
               <p
                 key={idx}
+                style={currentFontOption?.fontFamily ? { fontFamily: currentFontOption.fontFamily } : undefined}
                 className={`select-text leading-[1.8] hover:text-[#d94f70] transition-colors ${
                   selectedFont === 'neon' ? 'text-[#d94f70]' : 'text-[#000000]'
                 }`}
@@ -355,25 +387,33 @@ const ShayariCardView: React.FC<ResolvedCardViewProps> = ({
         </div>
       </div>
 
-      {/* 20 FONTS SELECTOR */}
+      {/* LANGUAGE-SPECIFIC DYNAMIC FONTS SELECTOR */}
       <div className="px-5 sm:px-6 py-4 bg-white border-t border-b border-[#ffe4e8]">
         <div className="flex items-center justify-between mb-2.5">
-          <span className="text-[16px] font-bold text-slate-800 flex items-center gap-1.5">
+          <span className="text-[16px] font-bold text-slate-800 flex items-center gap-2">
             <span>{ui.stylesLabel}</span>
             <span className="text-[#d94f70] font-extrabold">{currentFontOption.name}</span>
+            <span className="text-[12px] px-2.5 py-0.5 rounded-full bg-[#fff0f3] text-[#d94f70] font-extrabold border border-[#ffd6df]">
+              {availableFonts.length} Fonts
+            </span>
           </span>
           <span className="text-[14px] text-slate-500 font-semibold">{ui.scrollStylesHint}</span>
         </div>
 
-        {/* Horizontally scrollable 20 chips */}
+        {/* Horizontally scrollable chips */}
         <div className="flex gap-2.5 overflow-x-auto pb-2 scrollbar-thin scrollbar-thumb-pink-200">
-          {FONT_OPTIONS.map((font) => {
+          {availableFonts.map((font) => {
             const isActive = selectedFont === font.id;
             return (
               <button
                 key={font.id}
-                onClick={() => setSelectedFont(font.id)}
+                type="button"
+                onClick={() => {
+                  setSelectedFont(font.id);
+                  if (font.googleFontFamily) loadGoogleFontAsync(font.googleFontFamily);
+                }}
                 title={font.description}
+                style={font.fontFamily ? { fontFamily: font.fontFamily } : undefined}
                 className={`min-h-[48px] flex-shrink-0 px-4 py-2.5 rounded-xl text-[18px] font-bold transition-all cursor-pointer border whitespace-nowrap ${font.fontClass || ''} ${
                   isActive
                     ? 'bg-[#d94f70] text-white border-[#d94f70] shadow-xs scale-105'

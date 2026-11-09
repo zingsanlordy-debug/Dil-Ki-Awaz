@@ -292,6 +292,57 @@ async function startServer(): Promise<void> {
     return fromVercelProd || DEFAULT_PRODUCTION_ORIGIN;
   }
 
+  const LEGACY_301_MAP: Array<{ pattern: RegExp; target: string }> = [
+    // 18 feelings categories (both bare slug and /feelings/ prefix)
+    { pattern: /^\/(?:feelings\/)?romantic-love-shayari(?:\/(.*))?$/, target: '/feelings/love-shayari' },
+    { pattern: /^\/(?:feelings\/)?pyar-bhari-shayari(?:\/(.*))?$/, target: '/feelings/love-shayari' },
+    { pattern: /^\/(?:feelings\/)?mohabbat-shayari(?:\/(.*))?$/, target: '/feelings/love-shayari' },
+    { pattern: /^\/(?:feelings\/)?dard-bhari-shayari(?:\/(.*))?$/, target: '/feelings/sad-shayari' },
+    { pattern: /^\/(?:feelings\/)?yaad-intezaar-shayari(?:\/(.*))?$/, target: '/feelings/yaad-shayari' },
+    { pattern: /^\/(?:feelings\/)?intezaar-shayari(?:\/(.*))?$/, target: '/feelings/yaad-shayari' },
+    { pattern: /^\/(?:feelings\/)?yaadein-shayari(?:\/(.*))?$/, target: '/feelings/yaad-shayari' },
+    { pattern: /^\/(?:feelings\/)?naseeb-shayari(?:\/(.*))?$/, target: '/feelings/kismat-shayari' },
+    { pattern: /^\/(?:feelings\/)?kismat-bhagya-shayari(?:\/(.*))?$/, target: '/feelings/kismat-shayari' },
+    { pattern: /^\/(?:feelings\/)?smile-shayari(?:\/(.*))?$/, target: '/feelings/khushi-shayari' },
+    { pattern: /^\/(?:feelings\/)?judai-shayari(?:\/(.*))?$/, target: '/feelings/alone-shayari' },
+    { pattern: /^\/(?:feelings\/)?zindagi-shayari(?:\/(.*))?$/, target: '/feelings/motivational-shayari' },
+    { pattern: /^\/(?:feelings\/)?maafi-shayari(?:\/(.*))?$/, target: '/feelings/sorry-shayari' },
+    { pattern: /^\/(?:feelings\/)?gussa-shayari(?:\/(.*))?$/, target: '/feelings/sorry-shayari' },
+    { pattern: /^\/(?:feelings\/)?boy-shayari(?:\/(.*))?$/, target: '/feelings/boys-shayari' },
+    { pattern: /^\/(?:feelings\/)?girl-shayari(?:\/(.*))?$/, target: '/feelings/girls-shayari' },
+    { pattern: /^\/(?:feelings\/)?two-line-shayari(?:\/(.*))?$/, target: '/feelings/2-line-shayari' },
+    { pattern: /^\/(?:feelings\/)?maikhana-shayari(?:\/(.*))?$/, target: '/feelings/sharabi-shayari' },
+    // 8 legacy hubs and utility endpoints
+    { pattern: /^\/feelings\/?$/, target: '/feelings-shayari' },
+    { pattern: /^\/festival\/?$/, target: '/festival-shayari' },
+    { pattern: /^\/(?:religious\/?|dharmik-shayari\/?)$/, target: '/religious/sanatan-hindu' },
+    { pattern: /^\/(?:family-rituals\/?|sanskar-shayari\/?)$/, target: '/newborn-babies-shayari/' },
+    { pattern: /^\/(?:valentine\/?|valentine-shayari\/?)$/, target: '/valentine-week' },
+    { pattern: /^\/moments\/?$/, target: '/zq-moments' },
+    { pattern: /^\/(?:write-shayari\/?|apni-shayari\/?)$/, target: '/apni-shayari-likhe' },
+    { pattern: /^\/(?:favorites\/?|pasandida\/?)$/, target: '/pasandida-shayari' }
+  ];
+
+  // 301 Permanent Redirects for Google Search Console 404 Resolution
+  app.use((req: Request, res: Response, next: NextFunction): void => {
+    if (req.method !== 'GET' && req.method !== 'HEAD') {
+      next();
+      return;
+    }
+    const reqPath = req.path;
+    for (const item of LEGACY_301_MAP) {
+      const match = item.pattern.exec(reqPath);
+      if (match) {
+        const subpath = match[1] ? `/${match[1]}` : (item.target.startsWith('/feelings/') || item.target.endsWith('/') ? '/' : '');
+        const destination = `${item.target.replace(/\/$/, '')}${subpath}`;
+        res.setHeader('Cache-Control', 'public, max-age=86400');
+        res.redirect(301, destination);
+        return;
+      }
+    }
+    next();
+  });
+
   app.get('/robots.txt', (req: Request, res: Response) => {
     const activeOrigin = resolveRequestSiteOrigin(req);
     if (isPreviewSubdomain(req)) {

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ArrowLeft, Heart, Menu, Moon, Search, Sun, X } from 'lucide-react';
+import { LanguageSelectorDropdown } from './LanguageSelectorDropdown';
 import { useGlobalLanguage } from '../context/GlobalLanguageContext';
 
 export type AppRoute =
@@ -34,7 +35,7 @@ export const EXACT_HOME_SEO_TITLE =
   'All in One Shayari Collection - Love, Sad, Festival, Diwali, Holi, Sanatan Hindu, Islamic Muslim & Hindi Urdu English Special Shayari | ZQ-FEELINGS - Dil Ki Awaaz';
 
 export const EXACT_HOME_SEO_DESCRIPTION =
-  'Yahan aapko milenge aapki feelings ke hisab se, aapke mood ke hisab se bahut sari shayariyan ka collection. Har tyoharon ke liye, har celebration ke liye, 12 months special aur sanskar rituals ke liye best shayari. Yahan aap apne dil ki baat ko shayari me likh sakte hain, apni shayariyon ke collection ko apna moment banakar daal sakte hain. Har bhasha me 20 stylish fonts ke sath ek click me copy aur share kar sakte hain.';
+  '5,900+ se zyada dil chhu lene wali original shayariyan — Love, Sad, Attitude, Dosti, Tyohar, Dharmik aur Sanskar jaise 63+ Categories me. 77 bhashaon aur 240+ Stylish Fonts ka support, jisme shayari ka font badal kar 1-click me Copy aur Audio sun sakte hain. WhatsApp, Instagram aur Facebook par turant share karein, ya sundar Photo Card banakar Download karein. Apni Shayari Likhe me apne jazbaat bayan karein aur ZQ Moments me photo upload karke yaadein sajayein — 100% Free!';
 
 interface MenuNavItem {
   route: AppRoute;
@@ -217,6 +218,9 @@ export const Header: React.FC<HeaderProps> = ({
                 </span>
               </span>
             </a>
+
+            {/* THE ONLY 1 LANGUAGE BUTTON ON THE ENTIRE WEBSITE */}
+            <LanguageSelectorDropdown />
           </div>
 
           {/* Center: Live Global Search Bar */}
@@ -344,9 +348,9 @@ export const Header: React.FC<HeaderProps> = ({
           <div className="max-w-5xl mx-auto bg-[#fff8f9] border-2 border-[#ffd6df] rounded-2xl px-5 sm:px-8 py-4 sm:py-5 text-center shadow-2xs">
             <p className="text-[15px] sm:text-[18px] font-medium text-slate-900 leading-[1.8]">
               {globalLanguage === 'english'
-                ? 'Here you will find a vast collection of shayaris matching your feelings and mood. Best shayari for all festivals, celebrations, 12 months special days, and rituals. Express your heart\'s feelings, share your moments through beautiful pictures. Copy and share in one click with 20 stylish fonts!'
+                ? 'Discover 5,900+ original shayaris across 63+ categories including Love, Sad, Attitude, Festivals & Sanskar. Supported in 77 languages with 240+ stylish fonts, 1-click copy, and WhatsApp/Instagram/Facebook share. Download custom photo cards, write your own shayari, or upload photos in ZQ Moments — 100% Free!'
                 : globalLanguage === 'urdu'
-                  ? 'یہاں آپ کو اپنے جذبات اور موڈ کے مطابق بہترین شاعری کا مجموعہ ملے گا۔ تمام تہواروں، بارہ مہینوں کے خاص ایام اور رسومات کے لیے بہترین شاعری۔ 20 اسٹائلش فونٹس کے ساتھ ایک کلک میں کاپی اور شیئر کریں۔'
+                  ? '63 سے زیادہ زمروں میں 5,900 سے زائد دل چھو لینے والی اصل شاعری، جن میں محبت، درد، تہوار اور رسومات شامل ہیں۔ 77 زبانوں اور 240 سے زیادہ اسٹائلش فونٹس کے ساتھ 1-کلک کاپی، واٹس ایپ شیئر، فوٹو کارڈ ڈاؤن لوڈ، اپنی شاعری اور لمحات — 100% مفت!'
                   : EXACT_HOME_SEO_DESCRIPTION}
             </p>
           </div>

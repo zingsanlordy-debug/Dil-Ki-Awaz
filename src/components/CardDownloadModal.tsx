@@ -1,7 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { X, Copy, Check, Share2, Sparkles } from 'lucide-react';
 import { Shayari, FontStyleId } from '../types/shayari';
-import { FONT_OPTIONS } from '../data/fonts';
+import { getFontOptionById, transformShayariLine } from '../data/fonts';
+import { loadGoogleFontAsync } from '../utils/fontLoader';
 import { getCategoryGradientTheme } from '../utils/categoryTheme';
 import { formatShayariCopyText } from '../utils/copyShayariFormat';
 
@@ -21,13 +22,18 @@ export const CardDownloadModal: React.FC<CardDownloadModalProps> = ({
 
   if (!shayari) return null;
 
-  const fontOption = FONT_OPTIONS.find((f) => f.id === selectedFont) || FONT_OPTIONS[0];
+  const fontOption = getFontOptionById(selectedFont, shayari.language);
+  if (fontOption?.googleFontFamily) {
+    loadGoogleFontAsync(fontOption.googleFontFamily);
+  }
   const categoryTheme = getCategoryGradientTheme(shayari.category, shayari.categoryType);
+
+  const displayLines = shayari.lines.map((l) => transformShayariLine(l, selectedFont));
 
   const handleCopyText = () => {
     const textToCopy = formatShayariCopyText({
       title: shayari.title,
-      lines: shayari.lines,
+      lines: displayLines,
       category: String(shayari.category || ''),
       tags: shayari.tags
     });
@@ -37,7 +43,7 @@ export const CardDownloadModal: React.FC<CardDownloadModalProps> = ({
   };
 
   const whatsappShareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(
-    `🌸 *${shayari.title}* 🌸\n\n${shayari.lines.map((l) => `"${l}"`).join('\n')}\n\n💖 *ZQ FEELINGS - Dil Ki Awaaz*\n👉 ${window.location.origin}`
+    `🌸 *${shayari.title}* 🌸\n\n${displayLines.map((l) => `"${l}"`).join('\n')}\n\n💖 *ZQ FEELINGS - Dil Ki Awaaz*\n👉 ${window.location.origin}`
   )}`;
 
   return (
@@ -94,9 +100,16 @@ export const CardDownloadModal: React.FC<CardDownloadModalProps> = ({
           </h4>
 
           {/* Shayari in Selected Font (19px, line-height 1.8) */}
-          <div className={`space-y-3 text-[19px] leading-[1.8] font-semibold text-slate-900 ${fontOption.fontClass}`}>
-            {shayari.lines.map((line, idx) => (
-              <p key={idx} className="leading-[1.8] drop-shadow-2xs">
+          <div
+            className={`space-y-3 text-[19px] leading-[1.8] font-semibold text-slate-900 ${fontOption.fontClass || ''}`}
+            style={fontOption.fontFamily ? { fontFamily: fontOption.fontFamily } : undefined}
+          >
+            {displayLines.map((line, idx) => (
+              <p
+                key={idx}
+                style={fontOption.fontFamily ? { fontFamily: fontOption.fontFamily } : undefined}
+                className="leading-[1.8] drop-shadow-2xs"
+              >
                 {line}
               </p>
             ))}

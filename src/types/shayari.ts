@@ -173,32 +173,15 @@ export interface BlockedLog {
   date: string;
 }
 
-export type FontStyleId = 
-  | 'normal'
-  | 'bold'
-  | 'italic'
-  | 'bold-italic'
-  | 'fancy-cursive'
-  | 'signature'
-  | 'heart'
-  | 'old-english'
-  | 'glitch'
-  | 'boxed'
-  | 'symbols'
-  | 'strike'
-  | 'sparkle'
-  | 'love-border'
-  | 'neon'
-  | 'typewriter'
-  | 'upper-small'
-  | 'circle'
-  | 'double'
-  | 'classic-serif';
+export type FontStyleId = string;
 
 export interface FontOption {
   id: FontStyleId;
   name: string;
   displayName: string;
   fontClass?: string;
+  fontFamily?: string;
+  googleFontFamily?: string;
   description: string;
+  langGroup?: string;
 }

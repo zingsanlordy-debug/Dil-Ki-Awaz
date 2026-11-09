@@ -6,7 +6,8 @@ import {
   UI_TRANSLATIONS,
   UiStrings,
   getSyncTranslation,
-  requestDynamicTranslation
+  requestDynamicTranslation,
+  detectDeviceGlobalLanguage
 } from '../utils/globalTranslations';
 import { LanguageType } from '../types/shayari';
 
@@ -20,7 +21,7 @@ const VALID_LANGUAGE_IDS = new Set<string>([
 interface GlobalLanguageContextValue {
   globalLanguage: GlobalLanguageId;
   setGlobalLanguage: (lang: GlobalLanguageId) => void;
-  activeLanguageOption: GlobalLanguageOption | null;
+  activeLanguageOption: GlobalLanguageOption;
   ui: UiStrings;
   isRtl: boolean;
   speechLangCode: string;
@@ -29,7 +30,7 @@ interface GlobalLanguageContextValue {
 const GlobalLanguageContext = createContext<GlobalLanguageContextValue>({
   globalLanguage: 'default',
   setGlobalLanguage: () => {},
-  activeLanguageOption: null,
+  activeLanguageOption: GLOBAL_LANGUAGES[0],
   ui: UI_TRANSLATIONS.default,
   isRtl: false,
   speechLangCode: 'hi-IN'
@@ -47,7 +48,7 @@ export const GlobalLanguageProvider: React.FC<{ children: React.ReactNode }> = (
     } catch {
       // ignore storage read error
     }
-    return 'default';
+    return detectDeviceGlobalLanguage();
   });
 
   const setGlobalLanguage = (nextLang: GlobalLanguageId) => {
@@ -60,10 +61,14 @@ export const GlobalLanguageProvider: React.FC<{ children: React.ReactNode }> = (
   };
 
   const activeLanguageOption = useMemo(
-    () =>
-      globalLanguage === 'default'
-        ? null
-        : GLOBAL_LANGUAGES.find((l) => l.id === globalLanguage) || null,
+    () => {
+      const targetId = globalLanguage === 'default' ? 'hinglish' : globalLanguage;
+      return (
+        GLOBAL_LANGUAGES.find((l) => l.id === targetId) ||
+        GLOBAL_LANGUAGES.find((l) => l.id === 'hinglish') ||
+        GLOBAL_LANGUAGES[0]
+      );
+    },
     [globalLanguage]
   );
 
@@ -153,20 +158,11 @@ export function useTranslatedShayariLines(
   );
 
   const syncStanza = useMemo(() => {
-    if (globalLanguage === 'default') {
-      if (legacyCardLanguage === 'urdu' && linesUrdu && linesUrdu.length > 0) {
-        return linesUrdu.join('\n');
-      }
-      if (legacyCardLanguage === 'hinglish' && linesHinglish && linesHinglish.length > 0) {
+    if (globalLanguage === 'default' || globalLanguage === 'hinglish') {
+      if (linesHinglish && linesHinglish.length > 0) {
         return linesHinglish.join('\n');
       }
-      if (legacyCardLanguage === 'english' && linesEnglish && linesEnglish.length > 0) {
-        return linesEnglish.join('\n');
-      }
-      return joinedHindi;
-    }
-    if (globalLanguage === 'hinglish' && linesHinglish && linesHinglish.length > 0) {
-      return linesHinglish.join('\n');
+      return getSyncTranslation(joinedHindi, joinedEnglish, 'hinglish');
     }
     if (
       (globalLanguage === 'english' || globalLanguage === 'english-uk') &&
@@ -178,8 +174,11 @@ export function useTranslatedShayariLines(
     if (globalLanguage === 'urdu' && linesUrdu && linesUrdu.length > 0) {
       return linesUrdu.join('\n');
     }
+    if (globalLanguage === 'hindi') {
+      return joinedHindi;
+    }
     return getSyncTranslation(joinedHindi, joinedEnglish, globalLanguage);
-  }, [globalLanguage, legacyCardLanguage, linesUrdu, linesHinglish, linesEnglish, joinedHindi, joinedEnglish]);
+  }, [globalLanguage, linesUrdu, linesHinglish, linesEnglish, joinedHindi, joinedEnglish]);
 
   const [asyncStanza, setAsyncStanza] = useState<string>(syncStanza ?? joinedHindi);
 

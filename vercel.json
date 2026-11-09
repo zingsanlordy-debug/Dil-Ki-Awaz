@@ -1,0 +1,257 @@
+{
+  "version": 2,
+  "cleanUrls": true,
+  "redirects": [
+    {
+      "source": "/feelings/romantic-love-shayari(.*)",
+      "destination": "/feelings/love-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/romantic-love-shayari(.*)",
+      "destination": "/feelings/love-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/feelings/pyar-bhari-shayari(.*)",
+      "destination": "/feelings/love-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/pyar-bhari-shayari(.*)",
+      "destination": "/feelings/love-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/feelings/mohabbat-shayari(.*)",
+      "destination": "/feelings/love-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/mohabbat-shayari(.*)",
+      "destination": "/feelings/love-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/feelings/dard-bhari-shayari(.*)",
+      "destination": "/feelings/sad-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/dard-bhari-shayari(.*)",
+      "destination": "/feelings/sad-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/feelings/yaad-intezaar-shayari(.*)",
+      "destination": "/feelings/yaad-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/yaad-intezaar-shayari(.*)",
+      "destination": "/feelings/yaad-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/feelings/intezaar-shayari(.*)",
+      "destination": "/feelings/yaad-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/intezaar-shayari(.*)",
+      "destination": "/feelings/yaad-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/feelings/yaadein-shayari(.*)",
+      "destination": "/feelings/yaad-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/yaadein-shayari(.*)",
+      "destination": "/feelings/yaad-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/feelings/naseeb-shayari(.*)",
+      "destination": "/feelings/kismat-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/naseeb-shayari(.*)",
+      "destination": "/feelings/kismat-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/feelings/kismat-bhagya-shayari(.*)",
+      "destination": "/feelings/kismat-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/kismat-bhagya-shayari(.*)",
+      "destination": "/feelings/kismat-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/feelings/smile-shayari(.*)",
+      "destination": "/feelings/khushi-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/smile-shayari(.*)",
+      "destination": "/feelings/khushi-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/feelings/judai-shayari(.*)",
+      "destination": "/feelings/alone-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/judai-shayari(.*)",
+      "destination": "/feelings/alone-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/feelings/zindagi-shayari(.*)",
+      "destination": "/feelings/motivational-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/zindagi-shayari(.*)",
+      "destination": "/feelings/motivational-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/feelings/maafi-shayari(.*)",
+      "destination": "/feelings/sorry-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/maafi-shayari(.*)",
+      "destination": "/feelings/sorry-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/feelings/gussa-shayari(.*)",
+      "destination": "/feelings/sorry-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/gussa-shayari(.*)",
+      "destination": "/feelings/sorry-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/feelings/boy-shayari(.*)",
+      "destination": "/feelings/boys-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/boy-shayari(.*)",
+      "destination": "/feelings/boys-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/feelings/girl-shayari(.*)",
+      "destination": "/feelings/girls-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/girl-shayari(.*)",
+      "destination": "/feelings/girls-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/feelings/two-line-shayari(.*)",
+      "destination": "/feelings/2-line-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/two-line-shayari(.*)",
+      "destination": "/feelings/2-line-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/feelings/maikhana-shayari(.*)",
+      "destination": "/feelings/sharabi-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/maikhana-shayari(.*)",
+      "destination": "/feelings/sharabi-shayari/$1",
+      "permanent": true
+    },
+    {
+      "source": "/feelings/?$",
+      "destination": "/feelings-shayari",
+      "permanent": true
+    },
+    {
+      "source": "/festival/?$",
+      "destination": "/festival-shayari",
+      "permanent": true
+    },
+    {
+      "source": "/religious/?$",
+      "destination": "/religious/sanatan-hindu",
+      "permanent": true
+    },
+    {
+      "source": "/dharmik-shayari",
+      "destination": "/religious/sanatan-hindu",
+      "permanent": true
+    },
+    {
+      "source": "/family-rituals/?$",
+      "destination": "/newborn-babies-shayari/",
+      "permanent": true
+    },
+    {
+      "source": "/sanskar-shayari",
+      "destination": "/newborn-babies-shayari/",
+      "permanent": true
+    },
+    {
+      "source": "/valentine/?$",
+      "destination": "/valentine-week",
+      "permanent": true
+    },
+    {
+      "source": "/valentine-shayari",
+      "destination": "/valentine-week",
+      "permanent": true
+    },
+    {
+      "source": "/moments",
+      "destination": "/zq-moments",
+      "permanent": true
+    },
+    {
+      "source": "/write-shayari",
+      "destination": "/apni-shayari-likhe",
+      "permanent": true
+    },
+    {
+      "source": "/apni-shayari$",
+      "destination": "/apni-shayari-likhe",
+      "permanent": true
+    },
+    {
+      "source": "/favorites",
+      "destination": "/pasandida-shayari",
+      "permanent": true
+    },
+    {
+      "source": "/pasandida$",
+      "destination": "/pasandida-shayari",
+      "permanent": true
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/(.*)",
+      "destination": "/index.html"
+    }
+  ]
+}

@@ -4,8 +4,7 @@ import { FESTIVAL_CATEGORIES, SHAYARI_LIST } from '../data/shayariData';
 import { ShayariCard } from './ShayariCard';
 import { ShayariPagination } from './ShayariPagination';
 import {
-  Static35BottomLanguageBar,
-  Static35TopLanguageSelector
+  Static35BottomLanguageBar
 } from './Static35LanguageBar';
 import { getPaginatedSlice } from '../utils/pagination';
 import { Shayari, FontStyleId } from '../types/shayari';
@@ -71,7 +70,7 @@ export const FestivalPage: React.FC<FestivalPageProps> = ({
   const [currentPage, setCurrentPage] = useState<number>(
     initialPage && initialPage >= 1 ? initialPage : 1
   );
-  const { globalLanguage, ui, isRtl } = useGlobalLanguage();
+  const { globalLanguage, activeLanguageOption, ui, isRtl } = useGlobalLanguage();
 
   useEffect(() => {
     if (initialCategory) {
@@ -79,10 +78,6 @@ export const FestivalPage: React.FC<FestivalPageProps> = ({
     }
     setCurrentPage(initialPage && initialPage >= 1 ? initialPage : 1);
   }, [initialCategory, initialPage]);
-
-  useEffect(() => {
-    setActiveLang(initialLang || 'hi');
-  }, [initialLang]);
 
   const isStatic35Holiday = isHoliday35Category(activeCategory);
 
@@ -96,6 +91,19 @@ export const FestivalPage: React.FC<FestivalPageProps> = ({
       setIsLoadingLang(false);
     }
   }, []);
+
+  useEffect(() => {
+    if (activeLanguageOption?.apiCode) {
+      const targetLang = activeLanguageOption.apiCode as ValentineLangCode;
+      if (targetLang && targetLang !== activeLang) {
+        setActiveLang(targetLang);
+        void triggerLoadLang(targetLang);
+      }
+    } else if (initialLang) {
+      setActiveLang(initialLang);
+      void triggerLoadLang(initialLang);
+    }
+  }, [activeLanguageOption, initialLang, triggerLoadLang]);
 
   useEffect(() => {
     if (isStatic35Holiday) {
@@ -230,15 +238,6 @@ export const FestivalPage: React.FC<FestivalPageProps> = ({
             </p>
           </div>
         )}
-
-        {isStatic35Holiday && (
-          <Static35TopLanguageSelector
-            activeLang={activeLang}
-            isLoadingLang={isLoadingLang}
-            buildHref={(lang) => buildHoliday35CleanPath(activeCategory, lang)}
-            onSelectLanguage={handleLanguageSelect}
-          />
-        )}
       </div>
 
       {/* Top Diwali 320x50 Ad Banner (only on Diwali section) */}
@@ -247,7 +246,7 @@ export const FestivalPage: React.FC<FestivalPageProps> = ({
       {/* Diwali H2 Section Title above shayari cards */}
       {activeCategory === 'diwali' && (
         <h2 className="text-[22px] sm:text-[26px] font-bold text-slate-800 font-rozha text-center sm:text-left pt-2 pb-1">
-          Happy Diwali Shayari in Hindi - Dil Ki Awaz
+          {DIWALI_35_SEO[activeLang]?.h1 || '125 Happy Diwali Wishes, Shayari aur Messages in Hindi'}
         </h2>
       )}
 

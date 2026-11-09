@@ -75,7 +75,7 @@ import { getActiveSiteOrigin, isFreeHostingPreviewHost } from './siteOrigin';
 export const SITE_NAME_FULL = 'ZQ Feelings - Dil Ki Awaaz';
 export const HOME_SEO_TITLE = 'Best New Shayari 2026 | ZQ Feelings - Dil Ki Awaaz';
 export const HOME_SEO_DESCRIPTION =
-  'Read Best New Shayari 2026 in Hindi, English and more. Latest Love, Sad, Attitude, Miss You Shayari only on ZQ Feelings - Dil Ki Awaaz.';
+  '5,900+ Best Shayari in Hindi & 77 Languages. Love, Sad, Attitude & Festival Shayari. 240+ Stylish Fonts, 1-Click Copy, WhatsApp Share & Photo Card Download.';
 
 export function formatTopicSeoTitle(topic: string): string {
   const cleanTopic = topic.trim();

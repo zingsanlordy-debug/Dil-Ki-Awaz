@@ -33,7 +33,13 @@ import {
   getValentineShayariLines,
   isValentineLanguageReady
 } from '../data/valentineWeekLoader';
-import { FONT_OPTIONS, transformShayariLine } from '../data/fonts';
+import {
+  FONT_OPTIONS,
+  getFontsForLanguage,
+  transformShayariLine,
+  HINDI_FONTS_30
+} from '../data/fonts';
+import { loadGoogleFontAsync } from '../utils/fontLoader';
 import { formatShayariCopyText } from '../utils/copyShayariFormat';
 import { FontStyleId, Shayari } from '../types/shayari';
 import { useFontSize } from '../context/FontSizeContext';
@@ -56,16 +62,36 @@ const ValentineShayariCardItem: React.FC<ValentineShayariCardItemProps> = ({
   onToggleFavorite,
   onOpenCardModal
 }) => {
-  const [selectedFont, setSelectedFont] = useState<FontStyleId>('normal');
+  const availableFonts = useMemo(() => {
+    const target = langCode === 'hi-Latn' ? 'hinglish' : langCode;
+    return getFontsForLanguage(target);
+  }, [langCode]);
+  const [selectedFont, setSelectedFont] = useState<FontStyleId>(() => availableFonts[0]?.id || 'en-normal');
+
+  useEffect(() => {
+    if (!availableFonts.some((f) => f.id === selectedFont)) {
+      setSelectedFont(availableFonts[0]?.id || 'en-normal');
+    }
+  }, [availableFonts]);
+
+  const langMeta = VALENTINE_LANGUAGE_MAP.get(langCode) || VALENTINE_LANGUAGES[0];
+  const currentFontOption = useMemo(
+    () => availableFonts.find((f) => f.id === selectedFont) || availableFonts[0] || HINDI_FONTS_30[0],
+    [availableFonts, selectedFont]
+  );
+
+  useEffect(() => {
+    if (currentFontOption?.googleFontFamily) {
+      loadGoogleFontAsync(currentFontOption.googleFontFamily);
+    }
+  }, [currentFontOption]);
+
   const [copied, setCopied] = useState(false);
   const [sharedFeedback, setSharedFeedback] = useState(false);
   const [likes, setLikes] = useState(item.likes);
   const [hasLiked, setHasLiked] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const { fontSizeMode } = useFontSize();
-
-  const langMeta = VALENTINE_LANGUAGE_MAP.get(langCode) || VALENTINE_LANGUAGES[0];
-  const currentFontOption = FONT_OPTIONS.find((f) => f.id === selectedFont) || FONT_OPTIONS[0];
 
   const rawLines = useMemo(
     () => getValentineShayariLines(item, langCode),
@@ -269,6 +295,7 @@ const ValentineShayariCardItem: React.FC<ValentineShayariCardItemProps> = ({
           <div
             itemProp="text"
             dir={langMeta.rtl ? 'rtl' : 'ltr'}
+            style={currentFontOption?.fontFamily ? { fontFamily: currentFontOption.fontFamily } : undefined}
             className={`space-y-3 text-center tracking-wide ${shayariTypographyClass} ${
               currentFontOption.fontClass || ''
             } ${
@@ -280,6 +307,7 @@ const ValentineShayariCardItem: React.FC<ValentineShayariCardItemProps> = ({
             {displayLines.map((line, idx) => (
               <p
                 key={idx}
+                style={currentFontOption?.fontFamily ? { fontFamily: currentFontOption.fontFamily } : undefined}
                 className={`select-text leading-[1.85] ${
                   selectedFont === 'neon' ? 'text-[#be123c]' : 'text-[#000000]'
                 }`}
@@ -296,25 +324,29 @@ const ValentineShayariCardItem: React.FC<ValentineShayariCardItemProps> = ({
         </div>
       </div>
 
-      {/* 20 Stylish Fonts Bar */}
+      {/* LANGUAGE-SPECIFIC DYNAMIC FONTS BAR */}
       <div className="px-4 sm:px-5 py-3 bg-white border-t border-[#ffe4e8]">
         <div className="flex items-center justify-between mb-2 text-[13px] font-bold">
-          <span className="text-slate-700">
-            20 Stylish Fonts:{' '}
+          <span className="text-slate-700 flex items-center gap-1.5">
+            <span>{availableFonts.length} Stylish Fonts:</span>
             <span className="text-[#e11d48] font-extrabold">{currentFontOption.name}</span>
           </span>
           <span className="text-slate-400 text-[12px]">Swipe →</span>
         </div>
 
         <div className="flex gap-2 overflow-x-auto pb-1.5 scrollbar-thin scrollbar-thumb-pink-200">
-          {FONT_OPTIONS.map((font) => {
+          {availableFonts.map((font) => {
             const active = selectedFont === font.id;
             return (
               <button
                 key={font.id}
                 type="button"
-                onClick={() => setSelectedFont(font.id)}
+                onClick={() => {
+                  setSelectedFont(font.id);
+                  if (font.googleFontFamily) loadGoogleFontAsync(font.googleFontFamily);
+                }}
                 title={font.description}
+                style={font.fontFamily ? { fontFamily: font.fontFamily } : undefined}
                 className={`min-h-[40px] shrink-0 px-3.5 py-1.5 rounded-xl text-[14px] font-bold border transition-all cursor-pointer whitespace-nowrap ${
                   font.fontClass || ''
                 } ${

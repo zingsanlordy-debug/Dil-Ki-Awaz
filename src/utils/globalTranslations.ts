@@ -1,6 +1,6 @@
 export type GlobalLanguageId =
   | 'default'
-  // 15 Indian Languages
+  // === 15 Original Indian Languages ===
   | 'hindi'
   | 'hinglish'
   | 'tamil'
@@ -16,7 +16,22 @@ export type GlobalLanguageId =
   | 'urdu'
   | 'bhojpuri'
   | 'haryanvi'
-  // 20 Global Languages
+  // === 14 Newly Added Indian / Subcontinent Languages ===
+  | 'nepali'
+  | 'maithili'
+  | 'dogri'
+  | 'manipuri'
+  | 'santali'
+  | 'konkani'
+  | 'sindhi'
+  | 'kashmiri'
+  | 'bodo'
+  | 'rajasthani'
+  | 'chhattisgarhi'
+  | 'magahi'
+  | 'awadhi'
+  | 'tulu'
+  // === 20 Original Global Languages ===
   | 'english'
   | 'english-uk'
   | 'spanish'
@@ -36,7 +51,36 @@ export type GlobalLanguageId =
   | 'vietnamese'
   | 'dutch'
   | 'polish'
-  | 'persian';
+  | 'persian'
+  // === 28 Newly Added Global Languages ===
+  | 'sinhala'
+  | 'myanmar'
+  | 'khmer'
+  | 'lao'
+  | 'mongolian'
+  | 'uzbek'
+  | 'kazakh'
+  | 'kyrgyz'
+  | 'tajik'
+  | 'turkmen'
+  | 'azerbaijani'
+  | 'georgian'
+  | 'armenian'
+  | 'amharic'
+  | 'somali'
+  | 'swahili'
+  | 'yoruba'
+  | 'igbo'
+  | 'hausa'
+  | 'zulu'
+  | 'pashto'
+  | 'kurdish'
+  | 'malay'
+  | 'javanese'
+  | 'sundanese'
+  | 'cebuano'
+  | 'hmong'
+  | 'samoan';
 
 export interface GlobalLanguageOption {
   number: number;
@@ -51,7 +95,7 @@ export interface GlobalLanguageOption {
 }
 
 export const GLOBAL_LANGUAGES: GlobalLanguageOption[] = [
-  // === 15 INDIAN LANGUAGES ===
+  // === 15 ORIGINAL INDIAN LANGUAGES ===
   { number: 1, id: 'hindi', label: 'Hindi', nativeLabel: 'हिंदी', flag: '🇮🇳', apiCode: 'hi', speechLang: 'hi-IN', rtl: false, regionGroup: 'indian' },
   { number: 2, id: 'hinglish', label: 'Hinglish', nativeLabel: 'Hinglish', flag: '🇮🇳', apiCode: 'hi-Latn', speechLang: 'hi-IN', rtl: false, regionGroup: 'indian' },
   { number: 3, id: 'tamil', label: 'Tamil', nativeLabel: 'தமிழ்', flag: '🇮🇳', apiCode: 'ta', speechLang: 'ta-IN', rtl: false, regionGroup: 'indian' },
@@ -68,28 +112,308 @@ export const GLOBAL_LANGUAGES: GlobalLanguageOption[] = [
   { number: 14, id: 'bhojpuri', label: 'Bhojpuri', nativeLabel: 'भोजपुरी', flag: '🇮🇳', apiCode: 'bho', speechLang: 'hi-IN', rtl: false, regionGroup: 'indian' },
   { number: 15, id: 'haryanvi', label: 'Haryanvi', nativeLabel: 'हरियाणवी', flag: '🇮🇳', apiCode: 'bgc', speechLang: 'hi-IN', rtl: false, regionGroup: 'indian' },
 
-  // === 20 GLOBAL LANGUAGES ===
-  { number: 16, id: 'english', label: 'English (USA)', nativeLabel: 'English', flag: '🇺🇸', apiCode: 'en-US', speechLang: 'en-US', rtl: false, regionGroup: 'global' },
-  { number: 17, id: 'english-uk', label: 'English (UK)', nativeLabel: 'English (UK)', flag: '🇬🇧', apiCode: 'en-GB', speechLang: 'en-GB', rtl: false, regionGroup: 'global' },
-  { number: 18, id: 'spanish', label: 'Spanish', nativeLabel: 'Español', flag: '🇪🇸', apiCode: 'es', speechLang: 'es-ES', rtl: false, regionGroup: 'global' },
-  { number: 19, id: 'portuguese', label: 'Portuguese', nativeLabel: 'Português', flag: '🇵🇹', apiCode: 'pt', speechLang: 'pt-BR', rtl: false, regionGroup: 'global' },
-  { number: 20, id: 'french', label: 'French', nativeLabel: 'Français', flag: '🇫🇷', apiCode: 'fr', speechLang: 'fr-FR', rtl: false, regionGroup: 'global' },
-  { number: 21, id: 'german', label: 'German', nativeLabel: 'Deutsch', flag: '🇩🇪', apiCode: 'de', speechLang: 'de-DE', rtl: false, regionGroup: 'global' },
-  { number: 22, id: 'italian', label: 'Italian', nativeLabel: 'Italiano', flag: '🇮🇹', apiCode: 'it', speechLang: 'it-IT', rtl: false, regionGroup: 'global' },
-  { number: 23, id: 'japanese', label: 'Japanese', nativeLabel: '日本語', flag: '🇯🇵', apiCode: 'ja', speechLang: 'ja-JP', rtl: false, regionGroup: 'global' },
-  { number: 24, id: 'korean', label: 'Korean', nativeLabel: '한국어', flag: '🇰🇷', apiCode: 'ko', speechLang: 'ko-KR', rtl: false, regionGroup: 'global' },
-  { number: 25, id: 'arabic', label: 'Arabic', nativeLabel: 'العربية', flag: '🇸🇦', apiCode: 'ar', speechLang: 'ar-SA', rtl: true, regionGroup: 'global' },
-  { number: 26, id: 'thai', label: 'Thai', nativeLabel: 'ไทย', flag: '🇹🇭', apiCode: 'th', speechLang: 'th-TH', rtl: false, regionGroup: 'global' },
-  { number: 27, id: 'tagalog', label: 'Tagalog', nativeLabel: 'Tagalog', flag: '🇵🇭', apiCode: 'tl', speechLang: 'tl-PH', rtl: false, regionGroup: 'global' },
-  { number: 28, id: 'russian', label: 'Russian', nativeLabel: 'Русский', flag: '🇷🇺', apiCode: 'ru', speechLang: 'ru-RU', rtl: false, regionGroup: 'global' },
-  { number: 29, id: 'chinese', label: 'Chinese (Simplified)', nativeLabel: '简体中文', flag: '🇨🇳', apiCode: 'zh-CN', speechLang: 'zh-CN', rtl: false, regionGroup: 'global' },
-  { number: 30, id: 'indonesian', label: 'Indonesian', nativeLabel: 'Bahasa Indonesia', flag: '🇮🇩', apiCode: 'id', speechLang: 'id-ID', rtl: false, regionGroup: 'global' },
-  { number: 31, id: 'turkish', label: 'Turkish', nativeLabel: 'Türkçe', flag: '🇹🇷', apiCode: 'tr', speechLang: 'tr-TR', rtl: false, regionGroup: 'global' },
-  { number: 32, id: 'vietnamese', label: 'Vietnamese', nativeLabel: 'Tiếng Việt', flag: '🇻🇳', apiCode: 'vi', speechLang: 'vi-VN', rtl: false, regionGroup: 'global' },
-  { number: 33, id: 'dutch', label: 'Dutch', nativeLabel: 'Nederlands', flag: '🇳🇱', apiCode: 'nl', speechLang: 'nl-NL', rtl: false, regionGroup: 'global' },
-  { number: 34, id: 'polish', label: 'Polish', nativeLabel: 'Polski', flag: '🇵🇱', apiCode: 'pl', speechLang: 'pl-PL', rtl: false, regionGroup: 'global' },
-  { number: 35, id: 'persian', label: 'Persian', nativeLabel: 'فارسی', flag: '🇮🇷', apiCode: 'fa', speechLang: 'fa-IR', rtl: true, regionGroup: 'global' }
+  // === 14 NEW INDIAN & SUB-CONTINENT LANGUAGES (Requested by User) ===
+  { number: 16, id: 'nepali', label: 'Nepali', nativeLabel: 'नेपाली', flag: '🇳🇵', apiCode: 'ne', speechLang: 'ne-NP', rtl: false, regionGroup: 'indian' },
+  { number: 17, id: 'maithili', label: 'Maithili', nativeLabel: 'मैथिली', flag: '🇮🇳', apiCode: 'mai', speechLang: 'hi-IN', rtl: false, regionGroup: 'indian' },
+  { number: 18, id: 'dogri', label: 'Dogri', nativeLabel: 'डोगरी', flag: '🇮🇳', apiCode: 'doi', speechLang: 'hi-IN', rtl: false, regionGroup: 'indian' },
+  { number: 19, id: 'manipuri', label: 'Manipuri', nativeLabel: 'মৈতৈলোন্', flag: '🇮🇳', apiCode: 'mni', speechLang: 'hi-IN', rtl: false, regionGroup: 'indian' },
+  { number: 20, id: 'santali', label: 'Santali', nativeLabel: 'ᱥᱟᱱᱛᱟᱲᱤ', flag: '🇮🇳', apiCode: 'sat', speechLang: 'hi-IN', rtl: false, regionGroup: 'indian' },
+  { number: 21, id: 'konkani', label: 'Konkani', nativeLabel: 'कोंकणी', flag: '🇮🇳', apiCode: 'kok', speechLang: 'hi-IN', rtl: false, regionGroup: 'indian' },
+  { number: 22, id: 'sindhi', label: 'Sindhi', nativeLabel: 'سنڌي', flag: '🇮🇳', apiCode: 'sd', speechLang: 'ur-PK', rtl: true, regionGroup: 'indian' },
+  { number: 23, id: 'kashmiri', label: 'Kashmiri', nativeLabel: 'کٲشُر', flag: '🇮🇳', apiCode: 'ks', speechLang: 'ur-PK', rtl: true, regionGroup: 'indian' },
+  { number: 24, id: 'bodo', label: 'Bodo', nativeLabel: 'बड़ो', flag: '🇮🇳', apiCode: 'brx', speechLang: 'hi-IN', rtl: false, regionGroup: 'indian' },
+  { number: 25, id: 'rajasthani', label: 'Rajasthani', nativeLabel: 'राजस्थानी', flag: '🇮🇳', apiCode: 'raj', speechLang: 'hi-IN', rtl: false, regionGroup: 'indian' },
+  { number: 26, id: 'chhattisgarhi', label: 'Chhattisgarhi', nativeLabel: 'छत्तीसगढ़ी', flag: '🇮🇳', apiCode: 'hne', speechLang: 'hi-IN', rtl: false, regionGroup: 'indian' },
+  { number: 27, id: 'magahi', label: 'Magahi', nativeLabel: 'मगही', flag: '🇮🇳', apiCode: 'mag', speechLang: 'hi-IN', rtl: false, regionGroup: 'indian' },
+  { number: 28, id: 'awadhi', label: 'Awadhi', nativeLabel: 'अवधी', flag: '🇮🇳', apiCode: 'awa', speechLang: 'hi-IN', rtl: false, regionGroup: 'indian' },
+  { number: 29, id: 'tulu', label: 'Tulu', nativeLabel: 'ತುಳು', flag: '🇮🇳', apiCode: 'tcy', speechLang: 'kn-IN', rtl: false, regionGroup: 'indian' },
+
+  // === 20 ORIGINAL GLOBAL LANGUAGES ===
+  { number: 30, id: 'english', label: 'English (USA)', nativeLabel: 'English', flag: '🇺🇸', apiCode: 'en-US', speechLang: 'en-US', rtl: false, regionGroup: 'global' },
+  { number: 31, id: 'english-uk', label: 'English (UK)', nativeLabel: 'English (UK)', flag: '🇬🇧', apiCode: 'en-GB', speechLang: 'en-GB', rtl: false, regionGroup: 'global' },
+  { number: 32, id: 'spanish', label: 'Spanish', nativeLabel: 'Español', flag: '🇪🇸', apiCode: 'es', speechLang: 'es-ES', rtl: false, regionGroup: 'global' },
+  { number: 33, id: 'portuguese', label: 'Portuguese', nativeLabel: 'Português', flag: '🇵🇹', apiCode: 'pt', speechLang: 'pt-BR', rtl: false, regionGroup: 'global' },
+  { number: 34, id: 'french', label: 'French', nativeLabel: 'Français', flag: '🇫🇷', apiCode: 'fr', speechLang: 'fr-FR', rtl: false, regionGroup: 'global' },
+  { number: 35, id: 'german', label: 'German', nativeLabel: 'Deutsch', flag: '🇩🇪', apiCode: 'de', speechLang: 'de-DE', rtl: false, regionGroup: 'global' },
+  { number: 36, id: 'italian', label: 'Italian', nativeLabel: 'Italiano', flag: '🇮🇹', apiCode: 'it', speechLang: 'it-IT', rtl: false, regionGroup: 'global' },
+  { number: 37, id: 'japanese', label: 'Japanese', nativeLabel: '日本語', flag: '🇯🇵', apiCode: 'ja', speechLang: 'ja-JP', rtl: false, regionGroup: 'global' },
+  { number: 38, id: 'korean', label: 'Korean', nativeLabel: '한국어', flag: '🇰🇷', apiCode: 'ko', speechLang: 'ko-KR', rtl: false, regionGroup: 'global' },
+  { number: 39, id: 'arabic', label: 'Arabic', nativeLabel: 'العربية', flag: '🇸🇦', apiCode: 'ar', speechLang: 'ar-SA', rtl: true, regionGroup: 'global' },
+  { number: 40, id: 'thai', label: 'Thai', nativeLabel: 'ไทย', flag: '🇹🇭', apiCode: 'th', speechLang: 'th-TH', rtl: false, regionGroup: 'global' },
+  { number: 41, id: 'tagalog', label: 'Tagalog', nativeLabel: 'Tagalog', flag: '🇵🇭', apiCode: 'tl', speechLang: 'tl-PH', rtl: false, regionGroup: 'global' },
+  { number: 42, id: 'russian', label: 'Russian', nativeLabel: 'Русский', flag: '🇷🇺', apiCode: 'ru', speechLang: 'ru-RU', rtl: false, regionGroup: 'global' },
+  { number: 43, id: 'chinese', label: 'Chinese (Simplified)', nativeLabel: '简体中文', flag: '🇨🇳', apiCode: 'zh-CN', speechLang: 'zh-CN', rtl: false, regionGroup: 'global' },
+  { number: 44, id: 'indonesian', label: 'Indonesian', nativeLabel: 'Bahasa Indonesia', flag: '🇮🇩', apiCode: 'id', speechLang: 'id-ID', rtl: false, regionGroup: 'global' },
+  { number: 45, id: 'turkish', label: 'Turkish', nativeLabel: 'Türkçe', flag: '🇹🇷', apiCode: 'tr', speechLang: 'tr-TR', rtl: false, regionGroup: 'global' },
+  { number: 46, id: 'vietnamese', label: 'Vietnamese', nativeLabel: 'Tiếng Việt', flag: '🇻🇳', apiCode: 'vi', speechLang: 'vi-VN', rtl: false, regionGroup: 'global' },
+  { number: 47, id: 'dutch', label: 'Dutch', nativeLabel: 'Nederlands', flag: '🇳🇱', apiCode: 'nl', speechLang: 'nl-NL', rtl: false, regionGroup: 'global' },
+  { number: 48, id: 'polish', label: 'Polish', nativeLabel: 'Polski', flag: '🇵🇱', apiCode: 'pl', speechLang: 'pl-PL', rtl: false, regionGroup: 'global' },
+  { number: 49, id: 'persian', label: 'Persian', nativeLabel: 'فارسی', flag: '🇮🇷', apiCode: 'fa', speechLang: 'fa-IR', rtl: true, regionGroup: 'global' },
+
+  // === 28 NEW GLOBAL LANGUAGES (Requested by User) ===
+  { number: 50, id: 'sinhala', label: 'Sinhala', nativeLabel: 'සිංහල', flag: '🇱🇰', apiCode: 'si', speechLang: 'si-LK', rtl: false, regionGroup: 'global' },
+  { number: 51, id: 'myanmar', label: 'Burmese (Myanmar)', nativeLabel: 'မြန်မာ', flag: '🇲🇲', apiCode: 'my', speechLang: 'my-MM', rtl: false, regionGroup: 'global' },
+  { number: 52, id: 'khmer', label: 'Khmer', nativeLabel: 'ខ្មែរ', flag: '🇰🇭', apiCode: 'km', speechLang: 'km-KH', rtl: false, regionGroup: 'global' },
+  { number: 53, id: 'lao', label: 'Lao', nativeLabel: 'ພາສາລາວ', flag: '🇱🇦', apiCode: 'lo', speechLang: 'lo-LA', rtl: false, regionGroup: 'global' },
+  { number: 54, id: 'mongolian', label: 'Mongolian', nativeLabel: 'Монгол', flag: '🇲🇳', apiCode: 'mn', speechLang: 'mn-MN', rtl: false, regionGroup: 'global' },
+  { number: 55, id: 'uzbek', label: 'Uzbek', nativeLabel: 'Oʻzbekcha', flag: '🇺🇿', apiCode: 'uz', speechLang: 'uz-UZ', rtl: false, regionGroup: 'global' },
+  { number: 56, id: 'kazakh', label: 'Kazakh', nativeLabel: 'Қазақша', flag: '🇰🇿', apiCode: 'kk', speechLang: 'kk-KZ', rtl: false, regionGroup: 'global' },
+  { number: 57, id: 'kyrgyz', label: 'Kyrgyz', nativeLabel: 'Кыргызча', flag: '🇰🇬', apiCode: 'ky', speechLang: 'ky-KG', rtl: false, regionGroup: 'global' },
+  { number: 58, id: 'tajik', label: 'Tajik', nativeLabel: 'Тоҷикӣ', flag: '🇹🇯', apiCode: 'tg', speechLang: 'tg-TJ', rtl: false, regionGroup: 'global' },
+  { number: 59, id: 'turkmen', label: 'Turkmen', nativeLabel: 'Türkmençe', flag: '🇹🇲', apiCode: 'tk', speechLang: 'tk-TM', rtl: false, regionGroup: 'global' },
+  { number: 60, id: 'azerbaijani', label: 'Azerbaijani', nativeLabel: 'Azərbaycan', flag: '🇦🇿', apiCode: 'az', speechLang: 'az-AZ', rtl: false, regionGroup: 'global' },
+  { number: 61, id: 'georgian', label: 'Georgian', nativeLabel: 'ქართული', flag: '🇬🇪', apiCode: 'ka', speechLang: 'ka-GE', rtl: false, regionGroup: 'global' },
+  { number: 62, id: 'armenian', label: 'Armenian', nativeLabel: 'Հայերեն', flag: '🇦🇲', apiCode: 'hy', speechLang: 'hy-AM', rtl: false, regionGroup: 'global' },
+  { number: 63, id: 'amharic', label: 'Amharic', nativeLabel: 'አማርኛ', flag: '🇪🇹', apiCode: 'am', speechLang: 'am-ET', rtl: false, regionGroup: 'global' },
+  { number: 64, id: 'somali', label: 'Somali', nativeLabel: 'Soomaali', flag: '🇸🇴', apiCode: 'so', speechLang: 'so-SO', rtl: false, regionGroup: 'global' },
+  { number: 65, id: 'swahili', label: 'Swahili', nativeLabel: 'Kiswahili', flag: '🇰🇪', apiCode: 'sw', speechLang: 'sw-KE', rtl: false, regionGroup: 'global' },
+  { number: 66, id: 'yoruba', label: 'Yoruba', nativeLabel: 'Èdè Yorùbá', flag: '🇳🇬', apiCode: 'yo', speechLang: 'yo-NG', rtl: false, regionGroup: 'global' },
+  { number: 67, id: 'igbo', label: 'Igbo', nativeLabel: 'Asụsụ Igbo', flag: '🇳🇬', apiCode: 'ig', speechLang: 'ig-NG', rtl: false, regionGroup: 'global' },
+  { number: 68, id: 'hausa', label: 'Hausa', nativeLabel: 'Hausa', flag: '🇳🇬', apiCode: 'ha', speechLang: 'ha-NE', rtl: false, regionGroup: 'global' },
+  { number: 69, id: 'zulu', label: 'Zulu', nativeLabel: 'isiZulu', flag: '🇿🇦', apiCode: 'zu', speechLang: 'zu-ZA', rtl: false, regionGroup: 'global' },
+  { number: 70, id: 'pashto', label: 'Pashto', nativeLabel: 'پښتو', flag: '🇦🇫', apiCode: 'ps', speechLang: 'ps-AF', rtl: true, regionGroup: 'global' },
+  { number: 71, id: 'kurdish', label: 'Kurdish', nativeLabel: 'Kurdî', flag: '🇮🇶', apiCode: 'ku', speechLang: 'ku-TR', rtl: true, regionGroup: 'global' },
+  { number: 72, id: 'malay', label: 'Malay', nativeLabel: 'Bahasa Melayu', flag: '🇲🇾', apiCode: 'ms', speechLang: 'ms-MY', rtl: false, regionGroup: 'global' },
+  { number: 73, id: 'javanese', label: 'Javanese', nativeLabel: 'Basa Jawa', flag: '🇮🇩', apiCode: 'jv', speechLang: 'jv-ID', rtl: false, regionGroup: 'global' },
+  { number: 74, id: 'sundanese', label: 'Sundanese', nativeLabel: 'Basa Sunda', flag: '🇮🇩', apiCode: 'su', speechLang: 'su-ID', rtl: false, regionGroup: 'global' },
+  { number: 75, id: 'cebuano', label: 'Cebuano', nativeLabel: 'Sinugboanon', flag: '🇵🇭', apiCode: 'ceb', speechLang: 'fil-PH', rtl: false, regionGroup: 'global' },
+  { number: 76, id: 'hmong', label: 'Hmong', nativeLabel: 'Hmoob', flag: '🇱🇦', apiCode: 'hmn', speechLang: 'en-US', rtl: false, regionGroup: 'global' },
+  { number: 77, id: 'samoan', label: 'Samoan', nativeLabel: 'Gagana Sāmoa', flag: '🇼🇸', apiCode: 'sm', speechLang: 'en-US', rtl: false, regionGroup: 'global' }
 ];
+
+/**
+ * Automatically detects user's preferred language from mobile / browser / device settings
+ * Supports all 35 Languages (15 Indian + 20 Global) + Timezone heuristics.
+ */
+export function detectDeviceGlobalLanguage(): GlobalLanguageId {
+  if (typeof window === 'undefined') return 'hinglish';
+
+  try {
+    // 1. URL Path check (e.g. /diwali-shayari/marathi/ or /marathi)
+    const path = (window.location?.pathname || '').toLowerCase();
+    for (const l of GLOBAL_LANGUAGES) {
+      if (
+        path.includes(`/${l.id}/`) ||
+        path.endsWith(`/${l.id}`) ||
+        path.includes(`/${l.apiCode.toLowerCase()}/`) ||
+        path.endsWith(`/${l.apiCode.toLowerCase()}`)
+      ) {
+        return l.id;
+      }
+    }
+
+    // 2. Query param check (e.g. ?lang=marathi or ?lang=mr)
+    if (window.location?.search) {
+      const searchParams = new URLSearchParams(window.location.search);
+      const langParam = searchParams.get('lang')?.toLowerCase().trim();
+      if (langParam) {
+        const matched = GLOBAL_LANGUAGES.find(
+          (l) => l.id === langParam || l.apiCode.toLowerCase() === langParam
+        );
+        if (matched) return matched.id;
+      }
+    }
+
+    // 3. Browser / Mobile navigator.languages detection
+    const candidates: string[] = [];
+    if (Array.isArray(navigator.languages) && navigator.languages.length > 0) {
+      candidates.push(...navigator.languages);
+    }
+    if (navigator.language) {
+      candidates.push(navigator.language);
+    }
+
+    for (const raw of candidates) {
+      if (!raw) continue;
+      const lower = raw.toLowerCase().trim();
+
+      // Priority 1: Indian Mobile Settings (English India / en-IN / Hindi / Hinglish) -> HINGLISH
+      if (
+        lower === 'en-in' ||
+        lower.startsWith('en-in') ||
+        lower === 'hi' ||
+        lower.startsWith('hi-in') ||
+        lower.startsWith('hi-latn') ||
+        lower.includes('hinglish')
+      ) {
+        return 'hinglish';
+      }
+
+      // Other Indian & Subcontinent Languages
+      if (lower.startsWith('ne')) return 'nepali';
+      if (lower.startsWith('mr')) return 'marathi';
+      if (lower.startsWith('ta')) return 'tamil';
+      if (lower.startsWith('te')) return 'telugu';
+      if (lower.startsWith('kn')) return 'kannada';
+      if (lower.startsWith('ml')) return 'malayalam';
+      if (lower.startsWith('gu')) return 'gujarati';
+      if (lower.startsWith('bn')) return 'bengali';
+      if (lower.startsWith('pa')) return 'punjabi';
+      if (lower.startsWith('or')) return 'odia';
+      if (lower.startsWith('as')) return 'assamese';
+      if (lower.startsWith('ur')) return 'urdu';
+      if (lower.startsWith('bho')) return 'bhojpuri';
+      if (lower.startsWith('mai')) return 'maithili';
+      if (lower.startsWith('doi')) return 'dogri';
+      if (lower.startsWith('mni')) return 'manipuri';
+      if (lower.startsWith('sat')) return 'santali';
+      if (lower.startsWith('kok') || lower.startsWith('gom')) return 'konkani';
+      if (lower.startsWith('sd')) return 'sindhi';
+      if (lower.startsWith('ks')) return 'kashmiri';
+      if (lower.startsWith('brx')) return 'bodo';
+      if (lower.startsWith('raj')) return 'rajasthani';
+      if (lower.startsWith('hne')) return 'chhattisgarhi';
+      if (lower.startsWith('mag')) return 'magahi';
+      if (lower.startsWith('awa')) return 'awadhi';
+      if (lower.startsWith('tcy')) return 'tulu';
+      if (lower.startsWith('bgc')) return 'haryanvi';
+
+      // Global Languages
+      if (lower.startsWith('si')) return 'sinhala';
+      if (lower.startsWith('my')) return 'myanmar';
+      if (lower.startsWith('km')) return 'khmer';
+      if (lower.startsWith('lo')) return 'lao';
+      if (lower.startsWith('mn')) return 'mongolian';
+      if (lower.startsWith('uz')) return 'uzbek';
+      if (lower.startsWith('kk')) return 'kazakh';
+      if (lower.startsWith('ky')) return 'kyrgyz';
+      if (lower.startsWith('tg')) return 'tajik';
+      if (lower.startsWith('tk')) return 'turkmen';
+      if (lower.startsWith('az')) return 'azerbaijani';
+      if (lower.startsWith('ka')) return 'georgian';
+      if (lower.startsWith('hy')) return 'armenian';
+      if (lower.startsWith('am')) return 'amharic';
+      if (lower.startsWith('so')) return 'somali';
+      if (lower.startsWith('sw')) return 'swahili';
+      if (lower.startsWith('yo')) return 'yoruba';
+      if (lower.startsWith('ig')) return 'igbo';
+      if (lower.startsWith('ha')) return 'hausa';
+      if (lower.startsWith('zu')) return 'zulu';
+      if (lower.startsWith('ps')) return 'pashto';
+      if (lower.startsWith('ku')) return 'kurdish';
+      if (lower.startsWith('ms')) return 'malay';
+      if (lower.startsWith('jv')) return 'javanese';
+      if (lower.startsWith('su')) return 'sundanese';
+      if (lower.startsWith('ceb')) return 'cebuano';
+      if (lower.startsWith('hmn')) return 'hmong';
+      if (lower.startsWith('sm')) return 'samoan';
+
+      if (lower === 'en-gb' || lower === 'en-au' || lower === 'en-nz' || lower === 'en-za') return 'english-uk';
+      if (lower.startsWith('en')) {
+        const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+        if (tz.includes('Kolkata') || tz.includes('Calcutta') || tz.includes('India')) {
+          return 'hinglish';
+        }
+        return 'english';
+      }
+      if (lower.startsWith('es')) return 'spanish';
+      if (lower.startsWith('pt')) return 'portuguese';
+      if (lower.startsWith('fr')) return 'french';
+      if (lower.startsWith('de')) return 'german';
+      if (lower.startsWith('it')) return 'italian';
+      if (lower.startsWith('ja')) return 'japanese';
+      if (lower.startsWith('ko')) return 'korean';
+      if (lower.startsWith('ar')) return 'arabic';
+      if (lower.startsWith('th')) return 'thai';
+      if (lower.startsWith('tl') || lower.startsWith('fil')) return 'tagalog';
+      if (lower.startsWith('ru')) return 'russian';
+      if (lower.startsWith('zh')) return 'chinese';
+      if (lower.startsWith('id')) return 'indonesian';
+      if (lower.startsWith('tr')) return 'turkish';
+      if (lower.startsWith('vi')) return 'vietnamese';
+      if (lower.startsWith('nl')) return 'dutch';
+      if (lower.startsWith('pl')) return 'polish';
+      if (lower.startsWith('fa')) return 'persian';
+    }
+
+    // 4. Regional TimeZone Heuristic
+    const tz = Intl.DateTimeFormat().resolvedOptions().timeZone || '';
+    if (tz.includes('Kolkata') || tz.includes('Calcutta') || tz.includes('India')) return 'hinglish';
+    if (tz.includes('Kathmandu')) return 'nepali';
+    if (tz.includes('Colombo')) return 'sinhala';
+    if (tz.includes('Yangon')) return 'myanmar';
+    if (tz.includes('Phnom_Penh')) return 'khmer';
+    if (tz.includes('Vientiane')) return 'lao';
+    if (tz.includes('Ulaanbaatar')) return 'mongolian';
+    if (tz.includes('Tashkent')) return 'uzbek';
+    if (tz.includes('Almaty')) return 'kazakh';
+    if (tz.includes('Bishkek')) return 'kyrgyz';
+    if (tz.includes('Dushanbe')) return 'tajik';
+    if (tz.includes('Ashgabat')) return 'turkmen';
+    if (tz.includes('Baku')) return 'azerbaijani';
+    if (tz.includes('Tbilisi')) return 'georgian';
+    if (tz.includes('Yerevan')) return 'armenian';
+    if (tz.includes('Addis_Ababa')) return 'amharic';
+    if (tz.includes('Mogadishu')) return 'somali';
+    if (tz.includes('Nairobi') || tz.includes('Dar_es_Salaam')) return 'swahili';
+    if (tz.includes('Lagos')) return 'yoruba';
+    if (tz.includes('Johannesburg')) return 'zulu';
+    if (tz.includes('Kabul')) return 'pashto';
+    if (tz.includes('Kuala_Lumpur')) return 'malay';
+    if (tz.includes('Dubai') || tz.includes('Riyadh') || tz.includes('Qatar') || tz.includes('Kuwait') || tz.includes('Baghdad') || tz.includes('Muscat')) {
+      return 'arabic';
+    }
+    if (tz.includes('Moscow') || tz.includes('Yekaterinburg') || tz.includes('Novosibirsk')) {
+      return 'russian';
+    }
+    if (tz.includes('Paris') || tz.includes('Brussels') || tz.includes('Geneva')) {
+      return 'french';
+    }
+    if (tz.includes('Berlin') || tz.includes('Vienna') || tz.includes('Zurich')) {
+      return 'german';
+    }
+    if (tz.includes('Rome')) {
+      return 'italian';
+    }
+    if (tz.includes('Madrid') || tz.includes('Buenos_Aires') || tz.includes('Mexico_City') || tz.includes('Bogota') || tz.includes('Lima') || tz.includes('Santiago')) {
+      return 'spanish';
+    }
+    if (tz.includes('Tokyo')) {
+      return 'japanese';
+    }
+    if (tz.includes('Seoul')) {
+      return 'korean';
+    }
+    if (tz.includes('Shanghai') || tz.includes('Beijing') || tz.includes('Hong_Kong') || tz.includes('Taipei')) {
+      return 'chinese';
+    }
+    if (tz.includes('Jakarta')) {
+      return 'indonesian';
+    }
+    if (tz.includes('Istanbul')) {
+      return 'turkish';
+    }
+    if (tz.includes('Bangkok')) {
+      return 'thai';
+    }
+    if (tz.includes('Manila')) {
+      return 'tagalog';
+    }
+    if (tz.includes('Tehran')) {
+      return 'persian';
+    }
+    if (tz.includes('Amsterdam')) {
+      return 'dutch';
+    }
+    if (tz.includes('Warsaw')) {
+      return 'polish';
+    }
+    if (tz.includes('Lisbon') || tz.includes('Sao_Paulo') || tz.includes('Rio_de_Janeiro')) {
+      return 'portuguese';
+    }
+    if (tz.includes('London')) {
+      return 'english-uk';
+    }
+    if (tz.includes('New_York') || tz.includes('Chicago') || tz.includes('Los_Angeles') || tz.includes('Toronto') || tz.includes('Vancouver')) {
+      return 'english';
+    }
+  } catch {
+    // fallback
+  }
+
+  // DEFAULT LANGUAGE: HINGLISH (as requested, majority of Indian mobile users use Hinglish)
+  return 'hinglish';
+}
 
 export interface UiStrings {
   headerTitle: string;
@@ -219,7 +543,7 @@ const DEFAULT_UI: UiStrings = {
   changeLanguageHeading: 'भाषा बदलें (Language)'
 };
 
-export const UI_TRANSLATIONS: Record<GlobalLanguageId, UiStrings> = {
+export const UI_TRANSLATIONS: Partial<Record<GlobalLanguageId, UiStrings>> & { default: UiStrings } = {
   default: DEFAULT_UI,
   hindi: {
     ...DEFAULT_UI,
@@ -1457,7 +1781,12 @@ export function convertHindiToHinglish(text: string): string {
 
 function resolveUpstreamGtxCode(apiCode: string): string {
   if (apiCode === 'en-US' || apiCode === 'en-GB') return 'en';
-  if (apiCode === 'bgc' || apiCode === 'hi-Latn') return 'hi';
+  if (apiCode === 'bgc' || apiCode === 'hi-Latn' || apiCode === 'raj' || apiCode === 'hne' || apiCode === 'awa') return 'hi';
+  if (apiCode === 'kok') return 'gom';
+  if (apiCode === 'mni') return 'mni-Mtei';
+  if (apiCode === 'mag') return 'bho';
+  if (apiCode === 'tcy') return 'kn';
+  if (apiCode === 'brx') return 'as';
   return apiCode;
 }
 
@@ -1469,11 +1798,11 @@ export function getSyncTranslation(
   const cleanSource = sourceHindiOrText.trim();
   if (!cleanSource) return sourceHindiOrText;
 
-  if (langId === 'default' || langId === 'hindi') {
-    return sourceHindiOrText;
-  }
-  if (langId === 'hinglish') {
+  if (langId === 'default' || langId === 'hinglish') {
     return convertHindiToHinglish(sourceHindiOrText);
+  }
+  if (langId === 'hindi') {
+    return sourceHindiOrText;
   }
   if (langId === 'english' || langId === 'english-uk') {
     if (sourceEnglishFallback && sourceEnglishFallback.trim()) {

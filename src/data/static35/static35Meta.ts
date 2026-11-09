@@ -103,7 +103,7 @@ export const STATIC35_ISO_PREFIX_BY_CODE: Readonly<Record<ValentineLangCode, str
 };
 
 export const STATIC35_CODE_BY_GLOBAL_ID: Readonly<
-  Record<Exclude<GlobalLanguageId, 'default'>, ValentineLangCode>
+  Partial<Record<Exclude<GlobalLanguageId, 'default'>, ValentineLangCode>>
 > = {
   hindi: 'hi',
   hinglish: 'hi-Latn',

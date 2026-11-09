@@ -85,7 +85,7 @@ export const FeelingsPage: React.FC<FeelingsPageProps> = ({
   const [currentPage, setCurrentPage] = useState<number>(
     initialPage && initialPage >= 1 ? initialPage : 1
   );
-  const { globalLanguage, ui } = useGlobalLanguage();
+  const { globalLanguage, activeLanguageOption, ui } = useGlobalLanguage();
 
   useEffect(() => {
     if (initialCategory) {
@@ -104,18 +104,6 @@ export const FeelingsPage: React.FC<FeelingsPageProps> = ({
     setCurrentPage(initialPage && initialPage >= 1 ? initialPage : 1);
   }, [initialCategory, initialPage]);
 
-  useEffect(() => {
-    if (globalLanguage === 'english') {
-      setActiveLang('en-US');
-    } else if (globalLanguage === 'urdu') {
-      setActiveLang('ur');
-    } else if (initialLang) {
-      setActiveLang(initialLang);
-    } else {
-      setActiveLang('hi');
-    }
-  }, [initialLang, globalLanguage]);
-
   const triggerLoadLang = useCallback(async (lang: ValentineLangCode) => {
     if (isStatic35LanguageReady(lang)) return;
     setIsLoadingLang(true);
@@ -126,6 +114,21 @@ export const FeelingsPage: React.FC<FeelingsPageProps> = ({
       setIsLoadingLang(false);
     }
   }, []);
+
+  useEffect(() => {
+    if (activeLanguageOption?.apiCode) {
+      const mapped = activeLanguageOption.apiCode as ValentineLangCode;
+      if (mapped) {
+        setActiveLang(mapped);
+        void triggerLoadLang(mapped);
+      }
+    } else if (initialLang) {
+      setActiveLang(initialLang);
+      void triggerLoadLang(initialLang);
+    } else {
+      setActiveLang('hi');
+    }
+  }, [initialLang, globalLanguage, activeLanguageOption, triggerLoadLang]);
 
   useEffect(() => {
     void triggerLoadLang(activeLang);
