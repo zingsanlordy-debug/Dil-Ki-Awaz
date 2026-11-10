@@ -43,6 +43,7 @@ interface FestivalPageProps {
   onToggleFavorite: (id: string) => void;
   onOpenCardModal: (shayari: Shayari, selectedFont: FontStyleId) => void;
   onOpenComments?: (shayari: Shayari) => void;
+  onOpenDetail?: (shayari: Shayari) => void;
 }
 
 export const FestivalPage: React.FC<FestivalPageProps> = ({
@@ -57,7 +58,8 @@ export const FestivalPage: React.FC<FestivalPageProps> = ({
   isFavorite,
   onToggleFavorite,
   onOpenCardModal,
-  onOpenComments
+  onOpenComments,
+  onOpenDetail
 }) => {
   const normalizeFestivalCategory = (cat?: string) => (!cat ? 'diwali' : cat);
 
@@ -272,6 +274,7 @@ export const FestivalPage: React.FC<FestivalPageProps> = ({
                   shareCanonicalPath={holidaySharePath}
                   onOpenCardModal={onOpenCardModal}
                   onOpenComments={onOpenComments}
+                  onOpenDetail={onOpenDetail}
                 />
               );
               return cardElement;

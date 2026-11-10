@@ -167,7 +167,8 @@ export function useTranslatedShayariLines(
     if (
       (globalLanguage === 'english' || globalLanguage === 'english-uk') &&
       linesEnglish &&
-      linesEnglish.length > 0
+      linesEnglish.length > 0 &&
+      !linesEnglish.some((l) => l.includes('— (') || l.includes('Sweet whispers of eternal love'))
     ) {
       return linesEnglish.join('\n');
     }

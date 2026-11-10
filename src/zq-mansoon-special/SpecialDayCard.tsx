@@ -120,7 +120,7 @@ export const SpecialDayCard: React.FC<SpecialDayCardProps> = ({
   const specialPageUrl =
     typeof window !== 'undefined'
       ? `${window.location.origin}/${item.monthId}-special-shayari`
-      : `https://zqfeelings.com/${item.monthId}-special-shayari`;
+      : `https://dil-ki-awaaz.vercel.app/${item.monthId}-special-shayari`;
 
   const sharePayloadText = `🌸 *${translatedDayName} (${item.dayNameEnglish})* 🌸\n📅 ${item.dateLabel}\n\n${displayLines
     .map((line) => `"${line}"`)

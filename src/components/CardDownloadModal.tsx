@@ -116,8 +116,8 @@ export const CardDownloadModal: React.FC<CardDownloadModalProps> = ({
           </div>
 
           <div className="mt-6 pt-3.5 border-t border-[#ffe4e8] flex items-center justify-between text-[14px] text-[#d94f70] font-bold">
-            <span className="zq-feelings-logo">✍️ ZQ FEELINGS 💗</span>
-            <span>🌐 zqfeelings.com</span>
+            <span className="zq-feelings-logo">✍️ ZQ FEELINGS - Dil Ki Awaaz 💗</span>
+            <span>🌐 dil-ki-awaaz.vercel.app</span>
           </div>
         </div>
 

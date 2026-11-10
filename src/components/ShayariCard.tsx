@@ -40,6 +40,8 @@ import {
 } from '../data/static35/static35Loader';
 import { PostReportTriggerAndDrawer, UgcSeoSafeFooter } from './PostReportAndFooter';
 import { formatShayariCopyText } from '../utils/copyShayariFormat';
+import { getShayariPath } from '../utils/shayariSlug';
+import { getActiveSiteOrigin } from '../utils/siteOrigin';
 
 export interface ShayariCardProps {
   shayari: Shayari;
@@ -62,6 +64,7 @@ export interface ShayariCardProps {
   onReportPost?: (reason: string) => Promise<void> | void;
   onOpenCardModal?: (shayari: Shayari, selectedFont: FontStyleId) => void;
   onOpenComments?: (shayari: Shayari) => void;
+  onOpenDetail?: (shayari: Shayari) => void;
 }
 
 interface ResolvedCardViewProps extends ShayariCardProps {
@@ -93,6 +96,7 @@ const ShayariCardView: React.FC<ResolvedCardViewProps> = ({
   onReportPost,
   onOpenCardModal,
   onOpenComments,
+  onOpenDetail,
   rawLines,
   resolvedTitle,
   resolvedCategoryName,
@@ -152,13 +156,9 @@ const ShayariCardView: React.FC<ResolvedCardViewProps> = ({
     setTimeout(() => setCopied(false), 2200);
   };
 
-  const currentSharePageUrl = shareCanonicalPath
-    ? typeof window !== 'undefined'
-      ? `${window.location.origin}${shareCanonicalPath}`
-      : `https://zqfeelings.com${shareCanonicalPath}`
-    : typeof window !== 'undefined'
-      ? window.location.href
-      : 'https://zqfeelings.com/';
+  const canonicalShayariHref = shareCanonicalPath || getShayariPath(shayari);
+  const siteOrigin = typeof window !== 'undefined' ? window.location.origin : getActiveSiteOrigin();
+  const currentSharePageUrl = `${siteOrigin}${canonicalShayariHref}`;
 
   const whatsappShareUrl = `https://api.whatsapp.com/send?text=${encodeURIComponent(
     `🌸 *${resolvedTitle}* 🌸\n\n${displayLines.map((line) => `"${line}"`).join('\n')}\n\n💖 *ZQ FEELINGS - Dil Ki Awaaz*\n${currentSharePageUrl}`
@@ -278,7 +278,18 @@ const ShayariCardView: React.FC<ResolvedCardViewProps> = ({
               dir={isRtl ? 'rtl' : 'ltr'}
               className="text-[26px] font-bold text-[#d94f70] mt-1.5 leading-[1.4] break-words"
             >
-              {resolvedTitle}
+              <a
+                href={canonicalShayariHref}
+                onClick={(e) => {
+                  if (onOpenDetail) {
+                    e.preventDefault();
+                    onOpenDetail(shayari);
+                  }
+                }}
+                className="hover:underline hover:text-[#b33957] transition-colors cursor-pointer"
+              >
+                {resolvedTitle}
+              </a>
             </h3>
             {authorDisplayName && (
               <div className="mt-1.5 flex items-center gap-1.5 text-[16px] text-slate-700 font-bold">

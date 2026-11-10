@@ -43,6 +43,7 @@ interface HomePageProps {
   currentLanguage?: LanguageType;
   onOpenCardModal?: (shayari: Shayari, selectedFont: FontStyleId) => void;
   onOpenComments?: (shayari: Shayari) => void;
+  onOpenDetail?: (shayari: Shayari) => void;
 }
 
 const RITUAL_CARD_ACCENTS: Record<
@@ -158,7 +159,8 @@ export const HomePage: React.FC<HomePageProps> = ({
   onToggleFavorite,
   currentLanguage = 'hindi',
   onOpenCardModal,
-  onOpenComments
+  onOpenComments,
+  onOpenDetail
 }) => {
   const { ui, isRtl } = useGlobalLanguage();
   const momentsDesc = useTranslatedText(ui.homeMomentsDesc);
@@ -760,6 +762,7 @@ export const HomePage: React.FC<HomePageProps> = ({
                 currentLanguage={currentLanguage}
                 onOpenCardModal={onOpenCardModal}
                 onOpenComments={onOpenComments}
+                onOpenDetail={onOpenDetail}
               />
             ))}
           </div>

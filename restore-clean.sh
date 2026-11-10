@@ -1,7 +1,7 @@
 #!/bin/bash
-echo "[Restore] Restoring clean working state (Ads removed, no HeaderLanguageSelector)..."
-cp -rf /app/clean_src_backup/* /app/applet/src/
-cp -f /app/clean_index_backup.html /app/applet/index.html
-rm -f /app/applet/src/components/HeaderLanguageSelector.tsx
+set -e
+echo "[Restore] Restoring 100% complete latest working website state..."
+tar -xzf /app/backup_latest_clean.tar.gz -C /app/applet/
+echo "[Restore] Rebuilding and verifying..."
 npm run build
-echo "[Restore] COMPLETE! Your codebase is 100% clean and verified."
+echo "[Restore] COMPLETE! Website is 100% updated and verified."

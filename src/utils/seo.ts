@@ -43,6 +43,7 @@ export interface ParsedSeoRoute {
   familyRitualCat?: FamilyRitualCategory;
   specialMonth?: MonthId | 'all';
   page?: number;
+  shayariSlug?: string;
 }
 
 export interface SeoFaqItem {
@@ -315,6 +316,12 @@ export function parseLocationToRoute(pathname: string, hash = ''): ParsedSeoRout
     if (cleanHash.includes('festival')) return { route: 'festival', festivalCat: 'diwali' };
     if (cleanHash.includes('feelings')) return { route: 'feelings', feelingsCat: 'love' };
     return withPage({ route: 'home' });
+  }
+
+  // Direct Shayari Slug Detail Route (/shayari/:slug)
+  if (cleanSlug.startsWith('shayari/')) {
+    const slug = cleanSlug.replace(/^shayari\//, '').replace(/\/+$/, '').trim();
+    return { route: 'shayari-detail', shayariSlug: slug };
   }
 
   // Legal & Info pages
@@ -717,6 +724,7 @@ export function getSeoMetadataForState(params: {
   specialMonth: MonthId | 'all';
   page?: number;
   searchQuery?: string;
+  shayariSlug?: string;
 }): PageSeoMeta {
   const {
     route,
@@ -726,7 +734,8 @@ export function getSeoMetadataForState(params: {
     valentineLang,
     staticLang,
     specialMonth,
-    searchQuery
+    searchQuery,
+    shayariSlug
   } = params;
 
   const activePage = params.page && params.page >= 2 ? Math.floor(params.page) : 1;
@@ -741,6 +750,30 @@ export function getSeoMetadataForState(params: {
       section: 'Hindi Shayari Search',
       keywords: [q, 'Best New Shayari 2026', 'Shayari Search', 'ZQ Feelings', 'Dil Ki Awaaz'],
       breadcrumbs: [{ name: 'Home', path: '/' }]
+    };
+  }
+
+  // Shayari Detail Route (/shayari/:slug)
+  if (route === 'shayari-detail') {
+    const slug = shayariSlug || '';
+    const cleanWords = slug
+      .replace(/-[a-z0-9]+-[0-9]+$/i, '')
+      .replace(/-/g, ' ')
+      .trim();
+    const displayTitle = cleanWords
+      ? cleanWords.charAt(0).toUpperCase() + cleanWords.slice(1)
+      : 'Shayari';
+    return {
+      title: `${displayTitle} Shayari | ZQ FEELINGS - Dil Ki Awaaz`,
+      description: `Padhiye aur share kijiye best "${displayTitle}" Shayari WhatsApp, Instagram aur Facebook ke liye. 100% Free stylish font copy option ZQ FEELINGS par.`,
+      canonicalPath: `/shayari/${slug}`,
+      h1: `${displayTitle} Shayari — ZQ FEELINGS`,
+      section: 'Shayari Detail',
+      keywords: [displayTitle, 'Hindi Shayari', 'Love Shayari', 'ZQ Feelings', 'Dil Ki Awaaz'],
+      breadcrumbs: [
+        { name: 'Home', path: '/' },
+        { name: `${displayTitle} Shayari`, path: `/shayari/${slug}` }
+      ]
     };
   }
 

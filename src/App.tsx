@@ -88,12 +88,16 @@ const AdminPanelModal = lazy(() =>
 const LegalPage = lazy(() =>
   import('./components/LegalPage').then((m) => ({ default: m.LegalPage }))
 );
+const ShayariDetailPage = lazy(() =>
+  import('./components/ShayariDetailPage').then((m) => ({ default: m.ShayariDetailPage }))
+);
 import {
   buildCleanSeoUrl,
   parseLocationToRoute,
   getSeoMetadataForState,
   syncDocumentSeo
 } from './utils/seo';
+import { getShayariPath, findShayariBySlug, getRelatedShayaris } from './utils/shayariSlug';
 import { useGlobalLanguage } from './context/GlobalLanguageContext';
 import { Sparkles, ArrowLeft } from 'lucide-react';
 
@@ -190,6 +194,9 @@ export default function App() {
     initialParsed.specialMonth || 'january'
   );
   const [currentPage, setCurrentPage] = useState<number>(initialParsed.page || 1);
+  const [activeShayariSlug, setActiveShayariSlug] = useState<string | null>(
+    initialParsed.shayariSlug || null
+  );
   const [searchQuery, setSearchQuery] = useState('');
   const deferredSearchQuery = useDeferredValue(searchQuery);
   const [searchVisibleCount, setSearchVisibleCount] = useState(24);
@@ -320,6 +327,11 @@ export default function App() {
       if (parsed.religiousCat) setSelectedReligiousCat(parsed.religiousCat);
       if (parsed.familyRitualCat) setSelectedFamilyRitualCat(parsed.familyRitualCat);
       if (parsed.specialMonth) setSelectedSpecialMonth(parsed.specialMonth);
+      if (parsed.shayariSlug) {
+        setActiveShayariSlug(parsed.shayariSlug);
+      } else {
+        setActiveShayariSlug(null);
+      }
       setCurrentPage(parsed.page || 1);
     };
     window.addEventListener('popstate', handlePopState);
@@ -413,7 +425,8 @@ export default function App() {
       familyRitualCat: selectedFamilyRitualCat,
       specialMonth: selectedSpecialMonth,
       page: currentPage,
-      searchQuery: deferredSearchQuery
+      searchQuery: deferredSearchQuery,
+      shayariSlug: activeShayariSlug || undefined
     });
 
     // Normalize any legacy/short alias URL (e.g. /love-shayari -> /feelings/love-shayari/) to its exact clean canonical path
@@ -532,7 +545,8 @@ export default function App() {
     customShayaris,
     favoriteIds,
     lazyShayariPool,
-    zqOfficialShayaris
+    zqOfficialShayaris,
+    activeShayariSlug
   ]);
 
   const toggleFavorite = (id: string) => {
@@ -573,6 +587,7 @@ export default function App() {
     page: number = 1,
     staticLang?: ValentineLangCode
   ) => {
+    setActiveShayariSlug(null);
     setCurrentRoute(route);
     setCurrentPage(page);
     setSearchQuery('');
@@ -868,6 +883,40 @@ export default function App() {
     return pool.map((s) => (s.linesHindi || s.lines).join(' '));
   }, [currentRoute, zqOfficialShayaris, lazyShayariPool]);
 
+  const allCandidateShayaris = useMemo(() => {
+    return [
+      ...zqOfficialShayaris,
+      ...customShayaris,
+      ...globalShayaris,
+      ...(lazyShayariPool?.shayariList ?? []),
+      ...(lazyShayariPool?.specialShayaris ?? []),
+      ...(lazyShayariPool?.valentineShayaris ?? []),
+      ...(lazyShayariPool?.religiousShayaris ?? []),
+      ...(lazyShayariPool?.familyRitualsShayaris ?? [])
+    ];
+  }, [zqOfficialShayaris, customShayaris, globalShayaris, lazyShayariPool]);
+
+  const activeShayariDetailItem = useMemo(() => {
+    if (currentRoute !== 'shayari-detail' || !activeShayariSlug) return null;
+    return findShayariBySlug(activeShayariSlug, allCandidateShayaris);
+  }, [currentRoute, activeShayariSlug, allCandidateShayaris]);
+
+  const activeShayariRelatedItems = useMemo(() => {
+    if (!activeShayariDetailItem) return [];
+    return getRelatedShayaris(activeShayariDetailItem, allCandidateShayaris, 6);
+  }, [activeShayariDetailItem, allCandidateShayaris]);
+
+  const handleOpenShayariDetail = (shayari: Shayari) => {
+    const path = getShayariPath(shayari);
+    const slug = path.replace(/^\/shayari\//, '');
+    setActiveShayariSlug(slug);
+    setCurrentRoute('shayari-detail');
+    setCurrentPage(1);
+    setSearchQuery('');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    pushCleanUrl(path, 'shayari-detail');
+  };
+
   const isLegalRoute =
     currentRoute === 'about' ||
     currentRoute === 'privacy' ||
@@ -965,6 +1014,7 @@ export default function App() {
                       onOpenComments={(s) =>
                         handleOpenComments(s.id, s.title, s.comments || [])
                       }
+                      onOpenDetail={handleOpenShayariDetail}
                     />
                   ))}
                 </div>
@@ -1027,6 +1077,7 @@ export default function App() {
                 onOpenComments={(s) =>
                   handleOpenComments(s.id, s.title, s.comments || [])
                 }
+                onOpenDetail={handleOpenShayariDetail}
               />
             )}
 
@@ -1184,6 +1235,7 @@ export default function App() {
                 onOpenComments={(s) =>
                   handleOpenComments(s.id, s.title, s.comments || [])
                 }
+                onOpenDetail={handleOpenShayariDetail}
               />
             )}
 
@@ -1213,6 +1265,7 @@ export default function App() {
                 onOpenComments={(s) =>
                   handleOpenComments(s.id, s.title, s.comments || [])
                 }
+                onOpenDetail={handleOpenShayariDetail}
               />
             )}
 
@@ -1271,6 +1324,37 @@ export default function App() {
                 onDeleteLocalCopy={handleDeleteCustomShayari}
                 onNavigateHome={() => navigateTo('home')}
               />
+            )}
+
+            {/* DIRECT SHAYARI DETAIL ROUTE (/shayari/:slug) */}
+            {currentRoute === 'shayari-detail' && (
+              activeShayariDetailItem ? (
+                <ShayariDetailPage
+                  shayari={activeShayariDetailItem}
+                  relatedShayaris={activeShayariRelatedItems}
+                  onBackToCategory={() => {
+                    if (activeShayariDetailItem.category) {
+                      navigateTo('feelings', activeShayariDetailItem.category);
+                    } else {
+                      navigateTo('home');
+                    }
+                  }}
+                  onOpenShayari={handleOpenShayariDetail}
+                  onOpenCategory={(cat) => navigateTo('feelings', cat)}
+                  onNavigateHome={() => navigateTo('home')}
+                  isFavorite={isFavorite}
+                  onToggleFavorite={toggleFavorite}
+                  onOpenCardModal={handleOpenCardModal}
+                  onOpenComments={(s) =>
+                    handleOpenComments(s.id, s.title, s.comments || [])
+                  }
+                />
+              ) : (
+                <div className="py-20 text-center max-w-xl mx-auto px-4">
+                  <div className="w-12 h-12 mx-auto mb-4 border-4 border-[#ff2a5f] border-t-transparent rounded-full animate-spin" />
+                  <p className="text-gray-600 font-medium">Shayari load ho rahi hai...</p>
+                </div>
+              )
             )}
 
             {/* LEGAL & SUPPORT ROUTES (/about-us, /privacy-policy, /terms-and-conditions, /disclaimer, /contact-us) */}

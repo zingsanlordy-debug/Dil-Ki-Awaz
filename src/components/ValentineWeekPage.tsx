@@ -112,7 +112,7 @@ const ValentineShayariCardItem: React.FC<ValentineShayariCardItemProps> = ({
   const sharePageUrl =
     typeof window !== 'undefined'
       ? `${window.location.origin}${dedicatedCategoryPath}`
-      : `https://zqfeelings.com${dedicatedCategoryPath}`;
+      : `https://dil-ki-awaaz.vercel.app${dedicatedCategoryPath}`;
 
   const copyTextPayload = formatShayariCopyText({
     title: cardTitle || `${category.shortName} Shayari`,

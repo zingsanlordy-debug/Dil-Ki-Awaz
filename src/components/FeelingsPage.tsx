@@ -52,6 +52,7 @@ interface FeelingsPageProps {
   onToggleFavorite: (id: string) => void;
   onOpenCardModal: (shayari: Shayari, selectedFont: FontStyleId) => void;
   onOpenComments?: (shayari: Shayari) => void;
+  onOpenDetail?: (shayari: Shayari) => void;
 }
 
 export const FeelingsPage: React.FC<FeelingsPageProps> = ({
@@ -66,7 +67,8 @@ export const FeelingsPage: React.FC<FeelingsPageProps> = ({
   isFavorite,
   onToggleFavorite,
   onOpenCardModal,
-  onOpenComments
+  onOpenComments,
+  onOpenDetail
 }) => {
   const initialMaafiSub = extractMaafiSubFromCategory(initialCategory);
   const [activeCategory, setActiveCategory] = useState<string>(
@@ -293,6 +295,7 @@ export const FeelingsPage: React.FC<FeelingsPageProps> = ({
                 shareCanonicalPath={canonicalSharePath}
                 onOpenCardModal={onOpenCardModal}
                 onOpenComments={onOpenComments}
+                onOpenDetail={onOpenDetail}
               />
             ))}
           </div>

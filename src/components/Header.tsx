@@ -16,6 +16,7 @@ export type AppRoute =
   | 'public-wall'
   | 'favorites'
   | 'admin-zq'
+  | 'shayari-detail'
   | 'privacy'
   | 'terms'
   | 'disclaimer'

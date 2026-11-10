@@ -21,8 +21,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Tujhase shuroo hotee hai mohabbat, tujhape hee khatma meree daastaan."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Teree ek muskaan se roshan hai meraa saaraa jahaan,)",
-      "From the depths of the heart — (Tujhase shuroo hotee hai mohabbat, tujhape hee khatma meree daastaan.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -64,8 +64,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Dil ke har kone men bas teraa hee khvaab aabaad rahataa hai."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Dharakanon ko bhee ab teraa hee naam yaad rahataa hai,)",
-      "From the depths of the heart — (Dil ke har kone men bas teraa hee khvaab aabaad rahataa hai.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -107,8 +107,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Tere sivaa is dil men kisee aur kaa silasilaa na rahe."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Haath thaam le meraa ki ab koee faasalaa na rahe,)",
-      "From the depths of the heart — (Tere sivaa is dil men kisee aur kaa silasilaa na rahe.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -150,8 +150,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Mere har marza kee sabase khoobasoorat davaa ho tum."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Chaay kee mithaas aur shaam kee thandee havaa ho tum,)",
-      "From the depths of the heart — (Mere har marza kee sabase khoobasoorat davaa ho tum.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -193,8 +193,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Meraa bekaaboo saa dil sirfa tere kaaboo men ho gayaa."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Nigaahon se nigaahen mileen to ek ajeeb saa jaadoo ho gayaa,)",
-      "From the depths of the heart — (Meraa bekaaboo saa dil sirfa tere kaaboo men ho gayaa.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -236,8 +236,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Magar rooh ko sukoon sirfa tere deedaar se milaa."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Hazaaron chehare dekhe is bheer bharee duniyaa men hamane,)",
-      "From the depths of the heart — (Magar rooh ko sukoon sirfa tere deedaar se milaa.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -279,8 +279,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Sach kahoon us pal tum meree pooree kaayanaat lagate ho."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Maathe ko choom kar jab tum mujhe apanaa kahate ho,)",
-      "From the depths of the heart — (Sach kahoon us pal tum meree pooree kaayanaat lagate ho.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -322,8 +322,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Meree har saans ne bas teree hee vafaa kee qasam khaaee."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Lafzon men kaise bayaan karoon main apanee mohabbat kee gaharaaee,)",
-      "From the depths of the heart — (Meree har saans ne bas teree hee vafaa kee qasam khaaee.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -365,8 +365,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Tum door rahakar bhee mere sabase qareeb nazar aate ho."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Chupake se aakar mere khayaalon men muskuraa jaate ho,)",
-      "From the depths of the heart — (Tum door rahakar bhee mere sabase qareeb nazar aate ho.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -408,8 +408,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Meree har ghazal bas teree hee taareef men utaratee hai."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Chaand bhee sharamaa jaae jab too saadagee men sanvaratee hai,)",
-      "From the depths of the heart — (Meree har ghazal bas teree hee taareef men utaratee hai.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -451,8 +451,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Mujhe to har janma men bas teraa hee saath chaahie."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Na daulat chaahie na shoharat kaa koee taaj chaahie,)",
-      "From the depths of the heart — (Mujhe to har janma men bas teraa hee saath chaahie.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -494,8 +494,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Teree ek jhalak se meree soonee zindagee sanvar jaatee hai."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Teree aavaaz sun loon to din bhar kee thakaan utar jaatee hai,)",
-      "From the depths of the heart — (Teree ek jhalak se meree soonee zindagee sanvar jaatee hai.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -537,8 +537,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ishqa vo hai jo aakhiree saans tak nibhaane ke lie jiyaa jaae."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Ishqa vo naheen jo duniyaa ko dikhaane ke lie kiyaa jaae,)",
-      "From the depths of the heart — (Ishqa vo hai jo aakhiree saans tak nibhaane ke lie jiyaa jaae.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -580,8 +580,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Dil tujhe khone ke khayaal se bhee saham jaataa hai."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Meree har duaa men sabase pahale teraa hee zikra aataa hai,)",
-      "From the depths of the heart — (Dil tujhe khone ke khayaal se bhee saham jaataa hai.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -623,8 +623,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Bheegee havaaen mujhe tere aur qareeb le aatee hain."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Baarish kee boonden bhee teraa hee paighaam laatee hain,)",
-      "From the depths of the heart — (Bheegee havaaen mujhe tere aur qareeb le aatee hain.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -666,8 +666,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Teree baahon kaa gheraa hee hai meree sabase mahafooz panaah."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Teree hansee men chhupee hai mere jeene kee saaree vajah,)",
-      "From the depths of the heart — (Teree baahon kaa gheraa hee hai meree sabase mahafooz panaah.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -709,8 +709,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Tere ishqa ke nashe men main bevajah jhoom letaa hoon."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Kaaghaz par likhataa hoon naam teraa aur choom letaa hoon,)",
-      "From the depths of the heart — (Tere ishqa ke nashe men main bevajah jhoom letaa hoon.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -752,8 +752,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Meree aankhen bas teree hee tasveer utaaratee rahatee hain."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Vaqta thahar jaataa hai jab too mere saamane baithatee hai,)",
-      "From the depths of the heart — (Meree aankhen bas teree hee tasveer utaaratee rahatee hain.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -795,8 +795,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Main muskuraa kar teree hathelee par apanaa sar rakh doon."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Koee poochhe mujhase ki jannat kahaan hai is zameen par,)",
-      "From the depths of the heart — (Main muskuraa kar teree hathelee par apanaa sar rakh doon.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -838,8 +838,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Vo pagalee meree khaamoshee men bhee sau savaal samajh letee hai."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Binaa kahe bhee jo mere dil kaa har haal samajh letee hai,)",
-      "From the depths of the heart — (Vo pagalee meree khaamoshee men bhee sau savaal samajh letee hai.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -881,8 +881,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Too mil gayaa to ab rab se koee bhee gilaa na rahaa."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Tere naam se hee mahakatee hai mere aangan kee subah,)",
-      "From the depths of the heart — (Too mil gayaa to ab rab se koee bhee gilaa na rahaa.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -924,8 +924,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Meraa aaj aur meraa kal sab tujhamen hee kho gayaa hai."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Kismat kee lakeeron ko bhee tujhase ishqa ho gayaa hai,)",
-      "From the depths of the heart — (Meraa aaj aur meraa kal sab tujhamen hee kho gayaa hai.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -967,8 +967,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Saaree duniyaa jhukatee hai hamaaree mohabbat kee misaal ke aage."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Gulaab bhee feeke lagate hain tere gaalon kee laalee ke aage,)",
-      "From the depths of the heart — (Saaree duniyaa jhukatee hai hamaaree mohabbat kee misaal ke aage.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1010,8 +1010,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Manaane kaa mazaa aae mujhe, yoon pyaar lutaayaa kar."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Thoraa saa haq jataayaa kar, thoraa saa rooth jaayaa kar,)",
-      "From the depths of the heart — (Manaane kaa mazaa aae mujhe, yoon pyaar lutaayaa kar.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1053,8 +1053,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Vaisaa chain to mujhe apane ghar ke takiye par bhee naheen milataa."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Tere kandhe par sar rakhakar jo sukoon mujhe milataa hai,)",
-      "From the depths of the heart — (Vaisaa chain to mujhe apane ghar ke takiye par bhee naheen milataa.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1096,8 +1096,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Hamane apanee har dharakan ko teraa gulaam banaa liyaa hai."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Nazaron se utaar kar tujhe dil men basaa liyaa hai,)",
-      "From the depths of the heart — (Hamane apanee har dharakan ko teraa gulaam banaa liyaa hai.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1139,8 +1139,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Khoobasoorat ho gaee hai meree har subah aur har raat."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Jab se juree hai meree taqadeer tere naam ke saath,)",
-      "From the depths of the heart — (Khoobasoorat ho gaee hai meree har subah aur har raat.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1182,8 +1182,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Mere saare aramaan bas tere hee vaaste sajate hain."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Teree paayal kee chhanak se mere dil ke taar bajate hain,)",
-      "From the depths of the heart — (Mere saare aramaan bas tere hee vaaste sajate hain.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1225,8 +1225,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Mainne teree aankhon men apanaa pooraa kal dekhaa hai."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Mohabbat kee koee had naheen hotee ye tumase seekhaa hai,)",
-      "From the depths of the heart — (Mainne teree aankhon men apanaa pooraa kal dekhaa hai.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1268,8 +1268,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Apanee meethee see baaton se meraa saaraa gussaa bhulaa denaa."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Rooth bhee jaaoon agar kabhee to gale se lagaa lenaa,)",
-      "From the depths of the heart — (Apanee meethee see baaton se meraa saaraa gussaa bhulaa denaa.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1311,8 +1311,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Vaise hee mere seene men sirfa teraa pyaar dharakataa hai."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Sitaaron kee mahafil men jaise pooraa chaand chamakataa hai,)",
-      "From the depths of the heart — (Vaise hee mere seene men sirfa teraa pyaar dharakataa hai.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1354,8 +1354,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Meraa haath tere haath men ho to har safar suhaanaa hai."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Umra bhar chaloongaa tere saath chaahe raaste kitane bhee kathin hon,)",
-      "From the depths of the heart — (Meraa haath tere haath men ho to har safar suhaanaa hai.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1397,8 +1397,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Varanaa husna to is zamaane men bahut nazar aayaa hai."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Teree saadagee ne hee to meraa dil churaayaa hai,)",
-      "From the depths of the heart — (Varanaa husna to is zamaane men bahut nazar aayaa hai.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1440,8 +1440,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Sookhe hue registaan men tum saavan kee ghataa chhaae ho."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Meree berang see duniyaa men tum indradhanush banakar aae ho,)",
-      "From the depths of the heart — (Sookhe hue registaan men tum saavan kee ghataa chhaae ho.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1483,8 +1483,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Mere har lafza kee sabase pyaaree soorat ban chuke ho."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Aadat naheen ab tum meree zaroorat ban chuke ho,)",
-      "From the depths of the heart — (Mere har lafza kee sabase pyaaree soorat ban chuke ho.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1526,8 +1526,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Mujhe apanee jaan se bhee zyaadaa hai teree khushee pyaaree."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Teree palakon kee chhaanv men guzaar doon main sadiyaan saaree,)",
-      "From the depths of the heart — (Mujhe apanee jaan se bhee zyaadaa hai teree khushee pyaaree.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1569,8 +1569,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Main phir bhee binaa soche bas teraa hee haath chunoongaa."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Ek taraf saaree duniyaa kee khushiyaan rakh de koee,)",
-      "From the depths of the heart — (Main phir bhee binaa soche bas teraa hee haath chunoongaa.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1612,8 +1612,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Lagataa hai jaise rooh ke saare zakhma sanvaarate ho."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Jab tum pyaar se meraa naam pukaarate ho,)",
-      "From the depths of the heart — (Lagataa hai jaise rooh ke saare zakhma sanvaarate ho.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1655,8 +1655,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Rab ne jo fursat se garhaa vo haseen roop ho tum."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Dhoop men chhaanv aur sarda raaton kee narma dhoop ho tum,)",
-      "From the depths of the heart — (Rab ne jo fursat se garhaa vo haseen roop ho tum.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1698,8 +1698,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Darda bhee pyaaraa lagataa hai jab maraham lagaane vaale tum ho."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Intazaar bhee meethaa lagataa hai jab aane vaale tum ho,)",
-      "From the depths of the heart — (Darda bhee pyaaraa lagataa hai jab maraham lagaane vaale tum ho.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1741,8 +1741,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Bas itanee see khvaahish hai meree is chhotee see zindagee se."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Teree ungaliyon men ulajhee rahen meree ungaliyaan hameshaa,)",
-      "From the depths of the heart — (Bas itanee see khvaahish hai meree is chhotee see zindagee se.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1784,8 +1784,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Meraa ishqa har guzarate din ke saath aur bhee barhaa hai."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Mohabbat kaa matalab hee mainne teree aankhon men parhaa hai,)",
-      "From the depths of the heart — (Meraa ishqa har guzarate din ke saath aur bhee barhaa hai.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1827,8 +1827,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Apanee palakon kee sandook men tujhe hameshaa ke lie basaa loon."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Dil karataa hai tujhe duniyaa kee buree nazaron se chhupaa loon,)",
-      "From the depths of the heart — (Apanee palakon kee sandook men tujhe hameshaa ke lie basaa loon.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1870,8 +1870,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Too hee meraa pahalaa ishqa hai, too hee meraa aakhiree meet."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Tere binaa adhooraa hai meraa har khvaab aur har geet,)",
-      "From the depths of the heart — (Too hee meraa pahalaa ishqa hai, too hee meraa aakhiree meet.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1913,8 +1913,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Mujhe teree zulfon ko chhoone vaalee havaa se bhee rashqa hotaa hai."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Havaaon se kah do zaraa aahistaa guzaraa karen tere qareeb se,)",
-      "From the depths of the heart — (Mujhe teree zulfon ko chhoone vaalee havaa se bhee rashqa hotaa hai.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1956,8 +1956,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Hamane to bas tujhe apanee rooh kaa navaab rakhaa hai."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Na koee sharta hai tujhase, na koee hisaab rakhaa hai,)",
-      "From the depths of the heart — (Hamane to bas tujhe apanee rooh kaa navaab rakhaa hai.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -1999,8 +1999,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Marate dam tak nigaahon men tasveer sirfa teree rahegee."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Saanson kee dor chaahe jab bhee toot jaae meree,)",
-      "From the depths of the heart — (Marate dam tak nigaahon men tasveer sirfa teree rahegee.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -2042,8 +2042,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Teree ek nazar se mujh par khumaar chhaa jaatee hai."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Too hans de to mere aangan men bahaar aa jaatee hai,)",
-      "From the depths of the heart — (Teree ek nazar se mujh par khumaar chhaa jaatee hai.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -2085,8 +2085,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Shukra hai khudaa kaa ki usane tujhe meree qismat men likhaa."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Sachchaa ishqa naseeb vaalon ko hee milataa hai jahaan men,)",
-      "From the depths of the heart — (Shukra hai khudaa kaa ki usane tujhe meree qismat men likhaa.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -2128,8 +2128,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Tujhase milakar jaanaa ki rooh se chaahanaa kise kahate hain."
     ],
     "linesEnglish": [
-      "Sweet whispers of eternal love and heartfelt romance — (Kahaaniyaan to bahut sunee theen heer-raanjhe ke ishqa kee,)",
-      "From the depths of the heart — (Tujhase milakar jaanaa ki rooh se chaahanaa kise kahate hain.)"
+      "Sweet whispers of eternal love and heartfelt romance",
+      "From the depths of the heart"
     ],
     "tags": [
       "Love",
@@ -2171,8 +2171,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Kaash koee seene men dafan samandar kaa darda parh paataa."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Hansataa huaa cheharaa dekh kar log khush samajh lete hain,)",
-      "From the depths of the heart — (Kaash koee seene men dafan samandar kaa darda parh paataa.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -2214,8 +2214,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ek shakhsa saare shahar ko veeraan kar gayaa."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Vo bichharaa kuchh is adaa se ki rut hee badal gaee,)",
-      "From the depths of the heart — (Ek shakhsa saare shahar ko veeraan kar gayaa.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -2257,8 +2257,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Magar pahalaa toofaan aate hee usane kashtee badal lee."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Vaade to hazaaron kie the usane saath nibhaane ke,)",
-      "From the depths of the heart — (Magar pahalaa toofaan aate hee usane kashtee badal lee.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -2300,8 +2300,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Toot kar bikhar jaate hain vo log jo darda sah naheen paate."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Aansoo vo khaamosh duaaen hain jo lab kah naheen paate,)",
-      "From the depths of the heart — (Toot kar bikhar jaate hain vo log jo darda sah naheen paate.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -2343,8 +2343,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Vahee shakhsa aaj kisee aur kee duaaon kaa hissaa hai."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Jisako apanee har duaa men maangaa thaa hamane raat-din,)",
-      "From the depths of the heart — (Vahee shakhsa aaj kisee aur kee duaaon kaa hissaa hai.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -2386,8 +2386,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Pahale aadat banaate hain phir tanhaa chhor jaate hain."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Kamaal kaa hunar rakhate hain kuchh log dil torane kaa,)",
-      "From the depths of the heart — (Pahale aadat banaate hain phir tanhaa chhor jaate hain.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -2429,8 +2429,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Jab apane hee badal gae to ghairon se kyaa shikaayat karoon."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Ab kisee se koee gilaa naheen karataa ye dil meraa,)",
-      "From the depths of the heart — (Jab apane hee badal gae to ghairon se kyaa shikaayat karoon.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -2472,8 +2472,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Din bhar to main duniyaa ke saamane muskuraataa rahataa hoon."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Takiye kaa bheegaa konaa hee jaanataa hai meraa haal,)",
-      "From the depths of the heart — (Din bhar to main duniyaa ke saamane muskuraataa rahataa hoon.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -2515,8 +2515,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Jisma to chalataa rahataa hai magar andar jaan naheen hotee."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Mohabbat men haare hue insaan kee koee pahachaan naheen hotee,)",
-      "From the depths of the heart — (Jisma to chalataa rahataa hai magar andar jaan naheen hotee.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -2558,8 +2558,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Saans lenaa chhor doon kyaa ab zindaa rahane ke lie."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Kitanee aasaanee se kah diyaa tumane ki bhool jaao mujhe,)",
-      "From the depths of the heart — (Saans lenaa chhor doon kyaa ab zindaa rahane ke lie.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -2601,8 +2601,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Mere har lafza par ab khaamoshiyon ke pahare hain."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Zakhma dikhate naheen hain par dukhate bahut gahare hain,)",
-      "From the depths of the heart — (Mere har lafza par ab khaamoshiyon ke pahare hain.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -2644,8 +2644,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Na dil lagataa, na ummeed jagatee, na ye jaan jaatee."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Kaash tumase kabhee mulaaqaat hee na huee hotee hamaaree,)",
-      "From the depths of the heart — (Na dil lagataa, na ummeed jagatee, na ye jaan jaatee.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -2687,8 +2687,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Jinhen kisee ke toot kar rone se bhee farqa naheen parataa."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Vafaa kee ummeed bhee hamane un pattharon se lagaaee thee,)",
-      "From the depths of the heart — (Jinhen kisee ke toot kar rone se bhee farqa naheen parataa.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -2730,8 +2730,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Vo paas se guzar gayaa hamen ajanabee bataa kar."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Ek umar guzaar dee jisakee ek jhalak ke intazaar men,)",
-      "From the depths of the heart — (Vo paas se guzar gayaa hamen ajanabee bataa kar.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -2773,8 +2773,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Phir laakh koshish kar lo puraanee soorat nazar naheen aatee."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Dil ke aaeene men jab ek baar daraar par jaatee hai,)",
-      "From the depths of the heart — (Phir laakh koshish kar lo puraanee soorat nazar naheen aatee.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -2816,8 +2816,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Kaise bataaoon ki andar hee andar roz thoraa marataa hoon."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Vo poochhate hain aajakal main itanaa chup kyon rahataa hoon,)",
-      "From the depths of the heart — (Kaise bataaoon ki andar hee andar roz thoraa marataa hoon.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -2859,8 +2859,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Jis par sabase zyaadaa yaqeen thaa vahee mukar chukaa hai."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Jhoothee tasalliyon se ab meraa jee bhar chukaa hai,)",
-      "From the depths of the heart — (Jis par sabase zyaadaa yaqeen thaa vahee mukar chukaa hai.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -2902,8 +2902,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Doobe to pataa chalaa ki maajhee hee hatyaaraa thaa."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Kaaghaz kee kashtee thee aur ashkon kaa kinaaraa thaa,)",
-      "From the depths of the heart — (Doobe to pataa chalaa ki maajhee hee hatyaaraa thaa.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -2945,8 +2945,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Insaan to chalaa jaataa hai par nishaan chhor jaataa hai."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Yaaden bhee kitanee zaalim hotee hain guzare vaqta kee,)",
-      "From the depths of the heart — (Insaan to chalaa jaataa hai par nishaan chhor jaataa hai.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -2988,8 +2988,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Aur vo baazaar men hamaare jazbaaton kee qeemat lagaate rahe."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Hamane to rooh tak giravee rakh dee thee unakee chaahat men,)",
-      "From the depths of the heart — (Aur vo baazaar men hamaare jazbaaton kee qeemat lagaate rahe.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3031,8 +3031,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Saaree raat karavaten badal kar saveraa karanaa parataa hai."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Neend bhee rooth gaee hai meree aankhon se teree tarah,)",
-      "From the depths of the heart — (Saaree raat karavaten badal kar saveraa karanaa parataa hai.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3074,8 +3074,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Rone ko to hazaaron kandhe hain par apanaa hamadam naheen milataa."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Kuchh darda aise hote hain jinakaa koee maraham naheen milataa,)",
-      "From the depths of the heart — (Rone ko to hazaaron kandhe hain par apanaa hamadam naheen milataa.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3117,8 +3117,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ki mainne ek bevafaa par khud se zyaadaa bharosaa kiyaa."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Mohabbat kee adaalat men kasoor sirfa itanaa thaa meraa,)",
-      "From the depths of the heart — (Ki mainne ek bevafaa par khud se zyaadaa bharosaa kiyaa.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3160,8 +3160,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Havaa kaa har jhonkaa ab mujhe aur raund jaataa hai."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Sookhe patton kee tarah bikhar gaee hain khvaahishen meree,)",
-      "From the depths of the heart — (Havaa kaa har jhonkaa ab mujhe aur raund jaataa hai.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3203,8 +3203,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Kal tak jo jaan dete the aaj kamiyaan ginavaate hain."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Jab dil bhar jaataa hai to log bahaane dhoondhate hain,)",
-      "From the depths of the heart — (Kal tak jo jaan dete the aaj kamiyaan ginavaate hain.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3246,8 +3246,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Apanee hee ujaree huee aankhen ab mujhase dekhee naheen jaateen."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Tere jaane ke baad mainne aaeenaa dekhanaa chhor diyaa,)",
-      "From the depths of the heart — (Apanee hee ujaree huee aankhen ab mujhase dekhee naheen jaateen.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3289,8 +3289,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Bas un lafzon men ab pahale jaisee sachchaaee naheen rahee."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Khat to aaj bhee rakhe hain tere meree puraanee kitaab men,)",
-      "From the depths of the heart — (Bas un lafzon men ab pahale jaisee sachchaaee naheen rahee.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3332,8 +3332,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Aur gale men ghutan ho magar aankh se aansoo na nikale."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Sabase zyaadaa darda tab hotaa hai jab aap ronaa chaaho,)",
-      "From the depths of the heart — (Aur gale men ghutan ho magar aankh se aansoo na nikale.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3375,8 +3375,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Bas itanaa yaad rakhanaa ki phir aisaa chaahane vaalaa na milegaa."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Shauq se toro tum dil meraa, koee ilzaam na doongaa,)",
-      "From the depths of the heart — (Bas itanaa yaad rakhanaa ki phir aisaa chaahane vaalaa na milegaa.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3418,8 +3418,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Use phir bhee shikaayat rahee ki mainne kiyaa hee kyaa hai."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Rishtaa bachaate-bachaate main khud hee khatma ho gayaa,)",
-      "From the depths of the heart — (Use phir bhee shikaayat rahee ki mainne kiyaa hee kyaa hai.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3461,8 +3461,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Teree berukhee ne mujhe jeete-jee patthar banaayaa hai."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Mehafil men baithe hain phir bhee andar sannaataa chhaayaa hai,)",
-      "From the depths of the heart — (Teree berukhee ne mujhe jeete-jee patthar banaayaa hai.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3504,8 +3504,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Puraane ghaav aaj bhee baarish kee raaton men tees uthate hain."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Vaqta sab theek kar detaa hai ye sirfa kahane kee baat hai,)",
-      "From the depths of the heart — (Puraane ghaav aaj bhee baarish kee raaton men tees uthate hain.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3547,8 +3547,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Parhane vaalon ke lie to bas pannaa palat jaataa hai."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Adhooree kahaaniyon kaa darda sirfa kiradaar jaanate hain,)",
-      "From the depths of the heart — (Parhane vaalon ke lie to bas pannaa palat jaataa hai.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3590,8 +3590,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Kaise ek hansataa huaa insaan raakh kaa dher ban gayaa."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Kabhee fursat mile to aakar dekhanaa meraa ujaraa aashiyaanaa,)",
-      "From the depths of the heart — (Kaise ek hansataa huaa insaan raakh kaa dher ban gayaa.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3633,8 +3633,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Raat bhar khvaabon kaa janaazaa kandhon par uthaayaa hai."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Mat poochho ki meree aankhon men ye surkhee kaisee hai,)",
-      "From the depths of the heart — (Raat bhar khvaabon kaa janaazaa kandhon par uthaayaa hai.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3676,8 +3676,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Abhee kal hee to kahaa thaa ki tere bin mar jaaoongaa."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Badalate mausam se bhee tez badalate dekhaa hai tujhe,)",
-      "From the depths of the heart — (Abhee kal hee to kahaa thaa ki tere bin mar jaaoongaa.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3719,8 +3719,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Mujhe kyaa khabar thee ki vo meree barbaadee kaa sapanaa hai."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Har baar maaf kiyaa mainne ye soch kar ki apanaa hai,)",
-      "From the depths of the heart — (Mujhe kyaa khabar thee ki vo meree barbaadee kaa sapanaa hai.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3762,8 +3762,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Bhale hee toone mere hisse men sirfa kaante bichhaae hon."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Dil to aaj bhee teree salaamatee kee duaa maangataa hai,)",
-      "From the depths of the heart — (Bhale hee toone mere hisse men sirfa kaante bichhaae hon.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3805,8 +3805,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Jo jitanaa sachchaa hotaa hai vo utanaa hee rotaa hai."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Chot khaakar hee samajh aayaa is duniyaa kaa dastoor,)",
-      "From the depths of the heart — (Jo jitanaa sachchaa hotaa hai vo utanaa hee rotaa hai.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3848,8 +3848,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Kaheen chaar din hansaa kar phir se umar bhar na rulaa de."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Ab to khushiyon se bhee dar lagataa hai is toote dil ko,)",
-      "From the depths of the heart — (Kaheen chaar din hansaa kar phir se umar bhar na rulaa de.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3891,8 +3891,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Kaheen kisee mor par meraa guzaraa huaa kal na mil jaae."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Tere shahar kee galiyon se aaj bhee guzarane se darataa hoon,)",
-      "From the depths of the heart — (Kaheen kisee mor par meraa guzaraa huaa kal na mil jaae.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3934,8 +3934,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Darda to usane mujhe pooree eemaanadaaree se diyaa hai."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Mohabbat adhooree rah gaee to kyaa huaa ai mere dosta,)",
-      "From the depths of the heart — (Darda to usane mujhe pooree eemaanadaaree se diyaa hai.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -3977,8 +3977,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Agar baras paraa to teraa jhoothaa guroor bah jaaegaa."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Khaamosh labon ke peechhe jo toofaan chhupaa rakhaa hai,)",
-      "From the depths of the heart — (Agar baras paraa to teraa jhoothaa guroor bah jaaegaa.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -4020,8 +4020,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Unhonne duniyaa kee khaatir hamaaraa naam hee bhulaa diyaa."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Jinake lie hamane duniyaa kee har rasma bhulaa dee thee,)",
-      "From the depths of the heart — (Unhonne duniyaa kee khaatir hamaaraa naam hee bhulaa diyaa.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -4063,8 +4063,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Kisee apane kaa nazaraandaaz karanaa hee kaafee hotaa hai."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Kabra men dafan hone ke lie maranaa zarooree to naheen,)",
-      "From the depths of the heart — (Kisee apane kaa nazaraandaaz karanaa hee kaafee hotaa hai.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -4106,8 +4106,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Dimaagh jaanataa thaa too naheen aaegaa par dil maanataa kahaan hai."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Hazaaron kee bheer men bhee nigaahen tujhe hee talaashatee raheen,)",
-      "From the depths of the heart — (Dimaagh jaanataa thaa too naheen aaegaa par dil maanataa kahaan hai.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -4149,8 +4149,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Javaanee men dil tootaa to rone kee aavaaz hee kho gaee."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Bachapan ke khilaune toote to thoraa rokar chup ho gae the,)",
-      "From the depths of the heart — (Javaanee men dil tootaa to rone kee aavaaz hee kho gaee.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -4192,8 +4192,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Teraa ishqa khatma ho gayaa magar sazaa abhee baaqee hai."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Charaagh bujh gayaa hai magar dhuaan abhee baaqee hai,)",
-      "From the depths of the heart — (Teraa ishqa khatma ho gayaa magar sazaa abhee baaqee hai.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -4235,8 +4235,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Log kahate hain bare maze men zindagee guzar rahee hai."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Apanee hee laash ko apane kandhon par lie phirataa hoon,)",
-      "From the depths of the heart — (Log kahate hain bare maze men zindagee guzar rahee hai.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -4278,8 +4278,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Qalam se syaahee kee jagah sirfa darda tapakataa rahaa."
     ],
     "linesEnglish": [
-      "Silent tears of heartbreak, longing, and unspoken pain — (Likhane baithaa thaa apanee vafaa kee daastaan pannon par,)",
-      "From the depths of the heart — (Qalam se syaahee kee jagah sirfa darda tapakataa rahaa.)"
+      "Silent tears of heartbreak, longing, and unspoken pain",
+      "From the depths of the heart"
     ],
     "tags": [
       "Sad",
@@ -4321,8 +4321,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Zaraa machal gae to shahar kaa shahar le doobenge."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Ham samandar hain hamen khaamosh hee rahane do,)",
-      "From the depths of the heart — (Zaraa machal gae to shahar kaa shahar le doobenge.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -4364,8 +4364,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Jangal kee khaamoshee khud bataa detee hai ki raajaa kaun hai."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Sher apanee taaqat kaa kabhee dhindhoraa naheen peetataa,)",
-      "From the depths of the heart — (Jangal kee khaamoshee khud bataa detee hai ki raajaa kaun hai.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -4450,8 +4450,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham jahaan khare ho jaate hain qaafilaa vaheen se shuroo hotaa hai."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Bheer men chalanaa hamaaree fitarat men shaamil naheen,)",
-      "From the depths of the heart — (Ham jahaan khare ho jaate hain qaafilaa vaheen se shuroo hotaa hai.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -4493,8 +4493,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Teree pooree bastee khareed le itanaa to hamaaraa sirfa naam hai."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Aukaat kee baat mat kar ai mere naadaan dushman,)",
-      "From the depths of the heart — (Teree pooree bastee khareed le itanaa to hamaaraa sirfa naam hai.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -4536,8 +4536,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Hamane to toofaanon kaa bhee rukh mor kar dikhaayaa hai."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Hamase ulajhane se pahale itihaas zaroor parh lenaa,)",
-      "From the depths of the heart — (Hamane to toofaanon kaa bhee rukh mor kar dikhaayaa hai.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -4579,8 +4579,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Akaranaa to murdon kee khaas pahachaan huaa karatee hai."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Jhukataa vahee hai jisamen jaan aur sanskaar hote hain,)",
-      "From the depths of the heart — (Akaranaa to murdon kee khaas pahachaan huaa karatee hai.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -4622,8 +4622,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Main usakaa haragiz naheen hotaa jo har kisee kaa ho jaae."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Mere mizaaj ko samajhane ke lie bas itanaa kaafee hai,)",
-      "From the depths of the heart — (Main usakaa haragiz naheen hotaa jo har kisee kaa ho jaae.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -4665,8 +4665,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Dil men vafaa aur aankhon men khuddaaree behisaab rakhate hain."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Baadashaah naheen hain ham par andaaz navaabee rakhate hain,)",
-      "From the depths of the heart — (Dil men vafaa aur aankhon men khuddaaree behisaab rakhate hain.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -4708,8 +4708,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Kyonki hamane kabhee peeth peechhe vaar naheen kiyaa."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Naam hamaaraa aaj bhee mahafilon men izzat se liyaa jaataa hai,)",
-      "From the depths of the heart — (Kyonki hamane kabhee peeth peechhe vaar naheen kiyaa.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -4751,8 +4751,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham muskuraa dete hain aur unakaa khoon sookh jaataa hai."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Jalane vaalon ko aur jalaanaa hamaaraa puraanaa shauq hai,)",
-      "From the depths of the heart — (Ham muskuraa dete hain aur unakaa khoon sookh jaataa hai.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -4794,8 +4794,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham vo vazeer hain jo pooree baazee akele palat dete hain."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Shataranj ke pyaade naheen jo kisee ke ishaare par chalen,)",
-      "From the depths of the heart — (Ham vo vazeer hain jo pooree baazee akele palat dete hain.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -4837,8 +4837,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Hamaaree to taraqqee se hee logon ke seene jal uthate hain."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Maachis kee zaroorat yahaan kise paratee hai janaab,)",
-      "From the depths of the heart — (Hamaaree to taraqqee se hee logon ke seene jal uthate hain.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -4880,8 +4880,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Aasamaan bhee chhoo lenge par kisee ke qadamon men girakar naheen."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Ham apane usoolon par jeete hain kisee ke ehasaan par naheen,)",
-      "From the depths of the heart — (Aasamaan bhee chhoo lenge par kisee ke qadamon men girakar naheen.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -4923,8 +4923,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Main vaqta aane par lafzon se naheen kaam se javaab detaa hoon."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Khaamosh hoon to ise meree kamazoree mat samajh lenaa,)",
-      "From the depths of the heart — (Main vaqta aane par lafzon se naheen kaam se javaab detaa hoon.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -4966,8 +4966,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Har aire-ghaire ko ham apane dushmanon men naheen ginate."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Nafarat bhee ham haisiyat dekh kar kiyaa karate hain,)",
-      "From the depths of the heart — (Har aire-ghaire ko ham apane dushmanon men naheen ginate.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5009,8 +5009,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Hamaaree nazaren hee bataa detee hain ki ragon men kisakaa khoon hai."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Taaj kee mohataaj naheen hotee hamaaree baadashaahat,)",
-      "From the depths of the heart — (Hamaaree nazaren hee bataa detee hain ki ragon men kisakaa khoon hai.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5052,8 +5052,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Jo aankh dikhaae ham usakaa guroor mittee men milaa den."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Jo hamase pyaar se mile ham usake qadamon men dil rakh den,)",
-      "From the depths of the heart — (Jo aankh dikhaae ham usakaa guroor mittee men milaa den.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5095,8 +5095,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham vo shole hain jo aandhiyon men aur bharak uthate hain."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Zamaane kee havaaon se bujh jaaen vo deeye ham naheen,)",
-      "From the depths of the heart — (Ham vo shole hain jo aandhiyon men aur bharak uthate hain.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5138,8 +5138,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Tabhee to aadhee duniyaa hamaaree deevaanee aur aadhee dushman hai."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Hamaaraa staail aur hamaaraa tevar donon hee khaanadaanee hain,)",
-      "From the depths of the heart — (Tabhee to aadhee duniyaa hamaaree deevaanee aur aadhee dushman hai.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5181,8 +5181,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Jahaan se hamane apanee kaamayaabee kaa safar shuroo kiyaa hai."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Vahaan tak soch bhee naheen pahunchatee tere jaise logon kee,)",
-      "From the depths of the heart — (Jahaan se hamane apanee kaamayaabee kaa safar shuroo kiyaa hai.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5224,8 +5224,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Akar dikhaaoge to nazar se hameshaa ke lie utar jaaoge."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Izzat doge to dogunee izzat paaoge hamase,)",
-      "From the depths of the heart — (Akar dikhaaoge to nazar se hameshaa ke lie utar jaaoge.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5267,8 +5267,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Aur dogale logon se yaaree kaa rishtaa ham naheen rakhate."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Kaaghaz ke phoolon se mahak kee ummeed ham naheen rakhate,)",
-      "From the depths of the heart — (Aur dogale logon se yaaree kaa rishtaa ham naheen rakhate.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5310,8 +5310,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Meree maan kee duaaen meree dhaal banakar chalatee hain."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Teree saazishen meraa ek baal bhee baankaa na kar sakengee,)",
-      "From the depths of the heart — (Meree maan kee duaaen meree dhaal banakar chalatee hain.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5353,8 +5353,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Isakaa matalab ye naheen ki kutte jangal par raaj karenge."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Sher ke paanv men agar kaantaa chubh bhee jaae to kyaa,)",
-      "From the depths of the heart — (Isakaa matalab ye naheen ki kutte jangal par raaj karenge.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5396,8 +5396,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Jahaan duniyaa ruk jaatee hai ham vahaan se uraan bharate hain."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Ham kisee kee naqal naheen karate apanee raah khud banaate hain,)",
-      "From the depths of the heart — (Jahaan duniyaa ruk jaatee hai ham vahaan se uraan bharate hain.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5439,8 +5439,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham har karza aur har zakhma kaa pooraa hisaab rakhate hain."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Chehare par saadagee hai par jigar phaulaad kaa rakhate hain,)",
-      "From the depths of the heart — (Ham har karza aur har zakhma kaa pooraa hisaab rakhate hain.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5482,8 +5482,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Yoon peeth peechhe bhaunkane se koee sikandar naheen banataa."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Muqaabalaa karanaa hai to pahale khud ko hamaare qaabil banaa,)",
-      "From the depths of the heart — (Yoon peeth peechhe bhaunkane se koee sikandar naheen banataa.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5525,8 +5525,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Aaj khaamosh baithe hain kal pooraa aasamaan naapenge."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Vaqta kharaab ho sakataa hai janaab par hamaaraa hausalaa naheen,)",
-      "From the depths of the heart — (Aaj khaamosh baithe hain kal pooraa aasamaan naapenge.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5568,8 +5568,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Khauf phailaane ke lie to bas hamaaree maujoodagee hee kaafee hai."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Hathiyaar to shauq ke lie rakhe jaate hain mere dosta,)",
-      "From the depths of the heart — (Khauf phailaane ke lie to bas hamaaree maujoodagee hee kaafee hai.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5611,8 +5611,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Phate kaparon men bhee ham shahanshaahon saa raub rakhate hain."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Zameer bech kar ameer bananaa hamen manzoor naheen,)",
-      "From the depths of the heart — (Phate kaparon men bhee ham shahanshaahon saa raub rakhate hain.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5654,8 +5654,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Aafataab ke aage juganuon kee chamak naheen chalaa karatee."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Raastaa chhor do jab ham apane tevar men nikalate hain,)",
-      "From the depths of the heart — (Aafataab ke aage juganuon kee chamak naheen chalaa karatee.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5697,8 +5697,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham aaj bhee vaheen chattaan kee tarah muskuraate khare hain."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Hamen giraane kee koshish men kaee log khud gir gae,)",
-      "From the depths of the heart — (Ham aaj bhee vaheen chattaan kee tarah muskuraate khare hain.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5740,8 +5740,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Varanaa jis din zid par aa gae to bhoochaal aa jaaegaa."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Sharaafat kee chaadar orh rakhee hai bas buzurgon ke lihaaz men,)",
-      "From the depths of the heart — (Varanaa jis din zid par aa gae to bhoochaal aa jaaegaa.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5783,8 +5783,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham apanee kahaanee apane paseene aur khoon se likhate hain."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Kitaabon men naheen milegaa tujhe hamaare jaisaa kiradaar,)",
-      "From the depths of the heart — (Ham apanee kahaanee apane paseene aur khoon se likhate hain.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5826,8 +5826,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Jo jaisaa milataa hai use vaisaa hee aaeenaa dikhaa dete hain."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Bhaav ham kisee ko fizool men naheen diyaa karate,)",
-      "From the depths of the heart — (Jo jaisaa milataa hai use vaisaa hee aaeenaa dikhaa dete hain.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5869,8 +5869,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Aur hamen chamakane ke lie kisee kee sifaarish naheen chaahie."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Sooraj ko ugane ke lie kisee kee ijaazat naheen chaahie,)",
-      "From the depths of the heart — (Aur hamen chamakane ke lie kisee kee sifaarish naheen chaahie.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5912,8 +5912,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Kaun kab badalaa hai mere paas sabakaa pooraa hisaab hai."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Zubaan karavee zaroor hai meree magar dil aaeene saa saaf hai,)",
-      "From the depths of the heart — (Kaun kab badalaa hai mere paas sabakaa pooraa hisaab hai.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5955,8 +5955,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Hamaare paron men to poore gagan ko cheerane kaa dam hai."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Vo parinde aur honge jo pinjaron men khush rahate hain,)",
-      "From the depths of the heart — (Hamaare paron men to poore gagan ko cheerane kaa dam hai.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -5998,8 +5998,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Jis din tootaa us din teree hastee kaa nishaan na bachegaa."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Mat aazamaa mere sabra ke baandh ko ai zamaane,)",
-      "From the depths of the heart — (Jis din tootaa us din teree hastee kaa nishaan na bachegaa.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -6041,8 +6041,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Myaanon men rakhee talavaaren apanee dhaar kabhee naheen bhoolateen."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Hamaaree saadagee ko hamaaree bebasee samajhane kee bhool mat karanaa,)",
-      "From the depths of the heart — (Myaanon men rakhee talavaaren apanee dhaar kabhee naheen bhoolateen.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -6084,8 +6084,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Murdon se to kabhee kisee ko koee takaleef naheen hotee."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Dushmanon kee taadaad bataatee hai ki ham sahee raaste par hain,)",
-      "From the depths of the heart — (Murdon se to kabhee kisee ko koee takaleef naheen hotee.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -6127,8 +6127,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Hamane kabhee paison se kisee kee mazabooree naheen khareedee."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Salaam karate hain log hamaare rutabe aur eemaan ko,)",
-      "From the depths of the heart — (Hamane kabhee paison se kisee kee mazabooree naheen khareedee.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -6170,8 +6170,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Phir vo khudaa bhee ban jaae to ham palat kar naheen dekhate."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Ek baar jise dil se utaar diyaa so utaar diyaa,)",
-      "From the depths of the heart — (Phir vo khudaa bhee ban jaae to ham palat kar naheen dekhate.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -6213,8 +6213,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Kisee ke saaye men palanaa hamaare khoon men naheen hai."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Khud kee pahachaan banaane kaa junoon savaar hai sir par,)",
-      "From the depths of the heart — (Kisee ke saaye men palanaa hamaare khoon men naheen hai.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -6256,8 +6256,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Jab hamaaree baarish hogee to sab zameen par baith jaaenge."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Urane do in mittee ke gubaaron ko jitanee oonchaaee tak uren,)",
-      "From the depths of the heart — (Jab hamaaree baarish hogee to sab zameen par baith jaaenge.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -6299,8 +6299,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Heere kee qeemat pattharon ke baazaar men kam naheen hotee."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Ham mahafil men der se aate hain par charchaa hamaaree hee hotee hai,)",
-      "From the depths of the heart — (Heere kee qeemat pattharon ke baazaar men kam naheen hotee.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -6342,8 +6342,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham jhoothe naqaab pahan kar rishton kaa vyaapaar naheen karate."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Aankhon men aankhen daal kar baat karane kaa jigar rakhate hain,)",
-      "From the depths of the heart — (Ham jhoothe naqaab pahan kar rishton kaa vyaapaar naheen karate.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -6385,8 +6385,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Apanaa ikkaa ham tab dikhaate hain jab saamane vaalaa baadashaah nikaale."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Khel taash kaa ho yaa zindagee kaa ai mere dosta,)",
-      "From the depths of the heart — (Apanaa ikkaa ham tab dikhaate hain jab saamane vaalaa baadashaah nikaale.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -6428,8 +6428,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Meree apanee manzil hai aur meree apanee alag daur."
     ],
     "linesEnglish": [
-      "Fearless royal pride, unbreakable rules, and bold grace — (Naa kisee se eershyaa rakhate hain naa kisee se koee hor,)",
-      "From the depths of the heart — (Meree apanee manzil hai aur meree apanee alag daur.)"
+      "Fearless royal pride, unbreakable rules, and bold grace",
+      "From the depths of the heart"
     ],
     "tags": [
       "Attitude",
@@ -6471,8 +6471,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Magar koee aisaa naheen jo bin kahe meraa haal poochh le."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Bheer to bahut hai is shahar kee chamachamaatee galiyon men,)",
-      "From the depths of the heart — (Magar koee aisaa naheen jo bin kahe meraa haal poochh le.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -6514,8 +6514,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ujaalon men apanon ke badalate chehare zyaadaa daraate hain."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Ab mujhe andheron se koee khauf naheen lagataa ai dosta,)",
-      "From the depths of the heart — (Ujaalon men apanon ke badalate chehare zyaadaa daraate hain.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -6557,8 +6557,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ye na kabhee savaal karatee hai aur na kabhee saath chhoratee hai."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Khaamoshee se behatar koee hamasafar naheen is duniyaa men,)",
-      "From the depths of the heart — (Ye na kabhee savaal karatee hai aur na kabhee saath chhoratee hai.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -6600,8 +6600,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Vo bhee meree tarah sitaaron ke beech bilkul tanhaa hai."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Chaand ko takate hue kat jaatee hain meree soonee raaten,)",
-      "From the depths of the heart — (Vo bhee meree tarah sitaaron ke beech bilkul tanhaa hai.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -6643,8 +6643,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Kyonki parachhaaee bhee andheraa hote hee haath chhor detee hai."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Akele chalane kaa hunar seekh liyaa hai mainne zindagee se,)",
-      "From the depths of the heart — (Kyonki parachhaaee bhee andheraa hote hee haath chhor detee hai.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -6686,8 +6686,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Yahaan na koee jhoothaa dikhaavaa hai na kisee ke roothane kaa dar."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Kamare kee chaaradeevaaree hee ab meree sabase sachchee dosta hai,)",
-      "From the depths of the heart — (Yahaan na koee jhoothaa dikhaavaa hai na kisee ke roothane kaa dar.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -6729,8 +6729,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Aaj khud se hee baat karake jee bahalaa liyaa karate hain."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Kabhee mahafilon kee jaan huaa karate the ham bhee kisee daur men,)",
-      "From the depths of the heart — (Aaj khud se hee baat karake jee bahalaa liyaa karate hain.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -6772,8 +6772,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Havaa bhee dastak de daravaaze par to chaunk uthataa hoon."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Tanhaaee kaa aalam kuchh aisaa hai meree veeraan zindagee men,)",
-      "From the depths of the heart — (Havaa bhee dastak de daravaaze par to chaunk uthataa hoon.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -6815,8 +6815,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ek shor hai mere bheetar jise main chupachaap sahataa hoon."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Sabake saath hokar bhee sabase alag thalag saa rahataa hoon,)",
-      "From the depths of the heart — (Ek shor hai mere bheetar jise main chupachaap sahataa hoon.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -6858,8 +6858,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Bas yahee do cheezen ab meree shaamon kee saathee hain."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Ek kap chaay aur khirakee se dikhataa soonaa aasamaan,)",
-      "From the depths of the heart — (Bas yahee do cheezen ab meree shaamon kee saathee hain.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -6901,8 +6901,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Is matalabee mele men ham akele hee bahut achchhe hain."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Log milate hain matalab se aur matalab nikalate hee gum hain,)",
-      "From the depths of the heart — (Is matalabee mele men ham akele hee bahut achchhe hain.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -6944,8 +6944,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Par saath chalane ko koee ek hamasaayaa tak naheen."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Raaste lanbe hain aur paanv men chhaale bhee bahut hain,)",
-      "From the depths of the heart — (Par saath chalane ko koee ek hamasaayaa tak naheen.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -6987,8 +6987,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Tab lafzon ko zaayaa karane se khaamosh rahanaa behatar hai."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Jab koee samajhane vaalaa na ho aapake dil kee zubaan,)",
-      "From the depths of the heart — (Tab lafzon ko zaayaa karane se khaamosh rahanaa behatar hai.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7030,8 +7030,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Main roz apanee khoee huee hansee ko khud men talaashataa hoon."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Shor bharee duniyaa se door ek konaa talaashataa hoon,)",
-      "From the depths of the heart — (Main roz apanee khoee huee hansee ko khud men talaashataa hoon.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7073,8 +7073,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Bikhare hue khvaabon ke toote motee chunataa rahataa hoon."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Tanhaa baith kar samandar kee laharon ko ginataa rahataa hoon,)",
-      "From the depths of the heart — (Bikhare hue khvaabon ke toote motee chunataa rahataa hoon.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7116,8 +7116,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Par aadhee raat ko jise pukaar sakoon aisaa koee naheen."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Fon kee lanbee lista men saikaron naam darja hain mere,)",
-      "From the depths of the heart — (Par aadhee raat ko jise pukaar sakoon aisaa koee naheen.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7159,8 +7159,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Jahaan na koee ummeed tootatee hai na koee dil dukhaataa hai."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Akelaapan koee sazaa naheen balki ek gaharaa sukoon hai,)",
-      "From the depths of the heart — (Jahaan na koee ummeed tootatee hai na koee dil dukhaataa hai.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7202,8 +7202,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Khvaabon men bhee ab koee apanaa dastak naheen detaa."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Soonepan kee chaadar orh kar so jaataa hoon har roz,)",
-      "From the depths of the heart — (Khvaabon men bhee ab koee apanaa dastak naheen detaa.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7245,8 +7245,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Shaayad usakaa bhee aashiyaanaa meree tarah ujar gayaa thaa."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Ek parindaa shaakh par baithaa der tak udaas rahaa,)",
-      "From the depths of the heart — (Shaayad usakaa bhee aashiyaanaa meree tarah ujar gayaa thaa.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7288,8 +7288,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Andar kaa insaan to kab kaa tanhaaee men so chukaa hai."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Hansanaa to bas samaaj kee rasma nibhaane ke lie parataa hai,)",
-      "From the depths of the heart — (Andar kaa insaan to kab kaa tanhaaee men so chukaa hai.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7331,8 +7331,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Tab se logon kee berukhee kaa buraa laganaa band ho gayaa."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Jab se khud ke saath vaqta bitaanaa shuroo kiyaa hai mainne,)",
-      "From the depths of the heart — (Tab se logon kee berukhee kaa buraa laganaa band ho gayaa.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7374,8 +7374,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Meree tanhaaee kee aavaaz utanee hee tez sunaaee detee hai."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Raat jitanee gaharee hotee jaatee hai is shahar men,)",
-      "From the depths of the heart — (Meree tanhaaee kee aavaaz utanee hee tez sunaaee detee hai.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7417,8 +7417,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Har koee sirfa ugate sooraj ko salaam karane men mashagool hai."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Koee naheen aataa yahaan udaas cheharon kaa haal jaanane,)",
-      "From the depths of the heart — (Har koee sirfa ugate sooraj ko salaam karane men mashagool hai.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7460,8 +7460,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Girataa hoon to khud hee apane aansoo ponchh kar uth jaataa hoon."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Aaeene ke saamane khare hokar khud kee peeth thapathapaa letaa hoon,)",
-      "From the depths of the heart — (Girataa hoon to khud hee apane aansoo ponchh kar uth jaataa hoon.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7503,8 +7503,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Har mor par ungalee pakarane vaalaa koee naheen milataa."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Kuchh safar zindagee ke akele hee tay karane parate hain,)",
-      "From the depths of the heart — (Har mor par ungalee pakarane vaalaa koee naheen milataa.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7546,8 +7546,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ye soonee deevaaren mujhe har pal kaatane ko dauratee hain."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Band kamare men gharee kee tik-tik bhee shor machaatee hai,)",
-      "From the depths of the heart — (Ye soonee deevaaren mujhe har pal kaatane ko dauratee hain.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7589,8 +7589,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Aaj dekh lo tanhaaiyon se kaisee pakkee yaaree ho gaee."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Kabhee lagataa thaa ki tere binaa ek pal na jee sakenge,)",
-      "From the depths of the heart — (Aaj dekh lo tanhaaiyon se kaisee pakkee yaaree ho gaee.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7632,8 +7632,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Apane hee daayare men ab simat kar rah gae hain ham."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Na kisee ke aane kee khushee rahee na jaane kaa koee gham,)",
-      "From the depths of the heart — (Apane hee daayare men ab simat kar rah gae hain ham.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7675,8 +7675,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Samajho usane akelepan ko apanaa muqaddar maan liyaa hai."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Baarish men bheegate hue jab koee aansoo chhupaa letaa hai,)",
-      "From the depths of the heart — (Samajho usane akelepan ko apanaa muqaddar maan liyaa hai.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7718,8 +7718,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Mere safar men bas udaasee hee chalatee hai mere saath."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Door tak phailee huee pagadandee aur dhalatee huee shaam,)",
-      "From the depths of the heart — (Mere safar men bas udaasee hee chalatee hai mere saath.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7761,8 +7761,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Unhen kyaa pataa main khud se hee bichharaa huaa baithaa hoon."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Logon ko shikaayat hai ki main ab kisee se milataa naheen,)",
-      "From the depths of the heart — (Unhen kyaa pataa main khud se hee bichharaa huaa baithaa hoon.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7804,8 +7804,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Guzarate ajanabiyon men jaane kis apane ko dhoondhataa hoon."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Khaalee bench par paarka men ghanton baithaa rahataa hoon main,)",
-      "From the depths of the heart — (Guzarate ajanabiyon men jaane kis apane ko dhoondhataa hoon.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7847,8 +7847,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Jo bhee likhane aayaa usane bas kaataa aur phaar diyaa."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Dil kee kitaab ke panne ab kore hee achchhe lagate hain,)",
-      "From the depths of the heart — (Jo bhee likhane aayaa usane bas kaataa aur phaar diyaa.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7890,8 +7890,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Varanaa ham to auron kee khushee men khud ko bhool baithe the."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Tanhaaee ne sikhaa diyaa mujhe khud se mohabbat karanaa,)",
-      "From the depths of the heart — (Varanaa ham to auron kee khushee men khud ko bhool baithe the.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7933,8 +7933,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Kuchh aisee hee dhundhalee see ho gaee hai meree zindagaanee."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Sarda raaton kaa koharaa aur door jalatee ek maddham roshanee,)",
-      "From the depths of the heart — (Kuchh aisee hee dhundhalee see ho gaee hai meree zindagaanee.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -7976,8 +7976,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Tab jaakar meree mulaaqaat mere apane vajood se huee."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Jab saare daravaaze band ho gae duniyaa kee ummeedon ke,)",
-      "From the depths of the heart — (Tab jaakar meree mulaaqaat mere apane vajood se huee.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -8019,8 +8019,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Mere qadamon ke nishaan bhee havaaen mitaa detee hain."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Musaafir hoon main us raah kaa jahaan koee kaaravaan naheen,)",
-      "From the depths of the heart — (Mere qadamon ke nishaan bhee havaaen mitaa detee hain.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -8062,8 +8062,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Bas is bheer se door meree apanee tanhaa duniyaa khair hai."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Naa koee shikavaa kisee se naa kisee se koee bair hai,)",
-      "From the depths of the heart — (Bas is bheer se door meree apanee tanhaa duniyaa khair hai.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -8105,8 +8105,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Safaaee dene kaa man ab kisee ke aage naheen karataa."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Chupachaap sun letaa hoon ab sabakee karavee-meethee baaten,)",
-      "From the depths of the heart — (Safaaee dene kaa man ab kisee ke aage naheen karataa.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -8148,8 +8148,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Hazaaron logon kee bastee men kitanaa soonaa saveraa hai."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Har taraf raushanee ke mele hain phir bhee dil men andheraa hai,)",
-      "From the depths of the heart — (Hazaaron logon kee bastee men kitanaa soonaa saveraa hai.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -8191,8 +8191,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Yahaan hamadardee bhee log byaaj samet vasool karate hain."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Apane hee kandhe par sir rakh kar ronaa seekh lo dosta,)",
-      "From the depths of the heart — (Yahaan hamadardee bhee log byaaj samet vasool karate hain.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -8234,8 +8234,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Na koee chhaanv maangane aataa hai na koee panchhee baithataa hai."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Sookhe darakhta saa kharaa hoon main vaqta ke registaan men,)",
-      "From the depths of the heart — (Na koee chhaanv maangane aataa hai na koee panchhee baithataa hai.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -8277,8 +8277,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Koee patthar bhee phenke to ab halachal naheen hotee."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Khaamosh jheel ke paanee saa thahar gayaa hai man meraa,)",
-      "From the depths of the heart — (Koee patthar bhee phenke to ab halachal naheen hotee.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -8320,8 +8320,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Taaki duniyaa mere andar ke khaaleepan ko na parh sake."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Kitaabon ke pannon men chhupaa letaa hoon apanaa soonaa cheharaa,)",
-      "From the depths of the heart — (Taaki duniyaa mere andar ke khaaleepan ko na parh sake.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -8363,8 +8363,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Tab se mainne kisee se saath kee ummeed karanaa chhor diyaa."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Jab apane hee saaye ne shaam dhalate hee rukh mor liyaa,)",
-      "From the depths of the heart — (Tab se mainne kisee se saath kee ummeed karanaa chhor diyaa.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -8406,8 +8406,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Jo dil ek baar veeraan huaa vo phir kab basegaa shaayad."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Tanhaaiyon kaa ye silasilaa ab umar bhar chalegaa shaayad,)",
-      "From the depths of the heart — (Jo dil ek baar veeraan huaa vo phir kab basegaa shaayad.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -8449,8 +8449,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Iyarafon ke sahaare dabaa detaa hoon dil ke jazbaat ko."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Sangeet ke suron men dhoondhataa hoon sukoon aadhee raat ko,)",
-      "From the depths of the heart — (Iyarafon ke sahaare dabaa detaa hoon dil ke jazbaat ko.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -8492,8 +8492,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "So saare lafza samet kar seene kee tijoree men rakh lie."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Bahut kuchh kahanaa thaa magar sunane vaalaa koee na milaa,)",
-      "From the depths of the heart — (So saare lafza samet kar seene kee tijoree men rakh lie.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -8535,8 +8535,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Phir beech ke is mele men kis baat par ronaa hai."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Akele aae the jahaan men akele hee rukhasat honaa hai,)",
-      "From the depths of the heart — (Phir beech ke is mele men kis baat par ronaa hai.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -8578,8 +8578,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Unhen kyaa khabar ki andar se kitanaa tootaa aur tanhaa hoon main."
     ],
     "linesEnglish": [
-      "Quiet nights of solitude, reflection, and peaceful silence — (Meree khaamoshee ko meraa guroor samajhate hain zamaane vaale,)",
-      "From the depths of the heart — (Unhen kyaa khabar ki andar se kitanaa tootaa aur tanhaa hoon main.)"
+      "Quiet nights of solitude, reflection, and peaceful silence",
+      "From the depths of the heart"
     ],
     "tags": [
       "Alone",
@@ -8621,8 +8621,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Pankhon se kuchh naheen hotaa hausalon se uraan hotee hai."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Manzil unheen ko milatee hai jinake sapanon men jaan hotee hai,)",
-      "From the depths of the heart — (Pankhon se kuchh naheen hotaa hausalon se uraan hotee hai.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -8664,8 +8664,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Vahee ek din andheron men sooraj saa chamakanaa jaanataa hai."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Thokaren khaakar bhee jo musaafir sanbhalanaa jaanataa hai,)",
-      "From the depths of the heart — (Vahee ek din andheron men sooraj saa chamakanaa jaanataa hai.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -8707,8 +8707,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Unake muqaddar ke panne kabhee kore naheen huaa karate."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Paseene kee syaahee se jo likhate hain apane iraadon ko,)",
-      "From the depths of the heart — (Unake muqaddar ke panne kabhee kore naheen huaa karate.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -8750,8 +8750,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Abhee to pooraa aasamaan jeet kar dikhaanaa baaqee hai."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Abhee to naapee hai mutthee bhar zameen hamane ai dosta,)",
-      "From the depths of the heart — (Abhee to pooraa aasamaan jeet kar dikhaanaa baaqee hai.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -8793,8 +8793,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Maidaan chhor kar bhaaganaa bahaaduron kee nishaanee naheen."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Haar to vo sabak hai jo aapako behatar hone kaa mauqaa de,)",
-      "From the depths of the heart — (Maidaan chhor kar bhaaganaa bahaaduron kee nishaanee naheen.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -8836,8 +8836,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Subah ke sooraj ko ugane se koee rok naheen sakataa."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Raat chaahe jitanee bhee kaalee aur lanbee kyon na ho,)",
-      "From the depths of the heart — (Subah ke sooraj ko ugane se koee rok naheen sakataa.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -8879,8 +8879,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Sangharsha kee bhattee men tap kar hee insaan kundan kahalaataa hai."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Patthar bhee taraashane se bhagavaan kee moorat ban jaataa hai,)",
-      "From the depths of the heart — (Sangharsha kee bhattee men tap kar hee insaan kundan kahalaataa hai.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -8922,8 +8922,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Jitanaa mehanat karane vaale aksar chhor diyaa karate hain."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Kismat ke bharose baithane vaalon ko sirfa utanaa milataa hai,)",
-      "From the depths of the heart — (Jitanaa mehanat karane vaale aksar chhor diyaa karate hain.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -8965,8 +8965,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Mallaahon kaa chakkar chhoro tair kar dariyaa paar karo."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Toofaanon se aankh milaao sailaabon par vaar karo,)",
-      "From the depths of the heart — (Mallaahon kaa chakkar chhoro tair kar dariyaa paar karo.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9008,8 +9008,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Apane seene men kaamayaabee kee sulagatee huee aag rakh."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Jab tak torenge naheen tab tak chhorenge naheen ye zid rakh,)",
-      "From the depths of the heart — (Apane seene men kaamayaabee kee sulagatee huee aag rakh.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9051,8 +9051,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Vahee log taalee bajaaenge jab too itihaas rachegaa."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Log hansenge tujh par jab too naee shuruaat karegaa,)",
-      "From the depths of the heart — (Vahee log taalee bajaaenge jab too itihaas rachegaa.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9094,8 +9094,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Beej ko vishaal vriksha banane men thoraa vaqta lagataa hai."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Zindagee men baree jeet haasil karanee hai to sabra rakh,)",
-      "From the depths of the heart — (Beej ko vishaal vriksha banane men thoraa vaqta lagataa hai.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9137,8 +9137,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Nadee pahaaron ko cheer kar bhee samandar tak pahunch jaatee hai."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Raaste kabhee band naheen hote bas nazariye kee baat hai,)",
-      "From the depths of the heart — (Nadee pahaaron ko cheer kar bhee samandar tak pahunch jaatee hai.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9180,8 +9180,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Shaayad agalaa hee qadam teree kaamayaabee kee dahaleez ho."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Thak kar na baith ai manzil ke musaafir abhee se,)",
-      "From the depths of the heart — (Shaayad agalaa hee qadam teree kaamayaabee kee dahaleez ho.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9223,8 +9223,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Jo paseene se nahaataa hai vahee itihaas badalataa hai."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Jo paanee se nahaataa hai vo sirfa libaas badalataa hai,)",
-      "From the depths of the heart — (Jo paseene se nahaataa hai vahee itihaas badalataa hai.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9266,8 +9266,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Aur toote man se koee kharaa naheen hotaa maidaan men."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Chhote man se koee baraa naheen hotaa kabhee jahaan men,)",
-      "From the depths of the heart — (Aur toote man se koee kharaa naheen hotaa maidaan men.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9309,8 +9309,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Apanee mehanat ke shor se soee huee taqadeer jagaa de."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Kal kee chintaa chhor kar aaj men jee-jaan lagaa de,)",
-      "From the depths of the heart — (Apanee mehanat ke shor se soee huee taqadeer jagaa de.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9352,8 +9352,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Kyonki kaante qadamon kee raftaar barhaa diyaa karate hain."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Kaanton par chalane vaale hee manzil par jaldee pahunchate hain,)",
-      "From the depths of the heart — (Kyonki kaante qadamon kee raftaar barhaa diyaa karate hain.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9395,8 +9395,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Kamazor log ruk jaate hain aur jaanbaaz baazee jeet lete hain."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Mushkilen to sirfa tere iraadon kaa imtihaan letee hain,)",
-      "From the depths of the heart — (Kamazor log ruk jaate hain aur jaanbaaz baazee jeet lete hain.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9438,8 +9438,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Tere andar jo taaqat hai use yoon bekaar jaane mat de."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Khud par yaqeen rakh duniyaa kee baaton par dhyaan mat de,)",
-      "From the depths of the heart — (Tere andar jo taaqat hai use yoon bekaar jaane mat de.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9481,8 +9481,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Par usase pahale use aasamaan chhookar dikhaanaa hai."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Patang ko bhee pataa hai ki ant men kachare men jaanaa hai,)",
-      "From the depths of the heart — (Par usase pahale use aasamaan chhookar dikhaanaa hai.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9524,8 +9524,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Zindagee kee jang se peechhe hat jaaoon vo bechaaraa naheen hoon."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Giraa hoon main aaj magar abhee haaraa naheen hoon,)",
-      "From the depths of the heart — (Zindagee kee jang se peechhe hat jaaoon vo bechaaraa naheen hoon.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9567,8 +9567,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Sapane vo hain jo hamen raat bhar sone naheen dete."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Sapane vo naheen jo ham neend men sote hue dekhate hain,)",
-      "From the depths of the heart — (Sapane vo hain jo hamen raat bhar sone naheen dete.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9610,8 +9610,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Sher kee tarah apanee manzil kee chotee par khud charhanaa."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Bheer kaa hissaa banane se behatar hai akele aage barhanaa,)",
-      "From the depths of the heart — (Sher kee tarah apanee manzil kee chotee par khud charhanaa.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9653,8 +9653,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "To pahale sooraj kee tarah jalanaa seekho har imtihaan men."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Agar sooraj kee tarah chamakanaa chaahate ho is jahaan men,)",
-      "From the depths of the heart — (To pahale sooraj kee tarah jalanaa seekho har imtihaan men.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9696,8 +9696,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Haaraa vahee hai jo dil se kabhee laraa naheen hotaa."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Koee bhee lakshya manushya ke saahas se baraa naheen hotaa,)",
-      "From the depths of the heart — (Haaraa vahee hai jo dil se kabhee laraa naheen hotaa.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9739,8 +9739,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Mehanat kaa phal sahee samay aane par sabako detaa hai."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Vaqta goongaa naheen hai bas thoraa maun rahataa hai,)",
-      "From the depths of the heart — (Mehanat kaa phal sahee samay aane par sabako detaa hai.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9782,8 +9782,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Hamaaree manzil aasamaan hai raastaa hamen khud banaanaa hai."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Seerhiyaan unhen mubaarak hon jinhen sirfa chhat tak jaanaa hai,)",
-      "From the depths of the heart — (Hamaaree manzil aasamaan hai raastaa hamen khud banaanaa hai.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9825,8 +9825,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Balki manzil paane ke apane tareeqe aur prayaas badalo."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Naakaamiyon se dar kar kabhee apane khvaab mat badalo,)",
-      "From the depths of the heart — (Balki manzil paane ke apane tareeqe aur prayaas badalo.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9868,8 +9868,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Sangharsha ke binaa kisee kee bhee kahaanee pooree naheen."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Zakhmon ko apanee taaqat banaa lo kamazoree naheen,)",
-      "From the depths of the heart — (Sangharsha ke binaa kisee kee bhee kahaanee pooree naheen.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9911,8 +9911,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Aisaa kaam karo ki aane vaalee sadiyaan tumhen yaad rakhen."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Soch ko apanee le jaao shikhar tak ki sitaare bhee jhuk jaaen,)",
-      "From the depths of the heart — (Aisaa kaam karo ki aane vaalee sadiyaan tumhen yaad rakhen.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9954,8 +9954,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Sharta bas itanee hai ki toofaan men patavaar mat chhoranaa."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Kashtiyaan sabakee kinaare par pahunch hee jaatee hain ek din,)",
-      "From the depths of the heart — (Sharta bas itanee hai ki toofaan men patavaar mat chhoranaa.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -9997,8 +9997,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Duniyaa tere naam ke aage ek din sir jhukaaegee."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Teree aaj kee khaamosh mehanat kal shor machaaegee,)",
-      "From the depths of the heart — (Duniyaa tere naam ke aage ek din sir jhukaaegee.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -10040,8 +10040,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Aur jeetane vaale kabhee haar kaa bahaanaa naheen rakhate."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Bahaane banaane vaale kabhee kaamayaabee kaa svaad naheen chakhate,)",
-      "From the depths of the heart — (Aur jeetane vaale kabhee haar kaa bahaanaa naheen rakhate.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -10083,8 +10083,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Sabra rakhane vaale kee jholee men khushiyon kaa phool khilataa hai."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Har patajhar ke baad basant kaa mausam zaroor aataa hai,)",
-      "From the depths of the heart — (Sabra rakhane vaale kee jholee men khushiyon kaa phool khilataa hai.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -10126,8 +10126,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Museebaton se larakar hee zindagee khoobasooratee se nikharatee hai."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Havaaon ke vipareet jaakar hee cheel oonchee uraan bharatee hai,)",
-      "From the depths of the heart — (Museebaton se larakar hee zindagee khoobasooratee se nikharatee hai.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -10169,8 +10169,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Rone se naheen larane se taqadeeren badalanee parengee."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Lakeeren apane haathon kee hamen khud banaanee parengee,)",
-      "From the depths of the heart — (Rone se naheen larane se taqadeeren badalanee parengee.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -10212,8 +10212,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Baar-baar girakar bhee vo hamen himmat sikhaa jaatee hai."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Ek chhotee see cheentee bhee pahaar par charh jaatee hai,)",
-      "From the depths of the heart — (Baar-baar girakar bhee vo hamen himmat sikhaa jaatee hai.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -10255,8 +10255,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Utho aur phir se jut jaao nayaa saveraa tumhaaraa hai."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Asaphalataa ye siddha karatee hai ki prayaas poore man se naheen huaa,)",
-      "From the depths of the heart — (Utho aur phir se jut jaao nayaa saveraa tumhaaraa hai.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -10298,8 +10298,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Itanee baree kaamayaabee haasil karo ki unakee bolatee band ho."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Taane maarane vaalon ko apanee jubaan se javaab mat do,)",
-      "From the depths of the heart — (Itanee baree kaamayaabee haasil karo ki unakee bolatee band ho.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -10341,8 +10341,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Aur saphalataa kee qeemat sirfa raaton ko jaagane vaalaa jaanataa hai."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Mittee kaa matakaa aur parivaar kee qeemat sirfa banaane vaalaa jaanataa hai,)",
-      "From the depths of the heart — (Aur saphalataa kee qeemat sirfa raaton ko jaagane vaalaa jaanataa hai.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -10384,8 +10384,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Rukane vaale kharagosh kabhee daur jeetaa naheen karate."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Chalate raho apanee raftaar se chaahe kachhue kee chaal hee sahee,)",
-      "From the depths of the heart — (Rukane vaale kharagosh kabhee daur jeetaa naheen karate.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -10427,8 +10427,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Apanee pareshaanee ko bataao ki tumhaaraa hausalaa kitanaa baraa hai."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Apane hausale ko ye mat bataao ki tumhaaree pareshaanee kitanee baree hai,)",
-      "From the depths of the heart — (Apanee pareshaanee ko bataao ki tumhaaraa hausalaa kitanaa baraa hai.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -10470,8 +10470,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Tab jaakar vo samraaton ke mukut kee shobhaa banataa hai."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Heeraa bhee koyale kee khaan men sadiyon kaa dabaav sahataa hai,)",
-      "From the depths of the heart — (Tab jaakar vo samraaton ke mukut kee shobhaa banataa hai.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -10513,8 +10513,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Har band daravaaze ke paas ek naee khirakee zaroor khulatee hai."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Niraashaa ke baadalon ko cheer kar ummeed kee kiran dhoondho,)",
-      "From the depths of the heart — (Har band daravaaze ke paas ek naee khirakee zaroor khulatee hai.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -10556,8 +10556,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Kal pooree duniyaa ke saamane tumhaaraa sir garva se uthegaa."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Aaj kitaabon ke saamane sir jhukaa kar parh lo mere dosta,)",
-      "From the depths of the heart — (Kal pooree duniyaa ke saamane tumhaaraa sir garva se uthegaa.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -10599,8 +10599,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Magar saphalataa milate hee saaree duniyaa saath kharee hotee hai."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Sangharsha men aadamee akelaa hotaa hai ye karavaa sach hai,)",
-      "From the depths of the heart — (Magar saphalataa milate hee saaree duniyaa saath kharee hotee hai.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -10642,8 +10642,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ek nanheen see lau bhee ghane andhiyaare ko haraa detee hai."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Dil men ummeed kaa deeyaa kabhee bujhane mat denaa,)",
-      "From the depths of the heart — (Ek nanheen see lau bhee ghane andhiyaare ko haraa detee hai.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -10685,8 +10685,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Aur itanaa vinamra rakho ki kaamayaabee sir charhakar bol na sake."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Khud ko itanaa mazaboot banaao ki koee dukh tumhen tor na sake,)",
-      "From the depths of the heart — (Aur itanaa vinamra rakho ki kaamayaabee sir charhakar bol na sake.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -10728,8 +10728,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Darshak banakar sirfa taaliyaan bajaane ke lie janma naheen liyaa."
     ],
     "linesEnglish": [
-      "Unstoppable courage, relentless hustle, and rising above storms — (Zindagee ek khel hai ise khilaaree banakar jeeto,)",
-      "From the depths of the heart — (Darshak banakar sirfa taaliyaan bajaane ke lie janma naheen liyaa.)"
+      "Unstoppable courage, relentless hustle, and rising above storms",
+      "From the depths of the heart"
     ],
     "tags": [
       "Motivational",
@@ -10771,8 +10771,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Rooth mat jaanaa mujhase main tujhase beintahaa pyaar karataa hoon."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Galatee huee hai mujhase ye dil se sveekaar karataa hoon,)",
-      "From the depths of the heart — (Rooth mat jaanaa mujhase main tujhase beintahaa pyaar karataa hoon.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -10814,8 +10814,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ek chhotee see bhool kee itanee baree sazaa mat do."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Kaan pakar kar maafee maangataa hoon ab gussaa thook bhee do,)",
-      "From the depths of the heart — (Ek chhotee see bhool kee itanee baree sazaa mat do.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -10857,8 +10857,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Chaahe sau baar daant le par yoon baat karanaa band mat kar."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Teree khaamoshee mujhe andar hee andar maar rahee hai,)",
-      "From the depths of the heart — (Chaahe sau baar daant le par yoon baat karanaa band mat kar.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -10900,8 +10900,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Apane samajh kar maaf kar de ghairon saa sulook mat kar."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Insaan hoon koee farishtaa naheen jo khataa na ho mujhase,)",
-      "From the depths of the heart — (Apane samajh kar maaf kar de ghairon saa sulook mat kar.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -10943,8 +10943,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Par khudaa gavaah hai mere dil men tere lie sirfa pyaar hai."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Maan liyaa ki meree zubaan se kuchh karave lafza nikal gae,)",
-      "From the depths of the heart — (Par khudaa gavaah hai mere dil men tere lie sirfa pyaar hai.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -10986,8 +10986,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ek baar muskuraa de ki meree atakee huee saans laut aae."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Tere rooth jaane se meree pooree duniyaa berang ho gaee hai,)",
-      "From the depths of the heart — (Ek baar muskuraa de ki meree atakee huee saans laut aae.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11029,8 +11029,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Chalo puraanee baaten bhool kar ek baar phir gale lag jaao."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Rishte anamol hote hain inhen gusse kee bhent mat charhaao,)",
-      "From the depths of the heart — (Chalo puraanee baaten bhool kar ek baar phir gale lag jaao.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11072,8 +11072,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Maafee kaa talabagaar hoon main ye meraa tujhako paighaam hai."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Aankhon men namee aur labon par sirfa teraa hee naam hai,)",
-      "From the depths of the heart — (Maafee kaa talabagaar hoon main ye meraa tujhako paighaam hai.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11115,8 +11115,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Bas apanee nazaron se door mat karanaa varanaa jee na sakoongaa."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Sazaa jo chaahe de de mujhe main hans kar qabool karoongaa,)",
-      "From the depths of the heart — (Bas apanee nazaron se door mat karanaa varanaa jee na sakoongaa.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11158,8 +11158,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ab pachhataave ke aansoo bah rahe hain har guzarate lamhe men."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Naadaanee men dil dukhaa baithaa hoon apane hee sabase pyaare kaa,)",
-      "From the depths of the heart — (Ab pachhataave ke aansoo bah rahe hain har guzarate lamhe men.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11201,8 +11201,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "To main ek baar naheen hazaar baar tere aage jhukane ko taiyaar hoon."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Jhukane se agar hamaaraa pyaaraa saa rishtaa bachataa hai,)",
-      "From the depths of the heart — (To main ek baar naheen hazaar baar tere aage jhukane ko taiyaar hoon.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11244,8 +11244,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Maaf kar do mujhe ki bin tere soone mere din-raat hain."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Akar aur ahankaar se bare to hamaare jazbaat hain,)",
-      "From the depths of the heart — (Maaf kar do mujhe ki bin tere soone mere din-raat hain.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11287,8 +11287,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Meree vajah se teree aankh bheegee ye soch kar rooh kaanpatee hai."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Tere chehare par udaasee kee lakeeren mujhase dekhee naheen jaateen,)",
-      "From the depths of the heart — (Meree vajah se teree aankh bheegee ye soch kar rooh kaanpatee hai.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11330,8 +11330,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Teree har chhotee-baree khushee kaa khud se zyaadaa khayaal rakhoongaa."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Vaadaa karataa hoon aaj ke baad kabhee shikaayat kaa mauqaa na doongaa,)",
-      "From the depths of the heart — (Teree har chhotee-baree khushee kaa khud se zyaadaa khayaal rakhoongaa.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11373,8 +11373,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ab maan bhee jaao varanaa dil ro-ro kar beemaar ho jaaegaa."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Naaraazagee apanee jagah hai aur mohabbat apanee jagah yaar,)",
-      "From the depths of the heart — (Ab maan bhee jaao varanaa dil ro-ro kar beemaar ho jaaegaa.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11416,8 +11416,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Teree adaalat men bas ek muskaan kee bheekh maangataa hoon."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Gunaahagaar hoon teraa kataghare men sir jhukaae kharaa hoon,)",
-      "From the depths of the heart — (Teree adaalat men bas ek muskaan kee bheekh maangataa hoon.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11459,8 +11459,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Tujhe chot pahunchaa kar main khud bhee chain se soyaa naheen."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Lafza mere ghalat the magar meree neeyat kabhee buree na thee,)",
-      "From the depths of the heart — (Tujhe chot pahunchaa kar main khud bhee chain se soyaa naheen.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11502,8 +11502,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Teree hansee ke binaa mere aangan kaa ek phool na khilegaa."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Jab tak too maaf naheen karegee tab tak sukoon na milegaa,)",
-      "From the depths of the heart — (Teree hansee ke binaa mere aangan kaa ek phool na khilegaa.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11545,8 +11545,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Par yoon munh mor kar chale jaane kaa haq mainne naheen diyaa."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Haq hai tumhaaraa mujh par gussaa karane kaa aur larane kaa,)",
-      "From the depths of the heart — (Par yoon munh mor kar chale jaane kaa haq mainne naheen diyaa.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11588,8 +11588,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Apanee har bhool par dil se pashchaataap kiyaa hai mainne."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Saaree raat jaag kar teraa hee intazaar kiyaa hai mainne,)",
-      "From the depths of the heart — (Apanee har bhool par dil se pashchaataap kiyaa hai mainne.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11631,8 +11631,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Par sachche dosta ek soree par sab kuchh bhulaa dete hain."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Dostee men kabhee-kabhee anaban ho hee jaatee hai mere yaar,)",
-      "From the depths of the heart — (Par sachche dosta ek soree par sab kuchh bhulaa dete hain.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11674,8 +11674,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Sach kahataa hoon tujhe naaraaz rakhakar ek pal jiyaa naheen jaataa."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Teree berukhee kaa zahar ab mujhase piyaa naheen jaataa,)",
-      "From the depths of the heart — (Sach kahataa hoon tujhe naaraaz rakhakar ek pal jiyaa naheen jaataa.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11717,8 +11717,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Meree khataaen tum bhool jaao tumhaaraa gussaa main pee jaaoon."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Chalo phir se ek naee shuruaat karate hain ham donon,)",
-      "From the depths of the heart — (Meree khataaen tum bhool jaao tumhaaraa gussaa main pee jaaoon.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11760,8 +11760,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Apanee rahamat kee nazar kar de aur mitaa de saare gham."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Haath jor kar kharaa hoon teree chaukhat par ai mere hamadam,)",
-      "From the depths of the heart — (Apanee rahamat kee nazar kar de aur mitaa de saare gham.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11803,8 +11803,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Itanee khoobasoorat mohabbat ko yoon khaamoshee men mat jaane do."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Ghalatafahamiyon kee deevaar ko hamaare beech mat aane do,)",
-      "From the depths of the heart — (Itanee khoobasoorat mohabbat ko yoon khaamoshee men mat jaane do.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11846,8 +11846,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Par ab maan bhee jaao ki tumhen seene se lagaaoon."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Gussaa bhee tum par kitanaa pyaaraa lagataa hai ye kyaa bataaoon,)",
-      "From the depths of the heart — (Par ab maan bhee jaao ki tumhen seene se lagaaoon.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11889,8 +11889,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Is baar bhee maaf kar de ki too hee meree ibaadat hai."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Meree naadaaniyon ko daraguzar karanaa to teree puraanee aadat hai,)",
-      "From the depths of the heart — (Is baar bhee maaf kar de ki too hee meree ibaadat hai.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11932,8 +11932,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Tere har aansoo kaa bojh mainne apanee palakon par uthaayaa hai."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Dil dukhaayaa hai teraa to chain mujhe bhee kahaan aayaa hai,)",
-      "From the depths of the heart — (Tere har aansoo kaa bojh mainne apanee palakon par uthaayaa hai.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -11975,8 +11975,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Magar is jaanalevaa sannaate ko ab hamaare beech se hataa do."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Bol do jo bhee dil men hai chaahe jee bhar kar sunaa do,)",
-      "From the depths of the heart — (Magar is jaanalevaa sannaate ko ab hamaare beech se hataa do.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -12018,8 +12018,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Mujhe jeet naheen chaahie mujhe bas tum chaahie sansaar men."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Main haar maanataa hoon tum jeet gae is takaraar men,)",
-      "From the depths of the heart — (Mujhe jeet naheen chaahie mujhe bas tum chaahie sansaar men.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -12061,8 +12061,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Aao baithakar sulajhaa len apane dil ke saare afasaane."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Ek pyaalee chaay banaa kar laayaa hoon tumhaare gusse ko pighalaane,)",
-      "From the depths of the heart — (Aao baithakar sulajhaa len apane dil ke saare afasaane.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -12104,8 +12104,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ghairon se to insaan bas haath milaakar nikal jaataa hai."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Koee apanaa hee to roothataa hai aur apanaa hee manaataa hai,)",
-      "From the depths of the heart — (Ghairon se to insaan bas haath milaakar nikal jaataa hai.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -12147,8 +12147,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Isase pahale ki der ho jaae mujhe dil se maaf kar de."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Vaqta kaa koee bharosaa naheen kab saanson kee dor toot jaae,)",
-      "From the depths of the heart — (Isase pahale ki der ho jaae mujhe dil se maaf kar de.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -12190,8 +12190,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Bin tere to mere chaaron taraf bas ghutan bharee havaa hai."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Teree maafee hee mere zakhmee dil kee ikalautee davaa hai,)",
-      "From the depths of the heart — (Bin tere to mere chaaron taraf bas ghutan bharee havaa hai.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -12233,8 +12233,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Phir se mahakaa de hamaaree mohabbat ke murajhaae phool ko."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Naadaan samajh kar bakhsha de meree aaj kee is bhool ko,)",
-      "From the depths of the heart — (Phir se mahakaa de hamaaree mohabbat ke murajhaae phool ko.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -12276,8 +12276,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Apanee ek meethee nazar se meree rooh ko thandak de de."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Pachhataave kee aag men jal rahaa hoon kal shaam se main,)",
-      "From the depths of the heart — (Apanee ek meethee nazar se meree rooh ko thandak de de.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -12319,8 +12319,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Par yaqeen maan tere sivaa is dil men koee na samaayaa hai."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Main jaanataa hoon mainne teraa bharosaa thoraa saa dukhaayaa hai,)",
-      "From the depths of the heart — (Par yaqeen maan tere sivaa is dil men koee na samaayaa hai.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -12362,8 +12362,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Jab tak too hans na de tab tak tere paas hee baithoongaa aaj."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Roothe hue chaand ko manaane kee har koshish karoongaa aaj,)",
-      "From the depths of the heart — (Jab tak too hans na de tab tak tere paas hee baithoongaa aaj.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -12405,8 +12405,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Aur mujhe pataa hai teraa dil samandar se bhee baraa hai."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Bare dil vaale hee aksar doosaron kee khataa maaf karate hain,)",
-      "From the depths of the heart — (Aur mujhe pataa hai teraa dil samandar se bhee baraa hai.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -12448,8 +12448,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Aao ek chhotee see muskaan se saare gile mitaa dete hain."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Karavee baaton kee gaanth khol kar havaa men uraa dete hain,)",
-      "From the depths of the heart — (Aao ek chhotee see muskaan se saare gile mitaa dete hain.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -12491,8 +12491,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Meraa apanaa hee aksa mujhe meraa kasoor yaad dilaataa hai."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Too khafaa hai to aaeenaa bhee mujhase nazaren churaataa hai,)",
-      "From the depths of the heart — (Meraa apanaa hee aksa mujhe meraa kasoor yaad dilaataa hai.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -12534,8 +12534,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Thaam le meraa haath aur mujhe phir se apanaa kah de."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Chand lamhon kaa gussaa kaheen barason kaa pyaar na chheen le,)",
-      "From the depths of the heart — (Thaam le meraa haath aur mujhe phir se apanaa kah de.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -12577,8 +12577,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Meree saaree khushiyaan juree hain bas teree ek muskaan se."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Soree kahane men kaisee sharma jab rishtaa apanee jaan se ho,)",
-      "From the depths of the heart — (Meree saaree khushiyaan juree hain bas teree ek muskaan se.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -12620,8 +12620,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "To main apanee saaree zindagee tere qadamon men bahaa doon."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Agar mere rone se teraa gussaa shaant hotaa ho hamanavaa,)",
-      "From the depths of the heart — (To main apanee saaree zindagee tere qadamon men bahaa doon.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -12663,8 +12663,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Par ab saayaa banakar rahoongaa zindagee ke har mor par."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Maanaa ki vaqta par teraa saath na de sakaa us mor par,)",
-      "From the depths of the heart — (Par ab saayaa banakar rahoongaa zindagee ke har mor par.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -12706,8 +12706,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Teree naaraazagee ke aage apanee har daleel haar rahaa hoon."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Khaamosh labon se naheen aankhon se maafee maang rahaa hoon,)",
-      "From the depths of the heart — (Teree naaraazagee ke aage apanee har daleel haar rahaa hoon.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -12749,8 +12749,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ek mauqaa aur de do apane is gunahagaar ke lie."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Phool lekar aayaa hoon apane roothe hue sarakaar ke lie,)",
-      "From the depths of the heart — (Ek mauqaa aur de do apane is gunahagaar ke lie.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -12792,8 +12792,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Maaf kar do mujhe kyonki tumamen hee basatee meree jaan hai."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Rishton men jhukanaa kamazoree naheen barappan kee pahachaan hai,)",
-      "From the depths of the heart — (Maaf kar do mujhe kyonki tumamen hee basatee meree jaan hai.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -12835,8 +12835,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Kar de maaf ki aaj meraa khoyaa sukoon mil uthegaa."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Teree ek haan se meraa ujaraa huaa chaman phir khil uthegaa,)",
-      "From the depths of the heart — (Kar de maaf ki aaj meraa khoyaa sukoon mil uthegaa.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -12878,8 +12878,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Gale lagaa kar kah de ki chal jaa tujhe maaf kiyaa."
     ],
     "linesEnglish": [
-      "Humble apology from the heart to heal a cherished bond — (Na kar itanaa imtihaan meree tarap aur mere sabra kaa,)",
-      "From the depths of the heart — (Gale lagaa kar kah de ki chal jaa tujhe maaf kiyaa.)"
+      "Humble apology from the heart to heal a cherished bond",
+      "From the depths of the heart"
     ],
     "tags": [
       "Maafi",
@@ -12921,8 +12921,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham larake hain janaab apanaa darda kahaan kisee ko dikhaate hain."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Chehare par hansee rakhakar kandhon par ghar kaa bojh uthaate hain,)",
-      "From the depths of the heart — (Ham larake hain janaab apanaa darda kahaan kisee ko dikhaate hain.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -12964,8 +12964,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Larake apanee yaaree men hameshaa vafaadaar rahate hain."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Jeb khaalee ho phir bhee doston men diladaar rahate hain,)",
-      "From the depths of the heart — (Larake apanee yaaree men hameshaa vafaadaar rahate hain.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13007,8 +13007,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Khvaahishen maar kar ghar kee zarooraten kharee kar detee hain."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Umra se pahale hee hamen zimmedaariyaan baraa kar detee hain,)",
-      "From the depths of the heart — (Khvaahishen maar kar ghar kee zarooraten kharee kar detee hain.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13050,8 +13050,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Seene men toofaan chhupaa kar muskuraanaa sikhaayaa gayaa."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Larake rote naheen ye kahakar bachapan se chup karaayaa gayaa,)",
-      "From the depths of the heart — (Seene men toofaan chhupaa kar muskuraanaa sikhaayaa gayaa.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13093,8 +13093,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham larake toote dil men bhee manzil kaa junoon dhoondhate hain."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Baaik kee raftaar aur chaay kee chuskee men sukoon dhoondhate hain,)",
-      "From the depths of the heart — (Ham larake toote dil men bhee manzil kaa junoon dhoondhate hain.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13136,8 +13136,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Pitaa ke paseene kee khaatir apane shauq bhulaa jaate hain."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Maan ke aanchal ke lie pooree duniyaa se takaraa jaate hain,)",
-      "From the depths of the heart — (Pitaa ke paseene kee khaatir apane shauq bhulaa jaate hain.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13179,8 +13179,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham larake jis se jurate hain rishtaa aakhir tak nibhaate hain."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Dikhane men sakhta hain magar dil mom jaisaa rakhate hain,)",
-      "From the depths of the heart — (Ham larake jis se jurate hain rishtaa aakhir tak nibhaate hain.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13222,8 +13222,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ek larakaa ghar kee izzat ke lie raat-din tapataa hai."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Berozagaaree ke taane sunakar bhee jo chupachaap sahataa hai,)",
-      "From the depths of the heart — (Ek larakaa ghar kee izzat ke lie raat-din tapataa hai.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13265,8 +13265,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham larakon ko apane dam par hee shikhar tak pahunchanaa hai."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Akar hamaaree pahachaan naheen bas khuddaaree kaa gahanaa hai,)",
-      "From the depths of the heart — (Ham larakon ko apane dam par hee shikhar tak pahunchanaa hai.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13308,8 +13308,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Bas yahee taaqat badal detee hai har larake kee taqadeer."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Ek phataa huaa batuaa aur usamen rakhee parivaar kee tasveer,)",
-      "From the depths of the heart — (Bas yahee taaqat badal detee hai har larake kee taqadeer.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13351,8 +13351,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ek larakee kee khushee men apanaa saaraa gussaa haar detaa hai."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Mohabbat agar sachchee ho to larakaa sab kuchh vaar detaa hai,)",
-      "From the depths of the heart — (Ek larakee kee khushee men apanaa saaraa gussaa haar detaa hai.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13394,8 +13394,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Shareefon ke lie bhaaee aur dushmanon ke lie kaal kahalaate hain."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Na ham kisee ke aage jhukate hain na kisee ko giraate hain,)",
-      "From the depths of the heart — (Shareefon ke lie bhaaee aur dushmanon ke lie kaal kahalaate hain.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13437,8 +13437,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Fon par maan poochhe to barhiyaa khaanaa khaayaa bataate hain."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Ghar se door parades men sookhee rotee khaakar so jaate hain,)",
-      "From the depths of the heart — (Fon par maan poochhe to barhiyaa khaanaa khaayaa bataate hain.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13480,8 +13480,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Seedhaa-saadaa larakaa bhee mehanat se sitaaraa banakar chamakataa hai."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Braanded kaparon se naheen hamaare kiradaar se raub jhalakataa hai,)",
-      "From the depths of the heart — (Seedhaa-saadaa larakaa bhee mehanat se sitaaraa banakar chamakataa hai.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13523,8 +13523,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Varanaa bevajah chup rahanaa larakon kee fitarat men naheen hotaa."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Jab ek larakaa khaamosh ho jaae to samajh lenaa andar se tootaa hai,)",
-      "From the depths of the heart — (Varanaa bevajah chup rahanaa larakon kee fitarat men naheen hotaa.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13566,8 +13566,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ek aavaaz par jaan haazir karane kee aadat huaa karatee hai."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Yaaron kee mahafil hee hamaaree asalee daulat huaa karatee hai,)",
-      "From the depths of the heart — (Ek aavaaz par jaan haazir karane kee aadat huaa karatee hai.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13609,8 +13609,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ki ham larake apane seene men kitane samandar paalate hain."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Tanhaaee men aadhe jale sigaret yaa chaay ke pyaale jaanate hain,)",
-      "From the depths of the heart — (Ki ham larake apane seene men kitane samandar paalate hain.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13652,8 +13652,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Vahee bhaaee usakee rakshaa ke lie chattaan saa ar parataa hai."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Bahan kee vidaaee par jo kone men chhup kar ro parataa hai,)",
-      "From the depths of the heart — (Vahee bhaaee usakee rakshaa ke lie chattaan saa ar parataa hai.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13695,8 +13695,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Kal hamaaraa hee hogaa bhale hee thoraa kathin aaj hai."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Hamen roop-rang kaa ghamand naheen apane paseene par naaz hai,)",
-      "From the depths of the heart — (Kal hamaaraa hee hogaa bhale hee thoraa kathin aaj hai.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13738,8 +13738,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Yahaan muskuraahat to dikhatee hai par aankhen nam naheen hoteen."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Larakon kee zindagee bhee kisee imtihaan se kam naheen hotee,)",
-      "From the depths of the heart — (Yahaan muskuraahat to dikhatee hai par aankhen nam naheen hoteen.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13781,8 +13781,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham larake sanskaaron se bandhe hain kamazor mat samajhanaa."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Izzat karanaa hamaare khoon men hai ise dar mat samajhanaa,)",
-      "From the depths of the heart — (Ham larake sanskaaron se bandhe hain kamazor mat samajhanaa.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13824,8 +13824,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Bare bete aksar ghar men doosare pitaa kaa farza nibhaate hain."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Apane joote ghis jaaen par chhote bhaaee ko nae dilaate hain,)",
-      "From the depths of the heart — (Bare bete aksar ghar men doosare pitaa kaa farza nibhaate hain.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13867,8 +13867,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham zakhma khaakar bhee maahir hain shaan se jeene men."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Dil tootane kee aavaaz naheen hotee ham larakon ke seene men,)",
-      "From the depths of the heart — (Ham zakhma khaakar bhee maahir hain shaan se jeene men.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13910,8 +13910,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Us larake ke apane sapane aksar alamaaree men so jaaen."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Sailaree aate hee jo sabakee faramaaishon men khatma ho jaae,)",
-      "From the depths of the heart — (Us larake ke apane sapane aksar alamaaree men so jaaen.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13953,8 +13953,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham larake museebaton ko dekhakar kabhee peechhe naheen hatate hain."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Sher saa kalejaa lekar maidaan-e-jang men utarate hain,)",
-      "From the depths of the heart — (Ham larake museebaton ko dekhakar kabhee peechhe naheen hatate hain.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -13996,8 +13996,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Vo pyaar na bhee kare par sammaan hameshaa dil se karataa."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Sachchaa larakaa kabhee kisee kee izzat se khilavaar naheen karataa,)",
-      "From the depths of the heart — (Vo pyaar na bhee kare par sammaan hameshaa dil se karataa.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14039,8 +14039,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Vo larake vaqta kee maar sah-sah kar faulaad ban jaate hain."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Daarhee kee safedee se pahale jo tajurbon se pak jaate hain,)",
-      "From the depths of the heart — (Vo larake vaqta kee maar sah-sah kar faulaad ban jaate hain.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14082,8 +14082,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham larake kam shabdon men bhee gaharee baat kahate hain."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Dikhaave kee duniyaa se koson door apanee saadagee rakhate hain,)",
-      "From the depths of the heart — (Ham larake kam shabdon men bhee gaharee baat kahate hain.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14125,8 +14125,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ek larake ko zamaane ke asalee rang bahut jaldee dikhate hain."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Jab jeb men paise na hon tab apane bhee paraae lagate hain,)",
-      "From the depths of the heart — (Ek larake ko zamaane ke asalee rang bahut jaldee dikhate hain.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14168,8 +14168,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Vo larakaa apanee sharaafat kaa sabase baraa saboot detaa hai."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Mohabbat men dhokhaa khaakar bhee jo badaduaa naheen detaa,)",
-      "From the depths of the heart — (Vo larakaa apanee sharaafat kaa sabase baraa saboot detaa hai.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14211,8 +14211,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ki ek larake ke kandhon par kitanee anakahee paravaah hai."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Raat ke do baje chhat par tahalate hue qadam gavaah hain,)",
-      "From the depths of the heart — (Ki ek larake ke kandhon par kitanee anakahee paravaah hai.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14254,8 +14254,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Dagaa karoge to murakar tumhaaraa naam bhee naheen lenge."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Hamase vafaa karoge to jaan bhee hathelee par rakh denge,)",
-      "From the depths of the heart — (Dagaa karoge to murakar tumhaaraa naam bhee naheen lenge.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14297,8 +14297,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Binaa kisee shikaayat ke har din angaaron par chalanaa hai."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Larakaa honaa aasaan naheen har mor par khud ko saabit karanaa hai,)",
-      "From the depths of the heart — (Binaa kisee shikaayat ke har din angaaron par chalanaa hai.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14340,8 +14340,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham larake dil ke raajaa hain na ki jazbaaton ke vyaapaar."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Hamaaree saadagee par mat jaa ai duniyaa ke adaakaar,)",
-      "From the depths of the heart — (Ham larake dil ke raajaa hain na ki jazbaaton ke vyaapaar.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14383,8 +14383,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Vahee larakaa ek din apane khaanadaan kaa naam roshan kar jaataa hai."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Maathe par shikan laae binaa jo har qarza chukaataa hai,)",
-      "From the depths of the heart — (Vahee larakaa ek din apane khaanadaan kaa naam roshan kar jaataa hai.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14426,8 +14426,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham larake dushmanee bhee mardon kee tarah aamane-saamane rakhate hain."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Gussaa hamaaraa tez hai par dil bachchon saa saaf rakhate hain,)",
-      "From the depths of the heart — (Ham larake dushmanee bhee mardon kee tarah aamane-saamane rakhate hain.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14469,8 +14469,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Us kamaane vaale larake kee peeraa koee kitaab naheen likhatee."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Tyohaaron par bhee jise ghar kee chhuttee naseeb naheen hotee,)",
-      "From the depths of the heart — (Us kamaane vaale larake kee peeraa koee kitaab naheen likhatee.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14512,8 +14512,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham larake viraasat se zyaadaa apanee mehanat par fakhra karate hain."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Apane dam par shoonya se shikhar banaane kaa hunar rakhate hain,)",
-      "From the depths of the heart — (Ham larake viraasat se zyaadaa apanee mehanat par fakhra karate hain.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14555,8 +14555,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Khud hee maraham bananaa parataa hai apane ghaav mitaane ko."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Koee kandhaa naheen milataa aksar larakon ko sir tikaane ko,)",
-      "From the depths of the heart — (Khud hee maraham bananaa parataa hai apane ghaav mitaane ko.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14598,8 +14598,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Har sangharshasheel larake ke sir par svaabhimaan kaa taaj hotaa hai."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Hamaaree khaamoshee men bhee ek alag hee shaahee andaaz hotaa hai,)",
-      "From the depths of the heart — (Har sangharshasheel larake ke sir par svaabhimaan kaa taaj hotaa hai.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14641,8 +14641,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham larakon ke seene men basataa hai pooraa aasamaan bhee."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Pyaar men paagal bhee hote hain aur farza men chattaan bhee,)",
-      "From the depths of the heart — (Ham larakon ke seene men basataa hai pooraa aasamaan bhee.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14684,8 +14684,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Us larake ke aage farishtaa bhee apanaa sheesh jhukaataa hai."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Tootee chappal pahan kar bhee jo baap kee davaaee laataa hai,)",
-      "From the depths of the heart — (Us larake ke aage farishtaa bhee apanaa sheesh jhukaataa hai.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14727,8 +14727,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Pyaar ke do meethe bol hee hamaare har dukh kee achook davaa hai."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Hamen mahange tohafon kee naheen bas thore se sammaan kee bhookh hai,)",
-      "From the depths of the heart — (Pyaar ke do meethe bol hee hamaare har dukh kee achook davaa hai.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14770,8 +14770,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham larake koyale kee khaan se heeraa banakar nikalate hain."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Zamaane ke taanon ko apanee taaqat banaa kar chalate hain,)",
-      "From the depths of the heart — (Ham larake koyale kee khaan se heeraa banakar nikalate hain.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14813,8 +14813,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham larake jis raah chalen use yaadagaar kar den."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Dostee men jaan lutaa den aur dushmanee men had paar kar den,)",
-      "From the depths of the heart — (Ham larake jis raah chalen use yaadagaar kar den.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14856,8 +14856,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Subah hote hee cheharaa dhokar phir se jang men jut jaate hain."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Kamare ke band daravaaze ke peechhe takiyaa bhigo lete hain,)",
-      "From the depths of the heart — (Subah hote hee cheharaa dhokar phir se jang men jut jaate hain.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14899,8 +14899,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Isee usool par qaayam har khaanadaanee larake kee shaan hai."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Larakiyon kee izzat karanaa hee asalee mardaanagee kee pahachaan hai,)",
-      "From the depths of the heart — (Isee usool par qaayam har khaanadaanee larake kee shaan hai.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14942,8 +14942,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham larake kaam karake dikhaate hain fizool naheen bolate."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Chaahe laakh aandhiyaan aaen hamaare hausale naheen dolate,)",
-      "From the depths of the heart — (Ham larake kaam karake dikhaate hain fizool naheen bolate.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -14985,8 +14985,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Rab har us mehanatakash larake kaa naseeb roshan kare."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Apanee khushiyon kee qurbaanee dekar jo ghar men ujaalaa kare,)",
-      "From the depths of the heart — (Rab har us mehanatakash larake kaa naseeb roshan kare.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -15028,8 +15028,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham larakon kee yahee kahaanee sabase alag aur khaas hai."
     ],
     "linesEnglish": [
-      "Silent responsibilities, loyal brotherhood, and a boy's resilience — (Dil men darda kaa samandar aur aankhon men kaamayaabee kee pyaas hai,)",
-      "From the depths of the heart — (Ham larakon kee yahee kahaanee sabase alag aur khaas hai.)"
+      "Silent responsibilities, loyal brotherhood, and a boy's resilience",
+      "From the depths of the heart"
     ],
     "tags": [
       "Boy",
@@ -15071,8 +15071,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Main aaj kee naaree hoon apane svaabhimaan kee paharedaar bhee hoon."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Phool see komal hoon main par vaqta parane par talavaar bhee hoon,)",
-      "From the depths of the heart — (Main aaj kee naaree hoon apane svaabhimaan kee paharedaar bhee hoon.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -15114,8 +15114,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Do gharon ko roshan karane vaalee khushiyon kee pahachaan hoon main."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Paapaa kee paree naheen paapaa ke sir kaa abhimaan hoon main,)",
-      "From the depths of the heart — (Do gharon ko roshan karane vaalee khushiyon kee pahachaan hoon main.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -15157,8 +15157,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Jhoothe dikhaave se door meraa apanaa alag kiradaar hai."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Meree saadagee hee meraa sabase khoobasoorat shringaar hai,)",
-      "From the depths of the heart — (Jhoothe dikhaave se door meraa apanaa alag kiradaar hai.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -15200,8 +15200,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Aandhiyon men bhee uraan bharanaa jaanatee hoon mujhe mom mat samajhanaa."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Nazaakat meree adaa hai ise meree kamazoree mat samajhanaa,)",
-      "From the depths of the heart — (Aandhiyon men bhee uraan bharanaa jaanatee hoon mujhe mom mat samajhanaa.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -15243,8 +15243,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Meree desee adaa ke aage feekee hai saaree duniyaa kee chaandanee."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Kaajal kee ek lakeer aur maathe kee chhotee see bindee,)",
-      "From the depths of the heart — (Meree desee adaa ke aage feekee hai saaree duniyaa kee chaandanee.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -15286,8 +15286,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Apanee mehanat se likhee huee kaamayaabee kaa nayaa paighaam hoon."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Main kisee kee manzil kaa sahaaraa naheen khud ek muqaam hoon,)",
-      "From the depths of the heart — (Apanee mehanat se likhee huee kaamayaabee kaa nayaa paighaam hoon.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -15329,8 +15329,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Mere aatmavishvaas ke aage har andheraa khud simatataa hai."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Jhumakon kee chhanak men bhee meraa shaahee andaaz jhalakataa hai,)",
-      "From the depths of the heart — (Mere aatmavishvaas ke aage har andheraa khud simatataa hai.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -15372,8 +15372,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Had paar karoge to tumhaaree aukaat dikhaanaa jaanatee hoon main."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Izzat doge to palakon par bithaanaa jaanatee hoon main,)",
-      "From the depths of the heart — (Had paar karoge to tumhaaree aukaat dikhaanaa jaanatee hoon main.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -15415,8 +15415,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ham larakiyaan har kiradaar men bemisaal hain kisee se kam naheen."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Rasoee sanbhaalane kaa hunar bhee hai aur aasamaan naapane kaa dam bhee,)",
-      "From the depths of the heart — (Ham larakiyaan har kiradaar men bemisaal hain kisee se kam naheen.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -15458,8 +15458,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Parivaar kee khushee ke lie ham har darda hansakar sahan karate hain."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Meree muskaan par mat jaao isamen hazaaron raaz dafan hain,)",
-      "From the depths of the heart — (Parivaar kee khushee ke lie ham har darda hansakar sahan karate hain.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -15501,8 +15501,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Mere usool aur meree maryaadaa chattaan kee tarah atoot hain."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Taaj kee zaroorat naheen mujhe mere sanskaar hee meraa mukut hain,)",
-      "From the depths of the heart — (Mere usool aur meree maryaadaa chattaan kee tarah atoot hain.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -15544,8 +15544,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Main vo parindaa hoon jo hausalon se cheer de aasamaane."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Pankh kaatane kee koshish mat kar ai dakiyaanoosee zamaane,)",
-      "From the depths of the heart — (Main vo parindaa hoon jo hausalon se cheer de aasamaane.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -15587,8 +15587,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Main betee hoon jahaan jaatee hoon jannat basaatee hoon."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Maayake kee raunaq aur sasuraal kee lakshmee kahalaatee hoon,)",
-      "From the depths of the heart — (Main betee hoon jahaan jaatee hoon jannat basaatee hoon.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -15630,8 +15630,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Meree khuddaaree hee mere chehare par noor banakar chamakatee hai."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Mekaap se naheen meree soch se meree khoobasooratee jhalakatee hai,)",
-      "From the depths of the heart — (Meree khuddaaree hee mere chehare par noor banakar chamakatee hai.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -15673,8 +15673,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Main apane sapanon kee uraan kaa khud aaghaaz karatee hoon."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Kisee ke paison par naheen apane hunar par naaz karatee hoon,)",
-      "From the depths of the heart — (Main apane sapanon kee uraan kaa khud aaghaaz karatee hoon.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -15716,8 +15716,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Phir duniyaa kee koee deevaar usakaa raastaa rok naheen paatee."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Jab ek larakee thaan letee hai apanaa muqaddar badalane kee,)",
-      "From the depths of the heart — (Phir duniyaa kee koee deevaar usakaa raastaa rok naheen paatee.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -15759,8 +15759,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Mujhe paravaah naheen is jalane vaalee duniyaa ke taanon kee."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Shahazaadee hoon main apane baabul ke pyaare aangan kee,)",
-      "From the depths of the heart — (Mujhe paravaah naheen is jalane vaalee duniyaa ke taanon kee.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -15802,8 +15802,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Apanee sanskriti se jure rahanaa hee meraa asalee vaibhav hai."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Dupattaa sir par rakhanaa meree bebasee naheen meraa gaurav hai,)",
-      "From the depths of the heart — (Apanee sanskriti se jure rahanaa hee meraa asalee vaibhav hai.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -15845,8 +15845,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Svaabhimaan par aanch aae to kaalee ban jaanaa jaanatee hoon."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Mohabbat karoon to meeraa see bhakti nibhaanaa jaanatee hoon,)",
-      "From the depths of the heart — (Svaabhimaan par aanch aae to kaalee ban jaanaa jaanatee hoon.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -15888,8 +15888,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Main vo kitaab hoon jise har koee samajh naheen paataa."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Mujhe parakhane kee koshish mat kar ai naadaan musaafir,)",
-      "From the depths of the heart — (Main vo kitaab hoon jise har koee samajh naheen paataa.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -15931,8 +15931,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Unhen kyaa pataa meree chuppee men kitane toofaan palate hain."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Khaamosh rahatee hoon to log mujhe bezubaan samajh lete hain,)",
-      "From the depths of the heart — (Unhen kyaa pataa meree chuppee men kitane toofaan palate hain.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -15974,8 +15974,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ab kisee ke jhoothe sahaare kee mohataaj naheen hoon main."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Apane aansoo ponchh kar khud muskuraanaa seekh liyaa hai mainne,)",
-      "From the depths of the heart — (Ab kisee ke jhoothe sahaare kee mohataaj naheen hoon main.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16017,8 +16017,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Main betee hoon binaa sharta sab par pyaar lutaatee hoon."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Paayal kee jhankaar se ghar kaa konaa-konaa chahakaatee hoon,)",
-      "From the depths of the heart — (Main betee hoon binaa sharta sab par pyaar lutaatee hoon.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16060,8 +16060,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Jahaan log haar maan len main vaheen se jeet letee hoon."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Baraabaree kaa haq maangatee naheen apane dam par chheen letee hoon,)",
-      "From the depths of the heart — (Jahaan log haar maan len main vaheen se jeet letee hoon.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16103,8 +16103,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Main apanee sharton par jeetee hoon bheer se naheen daratee."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Meraa tevar meree pahachaan hai kisee kee naqal naheen karatee,)",
-      "From the depths of the heart — (Main apanee sharton par jeetee hoon bheer se naheen daratee.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16146,8 +16146,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Main kisee ke haath kaa khilaunaa naheen khud apanee taqadeer hoon."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Maan kee parachhaaee hoon aur pitaa ke hausale kee tasveer hoon,)",
-      "From the depths of the heart — (Main kisee ke haath kaa khilaunaa naheen khud apanee taqadeer hoon.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16189,8 +16189,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Kaparon se jaj karane vaalon khot tumhaaree nigaahon men hai."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Soot pahanoon yaa jeens meree sharaafat meree aankhon men hai,)",
-      "From the depths of the heart — (Kaparon se jaj karane vaalon khot tumhaaree nigaahon men hai.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16232,8 +16232,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Itanaa baraa kalejaa sirfa ek larakee hee dikhaa sakatee hai."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Apanaa ghar chhor kar paraae ghar ko apanaa banaa letee hai,)",
-      "From the depths of the heart — (Itanaa baraa kalejaa sirfa ek larakee hee dikhaa sakatee hai.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16275,8 +16275,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Jo qadra na jaane meree main usakee raah naheen takatee."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Heere see chamak hai mujhamen koyale kee paravaah naheen karatee,)",
-      "From the depths of the heart — (Jo qadra na jaane meree main usakee raah naheen takatee.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16318,8 +16318,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Meree izzat anamol hai baazaaron men ye milatee naheen."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Bhaav khaanaa meree aadat naheen bas har kisee se khulatee naheen,)",
-      "From the depths of the heart — (Meree izzat anamol hai baazaaron men ye milatee naheen.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16361,8 +16361,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Main apane aane vaale kal kee sabase sunaharee jhalakee hoon."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Sapanon ke peechhe bhaagane vaalee ek aazaad khyaal larakee hoon,)",
-      "From the depths of the heart — (Main apane aane vaale kal kee sabase sunaharee jhalakee hoon.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16404,8 +16404,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Main girakar bhee har baar dugunee taaqat se uth jaatee hoon."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Nafarat karane vaalon ko apanee kaamayaabee se jalaatee hoon,)",
-      "From the depths of the heart — (Main girakar bhee har baar dugunee taaqat se uth jaatee hoon.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16447,8 +16447,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Har mushkil ko haraa de aisaa meraa buland andaaz hai."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Meree hansee men sukoon hai aur mere iraadon men faulaad hai,)",
-      "From the depths of the heart — (Har mushkil ko haraa de aisaa meraa buland andaaz hai.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16490,8 +16490,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Vaqta ne sikhaa diyaa hai mujhe har roop men dhalanaa bhee."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Gulaab kee pankhuree bhee hoon aur hifaazat kaa kaantaa bhee,)",
-      "From the depths of the heart — (Vaqta ne sikhaa diyaa hai mujhe har roop men dhalanaa bhee.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16533,8 +16533,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Main aaj kee betee hoon sitaaron ke paar dikhatee hoon."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Kismat kee lakeeron se aage barhakar mehanat likhatee hoon,)",
-      "From the depths of the heart — (Main aaj kee betee hoon sitaaron ke paar dikhatee hoon.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16576,8 +16576,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ek baar man se utar gae to murakar khabar naheen letee."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Dhokhaa dene vaalon ko dobaaraa mauqaa main kabhee naheen detee,)",
-      "From the depths of the heart — (Ek baar man se utar gae to murakar khabar naheen letee.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16619,8 +16619,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Pyaar se pesh aaoge to khudaa kee sabase pyaaree rahamat hoon."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Seedhee hoon to gaay mat samajhanaa terhee huee to aafat hoon,)",
-      "From the depths of the heart — (Pyaar se pesh aaoge to khudaa kee sabase pyaaree rahamat hoon.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16662,8 +16662,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Main khud men mukammal hoon yahee baat banaatee hai mujhe khaas."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Khule baalon kee laharaatee ghataa aur aankhon men gaharaa vishvaas,)",
-      "From the depths of the heart — (Main khud men mukammal hoon yahee baat banaatee hai mujhe khaas.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16705,8 +16705,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Phir bhee samaaj poochhataa hai ki betiyaan kyaa kar sakatee hain."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Beton se barhakar farza nibhaayaa hai har mor par hamane,)",
-      "From the depths of the heart — (Phir bhee samaaj poochhataa hai ki betiyaan kyaa kar sakatee hain.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16748,8 +16748,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Main apane qadamon kee aahat se naee manzilen garhatee hoon."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Dil jeetane kaa hunar rakhatee hoon dimaagh se baazee palatatee hoon,)",
-      "From the depths of the heart — (Main apane qadamon kee aahat se naee manzilen garhatee hoon.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16791,8 +16791,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Kisee ko rijhaane ke lie main apanaa roop naheen badalatee hoon."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Sajane-sanvarane kaa shauq main khud kee khushee ke lie rakhatee hoon,)",
-      "From the depths of the heart — (Kisee ko rijhaane ke lie main apanaa roop naheen badalatee hoon.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16834,8 +16834,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Ek stree apane parivaar ke lie apanaa aapaa bhee bhoolatee hai."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Darda ko seene men chhupaa kar sabakee thaalee men pyaar parosatee hai,)",
-      "From the depths of the heart — (Ek stree apane parivaar ke lie apanaa aapaa bhee bhoolatee hai.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16877,8 +16877,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Main rukane ke lie naheen nayaa itihaas rachane ko nikalee hoon."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Meree uraan se jalane vaalon zaraa aasamaan baraa kar lo,)",
-      "From the depths of the heart — (Main rukane ke lie naheen nayaa itihaas rachane ko nikalee hoon.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16920,8 +16920,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Main sahee aur ghalat ke beech saaf faisalaa rakhatee hoon."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Naazuk kalaaee men bhee chattaan torane kaa hausalaa rakhatee hoon,)",
-      "From the depths of the heart — (Main sahee aur ghalat ke beech saaf faisalaa rakhatee hoon.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -16963,8 +16963,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Meraa rutabaa mere kaam se hai kisee ke zor se naheen."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Sheranee apanee chaal se pahachaanee jaatee hai shor se naheen,)",
-      "From the depths of the heart — (Meraa rutabaa mere kaam se hai kisee ke zor se naheen.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -17006,8 +17006,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Us ghar men khud chalakar aate hain chaaron dhaam."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Jis ghar men betiyon kee hansee goonjatee hai subah-o-shaam,)",
-      "From the depths of the heart — (Us ghar men khud chalakar aate hain chaaron dhaam.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -17049,8 +17049,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Mere sir par hameshaa mere rab kaa aasheervaad hai."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Akelee chalane se naheen daratee meraa saayaa mere saath hai,)",
-      "From the depths of the heart — (Mere sir par hameshaa mere rab kaa aasheervaad hai.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -17092,8 +17092,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Jhoothee chaapaloosee karanaa main apanee tauheen samajhatee hoon."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Dil se saaf hoon isalie thoree munhaphat kahalaatee hoon,)",
-      "From the depths of the heart — (Jhoothee chaapaloosee karanaa main apanee tauheen samajhatee hoon.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -17135,8 +17135,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Svaabhimaan se bharee huee main jnaan aur saahas kee gaagar hoon."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Naaree hoon main srijan kee shakti aur mamataa kaa saagar hoon,)",
-      "From the depths of the heart — (Svaabhimaan se bharee huee main jnaan aur saahas kee gaagar hoon.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
@@ -17178,8 +17178,8 @@ export const FEELINGS_ALL: Shayari[] = [
       "Kaanton bharee raahon men bhee phool khilaanaa jaanatee hoon."
     ],
     "linesEnglish": [
-      "Graceful dignity, fierce self-respect, and a woman's crown — (Apanee kahaanee kee naayikaa main khud hee bananaa jaanatee hoon,)",
-      "From the depths of the heart — (Kaanton bharee raahon men bhee phool khilaanaa jaanatee hoon.)"
+      "Graceful dignity, fierce self-respect, and a woman's crown",
+      "From the depths of the heart"
     ],
     "tags": [
       "Girl",
