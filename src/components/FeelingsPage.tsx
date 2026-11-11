@@ -422,7 +422,13 @@ export const FeelingsPage: React.FC<FeelingsPageProps> = ({
               >
                 <span className="text-lg shrink-0">{cat.icon}</span>
                 <span className="text-[13px] sm:text-[14px] font-extrabold truncate">
-                  {cat.name.replace(/\s+Shayari$/i, '')}
+                  {cat.id === 'boys'
+                    ? 'Ladkon Ki Shayari'
+                    : cat.id === 'girls'
+                      ? 'Ladkiyon Ki Shayari'
+                      : cat.id === '2-line'
+                        ? 'Do Line'
+                        : cat.name.replace(/\s+Shayari$/i, '')}
                 </span>
               </a>
             );

@@ -36,7 +36,7 @@ export const EXACT_HOME_SEO_TITLE =
   'All in One Shayari Collection - Love, Sad, Festival, Diwali, Holi, Sanatan Hindu, Islamic Muslim & Hindi Urdu English Special Shayari | ZQ-FEELINGS - Dil Ki Awaaz';
 
 export const EXACT_HOME_SEO_DESCRIPTION =
-  '5,900+ se zyada dil chhu lene wali original shayariyan — Love, Sad, Attitude, Dosti, Tyohar, Dharmik aur Sanskar jaise 63+ Categories me. 77 bhashaon aur 240+ Stylish Fonts ka support, jisme shayari ka font badal kar 1-click me Copy aur Audio sun sakte hain. WhatsApp, Instagram aur Facebook par turant share karein, ya sundar Photo Card banakar Download karein. Apni Shayari Likhe me apne jazbaat bayan karein aur ZQ Moments me photo upload karke yaadein sajayein — 100% Free!';
+  '5,900+ se zyada dil chhu lene wali original shayariyan — Love, Sad, Attitude, Dosti, Festival, Dharmik aur Sanskar jaise 63+ Categories me. 77 bhashaon aur 240+ Stylish Fonts ka support, jisme shayari ka font badal kar 1-click me Copy aur Audio sun sakte hain. WhatsApp, Instagram aur Facebook par turant share karein, ya sundar Photo Card banakar Download karein. Apni Shayari Likhe me apne jazbaat bayan karein aur ZQ Moments me photo upload karke yaadein sajayein — 100% Free!';
 
 interface MenuNavItem {
   route: AppRoute;

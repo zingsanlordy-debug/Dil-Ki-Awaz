@@ -190,9 +190,25 @@ export const HomePage: React.FC<HomePageProps> = ({
     const map = new Map<string, FeelingChipItem>();
 
     for (const f of FEELINGS_CATEGORIES) {
+      let eng = f.name.replace(/\s+Shayari$/i, '');
+      if (f.id === 'boys') eng = 'Ladkon Ki Shayari';
+      if (f.id === 'girls') eng = 'Ladkiyon Ki Shayari';
+      if (f.id === '2-line') eng = 'Do Line';
+      if (f.id === 'sad-love') eng = 'Sad Love';
+      if (f.id === 'heart-touching') eng = 'Heart Touching';
+      if (f.id === 'miss-you') eng = 'Miss You';
+      if (f.id === 'matlabi-duniya') eng = 'Matlabi Duniya';
+      if (f.id === 'bhai-behen') eng = 'Bhai Behen';
+      if (f.id === 'attitude') eng = 'Attitude';
+      if (f.id === 'breakup') eng = 'Breakup';
+      if (f.id === 'emotional') eng = 'Emotional';
+      if (f.id === 'sharabi') eng = 'Sharabi';
+      if (f.id === 'khwab') eng = 'Khwab';
+      if (f.id === 'sorry') eng = 'Sorry (Maafi)';
+      if (f.id === 'funny') eng = 'Funny';
       map.set(f.id, {
         id: f.id,
-        englishName: f.name.replace(/\s+Shayari$/i, ''),
+        englishName: eng,
         hindiName: f.hindiName,
         icon: f.icon,
         href: f.slug
@@ -253,9 +269,9 @@ export const HomePage: React.FC<HomePageProps> = ({
               <Heart className="w-6 h-6 text-[#d94f70] fill-[#d94f70] shrink-0" />
               <h2 className="font-rozha text-[24px] sm:text-[28px] font-bold text-[#d94f70] leading-snug">
                 <TranslatedText
-                  text="फीलिंग्स शायरी (Feeling Shayari)"
-                  english="Feeling Shayari"
-                  defaultDisplay="Feeling Shayari (फीलिंग्स शायरी)"
+                  text="फीलिंग्स शायरी (Feelings Shayari)"
+                  english="Feelings Shayari"
+                  defaultDisplay="Feelings Shayari (फीलिंग्स शायरी)"
                 />
               </h2>
             </div>

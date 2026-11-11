@@ -236,10 +236,17 @@ export const TranslatedText: React.FC<{
   defaultDisplay?: string;
 }> = ({ text, english, defaultDisplay }) => {
   const { globalLanguage } = useGlobalLanguage();
-  const translated = useTranslatedText(text, english);
+  const fallback = english || defaultDisplay;
+  const translated = useTranslatedText(text, fallback);
 
-  if (globalLanguage === 'default' && defaultDisplay) {
-    return <>{defaultDisplay}</>;
+  if (
+    (globalLanguage === 'default' ||
+      globalLanguage === 'hinglish' ||
+      globalLanguage === 'english' ||
+      globalLanguage === 'english-uk') &&
+    (defaultDisplay || english)
+  ) {
+    return <>{defaultDisplay || english}</>;
   }
   return <>{translated}</>;
 };
